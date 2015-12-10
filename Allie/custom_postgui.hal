@@ -1,0 +1,6 @@
+# Include your customized HAL commands here
+# The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
+
+net hy-spindle-at-speed spindle-vfd.spindle-at-speed => pyvcp.spindle-at-speed
+net hy-spindle-rpm spindle-vfd.spindle-speed-fb => pyvcp.spindle-speed
+net hy-modbus-ok spindle-vfd.hycomm-ok => pyvcp.hycomm-ok
