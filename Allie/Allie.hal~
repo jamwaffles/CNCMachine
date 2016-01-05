@@ -17,10 +17,10 @@ addf motion-command-handler servo-thread
 addf motion-controller servo-thread
 addf stepgen.update-freq servo-thread
 net spindle-cmd-rpm     <= motion.spindle-speed-out
-net spindle-cmd-rpm-abs <= motion.spindle-speed-out-abs
+#net spindle-cmd-rpm-abs <= motion.spindle-speed-out-abs
 net spindle-cmd-rps     <= motion.spindle-speed-out-rps
 net spindle-cmd-rps-abs <= motion.spindle-speed-out-rps-abs
-net spindle-at-speed    => motion.spindle-at-speed
+#net spindle-at-speed    => motion.spindle-at-speed
 
 net probe-in => motion.probe-input
 
