@@ -1,0 +1,17 @@
+(Run with "O <z-probe-offset> CALL")
+
+o<z-probe-offset> sub
+G92.1
+G38.2 Z-40 F400
+
+(relative)
+G91
+G0 Z2
+G38.2 Z-2.5 F100
+G92 Z0
+
+(absolute)
+G90
+G0 Z10
+o<z-probe-offset> endsub
+M2
