@@ -1,0 +1,25 @@
+(Run with "O <subs/y-probe-offset> CALL")
+
+o<subs/y-probe-offset> sub
+
+(set Y calculated parameter storage)
+#1001 = 0
+
+(clear current G54 offsets)
+G10 L2 P1 Y0
+
+(--- Y AXIS PROBE ---)
+G91 (relative)
+G38.2 Y50 F400 (quick probe)
+G0 Y-2 (retract a bit for slow probe)
+G38.2 Y10 F100
+(#5062 is Y value of G38.2 straight probe)
+(#5410 is tool diameter. We want the tool center, hence / 2)
+#1001 = [#5062 + #5410 / 2]
+G10 L2 P1 Y#1001
+G0 Y-10 (retract to safe place)
+G90 (absolute)
+G0 Z10
+
+o<subs/y-probe-offset> endsub
+M2

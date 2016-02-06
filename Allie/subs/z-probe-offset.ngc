@@ -1,17 +1,14 @@
-(Run with "O <z-probe-offset> CALL")
+(Run with "O <subs/z-probe-offset> CALL")
 
-o<z-probe-offset> sub
-G92.1
-G38.2 Z-40 F400
+o<subs/z-probe-offset> sub
+G10 L2 P1 Z0
 
-(relative)
-G91
-G0 Z2
+G38.2 Z-40 F400 (quick probe)
+G91 (relative)
+G0 Z2 (retract a bit for slow probe)
 G38.2 Z-2.5 F100
-G92 Z0
-
-(absolute)
-G90
-G0 Z10
-o<z-probe-offset> endsub
+G10 L2 P1 Z#5063 (#5063 is Z value of G38.2 straight probe)
+G90 (absolute)
+G0 Z10 (retract to safe height)
+o<subs/z-probe-offset> endsub
 M2
