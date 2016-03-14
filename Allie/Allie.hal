@@ -23,6 +23,7 @@ addf hm2_5i25.0.write         servo-thread
 # --- MACHINE-IS-ENABLED ---
 setp hm2_5i25.0.gpio.011.is_output true
 net machine-is-enabled hm2_5i25.0.gpio.011.out
+setp hm2_5i25.0.gpio.011.invert_output true
 
 # --- MACHINE-IS-ENABLED ---
 setp hm2_5i25.0.gpio.012.is_output true
