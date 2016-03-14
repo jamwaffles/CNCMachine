@@ -9,17 +9,17 @@ o<subs/x-probe-offset> sub
 G10 L2 P1 X0
 
 (--- X AXIS PROBE ---)
-G38.2 X50 F400 (quick probe)
 G91 (relative)
+G38.2 X50 F400 (quick probe)
 G0 X-2 (retract a bit for slow probe)
 G38.2 X10 F100
 (#5061 is X value of G38.2 straight probe)
 (#5410 is tool diameter. We want the tool center, hence / 2)
 #1000 = [#5061 + #5410 / 2]
 G10 L2 P1 X#1000
-G90 (absolute)
-G53 G0 X0 (retract to safe place)
+G0 X-5 (retract to safe place)
 G0 Z10
+G90 (absolute)
 
 o<subs/x-probe-offset> endsub
 M2
