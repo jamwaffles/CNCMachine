@@ -1,0 +1,25 @@
+(Run with "O <subs/probe-corner> CALL")
+
+o<subs/x-reverse-probe-offset> sub
+
+(set X calculated parameter storage)
+#1000 = 0
+
+(clear current G54 offsets)
+G10 L2 P1 X0
+
+(--- X AXIS PROBE ---)
+G91 (relative)
+G38.2 X-50 F400 (quick probe)
+G0 X2 (retract a bit for slow probe)
+G38.2 X-10 F100
+(#5061 is X value of G38.2 straight probe)
+(#5410 is tool diameter. We want the tool center, hence / 2)
+#1000 = [#5061 - #5410 / 2]
+G10 L2 P1 X#1000
+G0 X5 (retract to safe place)
+G0 Z10
+G90 (absolute)
+
+o<subs/x-reverse-probe-offset> endsub
+M2
