@@ -38,7 +38,7 @@ net home-x     <=  hm2_5i25.0.gpio.013.in
 net home-y     <=  hm2_5i25.0.gpio.014.in
 
 # --- PROBE-IN ---
-net probe-in     <=  hm2_5i25.0.gpio.015.in_not
+#net probe-in     <=  hm2_5i25.0.gpio.015.in_not
 
 #*******************
 #  AXIS X
@@ -189,7 +189,7 @@ net z-enable     => hm2_5i25.0.stepgen.02.enable
 setp hm2_5i25.0.gpio.010.invert_output true
 
 # Invert probe input
-setp hm2_5i25.0.gpio.015.invert_output true
+#setp hm2_5i25.0.gpio.015.invert_output true
 
 # ---setup home / limit switch signals---
 
@@ -276,7 +276,7 @@ net coolant-flood     <=  iocontrol.0.coolant-flood
 
 #  ---probe signal---
 
-net probe-in     =>  motion.probe-input
+#net probe-in     =>  motion.probe-input
 
 #  ---motion control signals---
 
