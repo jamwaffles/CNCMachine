@@ -20,6 +20,10 @@ addf hm2_5i25.0.write         servo-thread
 
 # external output signals
 
+# --- COOLANT-MIST ---
+setp hm2_5i25.0.gpio.016.is_output true
+net coolant-mist hm2_5i25.0.gpio.016.out
+
 # --- MACHINE-IS-ENABLED ---
 setp hm2_5i25.0.gpio.011.is_output true
 net machine-is-enabled hm2_5i25.0.gpio.011.out
