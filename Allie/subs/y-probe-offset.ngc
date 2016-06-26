@@ -10,9 +10,9 @@ G10 L2 P1 Y0
 
 (--- Y AXIS PROBE ---)
 G91 (relative)
-G38.2 Y50 F400 (quick probe)
+G38.2 Y50 F200 (quick probe)
 G0 Y-0.5 (retract a bit for slow probe)
-G38.2 Y10 F100
+G38.2 Y10 F50
 (#5062 is Y value of G38.2 straight probe)
 (#5410 is tool diameter. We want the tool center, hence / 2)
 #1001 = [#5062 + #5410 / 2]
