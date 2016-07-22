@@ -5,4 +5,4 @@
 #net pyvcp-spindle-rpm spindle-vfd.spindle-speed-fb => pyvcp.spindle-speed
 #net pyvcp-modbus-ok spindle-vfd.hycomm-ok => pyvcp.hycomm-ok
 
-net pyvcp-modbus-ok wj200-vfd.0.is-ready => pyvcp.hycomm-ok
+net pyvcp-modbus-ok wj200-vfd.0.is-ready => pyvcp.comm-ok

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pyvcp>
-	<labelframe text="Huanyang VFD">
+	<labelframe text="Hitachi WJ200">
 	<font>("Helvetica",12)</font>
 	<table>
 	    	<tablerow/>
@@ -13,11 +13,11 @@
 		<tablerow/>
 			<tablesticky sticky="w" />
 			<label>
-				<text>"Modbus Communication:"</text>
+				<text>"Comms ok"</text>
     			</label>
     			<tablesticky sticky="e" />
  			<led>
- 				<halpin>"hycomm-ok"</halpin>
+ 				<halpin>"comm-ok"</halpin>
  				<size>"10"</size>
  				<on_color>"green"</on_color>
  				<off_color>"red"</off_color>
@@ -25,7 +25,7 @@
 		<tablerow/>
 			<tablesticky sticky="w" />
 			<label>
-				<text>"Spindle at speed:"</text>
+				<text>"Spindle at speed"</text>
     			</label>
     			<tablesticky sticky="e" />
  			<led>
@@ -34,12 +34,12 @@
  				<on_color>"green"</on_color>
  				<off_color>"red"</off_color>
  			</led>
-		<tablerow/>
+		<!--<tablerow/>
 			<label>
 				<text>"  "</text>
-    			</label>
+    			</label>-->
  	</table>
- 	<table>
+ 	<!--<table>
  		<tablesticky sticky="nsew"/>
   		<tablerow/>
  			<tablesticky sticky="nsew"/>
@@ -59,7 +59,7 @@
 	    			<halpin>"spindle-speed"</halpin>
 	    			<max_>24000</max_>
 	    		</bar>
- 		<!--<tablerow/>
+ 		<tablerow/>
  			<meter>
 			    	<halpin>"spindle-speed"</halpin>
 			    	<size>200</size>
@@ -67,8 +67,8 @@
 			    	<max_>24000</max_>
 			    	<majorscale>4000</majorscale>
 			    	<minorscale>500</minorscale>
-			</meter>-->
+			</meter>
   
- 	</table>
+ 	</table>-->
  	</labelframe>
 </pyvcp>
