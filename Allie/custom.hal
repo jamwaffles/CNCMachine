@@ -2,12 +2,28 @@
 # This file will not be overwritten when you run stepconf again
 
 # Load the Huanyang VFD user component
-loadusr -Wn spindle-vfd hy_vfd -n spindle-vfd -t 1 -d /dev/ttyUSB0 -p none -r 38400 -s 1
+#loadusr -Wn spindle-vfd hy_vfd -n spindle-vfd -t 1 -d /dev/ttyUSB0 -p none -r 38400 -s 1
 
+loadusr -W wj200_vfd
+setp wj200-vfd.0.mbslaveaddr 1
+
+loadrt scale count=1
+addf scale.0 servo-thread
+setp scale.0.gain 0.01666666
+
+# Huanyang config
 #net vfd-comms halui.machine.is-on => spindle-vfd.enable
-setp spindle-vfd.enable 1
-net spindle-fwd motion.spindle-forward => spindle-vfd.spindle-forward
-net spindle-reverse motion.spindle-reverse => spindle-vfd.spindle-reverse
-net spindle-speed-cmd  motion.spindle-speed-out-abs => spindle-vfd.speed-command
-net spindle-on motion.spindle-on => spindle-vfd.spindle-on
-net spindle-at-speed motion.spindle-at-speed => spindle-vfd.spindle-at-speed
+#setp spindle-vfd.enable 1
+#net spindle-fwd motion.spindle-forward => spindle-vfd.spindle-forward
+#net spindle-reverse motion.spindle-reverse => spindle-vfd.spindle-reverse
+#net spindle-speed-cmd  motion.spindle-speed-out-abs => spindle-vfd.speed-command
+#net spindle-on motion.spindle-on => spindle-vfd.spindle-on
+#net spindle-at-speed motion.spindle-at-speed => spindle-vfd.spindle-at-speed
+
+# WJ200 config
+setp wj200-vfd.0.enable true
+net spindle-speed-scale motion.spindle-speed-out-abs => scale.0.in
+net spindle-fwd motion.spindle-forward => wj200-vfd.0.reverse
+net spindle-at-speed motion.spindle-at-speed => wj200-vfd.0.is-at-speed
+net spindle-speed-cmd scale.0.out => wj200-vfd.0.commanded-frequency
+net spindle-on motion.spindle-on => wj200-vfd.0.run
