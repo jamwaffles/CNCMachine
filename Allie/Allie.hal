@@ -27,12 +27,12 @@ addf hm2_5i25.0.write         servo-thread
 setp hm2_5i25.0.gpio.016.is_output true
 net coolant-mist hm2_5i25.0.gpio.016.out
 
-# --- MACHINE-IS-ENABLED ---
+# --- AUX-PSU ---
 setp hm2_5i25.0.gpio.011.is_output true
 net machine-is-enabled hm2_5i25.0.gpio.011.out
 setp hm2_5i25.0.gpio.011.invert_output true
 
-# --- MACHINE-IS-ENABLED ---
+# --- STEPPER-PSU ---
 setp hm2_5i25.0.gpio.012.is_output true
 net machine-is-enabled hm2_5i25.0.gpio.012.out
 
