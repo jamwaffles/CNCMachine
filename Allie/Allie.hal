@@ -39,7 +39,7 @@ net machine-is-enabled hm2_5i25.0.gpio.012.out
 # external input signals
 
 # --- HOME-X ---
-net home-x     <=  hm2_5i25.0.gpio.013.in
+net min-home-x     <=  hm2_5i25.0.gpio.013.in
 
 # --- HOME-Y ---
 net max-home-y     <=  hm2_5i25.0.gpio.014.in
@@ -94,8 +94,16 @@ net x-enable     => hm2_5i25.0.stepgen.00.enable
 
 # ---setup home / limit switch signals---
 
-net home-x     =>  joint.0.home-sw-in
-net x-neg-limit     =>  joint.0.neg-lim-sw-in
+#net home-x     =>  joint.0.home-sw-in
+#net x-neg-limit     =>  joint.0.neg-lim-sw-in
+#net x-pos-limit     =>  joint.0.pos-lim-sw-in
+
+#net min-home-x     =>  joint.0.home-sw-in
+#net x-pos-limit     =>  joint.0.pos-lim-sw-in
+#net min-home-x     =>  joint.0.neg-lim-sw-in
+
+net min-home-x     =>  joint.0.home-sw-in
+net min-home-x     =>  joint.0.neg-lim-sw-in
 net x-pos-limit     =>  joint.0.pos-lim-sw-in
 
 #*******************
