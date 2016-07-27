@@ -42,7 +42,7 @@ net machine-is-enabled hm2_5i25.0.gpio.012.out
 net home-x     <=  hm2_5i25.0.gpio.013.in
 
 # --- HOME-Y ---
-net home-y     <=  hm2_5i25.0.gpio.014.in
+net max-home-y     <=  hm2_5i25.0.gpio.014.in
 
 # --- PROBE-IN ---
 #net probe-in     <=  hm2_5i25.0.gpio.015.in_not
@@ -145,9 +145,9 @@ net y-enable     => hm2_5i25.0.stepgen.01.enable
 
 # ---setup home / limit switch signals---
 
-net home-y     =>  joint.1.home-sw-in
-net y-neg-limit     =>  joint.1.neg-lim-sw-in
-net y-pos-limit     =>  joint.1.pos-lim-sw-in
+net max-home-y     =>  joint.1.home-sw-in
+net y-neg-limit    =>  joint.1.neg-lim-sw-in
+net max-home-y     =>  joint.1.pos-lim-sw-in
 
 #*******************
 #  AXIS Z
