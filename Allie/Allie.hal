@@ -8,9 +8,10 @@ loadrt trivkins
 #loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS 
 loadrt motmod servo_period_nsec=100000 num_joints=3
 loadrt hostmot2
-loadrt hm2_pci config=" num_encoders=0 num_pwmgens=0 num_stepgens=3" 
+loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=1 num_pwmgens=0 num_stepgens=3" 
 setp    hm2_5i25.0.watchdog.timeout_ns 5000000
 loadrt pid names=pid.x,pid.y,pid.z,pid.s
+loadrt encoder num_chan=1
 
 addf hm2_5i25.0.read          servo-thread
 addf motion-command-handler   servo-thread
@@ -23,25 +24,25 @@ addf hm2_5i25.0.write         servo-thread
 
 # external output signals
 
-# --- COOLANT-MIST ---
-setp hm2_5i25.0.gpio.016.is_output true
-net coolant-mist hm2_5i25.0.gpio.016.out
-setp hm2_5i25.0.gpio.016.invert_output true
+# # --- COOLANT-MIST ---
+# setp hm2_5i25.0.gpio.016.is_output true
+# net coolant-mist hm2_5i25.0.gpio.016.out
+# setp hm2_5i25.0.gpio.016.invert_output true
 
-# --- AUX-PSU ---
-setp hm2_5i25.0.gpio.011.is_output true
-net machine-is-enabled hm2_5i25.0.gpio.011.out
-setp hm2_5i25.0.gpio.011.invert_output true
+# # --- AUX-PSU ---
+# setp hm2_5i25.0.gpio.011.is_output true
+# net machine-is-enabled hm2_5i25.0.gpio.011.out
+# setp hm2_5i25.0.gpio.011.invert_output true
 
-# --- STEPPER-PSU ---
-setp hm2_5i25.0.gpio.012.is_output true
-net machine-is-enabled hm2_5i25.0.gpio.012.out
-setp hm2_5i25.0.gpio.012.invert_output true
+# # --- STEPPER-PSU ---
+# setp hm2_5i25.0.gpio.012.is_output true
+# net machine-is-enabled hm2_5i25.0.gpio.012.out
+# setp hm2_5i25.0.gpio.012.invert_output true
 
-# --- SPINDLE-COOLANT-PUMP ---
-setp hm2_5i25.0.gpio.001.is_output true
-net spindle-on hm2_5i25.0.gpio.001.out
-setp hm2_5i25.0.gpio.001.invert_output true
+# # --- SPINDLE-COOLANT-PUMP ---
+# setp hm2_5i25.0.gpio.001.is_output true
+# net spindle-on hm2_5i25.0.gpio.001.out
+# setp hm2_5i25.0.gpio.001.invert_output true
 
 # external input signals
 
@@ -233,6 +234,20 @@ net spindle-vel-cmd-rpm     => pid.s.command
 net spindle-vel-fb-rpm      => pid.s.feedback
 net spindle-output        <=  pid.s.output
 
+# ---Encoder feedback signals/setup---
+
+setp    hm2_5i25.0.encoder.00.counter-mode 0
+setp    hm2_5i25.0.encoder.00.filter 1
+setp    hm2_5i25.0.encoder.00.index-invert 0
+setp    hm2_5i25.0.encoder.00.index-mask 0
+setp    hm2_5i25.0.encoder.00.index-mask-invert 0
+# setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
+setp    hm2_5i25.0.encoder.00.scale  1
+
+net spindle-revs             <=   hm2_5i25.0.encoder.00.position
+net spindle-vel-fb-rps       <=   hm2_5i25.0.encoder.00.velocity
+net spindle-index-enable     <=>  hm2_5i25.0.encoder.00.index-enable
+
 # ---setup spindle control signals---
 
 #net spindle-vel-cmd-rps        <=  motion.spindle-speed-out-rps
@@ -251,7 +266,6 @@ net spindle-index-enable      <=>  motion.spindle-index-enable
 # ---Setup spindle at speed signals---
 
 sets spindle-at-speed true
-
 
 #******************************
 # connect miscellaneous signals
