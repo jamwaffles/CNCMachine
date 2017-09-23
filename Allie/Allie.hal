@@ -24,20 +24,22 @@ addf hm2_5i25.0.write         servo-thread
 
 # external output signals
 
-# # --- COOLANT-MIST ---
-# setp hm2_5i25.0.gpio.016.is_output true
-# net coolant-mist hm2_5i25.0.gpio.016.out
-# setp hm2_5i25.0.gpio.016.invert_output true
+# --- COOLANT-MIST ---
+setp hm2_5i25.0.gpio.005.is_output true
+net coolant-mist hm2_5i25.0.gpio.005.out
+setp hm2_5i25.0.gpio.005.invert_output true
 
-# # --- AUX-PSU ---
-# setp hm2_5i25.0.gpio.011.is_output true
-# net machine-is-enabled hm2_5i25.0.gpio.011.out
-# setp hm2_5i25.0.gpio.011.invert_output true
+# --- AUX-PSU ---
+# Parport pin 14
+setp hm2_5i25.0.gpio.001.is_output true
+net machine-is-enabled hm2_5i25.0.gpio.001.out
+setp hm2_5i25.0.gpio.001.invert_output true
 
-# # --- STEPPER-PSU ---
-# setp hm2_5i25.0.gpio.012.is_output true
-# net machine-is-enabled hm2_5i25.0.gpio.012.out
-# setp hm2_5i25.0.gpio.012.invert_output true
+# --- STEPPER-PSU ---
+# Parport pin 15
+setp hm2_5i25.0.gpio.003.is_output true
+net machine-is-enabled hm2_5i25.0.gpio.003.out
+setp hm2_5i25.0.gpio.003.invert_output true
 
 # # --- SPINDLE-COOLANT-PUMP ---
 # setp hm2_5i25.0.gpio.001.is_output true
@@ -47,13 +49,13 @@ addf hm2_5i25.0.write         servo-thread
 # external input signals
 
 # --- HOME-X ---
-net home-x     <=  hm2_5i25.0.gpio.013.in
+#net home-x     <=  hm2_5i25.0.gpio.013.in
 
 # --- HOME-Y ---
-net home-y     <=  hm2_5i25.0.gpio.014.in
+#net home-y     <=  hm2_5i25.0.gpio.014.in
 
 # --- HOME-Z ---
-net home-z     <=  hm2_5i25.0.gpio.015.in
+#net home-z     <=  hm2_5i25.0.gpio.015.in
 
 #*******************
 #  AXIS X
@@ -208,9 +210,9 @@ setp hm2_5i25.0.gpio.010.invert_output true
 
 # ---setup home / limit switch signals---
 
-net home-z     =>  joint.2.home-sw-in
-net z-neg-limit     =>  joint.2.neg-lim-sw-in
-net z-pos-limit     =>  joint.2.pos-lim-sw-in
+#net home-z     =>  joint.2.home-sw-in
+#net z-neg-limit     =>  joint.2.neg-lim-sw-in
+#net z-pos-limit     =>  joint.2.pos-lim-sw-in
 
 #*******************
 #  SPINDLE S
@@ -265,7 +267,7 @@ net spindle-index-enable      <=>  motion.spindle-index-enable
 
 # ---Setup spindle at speed signals---
 
-sets spindle-at-speed true
+#sets spindle-at-speed true
 
 #******************************
 # connect miscellaneous signals
