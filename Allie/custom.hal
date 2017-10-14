@@ -9,7 +9,11 @@ setp wj200-vfd.0.mbslaveaddr 1
 
 loadrt scale count=1
 addf scale.0 servo-thread
-setp scale.0.gain 0.01666666
+
+# Motor pulley: 40 teeth
+# Spindle pulley: 50 teeth
+# Max VFD freq: 120Hz
+setp scale.0.gain 0.04287850719
 
 # Huanyang config
 #net vfd-comms halui.machine.is-on => spindle-vfd.enable
