@@ -55,7 +55,7 @@ net home-x     <=  hm2_5i25.0.gpio.013.in
 net home-y     <=  hm2_5i25.0.gpio.014.in
 
 # --- HOME-Z ---
-#net home-z     <=  hm2_5i25.0.gpio.015.in
+net home-z     <=  hm2_5i25.0.gpio.015.in
 
 #*******************
 #  AXIS X
@@ -210,9 +210,9 @@ setp hm2_5i25.0.gpio.010.invert_output true
 
 # ---setup home / limit switch signals---
 
-#net home-z     =>  joint.2.home-sw-in
-#net z-neg-limit     =>  joint.2.neg-lim-sw-in
-#net z-pos-limit     =>  joint.2.pos-lim-sw-in
+net home-z     =>  joint.2.home-sw-in
+net z-neg-limit     =>  joint.2.neg-lim-sw-in
+net z-pos-limit     =>  joint.2.pos-lim-sw-in
 
 #*******************
 #  SPINDLE S
