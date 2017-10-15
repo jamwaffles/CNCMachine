@@ -45,7 +45,7 @@
 			    	<halpin>"spindle-speed"</halpin>
 			    	<size>200</size>
 			    	<min_>0</min_>
-			    	<max_>24000</max_>
+			    	<max_>6000</max_>
 			    	<fillcolor>"green"</fillcolor>
 			</bar>
 
