@@ -28,6 +28,6 @@ setp scale.0.gain 0.04287850719
 setp wj200-vfd.0.enable true
 net spindle-speed-scale motion.spindle-speed-out-abs => scale.0.in
 net spindle-fwd motion.spindle-forward => wj200-vfd.0.reverse
-#net spindle-at-speed motion.spindle-at-speed => wj200-vfd.0.is-at-speed
+net spindle-at-speed motion.spindle-at-speed => wj200-vfd.0.is-at-speed
 net spindle-speed-cmd scale.0.out => wj200-vfd.0.commanded-frequency
 net spindle-on motion.spindle-on => wj200-vfd.0.run

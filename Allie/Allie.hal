@@ -267,7 +267,7 @@ net spindle-index-enable      <=>  motion.spindle-index-enable
 
 # ---Setup spindle at speed signals---
 
-sets spindle-at-speed true
+# sets spindle-at-speed true
 
 # Scaling is in custom.hal
 
