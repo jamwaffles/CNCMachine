@@ -49,13 +49,13 @@ setp hm2_5i25.0.gpio.003.invert_output true
 # external input signals
 
 # --- HOME-X ---
-net home-x     <=  hm2_5i25.0.gpio.013.in
+net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.013.in
 
 # --- HOME-Y ---
-net home-y     <=  hm2_5i25.0.gpio.014.in
+net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.014.in
 
 # --- HOME-Z ---
-net home-z     <=  hm2_5i25.0.gpio.015.in
+net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.015.in
 
 #*******************
 #  AXIS X
@@ -102,9 +102,8 @@ net x-pos-fb     => joint.0.motor-pos-fb
 net x-enable     <= joint.0.amp-enable-out
 net x-enable     => hm2_5i25.0.stepgen.00.enable
 
-# ---setup home / limit switch signals---
+# ---setup limit switch signals---
 
-net home-x     =>  joint.0.home-sw-in
 net x-neg-limit     =>  joint.0.neg-lim-sw-in
 net x-pos-limit     =>  joint.0.pos-lim-sw-in
 
@@ -153,9 +152,8 @@ net y-pos-fb     => joint.1.motor-pos-fb
 net y-enable     <= joint.1.amp-enable-out
 net y-enable     => hm2_5i25.0.stepgen.01.enable
 
-# ---setup home / limit switch signals---
+# ---setup limit switch signals---
 
-net home-y     =>  joint.1.home-sw-in
 net y-neg-limit    =>  joint.1.neg-lim-sw-in
 net y-pos-limit     =>  joint.1.pos-lim-sw-in
 
@@ -208,9 +206,8 @@ setp hm2_5i25.0.gpio.010.invert_output true
 # Invert probe input
 #setp hm2_5i25.0.gpio.015.invert_output true
 
-# ---setup home / limit switch signals---
+# ---setup limit switch signals---
 
-net home-z     =>  joint.2.home-sw-in
 net z-neg-limit     =>  joint.2.neg-lim-sw-in
 net z-pos-limit     =>  joint.2.pos-lim-sw-in
 
