@@ -151,6 +151,7 @@ net y-pos-fb     <= hm2_5i25.0.stepgen.01.position-fb
 net y-pos-fb     => joint.1.motor-pos-fb
 net y-enable     <= joint.1.amp-enable-out
 net y-enable     => hm2_5i25.0.stepgen.01.enable
+setp hm2_5i25.0.gpio.008.invert_output true
 
 # ---setup limit switch signals---
 
