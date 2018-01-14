@@ -4,18 +4,20 @@
 
   LinuxCNC (EMC2) post processor configuration.
 
-  $Revision: 40091 $
-  $Date: 2015-10-14 17:29:32 +0200 (on, 14 okt 2015) $
+  $Revision: 41601 2e6200651f01fad70bd72491303b9729cd57fc6e $
+  $Date: 2017-09-14 12:02:56 $
 
   FORKID {52A5C3D6-1533-413E-B493-7B93D9E48B30}
 */
 
-description = "LinuxCNC no G53";
-vendor = "LinuxCNC.org";
+description = "LinuxCNC (custom - no G53)";
+vendor = "LinuxCNC";
 vendorUrl = "http://www.linuxcnc.org";
-legal = "Copyright (C) 2012-2015 by Autodesk, Inc. modified by James Waples";
+legal = "Copyright (C) 2012-2015 by Autodesk, Inc., modified by me";
 certificationLevel = 2;
 minimumRevision = 24000;
+
+longDescription = "Generic milling post for LinuxCNC (EMC2).";
 
 extension = "ngc";
 setCodePage("ascii");
@@ -49,7 +51,21 @@ properties = {
   useG28: false // turn on to use G28 instead of G53 for machine retracts
 };
 
-
+// user-defined property definitions
+propertyDefinitions = {
+  writeMachine: {title:"Write machine", description:"Output the machine settings in the header of the code.", group:0, type:"boolean"},
+  writeTools: {title:"Write tool list", description:"Output a tool list in the header of the code.", group:0, type:"boolean"},
+  preloadTool: {title:"Preload tool", description:"Preloads the next tool at a tool change (if any).", type:"boolean"},
+  showSequenceNumbers: {title:"Use sequence numbers", description:"Use sequence numbers for each block of outputted code.", group:1, type:"boolean"},
+  sequenceNumberStart: {title:"Start sequence number", description:"The number at which to start the sequence numbers.", group:1, type:"integer"},
+  sequenceNumberIncrement: {title:"Sequence number increment", description:"The amount by which the sequence number is incremented by in each block.", group:1, type:"integer"},
+  optionalStop: {title:"Optional stop", description:"Outputs optional stop code during when necessary in the code.", type:"boolean"},
+  separateWordsWithSpace: {title:"Separate words with space", description:"Adds spaces between words if 'yes' is selected.", type:"boolean"},
+  useRadius: {title:"Radius arcs", description:"If yes is selected, arcs are outputted using radius values rather than IJK.", type:"boolean"},
+  useParametricFeed:  {title:"Parametric feed", description:"Specifies the feed value that should be output using a Q value.", type:"boolean"},
+  showNotes: {title:"Show notes", description:"Writes operation notes as comments in the outputted code.", type:"boolean"},
+  useG28: {title:"G28 Safe retracts", description:"Disable to avoid G28 output for safe machine retracts. When disabled, you must manually ensure safe retracts.", type:"boolean"}
+};
 
 var permittedCommentChars = " ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,=_-";
 
@@ -156,10 +172,13 @@ function writeComment(text) {
 }
 
 function onOpen() {
+  if (properties.useRadius) {
+    maximumCircularSweep = toRad(90); // avoid potential center calculation errors for CNC
+  }
 
   if (false) { // note: setup your machine here
-    var aAxis = createAxis({coordinate:0, table:false, axis:[1, 0, 0], range:[-360,360], preference:1});
-    var cAxis = createAxis({coordinate:2, table:false, axis:[0, 0, 1], range:[-360,360], preference:1});
+    var aAxis = createAxis({coordinate:0, table:false, axis:[1, 0, 0], range:[-360, 360], preference:1});
+    var cAxis = createAxis({coordinate:2, table:false, axis:[0, 0, 1], range:[-360, 360], preference:1});
     machineConfiguration = new MachineConfiguration(aAxis, cAxis);
 
     setMachineConfiguration(machineConfiguration);
@@ -267,6 +286,15 @@ function onOpen() {
             return;
           }
         }
+      }
+    }
+  }
+
+  if ((getNumberOfSections() > 0) && (getSection(0).workOffset == 0)) {
+    for (var i = 0; i < getNumberOfSections(); ++i) {
+      if (getSection(i).workOffset > 0) {
+        error(localize("Using multiple work offsets is not possible if the initial work offset is 0."));
+        return;
       }
     }
   }
@@ -564,6 +592,7 @@ function onSection() {
 
     // retract to safe plane
     retracted = true;
+
     zOutput.reset();
   }
 
@@ -659,6 +688,9 @@ function onSection() {
   }
 
   // wcs
+  if (insertToolCall) { // force work offset when changing tool
+    currentWorkOffset = undefined;
+  }
   var workOffset = currentSection.workOffset;
   if (workOffset == 0) {
     warningOnce(localize("Work offset has not been specified. Using G54 as WCS."), WARNING_WORK_OFFSET);
@@ -765,11 +797,12 @@ function onSection() {
 
   if (properties.useParametricFeed &&
       hasParameter("operation-strategy") &&
-      (getParameter("operation-strategy") != "drill")) {
+      (getParameter("operation-strategy") != "drill") && // legacy
+      !(currentSection.hasAnyCycle && currentSection.hasAnyCycle())) {
     if (!insertToolCall &&
         activeMovements &&
         (getCurrentSectionId() > 0) &&
-        (getPreviousSection().getPatternId() == currentSection.getPatternId())) {
+        ((getPreviousSection().getPatternId() == currentSection.getPatternId()) && (currentSection.getPatternId() != 0))) {
       // use the current feeds
     } else {
       initializeActiveFeeds();
