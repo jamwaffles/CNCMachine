@@ -31,3 +31,14 @@ net spindle-fwd motion.spindle-forward => wj200-vfd.0.reverse
 net spindle-at-speed motion.spindle-at-speed => wj200-vfd.0.is-at-speed
 net spindle-speed-cmd scale.0.out => wj200-vfd.0.commanded-frequency
 net spindle-on motion.spindle-on => wj200-vfd.0.run
+
+
+# ---- Drawbar manual button ----
+# Link probe input on black BoB v1 to drawbar-enable signal
+loadrt toggle count=1
+
+addf toggle.0 servo-thread
+setp hm2_5i25.0.gpio.005.is_output true
+
+net drawbar-engage <= toggle.0.in hm2_5i25.0.gpio.007.in_not
+net drawbar-engage-toggle <= toggle.0.out hm2_5i25.0.gpio.005.out
