@@ -198,9 +198,6 @@ net z-enable     <= joint.2.amp-enable-out
 net z-enable     => hm2_5i25.0.stepgen.02.enable
 setp hm2_5i25.0.gpio.010.invert_output true
 
-# Invert probe input
-#setp hm2_5i25.0.gpio.015.invert_output true
-
 # ---setup limit switch signals---
 
 net z-neg-limit     =>  joint.2.neg-lim-sw-in
