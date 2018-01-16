@@ -43,13 +43,13 @@ net machine-is-enabled hm2_5i25.0.gpio.001.out
 # external input signals
 
 # --- HOME-X ---
-net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.013.in
+net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.011.in
 
 # --- HOME-Y ---
-net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.014.in
+net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.012.in
 
 # --- HOME-Z ---
-net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.015.in
+net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.013.in
 
 #*******************
 #  AXIS X
