@@ -25,26 +25,20 @@ addf hm2_5i25.0.write         servo-thread
 # external output signals
 
 # --- COOLANT-MIST ---
-setp hm2_5i25.0.gpio.005.is_output true
-net coolant-mist hm2_5i25.0.gpio.005.out
-setp hm2_5i25.0.gpio.005.invert_output true
+setp hm2_5i25.0.gpio.003.is_output true
+net coolant-mist hm2_5i25.0.gpio.003.out
+#setp hm2_5i25.0.gpio.003.invert_output true
 
 # --- AUX-PSU ---
 # Parport pin 14
-setp hm2_5i25.0.gpio.001.is_output true
-net machine-is-enabled hm2_5i25.0.gpio.001.out
-setp hm2_5i25.0.gpio.001.invert_output true
+setp hm2_5i25.0.gpio.000.is_output true
+net machine-is-enabled hm2_5i25.0.gpio.000.out
+setp hm2_5i25.0.gpio.000.invert_output true
 
 # --- STEPPER-PSU ---
 # Parport pin 15
-setp hm2_5i25.0.gpio.003.is_output true
-net machine-is-enabled hm2_5i25.0.gpio.003.out
-setp hm2_5i25.0.gpio.003.invert_output true
-
-# # --- SPINDLE-COOLANT-PUMP ---
-# setp hm2_5i25.0.gpio.001.is_output true
-# net spindle-on hm2_5i25.0.gpio.001.out
-# setp hm2_5i25.0.gpio.001.invert_output true
+setp hm2_5i25.0.gpio.001.is_output true
+net machine-is-enabled hm2_5i25.0.gpio.001.out
 
 # external input signals
 
