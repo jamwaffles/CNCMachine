@@ -1242,6 +1242,11 @@ function onSectionEnd() {
 function onClose() {
   onCommand(COMMAND_COOLANT_OFF);
 
+  if (properties.useG28) {
+    writeBlock(gFormat.format(28), gAbsIncModal.format(91), "Z" + xyzFormat.format(0)); // retract
+  } else {
+    writeBlock(gAbsIncModal.format(90), gFormat.format(53), gMotionModal.format(0), "Z" + xyzFormat.format(0)); // retract
+  }
   zOutput.reset();
 
   setWorkPlane(new Vector(0, 0, 0)); // reset working plane
