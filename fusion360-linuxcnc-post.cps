@@ -302,6 +302,9 @@ function onOpen() {
   // absolute coordinates, feed per min, and incremental arc center mode
   writeBlock(gAbsIncModal.format(90), gFeedModeModal.format(94), gPlaneModal.format(17), gFormat.format(91.1));
 
+  // Non-corner-cutting feed
+  writeBlock(gFormat.format(64), "P" + 0.01, "Q" + 0.01);
+
   switch (unit) {
   case IN:
     writeBlock(gUnitModal.format(20));
