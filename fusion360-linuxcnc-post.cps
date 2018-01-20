@@ -40,14 +40,14 @@ properties = {
   writeMachine: true, // write machine
   writeTools: true, // writes the tools
   preloadTool: true, // preloads next tool on tool change if any
-  showSequenceNumbers: true, // show sequence numbers
+  showSequenceNumbers: false, // show sequence numbers
   sequenceNumberStart: 10, // first sequence number
   sequenceNumberIncrement: 5, // increment for sequence numbers
   optionalStop: true, // optional stop
   separateWordsWithSpace: true, // specifies that the words should be separated with a white space
   useRadius: false, // specifies that arcs should be output using the radius (R word) instead of the I, J, and K words
   useParametricFeed: false, // specifies that feed should be output using Q values
-  showNotes: false, // specifies that operation notes should be output
+  showNotes: true, // specifies that operation notes should be output
   useG28: false // turn on to use G28 instead of G53 for machine retracts
 };
 
