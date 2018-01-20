@@ -10,7 +10,7 @@
   FORKID {52A5C3D6-1533-413E-B493-7B93D9E48B30}
 */
 
-description = "LinuxCNC (custom - no G53)";
+description = "LinuxCNC (custom)";
 vendor = "LinuxCNC";
 vendorUrl = "http://www.linuxcnc.org";
 legal = "Copyright (C) 2012-2015 by Autodesk, Inc., modified by me";
