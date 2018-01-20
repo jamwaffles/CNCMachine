@@ -595,7 +595,12 @@ function onSection() {
 
     // retract to safe plane
     retracted = true;
-
+    if (properties.useG28) {
+      writeBlock(gFormat.format(28), gAbsIncModal.format(91), "Z" + xyzFormat.format(0)); // retract
+      writeBlock(gAbsIncModal.format(90));
+    } else {
+      writeBlock(gAbsIncModal.format(90), gFormat.format(53), gMotionModal.format(0), "Z" + xyzFormat.format(0)); // retract
+    }
     zOutput.reset();
   }
 
