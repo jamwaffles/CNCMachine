@@ -12,8 +12,16 @@ addf scale.0 servo-thread
 
 # Motor pulley: 40 teeth
 # Spindle pulley: 50 teeth
-# Max VFD freq: 120Hz
-setp scale.0.gain 0.04287850719
+# Max VFD freq: 240Hz
+# setp scale.0.gain 0.04287850719
+# http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
+
+# Motor pulley: 50 teeth
+# Spindle pulley: 50 teeth
+# Max VFD freq: 240Hz
+# 8 pole
+# http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
+setp scale.0.gain 0.04
 
 # Huanyang config
 #net vfd-comms halui.machine.is-on => spindle-vfd.enable
