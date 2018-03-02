@@ -13,6 +13,23 @@ setp    hm2_5i25.0.watchdog.timeout_ns 5000000
 loadrt pid names=pid.x,pid.y,pid.z,pid.s
 loadrt encoder num_chan=1
 
+loadrt near
+addf near.0 servo-thread
+
+loadrt abs count=2
+addf abs.0 servo-thread
+addf abs.1 servo-thread
+
+loadrt scale count=2
+addf scale.0 servo-thread
+addf scale.1 servo-thread
+
+loadrt lowpass
+addf lowpass.0 servo-thread
+
+# loadrt and2 count=1
+# addf and2.0 servo-thread
+
 addf hm2_5i25.0.read          servo-thread
 addf motion-command-handler   servo-thread
 addf motion-controller        servo-thread
@@ -222,7 +239,7 @@ setp   pid.s.maxerror .0005
 net spindle-index-enable  <=> pid.s.index-enable
 net spindle-enable        =>  pid.s.enable
 net spindle-vel-cmd-rpm     => pid.s.command
-net spindle-vel-fb-rpm      => pid.s.feedback
+# net spindle-vel-fb-rpm      => pid.s.feedback
 net spindle-output        <=  pid.s.output
 
 # ---Encoder feedback signals/setup---
@@ -233,17 +250,33 @@ setp    hm2_5i25.0.encoder.00.index-invert 0
 setp    hm2_5i25.0.encoder.00.index-mask 0
 setp    hm2_5i25.0.encoder.00.index-mask-invert 0
 # setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
-setp    hm2_5i25.0.encoder.00.scale  1
 
-# net spindle-revs             <=   hm2_5i25.0.encoder.00.position
-# net spindle-vel-fb-rps       <=   hm2_5i25.0.encoder.00.velocity
-# net spindle-index-enable     <=>  hm2_5i25.0.encoder.00.index-enable
+# 400 PPR encoder, quadrature is 4x speed per pulse
+setp    hm2_5i25.0.encoder.00.scale  -1600
+
+# Quadrature encoder on spindle
+# net spindle-position hm2_5i25.0.encoder.00.position => motion.spindle-revs
+# net spindle-velocity hm2_5i25.0.encoder.00.velocity => motion.spindle-speed-in
+# net spindle-index-enable hm2_5i25.0.encoder.00.index-enable <=> motion.spindle-index-enable
+# 
+# # ---setup spindle control signals---
+# 
+# net spindle-vel-cmd-rps        <=  motion.spindle-speed-out-rps
+# net spindle-vel-cmd-rps-abs    <=  motion.spindle-speed-out-rps-abs
+# net spindle-ccw                <=  motion.spindle-reverse
+# net spindle-brake              <=  motion.spindle-brake
+# net spindle-at-speed           =>  motion.spindle-at-speed
+# net spindle-index-enable      <=>  motion.spindle-index-enable
+
+net spindle-revs             <=   hm2_5i25.0.encoder.00.position
+net spindle-vel-fb-rps       <=   hm2_5i25.0.encoder.00.velocity
+net spindle-index-enable     <=>  hm2_5i25.0.encoder.00.index-enable
 
 # ---setup spindle control signals---
 
 net spindle-vel-cmd-rps        <=  motion.spindle-speed-out-rps
-net spindle-vel-cmd-rps-abs    <=  motion.spindle-speed-out-rps-abs
-# net spindle-vel-cmd-rpm        <=  motion.spindle-speed-out
+#net spindle-vel-cmd-rps-abs    <=  motion.spindle-speed-out-rps-abs
+net spindle-vel-cmd-rpm        <=  motion.spindle-speed-out
 # net spindle-vel-cmd-rpm-abs    <=  motion.spindle-speed-out-abs
 # net spindle-enable             <=  motion.spindle-on
 # net spindle-cw                 <=  motion.spindle-forward
@@ -254,9 +287,25 @@ net spindle-at-speed           =>  motion.spindle-at-speed
 net spindle-vel-fb-rps         =>  motion.spindle-speed-in
 net spindle-index-enable      <=>  motion.spindle-index-enable
 
+net spindle-vel-fb-rps => abs.0.in
+net spindle-vel-fb-rps-abs <= abs.0.out
+
 # ---Setup spindle at speed signals---
 
-# sets spindle-at-speed true
+setp scale.1.gain 60
+net spindle-vel-fb-rps => scale.1.in
+net spindle-fb-rpm <= scale.1.out => lowpass.0.in
+
+setp lowpass.0.gain 0.0025
+net spindle-fb-rpm => abs.1.in
+net spindle-fb-rpm-abs abs.1.out
+net spindle-fb-rpm-filtered lowpass.0.out
+
+net spindle-fb-rpm    =>  near.0.in1
+net spindle-vel-cmd-rpm        =>  near.0.in2
+
+net spindle-at-speed       <=  near.0.out
+setp near.0.scale 1.05
 
 # Scaling is in custom.hal
 

@@ -7,9 +7,6 @@
 loadusr -W wj200_vfd --baud 57600 --device /dev/ttyUSB0
 setp wj200-vfd.0.mbslaveaddr 1
 
-loadrt scale count=1
-addf scale.0 servo-thread
-
 # Motor pulley: 40 teeth
 # Spindle pulley: 50 teeth
 # Max VFD freq: 240Hz
@@ -19,9 +16,11 @@ addf scale.0 servo-thread
 # Motor pulley: 50 teeth
 # Spindle pulley: 50 teeth
 # Max VFD freq: 240Hz
-# 8 pole
+# 8 pole, but doesn't seem to matter?
 # http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
-setp scale.0.gain 0.04
+# Defined in Allie.hal
+# setp scale.0.gain 0.0341592654
+setp scale.0.gain 0.035
 
 # Huanyang config
 #net vfd-comms halui.machine.is-on => spindle-vfd.enable
@@ -36,10 +35,9 @@ setp scale.0.gain 0.04
 setp wj200-vfd.0.enable true
 net spindle-speed-scale motion.spindle-speed-out-abs => scale.0.in
 net spindle-fwd motion.spindle-forward => wj200-vfd.0.reverse
-net spindle-at-speed motion.spindle-at-speed => wj200-vfd.0.is-at-speed
+# net spindle-at-speed motion.spindle-at-speed => wj200-vfd.0.is-at-speed
 net spindle-speed-cmd scale.0.out => wj200-vfd.0.commanded-frequency
 net spindle-on motion.spindle-on => wj200-vfd.0.run
-
 
 # ---- Drawbar manual button ----
 # Link probe input on black BoB v1 to drawbar-enable signal
