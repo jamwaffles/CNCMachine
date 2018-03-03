@@ -20,9 +20,9 @@ setp wj200-vfd.0.mbslaveaddr 1
 # http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
 # Defined in Allie.hal
 # setp scale.0.gain 0.0341592654
-setp scale.0.gain 0.03312450571748
+setp scale.0.gain 0.033662736821338
+setp scale.0.offset 1.37425797362894
 
-setp scale.0.offset 1.656225285874
 
 # Huanyang config
 #net vfd-comms halui.machine.is-on => spindle-vfd.enable
