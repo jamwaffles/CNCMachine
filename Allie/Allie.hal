@@ -2,10 +2,7 @@
 # If you make changes to this file, they will be
 # overwritten when you run PNCconf again
 
-#loadrt [KINS]KINEMATICS
 loadrt trivkins
-#autoconverted  trivkins
-#loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS 
 loadrt motmod servo_period_nsec=150000 num_joints=3
 loadrt hostmot2
 loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=1 num_pwmgens=0 num_stepgens=3" 
@@ -258,7 +255,6 @@ setp   pid.s.maxerror .0005
 net spindle-index-enable  <=> pid.s.index-enable
 net spindle-enable        =>  pid.s.enable
 net spindle-vel-cmd-rpm     => pid.s.command
-# net spindle-vel-fb-rpm      => pid.s.feedback
 net spindle-output        <=  pid.s.output
 
 # ---Encoder feedback signals/setup---
@@ -270,22 +266,8 @@ setp    hm2_5i25.0.encoder.00.index-mask 0
 setp    hm2_5i25.0.encoder.00.index-mask-invert 0
 # setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
 
-# 400 PPR encoder, quadrature is 4x speed per pulse
+# 400 PPR encoder, quadrature is 4x speed per pulse, reverse rotation hence negative
 setp    hm2_5i25.0.encoder.00.scale  -1600
-
-# Quadrature encoder on spindle
-# net spindle-position hm2_5i25.0.encoder.00.position => motion.spindle-revs
-# net spindle-velocity hm2_5i25.0.encoder.00.velocity => motion.spindle-speed-in
-# net spindle-index-enable hm2_5i25.0.encoder.00.index-enable <=> motion.spindle-index-enable
-# 
-# # ---setup spindle control signals---
-# 
-# net spindle-vel-cmd-rps        <=  motion.spindle-speed-out-rps
-# net spindle-vel-cmd-rps-abs    <=  motion.spindle-speed-out-rps-abs
-# net spindle-ccw                <=  motion.spindle-reverse
-# net spindle-brake              <=  motion.spindle-brake
-# net spindle-at-speed           =>  motion.spindle-at-speed
-# net spindle-index-enable      <=>  motion.spindle-index-enable
 
 net spindle-revs             <=   hm2_5i25.0.encoder.00.position
 net spindle-vel-fb-rps       <=   hm2_5i25.0.encoder.00.velocity
@@ -294,11 +276,7 @@ net spindle-index-enable     <=>  hm2_5i25.0.encoder.00.index-enable
 # ---setup spindle control signals---
 
 net spindle-vel-cmd-rps        <=  motion.spindle-speed-out-rps
-#net spindle-vel-cmd-rps-abs    <=  motion.spindle-speed-out-rps-abs
 net spindle-vel-cmd-rpm        <=  motion.spindle-speed-out
-# net spindle-vel-cmd-rpm-abs    <=  motion.spindle-speed-out-abs
-# net spindle-enable             <=  motion.spindle-on
-# net spindle-cw                 <=  motion.spindle-forward
 net spindle-ccw                <=  motion.spindle-reverse
 net spindle-brake              <=  motion.spindle-brake
 net spindle-revs               =>  motion.spindle-revs
