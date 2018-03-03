@@ -27,6 +27,25 @@ addf scale.1 servo-thread
 loadrt lowpass
 addf lowpass.0 servo-thread
 
+# ---- Drawbar manual button ----
+
+# Drawbar button debouncing
+# https://forum.linuxcnc.org/24-hal-components/32319-debounce
+loadrt debounce cfg=1
+addf debounce.0 servo-thread
+setp debounce.0.delay 300		# 10ms based on 1ms servo thread
+
+# Link probe input on black BoB v1 to drawbar-enable signal
+loadrt toggle count=1
+addf toggle.0 servo-thread
+
+setp hm2_5i25.0.gpio.005.is_output true
+
+net drawbar-button-debounced debounce.0.0.in <= hm2_5i25.0.gpio.007.in_not
+net drawbar-debounced-toggle toggle.0.in <= debounce.0.0.out
+
+net drawbar-engage-toggle <= hm2_5i25.0.gpio.005.out toggle.0.out
+
 # loadrt and2 count=1
 # addf and2.0 servo-thread
 
