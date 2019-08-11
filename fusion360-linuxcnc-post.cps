@@ -1430,7 +1430,8 @@ function onClose() {
 
   setWorkPlane(new Vector(0, 0, 0)); // reset working plane
 
-  writeRetract(X, Y);
+  // Uncomment to send to G53 X0 Y0 on program end.
+  // writeRetract(X, Y);
 
   onImpliedCommand(COMMAND_END);
   onImpliedCommand(COMMAND_STOP_SPINDLE);
