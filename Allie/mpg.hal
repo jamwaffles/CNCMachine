@@ -1,0 +1,83 @@
+# MPG (jog wheel) config
+#
+# MPG is plugged into secondary (internal) connector via a DB25 breakout cable. Pinout can be found in Excel spreadsheet on OneDrive
+#
+# This config requires `numencoders=2` when loading the Mesa component. It uses the second encoder, as the first is connected to the spindle motor
+
+# Add component to mux axis selection into the selected axis
+loadrt mux16 names=jogincr
+addf jogincr                  servo-thread
+
+# --- JOINT-SELECT-A ---
+net joint-select-a     <=  hm2_5i25.0.gpio.017.in_not
+
+# --- JOINT-SELECT-B ---
+net joint-select-b     <=  hm2_5i25.0.gpio.018.in_not
+
+# --- JOINT-SELECT-C ---
+net joint-select-c     <=  hm2_5i25.0.gpio.019.in_not
+
+# --- JOG-INCR-A ---
+net jog-incr-a     <=  hm2_5i25.0.gpio.020.in_not
+
+# --- JOG-INCR-B ---
+net jog-incr-b     <=  hm2_5i25.0.gpio.021.in_not
+
+# --- JOG-INCR-C ---
+net jog-incr-c     <=  hm2_5i25.0.gpio.022.in_not
+
+# --- ESTOP-EXT ---
+net estop-ext     <=  hm2_5i25.0.gpio.023.in_not
+
+# ---jogwheel signals to mesa encoder - shared MPG---
+
+net joint-selected-count     <=  hm2_5i25.0.encoder.01.count
+
+#  ---mpg signals---
+
+#       for axis x MPG
+setp    joint.0.jog-vel-mode 1
+net selected-jog-incr    =>  joint.0.jog-scale
+net joint-select-a       =>  joint.0.jog-enable
+net joint-selected-count =>  joint.0.jog-counts
+
+#       for axis y MPG
+setp    joint.1.jog-vel-mode 1
+net selected-jog-incr    =>  joint.1.jog-scale
+net joint-select-b       =>  joint.1.jog-enable
+net joint-selected-count =>  joint.1.jog-counts
+
+#       for axis z MPG
+setp    joint.2.jog-vel-mode 1
+net selected-jog-incr    =>  joint.2.jog-scale
+net joint-select-c       =>  joint.2.jog-enable
+net joint-selected-count =>  joint.2.jog-counts
+
+
+# connect selectable mpg jog increments 
+# Note that increments of 0.025 scale to 0.1 due to 4x scaling of encoder pulses vs clicks
+
+net jog-incr-a           =>  jogincr.sel0
+net jog-incr-b           =>  jogincr.sel1
+net jog-incr-c           =>  jogincr.sel2
+net jog-incr-d           =>  jogincr.sel3
+net selected-jog-incr    <=  jogincr.out-f
+    setp jogincr.debounce-time      0.200000
+    setp jogincr.use-graycode      False
+    setp jogincr.suppress-no-input True
+    setp jogincr.in00          0.000000
+    setp jogincr.in01          0.000250
+    setp jogincr.in02          0.002500
+    setp jogincr.in03          0.000000
+    setp jogincr.in04          0.025000
+    setp jogincr.in05          0.000000
+    setp jogincr.in06          0.000000
+    setp jogincr.in07          0.000000
+    setp jogincr.in08          0.000000
+    setp jogincr.in09          0.000000
+    setp jogincr.in10          0.000000
+    setp jogincr.in11          0.000000
+    setp jogincr.in12          0.000000
+    setp jogincr.in13          0.000000
+    setp jogincr.in14          0.000000
+    setp jogincr.in15          0.000000

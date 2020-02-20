@@ -5,7 +5,7 @@
 loadrt trivkins
 loadrt motmod servo_period_nsec=150000 num_joints=3
 loadrt hostmot2
-loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=1 num_pwmgens=0 num_stepgens=3" 
+loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=2 num_pwmgens=0 num_stepgens=3" 
 setp    hm2_5i25.0.watchdog.timeout_ns 5000000
 loadrt pid names=pid.x,pid.y,pid.z,pid.s
 loadrt encoder num_chan=1
@@ -361,7 +361,7 @@ net machine-is-enabled        <=  motion.motion-enabled
 #  ---estop signals---
 
 net estop-out     <=  iocontrol.0.user-enable-out
-net estop-out     =>  iocontrol.0.emc-enable-in
+net estop-ext     =>  iocontrol.0.emc-enable-in
 
 #  ---manual tool change signals---
 
