@@ -1,0 +1,35 @@
+T1 P1 D3.000000 Z-6.542100 ;2 flute 45 degree helix alu power solid carbide standard length slot drills (e5522 series) (flat end mill) 
+T2 P2 D5.000000 Z+90.627100 ;tin coated hss 5% cobalt gold-p 5xd jobber drill - yg-1 (dlgp195 series) (drill) 
+T3 P3 D3.000000 Z+5.902160 ;tin coated hss 5% cobalt gold-p 5xd jobber drill - yg-1 (dlgp195 series) (drill) 
+T4 P4 D5.000000 Z-6.564460 ;hss 8% cobalt 120 degree uncoated nc spotting drill - yg-1 (d2307 series) (spot drill) 
+T5 P5 D6.000000 Z-4.040370 ;3 flute alu power carbide 45 degree helix long length solid carbide (flat end mill) 
+T6 P6 D5.000000 Z-16.693400 ;2 flute 90 degree solid carbide drill mill (chamfer mill) 
+T7 P7 D6.000000 Z+13.478100 ;2 flute 42 degree helix alu power long length hss-co8 slot drill (flat end mill) 
+T8 P8 D8.300000 Z-26.978500 ;(chamfer mill) 
+T9 P9 D6.000000 Z-5.606780 ;(ball end mill) 
+T10 P10 D6.000000 ;2 flute alu power carbide 45 degree helix short length solid carbide (flat end mill) 
+T11 P11 D2.000000 ;2 flute uncoated carbide ball nose standard length slot drill (ball end mill) 
+T12 P12 D50.000000 Z-3.202260 ;45 deg indexable face mill for lnmx inserts (steel) 
+T13 P13 D3.000000 ;3 flute alu power carbide 45 degree helix long length corner radius solid carbide (e5e51 series) (flat end mill) 
+T14 P14 D8.000000 ;tin coated hss 5% cobalt gold-p 5xd jobber drill - yg-1 (dlgp195 series) (drill) 
+T15 P15 D5.000000 Z-14.621500 ;3 flute carbide end mill for aluminium 5mm diameter 45° helix (flat end mill) 
+T16 P16 D5.500000 Z+96.860200 ;5.5mm drill 
+T17 P17 D0.001000 Z-12.493700 ;60 deg engraving tool 
+T25 P25 D2.500000 Z-4.865480 ;tin coated hss 5% cobalt gold-p 5xd jobber drill - yg-1 (dlgp195 series) 
+T26 P26 D3.000000 Z-2.025920 ;metric coarse spiral flute hsse tin coated combo machine taps - yg-1 (td804 series) 
+T27 P27 D4.200000 Z+14.567800 ;tin coated hss 5% cobalt gold-p 5xd jobber drill - yg-1 (dlgp195 series) 
+T28 P28 D5.000000 Z+2.007500 ;metric coarse spiral flute hsse tin coated combo machine taps - yg-1 (td804 series) 
+T30 P30 D4.500000 Z+14.893500 ;tin coated hss 5% cobalt gold-p 5xd jobber drill - yg-1 (dlgp195 series) 
+T24 P24 D1.500000 Z+51.460600 ;1.5mm drill 
+T29 P29 D3.500000 Z+76.602000 ;tin coated hss 5% cobalt gold-p 5xd jobber drill - yg-1 (dlgp195 series) 
+T18 P18 D2.000000 Z-6.200990 ;2mm 2 flute polished carbide 
+T31 P31 D5.000000 Z-16.702000 ;3 flute steel 
+T32 P32 D12.000000 Z-9.905510 ;4 flute carbide coated 
+T33 P33 D6.000000 Z-4.395960 ;3 flute steel ripper 
+T34 P34 D6.000000 Z-13.402800 ;3 flute steel nc mill g9f43060n 
+T99 P99 D10.000000 Z+18.573300 ;touch probe 
+T36 P36 D8.000000 Z+5.750090 ;coarse pitch ripper 8mm 3 flute 
+T35 P35 D8.000000 Z+2.788290 ;4 flute 8mm steel only one 
+T38 P38 D6.000000 Z-6.612500 ;4 flute long length pm60 only one end mill with multiple helix - yg-1 (gyg02 series) 
+T39 P39 D5.000000 Z+90.814900 ;5mm drill 
+T40 P40 D10.000000 Z+130.685560 ;10mm drill 

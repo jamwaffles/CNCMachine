@@ -283,14 +283,14 @@ net spindle-index-enable     <=>  hm2_5i25.0.encoder.00.index-enable
 
 # ---setup spindle control signals---
 
-net spindle-vel-cmd-rps        <=  spindle.0.speed-out-rps
-net spindle-vel-cmd-rpm        <=  spindle.0.speed-out
-net spindle-ccw                <=  spindle.0.reverse
-net spindle-brake              <=  spindle.0.brake
-net spindle-revs               =>  spindle.0.revs
-net spindle-at-speed           =>  spindle.0.at-speed
-net spindle-vel-fb-rps         =>  spindle.0.speed-in
-net spindle-index-enable      <=>  spindle.0.index-enable
+net spindle-vel-cmd-rps        <=  motion.spindle-speed-out-rps
+net spindle-vel-cmd-rpm        <=  motion.spindle-speed-out
+net spindle-ccw                <=  motion.spindle-reverse
+net spindle-brake              <=  motion.spindle-brake
+net spindle-revs               =>  motion.spindle-revs
+net spindle-at-speed           =>  motion.spindle-at-speed
+net spindle-vel-fb-rps         =>  motion.spindle-speed-in
+net spindle-index-enable      <=>  motion.spindle-index-enable
 
 net spindle-vel-fb-rps => abs.0.in
 net spindle-vel-fb-rps-abs <= abs.0.out
@@ -335,9 +335,9 @@ net jog-z-neg             halui.axis.z.minus
 net jog-z-analog          halui.axis.z.analog
 net jog-selected-pos      halui.axis.selected.plus
 net jog-selected-neg      halui.axis.selected.minus
-net spindle-manual-cw     halui.spindle.0.forward
-net spindle-manual-ccw    halui.spindle.0.reverse
-net spindle-manual-stop   halui.spindle.0.stop
+net spindle-manual-cw     halui.spindle.forward
+net spindle-manual-ccw    halui.spindle.reverse
+net spindle-manual-stop   halui.spindle.stop
 net machine-is-on         halui.machine.is-on
 net jog-speed             halui.axis.jog-speed 
 net MDI-mode              halui.mode.is-mdi

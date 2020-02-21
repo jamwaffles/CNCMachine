@@ -27,17 +27,17 @@ setp scale.0.offset 1.37425797362894
 # Huanyang config
 #net vfd-comms halui.machine.is-on => spindle-vfd.enable
 #setp spindle-vfd.enable 1
-#net spindle-fwd spindle.0.forward => spindle-vfd.spindle-forward
-#net spindle-reverse spindle.0.reverse => spindle-vfd.spindle-reverse
-#net spindle-speed-cmd  spindle.0.speed-out-abs => spindle-vfd.speed-command
-#net spindle-on spindle.0.on => spindle-vfd.spindle-on
-#net spindle-at-speed spindle.0.at-speed => spindle-vfd.spindle-at-speed
+#net spindle-fwd motion.spindle-forward => spindle-vfd.spindle-forward
+#net spindle-reverse motion.spindle-reverse => spindle-vfd.spindle-reverse
+#net spindle-speed-cmd  motion.spindle-speed-out-abs => spindle-vfd.speed-command
+#net spindle-on motion.spindle-on => spindle-vfd.spindle-on
+#net spindle-at-speed motion.spindle-at-speed => spindle-vfd.spindle-at-speed
 
 # WJ200 config
 setp wj200-vfd.0.enable true
-net spindle-speed-scale spindle.0.speed-out-abs => scale.0.in
-net spindle-fwd spindle.0.forward => wj200-vfd.0.reverse
-# net spindle-at-speed spindle.0.at-speed => wj200-vfd.0.is-at-speed
+net spindle-speed-scale motion.spindle-speed-out-abs => scale.0.in
+net spindle-fwd motion.spindle-forward => wj200-vfd.0.reverse
+# net spindle-at-speed motion.spindle-at-speed => wj200-vfd.0.is-at-speed
 net spindle-speed-cmd scale.0.out => wj200-vfd.0.commanded-frequency
-net spindle-on spindle.0.on => wj200-vfd.0.run
+net spindle-on motion.spindle-on => wj200-vfd.0.run
 net spindle-is-running <= wj200-vfd.0.is-running
