@@ -37,21 +37,21 @@ net joint-selected-count     <=  hm2_5i25.0.encoder.01.count
 
 #       for axis x MPG
 setp    joint.0.jog-vel-mode 1
-net selected-jog-incr    =>  joint.0.jog-scale
-net joint-select-a       =>  joint.0.jog-enable
-net joint-selected-count =>  joint.0.jog-counts
+net selected-jog-incr    =>  joint.0.jog-scale axis.x.jog-scale
+net joint-select-a       =>  joint.0.jog-enable axis.x.jog-enable
+net joint-selected-count =>  joint.0.jog-counts axis.x.jog-counts
 
 #       for axis y MPG
 setp    joint.1.jog-vel-mode 1
-net selected-jog-incr    =>  joint.1.jog-scale
-net joint-select-b       =>  joint.1.jog-enable
-net joint-selected-count =>  joint.1.jog-counts
+net selected-jog-incr    =>  joint.1.jog-scale axis.y.jog-scale
+net joint-select-b       =>  joint.1.jog-enable axis.y.jog-enable
+net joint-selected-count =>  joint.1.jog-counts axis.y.jog-counts
 
 #       for axis z MPG
 setp    joint.2.jog-vel-mode 1
-net selected-jog-incr    =>  joint.2.jog-scale
-net joint-select-c       =>  joint.2.jog-enable
-net joint-selected-count =>  joint.2.jog-counts
+net selected-jog-incr    =>  joint.2.jog-scale axis.z.jog-scale
+net joint-select-c       =>  joint.2.jog-enable axis.z.jog-enable
+net joint-selected-count =>  joint.2.jog-counts axis.z.jog-counts
 
 
 # connect selectable mpg jog increments 
