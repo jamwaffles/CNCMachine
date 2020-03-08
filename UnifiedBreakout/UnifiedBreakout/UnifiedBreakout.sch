@@ -1,0 +1,278 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:DB25_Female_MountingHoles J1
+U 1 1 5E62BC59
+P 800 2050
+F 0 "J1" H 979 1959 50  0000 L CNN
+F 1 "MESA P3" H 979 2050 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 800 2050 50  0001 C CNN
+F 3 " ~" H 800 2050 50  0001 C CNN
+	1    800  2050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:DB25_Female_MountingHoles J2
+U 1 1 5E62E73C
+P 2350 9350
+F 0 "J2" H 2529 9259 50  0000 L CNN
+F 1 "MESA P2" H 2529 9350 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 2350 9350 50  0001 C CNN
+F 3 " ~" H 2350 9350 50  0001 C CNN
+	1    2350 9350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-40.52 K1
+U 1 1 5E6314EF
+P 7500 950
+F 0 "K1" H 8130 996 50  0000 L CNN
+F 1 "MOTOR POWER" H 8130 905 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 8850 920 50  0001 C CNN
+F 3 "http://gfinder.findernet.com/assets/Series/353/S40EN.pdf" H 7500 950 50  0001 C CNN
+	1    7500 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-40.52 K2
+U 1 1 5E633A1F
+P 7500 1850
+F 0 "K2" H 8130 1896 50  0000 L CNN
+F 1 "MIST" H 8130 1805 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 8850 1820 50  0001 C CNN
+F 3 "http://gfinder.findernet.com/assets/Series/353/S40EN.pdf" H 7500 1850 50  0001 C CNN
+	1    7500 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:FINDER-40.52 K3
+U 1 1 5E63401D
+P 7500 2850
+F 0 "K3" H 8130 2896 50  0000 L CNN
+F 1 "DRAWBAR" H 8130 2805 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 8850 2820 50  0001 C CNN
+F 3 "http://gfinder.findernet.com/assets/Series/353/S40EN.pdf" H 7500 2850 50  0001 C CNN
+	1    7500 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:RJ45 J3
+U 1 1 5E639812
+P 1700 5700
+F 0 "J3" H 1757 6367 50  0000 C CNN
+F 1 "ENCODER IN" H 1757 6276 50  0000 C CNN
+F 2 "Connector_RJ:RJ45_Amphenol_54602-x08_Horizontal" V 1700 5725 50  0001 C CNN
+F 3 "~" V 1700 5725 50  0001 C CNN
+	1    1700 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:DB25_Female_MountingHoles J12
+U 1 1 5E6411E4
+P 10700 5650
+F 0 "J12" H 10880 5652 50  0000 L CNN
+F 1 "PENDANT" H 10880 5561 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 10700 5650 50  0001 C CNN
+F 3 " ~" H 10700 5650 50  0001 C CNN
+	1    10700 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB15_Female_MountingHoles J11
+U 1 1 5E6438F3
+P 1800 6600
+F 0 "J11" H 1954 6602 50  0000 L CNN
+F 1 "ENCODER OUT" H 1954 6511 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset4.94mm_Housed_MountingHolesOffset7.48mm" H 1800 6600 50  0001 C CNN
+F 3 " ~" H 1800 6600 50  0001 C CNN
+	1    1800 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:RJ12 J4
+U 1 1 5E646FCB
+P 9550 6400
+F 0 "J4" H 9607 6967 50  0000 C CNN
+F 1 "LIM X" H 9607 6876 50  0000 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 9550 6425 50  0001 C CNN
+F 3 "~" V 9550 6425 50  0001 C CNN
+	1    9550 6400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:RJ12 J9
+U 1 1 5E647CB9
+P 9550 7250
+F 0 "J9" H 9607 7817 50  0000 C CNN
+F 1 "LIM Y" H 9607 7726 50  0000 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 9550 7275 50  0001 C CNN
+F 3 "~" V 9550 7275 50  0001 C CNN
+	1    9550 7250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:RJ12 J10
+U 1 1 5E64828D
+P 9550 8100
+F 0 "J10" H 9607 8667 50  0000 C CNN
+F 1 "LIM Z" H 9607 8576 50  0000 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 9550 8125 50  0001 C CNN
+F 3 "~" V 9550 8125 50  0001 C CNN
+	1    9550 8100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:ATX-24 J7
+U 1 1 5E648DC2
+P 4500 7250
+F 0 "J7" H 4500 7917 50  0000 C CNN
+F 1 "ATX-24" H 4500 7826 50  0000 C CNN
+F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5566-24A_2x12_P4.20mm_Vertical" H 4500 7150 50  0001 C CNN
+F 3 "https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33" H 6900 6700 50  0001 C CNN
+	1    4500 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:RJ12 J14
+U 1 1 5E654A2E
+P 8250 4050
+F 0 "J14" H 8307 4617 50  0000 C CNN
+F 1 "PROBE" H 8307 4526 50  0000 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 8250 4075 50  0001 C CNN
+F 3 "~" V 8250 4075 50  0001 C CNN
+	1    8250 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:RJ12 J13
+U 1 1 5E65640E
+P 8000 5350
+F 0 "J13" H 8057 5917 50  0000 C CNN
+F 1 "DRAWBAR" H 8057 5826 50  0000 C CNN
+F 2 "Connector_RJ:RJ12_Amphenol_54601" V 8000 5375 50  0001 C CNN
+F 3 "~" V 8000 5375 50  0001 C CNN
+	1    8000 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E664C88
+P 4200 3550
+F 0 "#PWR04" H 4200 3300 50  0001 C CNN
+F 1 "GND" H 4205 3377 50  0000 C CNN
+F 2 "" H 4200 3550 50  0001 C CNN
+F 3 "" H 4200 3550 50  0001 C CNN
+	1    4200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5E6654AD
+P 800 3600
+F 0 "#PWR01" H 800 3350 50  0001 C CNN
+F 1 "GND" H 805 3427 50  0000 C CNN
+F 2 "" H 800 3600 50  0001 C CNN
+F 3 "" H 800 3600 50  0001 C CNN
+	1    800  3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E665787
+P 4500 8050
+F 0 "#PWR05" H 4500 7800 50  0001 C CNN
+F 1 "GND" H 4505 7877 50  0000 C CNN
+F 2 "" H 4500 8050 50  0001 C CNN
+F 3 "" H 4500 8050 50  0001 C CNN
+	1    4500 8050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5E667BA1
+P 850 6800
+F 0 "#PWR02" H 850 6550 50  0001 C CNN
+F 1 "GND" H 855 6627 50  0000 C CNN
+F 2 "" H 850 6800 50  0001 C CNN
+F 3 "" H 850 6800 50  0001 C CNN
+	1    850  6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E668242
+P 2350 10850
+F 0 "#PWR03" H 2350 10600 50  0001 C CNN
+F 1 "GND" H 2355 10677 50  0000 C CNN
+F 2 "" H 2350 10850 50  0001 C CNN
+F 3 "" H 2350 10850 50  0001 C CNN
+	1    2350 10850
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 2950 750  1050 700 
+U 5E6754F3
+F0 "X MOT" 50
+F1 "motor_connector.sch" 50
+F2 "STEP" I L 2950 850 50 
+F3 "DIR" I L 2950 1000 50 
+F4 "ENABLE" I L 2950 1150 50 
+F5 "ALARM" O L 2950 1350 50 
+F6 "GND" U R 4000 1350 50 
+$EndSheet
+$Sheet
+S 2950 1750 1050 700 
+U 5E67FD54
+F0 "Y MOT" 50
+F1 "motor_connector.sch" 50
+F2 "STEP" I L 2950 1850 50 
+F3 "DIR" I L 2950 2000 50 
+F4 "ENABLE" I L 2950 2150 50 
+F5 "ALARM" O L 2950 2350 50 
+F6 "GND" U R 4000 2350 50 
+$EndSheet
+$Sheet
+S 2950 2750 1050 700 
+U 5E67FFE4
+F0 "Z MOT" 50
+F1 "motor_connector.sch" 50
+F2 "STEP" I L 2950 2850 50 
+F3 "DIR" I L 2950 3000 50 
+F4 "ENABLE" I L 2950 3150 50 
+F5 "ALARM" O L 2950 3350 50 
+F6 "GND" U R 4000 3350 50 
+$EndSheet
+Wire Wire Line
+	4000 1350 4200 1350
+Wire Wire Line
+	4200 1350 4200 2350
+Wire Wire Line
+	4000 2350 4200 2350
+Connection ~ 4200 2350
+Wire Wire Line
+	4200 2350 4200 3350
+Wire Wire Line
+	4000 3350 4200 3350
+Connection ~ 4200 3350
+Wire Wire Line
+	4200 3350 4200 3550
+$Sheet
+S 1500 1300 1100 1050
+U 5E686E64
+F0 "MESA P3" 50
+F1 "mesa_p3_back_panel.sch" 50
+$EndSheet
+$EndSCHEMATC
