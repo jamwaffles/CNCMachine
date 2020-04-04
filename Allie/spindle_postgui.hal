@@ -1,0 +1,2 @@
+net spindle-vel-fb-rpm => pyvcp.spindle-speed
+net spindle-at-speed => pyvcp.spindle-at-speed-led

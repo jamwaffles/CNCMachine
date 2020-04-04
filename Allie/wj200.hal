@@ -1,0 +1,43 @@
+# Spindle config
+# Also contains legacy Huanyang config for posterity
+
+# Load the Huanyang VFD user component
+#loadusr -Wn spindle-vfd hy_vfd -n spindle-vfd -t 1 -d /dev/ttyUSB0 -p none -r 38400 -s 1
+
+loadusr -W wj200_vfd --baud 57600 --device /dev/ttyUSB0
+setp wj200-vfd.0.mbslaveaddr 1
+
+# Motor pulley: 40 teeth
+# Spindle pulley: 50 teeth
+# Max VFD freq: 240Hz
+# setp scale.0.gain 0.04287850719
+# http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
+
+# Motor pulley: 50 teeth
+# Spindle pulley: 50 teeth
+# Max VFD freq: 240Hz
+# 8 pole, but doesn't seem to matter?
+# http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
+# Defined in Allie.hal
+# setp scale.0.gain 0.0341592654
+setp scale.0.gain 0.033662736821338
+setp scale.0.offset 1.37425797362894
+
+
+# Huanyang config
+#net vfd-comms halui.machine.is-on => spindle-vfd.enable
+#setp spindle-vfd.enable 1
+#net spindle-fwd spindle.0.forward => spindle-vfd.spindle-forward
+#net spindle-reverse spindle.0.reverse => spindle-vfd.spindle-reverse
+#net spindle-speed-cmd  spindle.0.speed-out-abs => spindle-vfd.speed-command
+#net spindle-on spindle.0.on => spindle-vfd.spindle-on
+#net spindle-at-speed spindle.0.at-speed => spindle-vfd.spindle-at-speed
+
+# WJ200 config
+setp wj200-vfd.0.enable true
+net spindle-speed-scale spindle.0.speed-out-abs => scale.0.in
+net spindle-fwd spindle.0.forward => wj200-vfd.0.reverse
+# net spindle-at-speed spindle.0.at-speed => wj200-vfd.0.is-at-speed
+net spindle-speed-cmd scale.0.out => wj200-vfd.0.commanded-frequency
+net spindle-on spindle.0.on => wj200-vfd.0.run
+net spindle-is-running <= wj200-vfd.0.is-running

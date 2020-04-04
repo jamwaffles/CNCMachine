@@ -1,43 +1,88 @@
-# Spindle config
-# Also contains legacy Huanyang config for posterity
+#*******************
+#  SPINDLE
+#*******************
 
-# Load the Huanyang VFD user component
-#loadusr -Wn spindle-vfd hy_vfd -n spindle-vfd -t 1 -d /dev/ttyUSB0 -p none -r 38400 -s 1
+setp   pid.s.Pgain     [SPINDLE_9]P
+setp   pid.s.Igain     [SPINDLE_9]I
+setp   pid.s.Dgain     [SPINDLE_9]D
+setp   pid.s.bias      [SPINDLE_9]BIAS
+setp   pid.s.FF0       [SPINDLE_9]FF0
+setp   pid.s.FF1       [SPINDLE_9]FF1
+setp   pid.s.FF2       [SPINDLE_9]FF2
+setp   pid.s.deadband  [SPINDLE_9]DEADBAND
+setp   pid.s.maxoutput [SPINDLE_9]MAX_OUTPUT
+setp   pid.s.error-previous-target true
+setp   pid.s.maxerror .0005
 
-loadusr -W wj200_vfd --baud 57600 --device /dev/ttyUSB0
-setp wj200-vfd.0.mbslaveaddr 1
+net spindle-index-enable  <=> pid.s.index-enable
+net spindle-enable        =>  pid.s.enable
+net spindle-vel-cmd-rpm     => pid.s.command
+net spindle-vel-fb-rpm      => pid.s.feedback
+net spindle-output        <=  pid.s.output
 
-# Motor pulley: 40 teeth
-# Spindle pulley: 50 teeth
-# Max VFD freq: 240Hz
-# setp scale.0.gain 0.04287850719
-# http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
+# Step Gen signals/setup
 
-# Motor pulley: 50 teeth
-# Spindle pulley: 50 teeth
-# Max VFD freq: 240Hz
-# 8 pole, but doesn't seem to matter?
-# http://linuxcnc.org/docs/html/examples/spindle.html#_0_10v_spindle_speed
-# Defined in Allie.hal
-# setp scale.0.gain 0.0341592654
-setp scale.0.gain 0.033662736821338
-setp scale.0.offset 1.37425797362894
+setp   hm2_5i25.0.stepgen.06.dirsetup        [SPINDLE_9]DIRSETUP
+setp   hm2_5i25.0.stepgen.06.dirhold         [SPINDLE_9]DIRHOLD
+setp   hm2_5i25.0.stepgen.06.steplen         [SPINDLE_9]STEPLEN
+setp   hm2_5i25.0.stepgen.06.stepspace       [SPINDLE_9]STEPSPACE
+setp   hm2_5i25.0.stepgen.06.position-scale  [SPINDLE_9]STEP_SCALE
+# 0 = step/dir, 2 = quadrature
+setp   hm2_5i25.0.stepgen.06.step_type        0
+# 1 = velocity mode
+setp   hm2_5i25.0.stepgen.06.control-type     1
+setp   hm2_5i25.0.stepgen.06.maxaccel         [SPINDLE_9]MAX_ACCELERATION
+setp   hm2_5i25.0.stepgen.06.maxvel           [SPINDLE_9]MAX_VELOCITY
 
+# Invert direction pin
+setp hm2_5i25.0.gpio.027.invert_output true
 
-# Huanyang config
-#net vfd-comms halui.machine.is-on => spindle-vfd.enable
-#setp spindle-vfd.enable 1
-#net spindle-fwd spindle.0.forward => spindle-vfd.spindle-forward
-#net spindle-reverse spindle.0.reverse => spindle-vfd.spindle-reverse
-#net spindle-speed-cmd  spindle.0.speed-out-abs => spindle-vfd.speed-command
-#net spindle-on spindle.0.on => spindle-vfd.spindle-on
-#net spindle-at-speed spindle.0.at-speed => spindle-vfd.spindle-at-speed
+net spindle-enable          =>  hm2_5i25.0.stepgen.06.enable
+net spindle-vel-cmd-rps     =>  hm2_5i25.0.stepgen.06.velocity-cmd
 
-# WJ200 config
-setp wj200-vfd.0.enable true
-net spindle-speed-scale spindle.0.speed-out-abs => scale.0.in
-net spindle-fwd spindle.0.forward => wj200-vfd.0.reverse
-# net spindle-at-speed spindle.0.at-speed => wj200-vfd.0.is-at-speed
-net spindle-speed-cmd scale.0.out => wj200-vfd.0.commanded-frequency
-net spindle-on spindle.0.on => wj200-vfd.0.run
-net spindle-is-running <= wj200-vfd.0.is-running
+# ---closedloop stepper signals---
+
+# net s-pos-cmd    <= joint.9.motor-pos-cmd
+# net s-vel-cmd    <= joint.9.vel-cmd
+# net s-output     <= hm2_5i25.0.stepgen.06.velocity-cmd
+net s-pos-fb     <= hm2_5i25.0.stepgen.06.position-fb
+# net s-pos-fb     => joint.9.motor-pos-fb
+# net s-enable     <= joint.9.amp-enable-out
+# net s-enable     => hm2_5i25.0.stepgen.06.enable
+
+# ---Encoder feedback signals/setup---
+
+setp    hm2_5i25.0.encoder.00.counter-mode 0
+setp    hm2_5i25.0.encoder.00.filter 1
+setp    hm2_5i25.0.encoder.00.index-invert 0
+setp    hm2_5i25.0.encoder.00.index-mask 0
+setp    hm2_5i25.0.encoder.00.index-mask-invert 0
+setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
+
+net spindle-revs             <=   hm2_5i25.0.encoder.00.position
+net spindle-vel-fb-rps       <=   hm2_5i25.0.encoder.00.velocity
+net spindle-vel-fb-rpm       <=   hm2_5i25.0.encoder.00.velocity-rpm
+net spindle-index-enable     <=>  hm2_5i25.0.encoder.00.index-enable
+
+# ---setup spindle control signals---
+
+net spindle-vel-cmd-rps        <=  spindle.0.speed-out-rps
+net spindle-vel-cmd-rps-abs    <=  spindle.0.speed-out-rps-abs
+net spindle-vel-cmd-rpm        <=  spindle.0.speed-out
+net spindle-vel-cmd-rpm-abs    <=  spindle.0.speed-out-abs
+net spindle-enable             <=  spindle.0.on
+net spindle-cw                 <=  spindle.0.forward
+net spindle-ccw                <=  spindle.0.reverse
+net spindle-brake              <=  spindle.0.brake
+net spindle-revs               =>  spindle.0.revs
+net spindle-at-speed           =>  spindle.0.at-speed
+net spindle-vel-fb-rps         =>  spindle.0.speed-in
+net spindle-index-enable      <=>  spindle.0.index-enable
+
+# ---Setup spindle at speed signals---
+
+net spindle-vel-cmd-rps    =>  near.0.in1
+net spindle-vel-fb-rps         =>  near.0.in2
+net spindle-at-speed       <=  near.0.out
+setp near.0.scale 1.000000
+setp near.0.difference 3.333333
