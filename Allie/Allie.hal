@@ -5,9 +5,9 @@
 loadrt trivkins
 loadrt motmod servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=3
 loadrt hostmot2
-loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=2 num_pwmgens=0 num_stepgens=7" 
+loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=2 num_pwmgens=0 num_stepgens=7"
 setp    hm2_5i25.0.watchdog.timeout_ns 5000000
-loadrt pid names=pid.x,pid.y,pid.z,pid.s
+loadrt pid names=pid.x,pid.y,pid.z,pid.s_pos,pid.s_vel
 loadrt encoder num_chan=1
 
 loadrt near
@@ -60,7 +60,6 @@ addf motion-controller        servo-thread
 addf pid.x.do-pid-calcs       servo-thread
 addf pid.y.do-pid-calcs       servo-thread
 addf pid.z.do-pid-calcs       servo-thread
-addf pid.s.do-pid-calcs       servo-thread
 addf hm2_5i25.0.write         servo-thread
 
 # external output signals
@@ -339,7 +338,7 @@ net spindle-manual-cw     halui.spindle.0.forward
 net spindle-manual-ccw    halui.spindle.0.reverse
 net spindle-manual-stop   halui.spindle.0.stop
 net machine-is-on         halui.machine.is-on
-net jog-speed             halui.axis.jog-speed 
+net jog-speed             halui.axis.jog-speed
 net MDI-mode              halui.mode.is-mdi
 
 #  ---coolant signals---

@@ -1,33 +1,50 @@
-#*******************
-#  SPINDLE
-#*******************
+# Heavily inspired by http://wiki.linuxcnc.org/uploads/orient.svg with changed signal names
+# Requires `pid.s_pos,pid.s_vel` to be added to a `loadrt pid` line
+# Example: loadrt pid names=pid.s_pos,pid.s_vel
 
-setp   pid.s.Pgain     [SPINDLE_9]P
-setp   pid.s.Igain     [SPINDLE_9]I
-setp   pid.s.Dgain     [SPINDLE_9]D
-setp   pid.s.bias      [SPINDLE_9]BIAS
-setp   pid.s.FF0       [SPINDLE_9]FF0
-setp   pid.s.FF1       [SPINDLE_9]FF1
-setp   pid.s.FF2       [SPINDLE_9]FF2
-setp   pid.s.deadband  [SPINDLE_9]DEADBAND
-setp   pid.s.maxoutput [SPINDLE_9]MAX_OUTPUT
-setp   pid.s.error-previous-target true
-setp   pid.s.maxerror .0005
+loadrt orient count=1
+loadrt mux2 count=1
 
-net spindle-index-enable  <=> pid.s.index-enable
-net spindle-enable        =>  pid.s.enable
-net spindle-vel-cmd-rpm     => pid.s.command
-net spindle-vel-fb-rpm      => pid.s.feedback
-net spindle-output        <=  pid.s.output
+addf pid.s_pos.do-pid-calcs       servo-thread
+addf pid.s_vel.do-pid-calcs       servo-thread
 
-# Step Gen signals/setup
+# ---
+# Component setup
+# ---
 
+# Position mode PID, used during orient
+setp   pid.s_pos.Pgain     [SPINDLE_9]POS_P
+setp   pid.s_pos.Igain     [SPINDLE_9]POS_I
+setp   pid.s_pos.Dgain     [SPINDLE_9]POS_D
+setp   pid.s_pos.bias      [SPINDLE_9]POS_BIAS
+setp   pid.s_pos.FF0       [SPINDLE_9]POS_FF0
+setp   pid.s_pos.FF1       [SPINDLE_9]POS_FF1
+setp   pid.s_pos.FF2       [SPINDLE_9]POS_FF2
+setp   pid.s_pos.deadband  [SPINDLE_9]POS_DEADBAND
+setp   pid.s_pos.maxoutput [SPINDLE_9]MAX_OUTPUT
+setp   pid.s_pos.error-previous-target true
+setp   pid.s_pos.maxerror .0005
+
+# Velocity mode PID, used during normal operation
+setp   pid.s_vel.Pgain     [SPINDLE_9]VEL_P
+setp   pid.s_vel.Igain     [SPINDLE_9]VEL_I
+setp   pid.s_vel.Dgain     [SPINDLE_9]VEL_D
+setp   pid.s_vel.bias      [SPINDLE_9]VEL_BIAS
+setp   pid.s_vel.FF0       [SPINDLE_9]VEL_FF0
+setp   pid.s_vel.FF1       [SPINDLE_9]VEL_FF1
+setp   pid.s_vel.FF2       [SPINDLE_9]VEL_FF2
+setp   pid.s_vel.deadband  [SPINDLE_9]VEL_DEADBAND
+setp   pid.s_vel.maxoutput [SPINDLE_9]MAX_OUTPUT
+setp   pid.s_vel.error-previous-target true
+setp   pid.s_vel.maxerror .0005
+
+# Spindle stepgen connected to P2 pin 6 and 7
 setp   hm2_5i25.0.stepgen.06.dirsetup        [SPINDLE_9]DIRSETUP
 setp   hm2_5i25.0.stepgen.06.dirhold         [SPINDLE_9]DIRHOLD
 setp   hm2_5i25.0.stepgen.06.steplen         [SPINDLE_9]STEPLEN
 setp   hm2_5i25.0.stepgen.06.stepspace       [SPINDLE_9]STEPSPACE
 setp   hm2_5i25.0.stepgen.06.position-scale  [SPINDLE_9]STEP_SCALE
-# 0 = step/dir, 2 = quadrature
+# 0 = step/dir, 2 = quadrature, among others
 setp   hm2_5i25.0.stepgen.06.step_type        0
 # 1 = velocity mode
 setp   hm2_5i25.0.stepgen.06.control-type     1
@@ -37,21 +54,10 @@ setp   hm2_5i25.0.stepgen.06.maxvel           [SPINDLE_9]MAX_VELOCITY
 # Invert direction pin
 setp hm2_5i25.0.gpio.027.invert_output true
 
-net spindle-enable          =>  hm2_5i25.0.stepgen.06.enable
-net spindle-vel-cmd-rps     =>  hm2_5i25.0.stepgen.06.velocity-cmd
+# Drive enable pin, P2 pin 8
+setp hm2_5i25.0.gpio.028.is_output true
 
-# ---closedloop stepper signals---
-
-# net s-pos-cmd    <= joint.9.motor-pos-cmd
-# net s-vel-cmd    <= joint.9.vel-cmd
-# net s-output     <= hm2_5i25.0.stepgen.06.velocity-cmd
-net s-pos-fb     <= hm2_5i25.0.stepgen.06.position-fb
-# net s-pos-fb     => joint.9.motor-pos-fb
-# net s-enable     <= joint.9.amp-enable-out
-# net s-enable     => hm2_5i25.0.stepgen.06.enable
-
-# ---Encoder feedback signals/setup---
-
+# Spindle encoder
 setp    hm2_5i25.0.encoder.00.counter-mode 0
 setp    hm2_5i25.0.encoder.00.filter 1
 setp    hm2_5i25.0.encoder.00.index-invert 0
@@ -59,13 +65,15 @@ setp    hm2_5i25.0.encoder.00.index-mask 0
 setp    hm2_5i25.0.encoder.00.index-mask-invert 0
 setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
 
-net spindle-revs             <=   hm2_5i25.0.encoder.00.position
-net spindle-vel-fb-rps       <=   hm2_5i25.0.encoder.00.velocity
-net spindle-vel-fb-rpm       <=   hm2_5i25.0.encoder.00.velocity-rpm
-net spindle-index-enable     <=>  hm2_5i25.0.encoder.00.index-enable
+# ---
+# Component wiring
+# ---
 
-# ---setup spindle control signals---
+# External connections
+# net spindle-orient-enable <= spindle.0.spindle-orient
+# net spindle-orient-angle <= spindle.0.spindle-orient-angle
 
+# Spindle connections
 net spindle-vel-cmd-rps        <=  spindle.0.speed-out-rps
 net spindle-vel-cmd-rps-abs    <=  spindle.0.speed-out-rps-abs
 net spindle-vel-cmd-rpm        <=  spindle.0.speed-out
@@ -79,10 +87,36 @@ net spindle-at-speed           =>  spindle.0.at-speed
 net spindle-vel-fb-rps         =>  spindle.0.speed-in
 net spindle-index-enable      <=>  spindle.0.index-enable
 
-# ---Setup spindle at speed signals---
+# Drive enable pin, P2 pin 8
+net spindle-enable => hm2_5i25.0.gpio.028.out
 
-net spindle-vel-cmd-rps    =>  near.0.in1
-net spindle-vel-fb-rps         =>  near.0.in2
-net spindle-at-speed       <=  near.0.out
-setp near.0.scale 1.000000
-setp near.0.difference 3.333333
+# Stepgen
+net spindle-enable => hm2_5i25.0.stepgen.06.enable
+
+# Encoder
+net spindle-revs <= hm2_5i25.0.encoder.00.position
+net spindle-vel-fb-rps <= hm2_5i25.0.encoder.00.velocity
+net spindle-vel-fb-rpm <= hm2_5i25.0.encoder.00.velocity-rpm
+net spindle-index-enable <=> hm2_5i25.0.encoder.00.index-enable
+
+# Velocity PID
+net spindle-enable => pid.s_vel.enable
+net spindle-vel-cmd-rpm => pid.s_vel.command
+net spindle-vel-fb-rpm => pid.s_vel.feedback
+net spindle-vel-output => pid.s_vel.output
+
+# Position PID
+net spindle-orient-cmd => pid.s_pos.command
+net spindle-revs => pid.s_pos.feedback
+net spindle-orient-enable => pid.s_pos.enable
+net spindle-pos-output => pid.s_pos.output
+
+# Orient component
+net spindle-orient-cmd <= orient.0.command
+net spindle-revs => orient.0.position
+net spindle-orient-enable => orient.0.enable
+
+# Mux - select between pos and vel modes
+net spindle-orient-enable => mux2.0.sel
+net spindle-pos-output => mux2.0.in0
+net spindle-vel-output => mux2.0.in1
