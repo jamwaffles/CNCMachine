@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pyvcp>
          <vbox>
-         <relief>RIDGE</relief>         
          <bd>6</bd>
                 <label>
                         <text>"Spindle Speed:"</text>
-                        <font>("Helvetica",20)</font>
+                        <font>("Helvetica",16)</font>
                 </label>
                 <bar>
                         <halpin>"spindle-speed"</halpin>
@@ -14,12 +13,12 @@
                 </bar>
                 <label>
                         <text>"Spindle-At-Speed:"</text>
-                        <font>("Helvetica",20)</font>
+                        <font>("Helvetica",16)</font>
                 </label>
                 <hbox>
                     <label>
                             <text>"             "</text>
-                            <font>("Helvetica",20)</font>
+                            <font>("Helvetica",16)</font>
                     </label>
                     <led>
                         <halpin>"spindle-at-speed-led"</halpin> 
