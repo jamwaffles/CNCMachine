@@ -8,21 +8,6 @@ loadrt hostmot2
 loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=2 num_pwmgens=0 num_stepgens=7"
 setp    hm2_5i25.0.watchdog.timeout_ns 5000000
 loadrt pid names=pid.x,pid.y,pid.z,pid.s_pos,pid.s_vel
-loadrt encoder num_chan=1
-
-loadrt near
-addf near.0 servo-thread
-
-loadrt abs count=2
-addf abs.0 servo-thread
-addf abs.1 servo-thread
-
-loadrt scale count=2
-addf scale.0 servo-thread
-addf scale.1 servo-thread
-
-loadrt lowpass
-addf lowpass.0 servo-thread
 
 # ---- Drawbar manual button ----
 
@@ -247,6 +232,22 @@ net z-pos-limit     =>  joint.2.pos-lim-sw-in
 # #  WJ200 SPINDLE S
 # #*******************
 
+# loadrt encoder num_chan=1
+# 
+# loadrt near
+# addf near.0 servo-thread
+# 
+# loadrt dd count=2
+# addf dd.0 servo-thread
+# addf dd.1 servo-thread
+# 
+# loadrt scale count=2
+# addf scale.0 servo-thread
+# addf scale.1 servo-thread
+# 
+# loadrt lowpass
+# addf lowpass.0 servo-thread
+
 # setp   pid.s.Pgain     [SPINDLE_9]P
 # setp   pid.s.Igain     [SPINDLE_9]I
 # setp   pid.s.Dgain     [SPINDLE_9]D
@@ -291,7 +292,7 @@ net z-pos-limit     =>  joint.2.pos-lim-sw-in
 # net spindle-vel-fb-rps         =>  spindle.0.speed-in
 # net spindle-index-enable      <=>  spindle.0.index-enable
 
-# net spindle-vel-fb-rps => abs.0.in
+# net spindle-vel-fb-rps => dd.0.in
 # net spindle-vel-fb-rps-abs <= abs.0.out
 
 # # ---Setup spindle at speed signals---
