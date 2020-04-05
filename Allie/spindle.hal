@@ -1,9 +1,16 @@
 # Heavily inspired by http://wiki.linuxcnc.org/uploads/orient.svg with changed signal names
 # Requires `pid.s_pos,pid.s_vel` to be added to a `loadrt pid` line
-# Example: loadrt pid names=pid.s_pos,pid.s_vel
+# Example: 
+#
+# loadrt pid names=pid.s_pos,pid.s_vel
 
 loadrt orient count=1
 loadrt mux2 count=1
+loadrt or2
+
+addf mux2.0 servo-thread
+addf orient.0 servo-thread
+addf or2.0 servo-thread
 
 addf pid.s_pos.do-pid-calcs       servo-thread
 addf pid.s_vel.do-pid-calcs       servo-thread
@@ -70,8 +77,8 @@ setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
 # ---
 
 # External connections
-# net spindle-orient-enable <= spindle.0.spindle-orient
-# net spindle-orient-angle <= spindle.0.spindle-orient-angle
+net spindle-orient-enable <= spindle.0.orient
+net spindle-orient-angle <= spindle.0.orient-angle
 
 # Spindle connections
 net spindle-vel-cmd-rps        <=  spindle.0.speed-out-rps
@@ -90,9 +97,6 @@ net spindle-index-enable      <=>  spindle.0.index-enable
 # Drive enable pin, P2 pin 8
 net spindle-enable => hm2_5i25.0.gpio.028.out
 
-# Stepgen
-net spindle-enable => hm2_5i25.0.stepgen.06.enable
-
 # Encoder
 net spindle-revs <= hm2_5i25.0.encoder.00.position
 net spindle-vel-fb-rps <= hm2_5i25.0.encoder.00.velocity
@@ -101,22 +105,31 @@ net spindle-index-enable <=> hm2_5i25.0.encoder.00.index-enable
 
 # Velocity PID
 net spindle-enable => pid.s_vel.enable
-net spindle-vel-cmd-rpm => pid.s_vel.command
-net spindle-vel-fb-rpm => pid.s_vel.feedback
-net spindle-vel-output => pid.s_vel.output
+net spindle-vel-cmd-rps => pid.s_vel.command
+net spindle-vel-fb-rps => pid.s_vel.feedback
+net spindle-vel-output <= pid.s_vel.output
 
 # Position PID
+net spindle-orient-enable => pid.s_pos.enable
 net spindle-orient-cmd => pid.s_pos.command
 net spindle-revs => pid.s_pos.feedback
-net spindle-orient-enable => pid.s_pos.enable
-net spindle-pos-output => pid.s_pos.output
+net spindle-pos-output <= pid.s_pos.output
 
 # Orient component
 net spindle-orient-cmd <= orient.0.command
 net spindle-revs => orient.0.position
 net spindle-orient-enable => orient.0.enable
+net spindle-orient-angle => orient.0.angle
 
 # Mux - select between pos and vel modes
 net spindle-orient-enable => mux2.0.sel
-net spindle-pos-output => mux2.0.in0
-net spindle-vel-output => mux2.0.in1
+net spindle-pos-output => mux2.0.in1
+net spindle-vel-output => mux2.0.in0
+net spindle-mux-output <= mux2.0.out
+
+# Stepgen closed loop
+net spindle-orient-enable => or2.0.in0 
+net spindle-enable => or2.0.in1
+net spindle-or or2.0.out => hm2_5i25.0.stepgen.06.enable
+
+net spindle-mux-output hm2_5i25.0.stepgen.06.velocity-cmd
