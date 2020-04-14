@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RAPC722BK
+D SWITCHCRAFT/CONXALL - RAPC722BK - CONNECTOR, DC POWER, SOCKET, 5A, THT
+K
+F http://www.mouser.com/datasheet/2/393/rapc722x_cd-371352.pdf
+$ENDCMP
+#
+#End Doc Library

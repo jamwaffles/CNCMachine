@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model RAPC722BK
+#/878296/234518/2.46/3/4/Connector
+DEF RAPC722BK J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "RAPC722BK" 650 200 50 H V L CNN
+F2 "RAPC722BK" 650 100 50 H I L CNN
+F3 "http://www.mouser.com/datasheet/2/393/rapc722x_cd-371352.pdf" 650 0 50 H I L CNN
+F4 "SWITCHCRAFT/CONXALL - RAPC722BK - CONNECTOR, DC POWER, SOCKET, 5A, THT" 650 -100 50 H I L CNN "Description"
+F5 "11" 650 -200 50 H I L CNN "Height"
+F6 "Switchcraft" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "RAPC722BK" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "502-RAPC722BK" 650 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=502-RAPC722BK" 650 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "7051541" 650 -700 50 H I L CNN "RS Part Number"
+F11 "http://uk.rs-online.com/web/p/products/7051541" 650 -800 50 H I L CNN "RS Price/Stock"
+F12 "70516947" 650 -900 50 H I L CNN "Allied_Number"
+F13 "https://www.alliedelec.com/switchcraft-rapc722bk/70516947/" 650 -1000 50 H I L CNN "Allied Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 800 0 200 L 50 50 0 0 U
+X 3 3 0 -100 200 R 50 50 0 0 U
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

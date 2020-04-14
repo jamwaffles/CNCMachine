@@ -18,7 +18,7 @@ L Connector:DB15_Female_MountingHoles J13
 U 1 1 5E9DE5F8
 P 6100 3500
 F 0 "J13" H 6254 3502 50  0000 L CNN
-F 1 "ENCODER IN" H 6254 3411 50  0000 L CNN
+F 1 "ENCODER OUT" H 6254 3411 50  0000 L CNN
 F 2 "Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 6100 3500 50  0001 C CNN
 F 3 " ~" H 6100 3500 50  0001 C CNN
 	1    6100 3500
@@ -69,7 +69,7 @@ L Connector:DB15_Female_MountingHoles J12
 U 1 1 5EA2910D
 P 3800 3500
 F 0 "J12" H 3706 4492 50  0000 C CNN
-F 1 "ENCODER OUT" H 3706 4401 50  0000 C CNN
+F 1 "ENCODER IN" H 3706 4401 50  0000 C CNN
 F 2 "Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 3800 3500 50  0001 C CNN
 F 3 " ~" H 3800 3500 50  0001 C CNN
 	1    3800 3500
