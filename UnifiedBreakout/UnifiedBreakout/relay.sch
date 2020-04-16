@@ -26,6 +26,9 @@ F 0 "RL2" V 4983 3250 50  0000 C CNN
 F 1 "JW2" V 5074 3250 50  0000 C CNN
 F 2 "Relay_THT:Relay_DPDT_Panasonic_JW2" H 6400 3200 50  0001 L CNN
 F 3 "http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_jw.pdf?via=ok" H 5750 3250 50  0001 C CNN
+F 4 "RTE24012" H 5750 3250 50  0001 C CNN "Alternative MPN"
+F 5 "RT424012" H 5750 3250 50  0001 C CNN "MPN"
+F 6 "TE Connectivity" H 5750 3250 50  0001 C CNN "Manufacturer"
 	1    5750 3250
 	0    1    1    0   
 $EndComp
@@ -90,6 +93,8 @@ F 0 "R11" H 4770 2546 50  0000 L CNN
 F 1 "680R" H 4770 2455 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4630 2500 50  0001 C CNN
 F 3 "~" H 4700 2500 50  0001 C CNN
+F 4 "CFR-25JB-52-680R" H 4700 2500 50  0001 C CNN "MPN"
+F 5 "Yageo" H 4700 2500 50  0001 C CNN "Manufacturer"
 	1    4700 2500
 	1    0    0    -1  
 $EndComp
@@ -152,6 +157,8 @@ F 0 "R10" V 3943 3450 50  0000 C CNN
 F 1 "2K2" V 4034 3450 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4080 3450 50  0001 C CNN
 F 3 "~" H 4150 3450 50  0001 C CNN
+F 4 "CFR-25JB-52-2K2" H 4150 3450 50  0001 C CNN "MPN"
+F 5 "Yageo" H 4150 3450 50  0001 C CNN "Manufacturer"
 	1    4150 3450
 	0    1    1    0   
 $EndComp

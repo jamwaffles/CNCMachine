@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 18
+Sheet 2 18
 Title ""
 Date ""
 Rev ""
@@ -21,10 +21,12 @@ AR Path="/5E6754F3/5E675BA7" Ref="J7"  Part="1"
 AR Path="/5E67ECBC/5E675BA7" Ref="J?"  Part="1" 
 AR Path="/5E67FD54/5E675BA7" Ref="J8"  Part="1" 
 AR Path="/5E67FFE4/5E675BA7" Ref="J9"  Part="1" 
-F 0 "J9" H 5070 3354 50  0000 R CNN
+F 0 "J7" H 5070 3354 50  0000 R CNN
 F 1 "RJ45" H 5070 3445 50  0000 R CNN
 F 2 "Stewart:SS6488SANF1" V 5400 3375 50  0001 C CNN
 F 3 "~" V 5400 3375 50  0001 C CNN
+F 4 "SS-6488S-A-NF-1" H 5400 3350 50  0001 C CNN "MPN"
+F 5 "Bel" H 5400 3350 50  0001 C CNN "Manufacturer"
 	1    5400 3350
 	-1   0    0    1   
 $EndComp

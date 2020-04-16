@@ -1,0 +1,2357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/james/Repositories/CNCMachine/UnifiedBreakout/UnifiedBreakout/UnifiedBreakout.sch</source>
+    <date>Thu 16 Apr 2020 11:07:53 BST</date>
+    <tool>Eeschema 5.1.5-52549c5~86~ubuntu18.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>UnifiedBreakout.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/X MOT/" tstamps="/5E6754F3/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>motor_connector.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Y MOT/" tstamps="/5E67FD54/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>motor_connector.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Z MOT/" tstamps="/5E67FFE4/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>motor_connector.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/MESA P2 INTERNAL IO/" tstamps="/5E96EB73/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>mesa_prob_rfx2_p2_internal.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/AXIS POWER RELAY/" tstamps="/5E97B88B/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>relay.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/DRAWBAR RELAY/" tstamps="/5E98D570/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>relay.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="8" name="/MIST RELAY/" tstamps="/5E98DEDA/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>relay.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="9" name="/MESA P3 REAR IO/" tstamps="/5E961C58/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>mesa_prob_rfx2_p3_rear.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="10" name="/ARGON ENCODER/" tstamps="/5E9DE03A/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>argon_encoder.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="11" name="/ARGON IO/" tstamps="/5E9EB9EA/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>argon_io.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="12" name="/ARGON ESTOP/" tstamps="/5EA599CB/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>argon_estop.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="13" name="/LIM X/" tstamps="/5EA623AE/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>opto_input.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="14" name="/LIM Y/" tstamps="/5EA7F263/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>opto_input.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="15" name="/LIM Z/" tstamps="/5EA816C6/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>opto_input.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="16" name="/PROBE/" tstamps="/5EA83CCC/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>opto_input.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="17" name="/DRAWBAR SW/" tstamps="/5EA86618/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>opto_input.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="18" name="/PENDANT/" tstamps="/5E92536F/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>jog_pendant.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9516AE</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9527BF</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E95CE21</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E95CE27</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E960103</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>100uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E960109</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>ATX-24</value>
+      <footprint>Connector_Molex:Molex_Mini-Fit_Jr_5569-24A2_2x12_P4.20mm_Horizontal</footprint>
+      <datasheet>https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33</datasheet>
+      <libsource lib="Connector" part="ATX-24" description="ATX Power supply 24pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E648DC2</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>220R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220R</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E991CB6</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>ATX PWR GOOD</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E992705</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E998094</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>220R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220R</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E99DFF2</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>ATX STBY</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E99DFF8</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9CB01B</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9CB021</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>220R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220R</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9CE8F0</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>220R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220R</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9CF21D</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>MESA P2 PWR</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9D164F</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>MESA P3 PWR</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9D2101</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>24V DC IN</value>
+      <footprint>SwitchCraft-BarrelJack-RAPC722BK:RAPC722BK</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Barrel_Jack_Switch" description="DC Barrel Jack with an internal switch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA0132B</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>4N35</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/docs/81181/4n35.pdf</datasheet>
+      <libsource lib="Isolator" part="4N35" description="Optocoupler, Phototransistor Output, with Base Connection, Vce 70V, CTR 100%, Viso 5000V, DIP6"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EADA07A</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>220K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220K</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EADB4A6</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EAE3E5D</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>ARGON RS485</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED09EA9</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>12V BUS</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED1FA8B</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>24V BUS</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED200A2</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>5V BUS</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5ED20526</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>74HC14</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
+      <libsource lib="74xx" part="74HC14" description="Hex inverter schmitt trigger"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA66FFA</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E93BCA1</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E93C400</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E93C89B</tstamp>
+    </comp>
+    <comp ref="J24">
+      <value>AXIS PWR IN</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA50C60</tstamp>
+    </comp>
+    <comp ref="J25">
+      <value>AXIS PWR OUT</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA51813</tstamp>
+    </comp>
+    <comp ref="J22">
+      <value>DRAWBAR</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA9D1BF</tstamp>
+    </comp>
+    <comp ref="J23">
+      <value>MIST</value>
+      <footprint>Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EA9DE62</tstamp>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E998E63</tstamp>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E999355</tstamp>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E9994FD</tstamp>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E999660</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>RJ45</value>
+      <footprint>Stewart:SS6488SANF1</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ45" description="RJ connector, 8P8C (8 positions 8 connected)"/>
+      <sheetpath names="/X MOT/" tstamps="/5E6754F3/"/>
+      <tstamp>5E675BA7</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>RJ45</value>
+      <footprint>Stewart:SS6488SANF1</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ45" description="RJ connector, 8P8C (8 positions 8 connected)"/>
+      <sheetpath names="/Y MOT/" tstamps="/5E67FD54/"/>
+      <tstamp>5E675BA7</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>RJ45</value>
+      <footprint>Stewart:SS6488SANF1</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ45" description="RJ connector, 8P8C (8 positions 8 connected)"/>
+      <sheetpath names="/Z MOT/" tstamps="/5E67FFE4/"/>
+      <tstamp>5E675BA7</tstamp>
+    </comp>
+    <comp ref="J10">
+      <value>MESA P2 INTERNAL IO</value>
+      <footprint>Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm</footprint>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB25_Female_MountingHoles" description="25-pin female D-SUB connector, Mounting Hole"/>
+      <sheetpath names="/MESA P2 INTERNAL IO/" tstamps="/5E96EB73/"/>
+      <tstamp>5E96F66C</tstamp>
+    </comp>
+    <comp ref="RL1">
+      <value>JW2</value>
+      <footprint>Relay_THT:Relay_DPDT_Panasonic_JW2</footprint>
+      <datasheet>http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_jw.pdf?via=ok</datasheet>
+      <fields>
+        <field name="Alternative MPN">RTE24012</field>
+        <field name="MPN">RT424012</field>
+      </fields>
+      <libsource lib="Relay" part="JW2" description="General Purpose Relay DPDT (2 Form C) Through Hole, Panasonic JW series"/>
+      <sheetpath names="/AXIS POWER RELAY/" tstamps="/5E97B88B/"/>
+      <tstamp>5E97D1CA</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>BC547</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline_Wide</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BC/BC547.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BC547" description="0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"/>
+      <sheetpath names="/AXIS POWER RELAY/" tstamps="/5E97B88B/"/>
+      <tstamp>5E97E5AE</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>1N4001</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4001" description="50V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/AXIS POWER RELAY/" tstamps="/5E97B88B/"/>
+      <tstamp>5E97F269</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/AXIS POWER RELAY/" tstamps="/5E97B88B/"/>
+      <tstamp>5E9816C4</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>680R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-680R</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/AXIS POWER RELAY/" tstamps="/5E97B88B/"/>
+      <tstamp>5E982C8C</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/AXIS POWER RELAY/" tstamps="/5E97B88B/"/>
+      <tstamp>5E98535D</tstamp>
+    </comp>
+    <comp ref="RL2">
+      <value>JW2</value>
+      <footprint>Relay_THT:Relay_DPDT_Panasonic_JW2</footprint>
+      <datasheet>http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_jw.pdf?via=ok</datasheet>
+      <fields>
+        <field name="Alternative MPN">RTE24012</field>
+        <field name="MPN">RT424012</field>
+      </fields>
+      <libsource lib="Relay" part="JW2" description="General Purpose Relay DPDT (2 Form C) Through Hole, Panasonic JW series"/>
+      <sheetpath names="/DRAWBAR RELAY/" tstamps="/5E98D570/"/>
+      <tstamp>5E97D1CA</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>BC547</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline_Wide</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BC/BC547.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BC547" description="0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"/>
+      <sheetpath names="/DRAWBAR RELAY/" tstamps="/5E98D570/"/>
+      <tstamp>5E97E5AE</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>1N4001</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4001" description="50V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/DRAWBAR RELAY/" tstamps="/5E98D570/"/>
+      <tstamp>5E97F269</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/DRAWBAR RELAY/" tstamps="/5E98D570/"/>
+      <tstamp>5E9816C4</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>680R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-680R</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/DRAWBAR RELAY/" tstamps="/5E98D570/"/>
+      <tstamp>5E982C8C</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/DRAWBAR RELAY/" tstamps="/5E98D570/"/>
+      <tstamp>5E98535D</tstamp>
+    </comp>
+    <comp ref="RL3">
+      <value>JW2</value>
+      <footprint>Relay_THT:Relay_DPDT_Panasonic_JW2</footprint>
+      <datasheet>http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_jw.pdf?via=ok</datasheet>
+      <fields>
+        <field name="Alternative MPN">RTE24012</field>
+        <field name="MPN">RT424012</field>
+      </fields>
+      <libsource lib="Relay" part="JW2" description="General Purpose Relay DPDT (2 Form C) Through Hole, Panasonic JW series"/>
+      <sheetpath names="/MIST RELAY/" tstamps="/5E98DEDA/"/>
+      <tstamp>5E97D1CA</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>BC547</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline_Wide</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BC/BC547.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BC547" description="0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"/>
+      <sheetpath names="/MIST RELAY/" tstamps="/5E98DEDA/"/>
+      <tstamp>5E97E5AE</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>1N4001</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4001" description="50V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/MIST RELAY/" tstamps="/5E98DEDA/"/>
+      <tstamp>5E97F269</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/MIST RELAY/" tstamps="/5E98DEDA/"/>
+      <tstamp>5E9816C4</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>680R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-680R</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MIST RELAY/" tstamps="/5E98DEDA/"/>
+      <tstamp>5E982C8C</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/MIST RELAY/" tstamps="/5E98DEDA/"/>
+      <tstamp>5E98535D</tstamp>
+    </comp>
+    <comp ref="J11">
+      <value>MESA P3 REAR IO</value>
+      <footprint>Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm</footprint>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB25_Female_MountingHoles" description="25-pin female D-SUB connector, Mounting Hole"/>
+      <sheetpath names="/MESA P3 REAR IO/" tstamps="/5E961C58/"/>
+      <tstamp>5E96286A</tstamp>
+    </comp>
+    <comp ref="J13">
+      <value>ENCODER OUT</value>
+      <footprint>Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm</footprint>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB15_Female_MountingHoles" description="15-pin female D-SUB connector (low-density/2 columns), Mounting Hole"/>
+      <sheetpath names="/ARGON ENCODER/" tstamps="/5E9DE03A/"/>
+      <tstamp>5E9DE5F8</tstamp>
+    </comp>
+    <comp ref="JP1">
+      <value>ENCODER PWR SEL</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Dual" description="Dual jumper, normally closed"/>
+      <sheetpath names="/ARGON ENCODER/" tstamps="/5E9DE03A/"/>
+      <tstamp>5EA289BC</tstamp>
+    </comp>
+    <comp ref="J12">
+      <value>ENCODER IN</value>
+      <footprint>Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm</footprint>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB15_Female_MountingHoles" description="15-pin female D-SUB connector (low-density/2 columns), Mounting Hole"/>
+      <sheetpath names="/ARGON ENCODER/" tstamps="/5E9DE03A/"/>
+      <tstamp>5EA2910D</tstamp>
+    </comp>
+    <comp ref="J14">
+      <value>ARGON J5</value>
+      <footprint>Connector_IDC:IDC-Header_2x13_P2.54mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x13_Odd_Even" description="Generic connector, double row, 02x13, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/ARGON IO/" tstamps="/5E9EB9EA/"/>
+      <tstamp>5E9EBBAB</tstamp>
+    </comp>
+    <comp ref="JP2">
+      <value>HSIN1</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Dual" description="Dual jumper, normally closed"/>
+      <sheetpath names="/ARGON IO/" tstamps="/5E9EB9EA/"/>
+      <tstamp>5E9F4611</tstamp>
+    </comp>
+    <comp ref="JP3">
+      <value>HSIN2</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper_NC_Dual" description="Dual jumper, normally closed"/>
+      <sheetpath names="/ARGON IO/" tstamps="/5E9EB9EA/"/>
+      <tstamp>5E9F56E4</tstamp>
+    </comp>
+    <comp ref="J15">
+      <value>ARGON J2.2</value>
+      <footprint>Stewart:SS6488SANF1</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ45" description="RJ connector, 8P8C (8 positions 8 connected)"/>
+      <sheetpath names="/ARGON ESTOP/" tstamps="/5EA599CB/"/>
+      <tstamp>5EA5A0E0</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>4N35</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/docs/81181/4n35.pdf</datasheet>
+      <libsource lib="Isolator" part="4N35" description="Optocoupler, Phototransistor Output, with Base Connection, Vce 70V, CTR 100%, Viso 5000V, DIP6"/>
+      <sheetpath names="/LIM X/" tstamps="/5EA623AE/"/>
+      <tstamp>5EA62D6B</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM X/" tstamps="/5EA623AE/"/>
+      <tstamp>5EA63E66</tstamp>
+    </comp>
+    <comp ref="J16">
+      <value>RJ14</value>
+      <footprint>Wurth:615004141121</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ14" description="RJ connector, 6P4C (6 positions 4 connected)"/>
+      <sheetpath names="/LIM X/" tstamps="/5EA623AE/"/>
+      <tstamp>5EA649A8</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>220K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220K</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM X/" tstamps="/5EA623AE/"/>
+      <tstamp>5EA66D61</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM X/" tstamps="/5EA623AE/"/>
+      <tstamp>5E9E2B63</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>4N35</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/docs/81181/4n35.pdf</datasheet>
+      <libsource lib="Isolator" part="4N35" description="Optocoupler, Phototransistor Output, with Base Connection, Vce 70V, CTR 100%, Viso 5000V, DIP6"/>
+      <sheetpath names="/LIM Y/" tstamps="/5EA7F263/"/>
+      <tstamp>5EA62D6B</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM Y/" tstamps="/5EA7F263/"/>
+      <tstamp>5EA63E66</tstamp>
+    </comp>
+    <comp ref="J17">
+      <value>RJ14</value>
+      <footprint>Wurth:615004141121</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ14" description="RJ connector, 6P4C (6 positions 4 connected)"/>
+      <sheetpath names="/LIM Y/" tstamps="/5EA7F263/"/>
+      <tstamp>5EA649A8</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>220K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220K</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM Y/" tstamps="/5EA7F263/"/>
+      <tstamp>5EA66D61</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM Y/" tstamps="/5EA7F263/"/>
+      <tstamp>5E9E2B63</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>4N35</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/docs/81181/4n35.pdf</datasheet>
+      <libsource lib="Isolator" part="4N35" description="Optocoupler, Phototransistor Output, with Base Connection, Vce 70V, CTR 100%, Viso 5000V, DIP6"/>
+      <sheetpath names="/LIM Z/" tstamps="/5EA816C6/"/>
+      <tstamp>5EA62D6B</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM Z/" tstamps="/5EA816C6/"/>
+      <tstamp>5EA63E66</tstamp>
+    </comp>
+    <comp ref="J18">
+      <value>RJ14</value>
+      <footprint>Wurth:615004141121</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ14" description="RJ connector, 6P4C (6 positions 4 connected)"/>
+      <sheetpath names="/LIM Z/" tstamps="/5EA816C6/"/>
+      <tstamp>5EA649A8</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>220K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220K</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM Z/" tstamps="/5EA816C6/"/>
+      <tstamp>5EA66D61</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/LIM Z/" tstamps="/5EA816C6/"/>
+      <tstamp>5E9E2B63</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>4N35</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/docs/81181/4n35.pdf</datasheet>
+      <libsource lib="Isolator" part="4N35" description="Optocoupler, Phototransistor Output, with Base Connection, Vce 70V, CTR 100%, Viso 5000V, DIP6"/>
+      <sheetpath names="/PROBE/" tstamps="/5EA83CCC/"/>
+      <tstamp>5EA62D6B</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/PROBE/" tstamps="/5EA83CCC/"/>
+      <tstamp>5EA63E66</tstamp>
+    </comp>
+    <comp ref="J19">
+      <value>RJ14</value>
+      <footprint>Wurth:615004141121</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ14" description="RJ connector, 6P4C (6 positions 4 connected)"/>
+      <sheetpath names="/PROBE/" tstamps="/5EA83CCC/"/>
+      <tstamp>5EA649A8</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>220K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220K</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/PROBE/" tstamps="/5EA83CCC/"/>
+      <tstamp>5EA66D61</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/PROBE/" tstamps="/5EA83CCC/"/>
+      <tstamp>5E9E2B63</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>4N35</value>
+      <footprint>Package_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/docs/81181/4n35.pdf</datasheet>
+      <libsource lib="Isolator" part="4N35" description="Optocoupler, Phototransistor Output, with Base Connection, Vce 70V, CTR 100%, Viso 5000V, DIP6"/>
+      <sheetpath names="/DRAWBAR SW/" tstamps="/5EA86618/"/>
+      <tstamp>5EA62D6B</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>2K2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-2K2</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/DRAWBAR SW/" tstamps="/5EA86618/"/>
+      <tstamp>5EA63E66</tstamp>
+    </comp>
+    <comp ref="J20">
+      <value>RJ14</value>
+      <footprint>Wurth:615004141121</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="RJ14" description="RJ connector, 6P4C (6 positions 4 connected)"/>
+      <sheetpath names="/DRAWBAR SW/" tstamps="/5EA86618/"/>
+      <tstamp>5EA649A8</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>220K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-220K</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/DRAWBAR SW/" tstamps="/5EA86618/"/>
+      <tstamp>5EA66D61</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>10K</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="MPN">CFR-25JB-52-10K </field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/DRAWBAR SW/" tstamps="/5EA86618/"/>
+      <tstamp>5E9E2B63</tstamp>
+    </comp>
+    <comp ref="J21">
+      <value>PENDANT</value>
+      <footprint>Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm</footprint>
+      <datasheet> ~</datasheet>
+      <libsource lib="Connector" part="DB25_Female_MountingHoles" description="25-pin female D-SUB connector, Mounting Hole"/>
+      <sheetpath names="/PENDANT/" tstamps="/5E92536F/"/>
+      <tstamp>5E928FD4</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xx" part="74HC14">
+      <aliases>
+        <alias>74LS14</alias>
+      </aliases>
+      <description>Hex inverter schmitt trigger</description>
+      <docs>http://www.ti.com/lit/gpn/sn74HC14</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74HC14</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="output"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="output"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="output"/>
+        <pin num="11" name="~" type="input"/>
+        <pin num="12" name="~" type="output"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="6P4C">
+      <aliases>
+        <alias>RJ13</alias>
+        <alias>RJ14</alias>
+      </aliases>
+      <description>RJ connector, 6P4C (6 positions 4 connected), RJ13/RJ14</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>6P4C*</fp>
+        <fp>RJ13*</fp>
+        <fp>RJ14*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">6P4C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="8P8C">
+      <aliases>
+        <alias>RJ31</alias>
+        <alias>RJ32</alias>
+        <alias>RJ33</alias>
+        <alias>RJ34</alias>
+        <alias>RJ35</alias>
+        <alias>RJ41</alias>
+        <alias>RJ45</alias>
+        <alias>RJ49</alias>
+        <alias>RJ61</alias>
+      </aliases>
+      <description>RJ connector, 8P8C (8 positions 8 connected), RJ31/RJ32/RJ33/RJ34/RJ35/RJ41/RJ45/RJ49/RJ61</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>8P8C*</fp>
+        <fp>RJ31*</fp>
+        <fp>RJ32*</fp>
+        <fp>RJ33*</fp>
+        <fp>RJ34*</fp>
+        <fp>RJ35*</fp>
+        <fp>RJ41*</fp>
+        <fp>RJ45*</fp>
+        <fp>RJ49*</fp>
+        <fp>RJ61*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">8P8C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="ATX-24">
+      <description>ATX Power supply 24pins</description>
+      <docs>https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33</docs>
+      <footprints>
+        <fp>*Mini?Fit*2x12*Vertical*</fp>
+        <fp>*Mini?Fit*2x12*Horizontal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">ATX-24</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+3.3V" type="power_out"/>
+        <pin num="2" name="+3.3V" type="passive"/>
+        <pin num="3" name="GND" type="power_out"/>
+        <pin num="4" name="+5V" type="power_out"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="+5V" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="PWR_OK" type="output"/>
+        <pin num="9" name="+5VSB" type="power_out"/>
+        <pin num="10" name="+12V" type="power_out"/>
+        <pin num="11" name="+12V" type="passive"/>
+        <pin num="12" name="+3.3V" type="passive"/>
+        <pin num="13" name="+3.3V" type="passive"/>
+        <pin num="14" name="-12V" type="power_out"/>
+        <pin num="15" name="GND" type="passive"/>
+        <pin num="16" name="PS_ON#" type="openCol"/>
+        <pin num="17" name="GND" type="passive"/>
+        <pin num="18" name="GND" type="passive"/>
+        <pin num="19" name="GND" type="passive"/>
+        <pin num="20" name="NC" type="NotConnected"/>
+        <pin num="21" name="+5V" type="passive"/>
+        <pin num="22" name="+5V" type="passive"/>
+        <pin num="23" name="+5V" type="passive"/>
+        <pin num="24" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Barrel_Jack_Switch">
+      <description>DC Barrel Jack with an internal switch</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>BarrelJack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack_Switch</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="DB15_Female_MountingHoles">
+      <description>15-pin female D-SUB connector (low-density/2 columns), Mounting Hole</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>DSUB*Female*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DB15_Female_MountingHoles</field>
+      </fields>
+      <pins>
+        <pin num="0" name="PAD" type="passive"/>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+        <pin num="11" name="P111" type="passive"/>
+        <pin num="12" name="P12" type="passive"/>
+        <pin num="13" name="P13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="DB25_Female_MountingHoles">
+      <description>25-pin female D-SUB connector, Mounting Hole</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>DSUB*Female*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DB25_Female_MountingHoles</field>
+      </fields>
+      <pins>
+        <pin num="0" name="PAD" type="passive"/>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+        <pin num="16" name="P16" type="passive"/>
+        <pin num="17" name="P17" type="passive"/>
+        <pin num="18" name="P18" type="passive"/>
+        <pin num="19" name="P19" type="passive"/>
+        <pin num="20" name="P20" type="passive"/>
+        <pin num="21" name="P21" type="passive"/>
+        <pin num="22" name="P22" type="passive"/>
+        <pin num="23" name="P23" type="passive"/>
+        <pin num="24" name="P24" type="passive"/>
+        <pin num="25" name="P25" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x02">
+      <description>Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x03">
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x13_Odd_Even">
+      <description>Generic connector, double row, 02x13, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x13_Odd_Even</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+        <pin num="15" name="Pin_15" type="passive"/>
+        <pin num="16" name="Pin_16" type="passive"/>
+        <pin num="17" name="Pin_17" type="passive"/>
+        <pin num="18" name="Pin_18" type="passive"/>
+        <pin num="19" name="Pin_19" type="passive"/>
+        <pin num="20" name="Pin_20" type="passive"/>
+        <pin num="21" name="Pin_21" type="passive"/>
+        <pin num="22" name="Pin_22" type="passive"/>
+        <pin num="23" name="Pin_23" type="passive"/>
+        <pin num="24" name="Pin_24" type="passive"/>
+        <pin num="25" name="Pin_25" type="passive"/>
+        <pin num="26" name="Pin_26" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Jumper_NC_Dual">
+      <description>Dual jumper, normally closed</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Bridged*</fp>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*2Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_NC_Dual</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4001">
+      <aliases>
+        <alias>1N4002</alias>
+        <alias>1N4003</alias>
+        <alias>1N4004</alias>
+        <alias>1N4005</alias>
+        <alias>1N4006</alias>
+        <alias>1N4007</alias>
+        <alias>BA157</alias>
+        <alias>BA158</alias>
+        <alias>BA159</alias>
+      </aliases>
+      <description>50V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4001</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Isolator" part="4N25">
+      <aliases>
+        <alias>4N26</alias>
+        <alias>TIL111</alias>
+        <alias>4N27</alias>
+        <alias>4N28</alias>
+        <alias>4N35</alias>
+        <alias>4N36</alias>
+        <alias>4N37</alias>
+      </aliases>
+      <description>DC Optocoupler Base Connected, Vce 30V, CTR 20%, Viso 2500V, DIP6</description>
+      <docs>https://www.vishay.com/docs/83725/4n25.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4N25</field>
+        <field name="Footprint">Package_DIP:DIP-6_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="NC" type="NotConnected"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+      </fields>
+    </libpart>
+    <libpart lib="Relay" part="JW2">
+      <description>General Purpose Relay DPDT (2 Form C) Through Hole, Panasonic JW series</description>
+      <docs>http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_jw.pdf?via=ok</docs>
+      <footprints>
+        <fp>Relay*DPDT*Panasonic*JW2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RL</field>
+        <field name="Value">JW2</field>
+        <field name="Footprint">Relay_THT:Relay_DPDT_Panasonic_JW2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BC547">
+      <aliases>
+        <alias>BC546</alias>
+        <alias>BC548</alias>
+        <alias>BC549</alias>
+        <alias>BC550</alias>
+        <alias>BC337</alias>
+        <alias>BC338</alias>
+      </aliases>
+      <description>0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92</description>
+      <docs>http://www.fairchildsemi.com/ds/BC/BC547.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC547</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C" type="passive"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xx">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/74xx.lib</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Device.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Diode.lib</uri>
+    </library>
+    <library logical="Isolator">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Isolator.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Mechanical.lib</uri>
+    </library>
+    <library logical="Relay">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Relay.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/home/james/KiCADLibraries/kicad-symbols/Transistor_BJT.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/SPINDLE_ENC_B">
+      <node ref="J12" pin="6"/>
+      <node ref="J13" pin="6"/>
+      <node ref="J11" pin="12"/>
+    </net>
+    <net code="2" name="+24V">
+      <node ref="C3" pin="1"/>
+      <node ref="J15" pin="7"/>
+      <node ref="J15" pin="1"/>
+      <node ref="J16" pin="2"/>
+      <node ref="J17" pin="2"/>
+      <node ref="J1" pin="1"/>
+      <node ref="J4" pin="1"/>
+      <node ref="J21" pin="4"/>
+      <node ref="C4" pin="1"/>
+      <node ref="J18" pin="2"/>
+      <node ref="J20" pin="2"/>
+      <node ref="J19" pin="2"/>
+    </net>
+    <net code="3" name="/ESTOP">
+      <node ref="J11" pin="1"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="4" name="/SPINDLE_ENC_A">
+      <node ref="J12" pin="8"/>
+      <node ref="J13" pin="8"/>
+      <node ref="J11" pin="11"/>
+    </net>
+    <net code="5" name="/SPINDLE_ENC_IDX">
+      <node ref="J11" pin="13"/>
+      <node ref="J12" pin="15"/>
+      <node ref="J13" pin="15"/>
+    </net>
+    <net code="6" name="GND">
+      <node ref="J20" pin="4"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J8" pin="6"/>
+      <node ref="J8" pin="2"/>
+      <node ref="J8" pin="4"/>
+      <node ref="J8" pin="8"/>
+      <node ref="J21" pin="20"/>
+      <node ref="D2" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="J7" pin="2"/>
+      <node ref="J7" pin="4"/>
+      <node ref="J7" pin="6"/>
+      <node ref="J7" pin="8"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="R22" pin="2"/>
+      <node ref="U6" pin="4"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R23" pin="2"/>
+      <node ref="J12" pin="0"/>
+      <node ref="J14" pin="1"/>
+      <node ref="J14" pin="15"/>
+      <node ref="U5" pin="4"/>
+      <node ref="R19" pin="2"/>
+      <node ref="J19" pin="4"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="RL3" pin="3"/>
+      <node ref="J13" pin="10"/>
+      <node ref="J13" pin="0"/>
+      <node ref="R21" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="R14" pin="2"/>
+      <node ref="U2" pin="4"/>
+      <node ref="R15" pin="2"/>
+      <node ref="J16" pin="4"/>
+      <node ref="R17" pin="2"/>
+      <node ref="J17" pin="4"/>
+      <node ref="R16" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="R18" pin="2"/>
+      <node ref="U4" pin="4"/>
+      <node ref="J15" pin="8"/>
+      <node ref="J18" pin="4"/>
+      <node ref="J15" pin="5"/>
+      <node ref="J9" pin="2"/>
+      <node ref="J9" pin="4"/>
+      <node ref="J9" pin="6"/>
+      <node ref="J9" pin="8"/>
+      <node ref="J21" pin="19"/>
+      <node ref="J21" pin="0"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="RL2" pin="3"/>
+      <node ref="J11" pin="21"/>
+      <node ref="J11" pin="20"/>
+      <node ref="J11" pin="19"/>
+      <node ref="J11" pin="18"/>
+      <node ref="J11" pin="0"/>
+      <node ref="J10" pin="0"/>
+      <node ref="J10" pin="21"/>
+      <node ref="J10" pin="20"/>
+      <node ref="J10" pin="19"/>
+      <node ref="J10" pin="18"/>
+      <node ref="J6" pin="3"/>
+      <node ref="R7" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="J2" pin="17"/>
+      <node ref="J2" pin="7"/>
+      <node ref="J2" pin="5"/>
+      <node ref="J2" pin="3"/>
+      <node ref="J2" pin="24"/>
+      <node ref="J2" pin="19"/>
+      <node ref="J2" pin="18"/>
+      <node ref="J2" pin="15"/>
+      <node ref="J3" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="D4" pin="1"/>
+      <node ref="J5" pin="2"/>
+      <node ref="D3" pin="1"/>
+    </net>
+    <net code="7" name="/ARGON ESTOP/ESTOP+">
+      <node ref="J15" pin="4"/>
+      <node ref="J21" pin="21"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="8" name="/MESA P3 REAR IO/IO_02_STEPGEN_00_STEP">
+      <node ref="J11" pin="2"/>
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="9" name="/PENDANT_SELX">
+      <node ref="J10" pin="14"/>
+      <node ref="J21" pin="1"/>
+    </net>
+    <net code="10" name="/SPINDLE_STEPGEN_STEP">
+      <node ref="JP2" pin="3"/>
+      <node ref="J11" pin="8"/>
+    </net>
+    <net code="11" name="/SPINDLE_STEPGEN_DIR">
+      <node ref="J11" pin="9"/>
+      <node ref="JP3" pin="3"/>
+    </net>
+    <net code="12" name="/PENDANT_ENC_A">
+      <node ref="J21" pin="11"/>
+      <node ref="J10" pin="11"/>
+    </net>
+    <net code="13" name="/PENDANT_ENC_B">
+      <node ref="J21" pin="12"/>
+      <node ref="J10" pin="12"/>
+    </net>
+    <net code="14" name="/PENDANT_SELY">
+      <node ref="J21" pin="14"/>
+      <node ref="J10" pin="9"/>
+    </net>
+    <net code="15" name="/PENDANT_SELZ">
+      <node ref="J21" pin="2"/>
+      <node ref="J10" pin="8"/>
+    </net>
+    <net code="16" name="/PENDANT_SELA">
+      <node ref="J21" pin="5"/>
+      <node ref="J10" pin="7"/>
+    </net>
+    <net code="17" name="/PENDANT_MULX1">
+      <node ref="J21" pin="15"/>
+      <node ref="J10" pin="6"/>
+    </net>
+    <net code="18" name="/PENDANT_MULX10">
+      <node ref="J10" pin="5"/>
+      <node ref="J21" pin="3"/>
+    </net>
+    <net code="19" name="/PENDANT_MULX100">
+      <node ref="J10" pin="4"/>
+      <node ref="J21" pin="16"/>
+    </net>
+    <net code="20" name="/Y MOT/DIR">
+      <node ref="J8" pin="3"/>
+      <node ref="J11" pin="5"/>
+    </net>
+    <net code="21" name="/X MOT/DIR">
+      <node ref="J7" pin="3"/>
+      <node ref="J11" pin="3"/>
+    </net>
+    <net code="22" name="/MESA P3 REAR IO/IO_06_STEPGEN_01_STEP">
+      <node ref="J8" pin="1"/>
+      <node ref="J11" pin="4"/>
+    </net>
+    <net code="23" name="/MESA P3 REAR IO/IO_09_STEPGEN_02_STEP">
+      <node ref="J11" pin="6"/>
+      <node ref="J9" pin="1"/>
+    </net>
+    <net code="24" name="/Z MOT/DIR">
+      <node ref="J9" pin="3"/>
+      <node ref="J11" pin="7"/>
+    </net>
+    <net code="25" name="+5V">
+      <node ref="J2" pin="23"/>
+      <node ref="J2" pin="22"/>
+      <node ref="J2" pin="21"/>
+      <node ref="J3" pin="1"/>
+      <node ref="J19" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="J18" pin="1"/>
+      <node ref="J2" pin="6"/>
+      <node ref="J16" pin="1"/>
+      <node ref="J17" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="J2" pin="4"/>
+      <node ref="J20" pin="1"/>
+    </net>
+    <net code="26" name="/DRAWBAR_SW">
+      <node ref="J10" pin="16"/>
+      <node ref="R31" pin="2"/>
+      <node ref="U6" pin="5"/>
+    </net>
+    <net code="27" name="/PROBE">
+      <node ref="U5" pin="5"/>
+      <node ref="J10" pin="17"/>
+      <node ref="R30" pin="2"/>
+    </net>
+    <net code="28" name="Net-(R7-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="29" name="Net-(R6-Pad1)">
+      <node ref="U1" pin="6"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad3)">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="31" name="/SPINDLE_PWM_SIG">
+      <node ref="J11" pin="14"/>
+      <node ref="JP3" pin="1"/>
+    </net>
+    <net code="32" name="/SPINDLE_PWM_DIR">
+      <node ref="JP2" pin="1"/>
+      <node ref="J11" pin="16"/>
+    </net>
+    <net code="33" name="+5VP">
+      <node ref="J11" pin="23"/>
+      <node ref="J11" pin="22"/>
+      <node ref="R28" pin="1"/>
+      <node ref="R26" pin="1"/>
+      <node ref="R25" pin="1"/>
+      <node ref="R29" pin="1"/>
+      <node ref="J11" pin="24"/>
+      <node ref="JP1" pin="1"/>
+      <node ref="R27" pin="1"/>
+      <node ref="J11" pin="25"/>
+      <node ref="R31" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="R24" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="J21" pin="25"/>
+      <node ref="R2" pin="2"/>
+      <node ref="R30" pin="1"/>
+    </net>
+    <net code="34" name="/ALARM">
+      <node ref="J10" pin="2"/>
+      <node ref="J9" pin="7"/>
+      <node ref="J7" pin="7"/>
+      <node ref="J14" pin="16"/>
+      <node ref="J8" pin="7"/>
+    </net>
+    <net code="35" name="/MIST">
+      <node ref="R26" pin="2"/>
+      <node ref="U7" pin="5"/>
+      <node ref="J10" pin="15"/>
+    </net>
+    <net code="36" name="/DRAWBAR_VALVE">
+      <node ref="R25" pin="2"/>
+      <node ref="U7" pin="3"/>
+      <node ref="J10" pin="10"/>
+    </net>
+    <net code="37" name="/AXIS_PWR">
+      <node ref="U7" pin="1"/>
+      <node ref="R24" pin="2"/>
+      <node ref="J10" pin="1"/>
+    </net>
+    <net code="38" name="/PE">
+      <node ref="J25" pin="3"/>
+      <node ref="J24" pin="3"/>
+    </net>
+    <net code="39" name="/L_IN">
+      <node ref="RL1" pin="4"/>
+      <node ref="J24" pin="1"/>
+    </net>
+    <net code="40" name="/MIST RELAY/IN_A">
+      <node ref="J23" pin="2"/>
+      <node ref="RL3" pin="4"/>
+    </net>
+    <net code="41" name="/DRAWBAR RELAY/IN_A">
+      <node ref="J22" pin="2"/>
+      <node ref="RL2" pin="4"/>
+    </net>
+    <net code="42" name="+12V">
+      <node ref="RL2" pin="1"/>
+      <node ref="J2" pin="11"/>
+      <node ref="RL3" pin="1"/>
+      <node ref="D10" pin="1"/>
+      <node ref="D9" pin="2"/>
+      <node ref="J2" pin="10"/>
+      <node ref="D8" pin="1"/>
+      <node ref="D6" pin="1"/>
+      <node ref="D5" pin="2"/>
+      <node ref="J23" pin="1"/>
+      <node ref="RL1" pin="1"/>
+      <node ref="J22" pin="1"/>
+      <node ref="J5" pin="1"/>
+      <node ref="D7" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C6" pin="1"/>
+    </net>
+    <net code="43" name="/N_IN">
+      <node ref="RL1" pin="5"/>
+      <node ref="J24" pin="2"/>
+    </net>
+    <net code="44" name="/L_OUT">
+      <node ref="J25" pin="1"/>
+      <node ref="RL1" pin="3"/>
+    </net>
+    <net code="45" name="/N_OUT">
+      <node ref="J25" pin="2"/>
+      <node ref="RL1" pin="6"/>
+    </net>
+    <net code="46" name="/LIMIT_X">
+      <node ref="J11" pin="15"/>
+      <node ref="R27" pin="2"/>
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="47" name="/LIMIT_Y">
+      <node ref="J11" pin="17"/>
+      <node ref="R28" pin="2"/>
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="48" name="/LIMIT_Z">
+      <node ref="U4" pin="5"/>
+      <node ref="R29" pin="2"/>
+      <node ref="J11" pin="10"/>
+    </net>
+    <net code="49" name="/ARGON ESTOP/RS485_A">
+      <node ref="J6" pin="1"/>
+      <node ref="J15" pin="3"/>
+    </net>
+    <net code="50" name="/ARGON ESTOP/RS485_B">
+      <node ref="J6" pin="2"/>
+      <node ref="J15" pin="6"/>
+    </net>
+    <net code="51" name="/AXIS POWER RELAY/ENABLE">
+      <node ref="U7" pin="2"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="52" name="/DRAWBAR RELAY/ENABLE">
+      <node ref="R10" pin="2"/>
+      <node ref="U7" pin="4"/>
+    </net>
+    <net code="53" name="/MIST RELAY/ENABLE">
+      <node ref="R12" pin="2"/>
+      <node ref="U7" pin="6"/>
+    </net>
+    <net code="54" name="Net-(J2-Pad20)">
+      <node ref="J2" pin="20"/>
+    </net>
+    <net code="55" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="13"/>
+      <node ref="J2" pin="2"/>
+      <node ref="J2" pin="12"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="56" name="Net-(J2-Pad14)">
+      <node ref="J2" pin="14"/>
+    </net>
+    <net code="57" name="/DRAWBAR RELAY/OUT_B">
+      <node ref="RL2" pin="6"/>
+    </net>
+    <net code="58" name="/DRAWBAR RELAY/IN_B">
+      <node ref="RL2" pin="5"/>
+    </net>
+    <net code="59" name="/MIST RELAY/IN_B">
+      <node ref="RL3" pin="5"/>
+    </net>
+    <net code="60" name="/MIST RELAY/OUT_B">
+      <node ref="RL3" pin="6"/>
+    </net>
+    <net code="61" name="Net-(D4-Pad2)">
+      <node ref="R5" pin="2"/>
+      <node ref="D4" pin="2"/>
+    </net>
+    <net code="62" name="Net-(J2-Pad9)">
+      <node ref="R1" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="J2" pin="9"/>
+    </net>
+    <net code="63" name="Net-(J2-Pad8)">
+      <node ref="R4" pin="2"/>
+      <node ref="J2" pin="8"/>
+    </net>
+    <net code="64" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="65" name="/ATX_PWR">
+      <node ref="R1" pin="2"/>
+      <node ref="J2" pin="16"/>
+      <node ref="J10" pin="3"/>
+    </net>
+    <net code="66" name="/X MOT/ENABLE">
+      <node ref="J7" pin="5"/>
+    </net>
+    <net code="67" name="/Y MOT/ENABLE">
+      <node ref="J8" pin="5"/>
+    </net>
+    <net code="68" name="/Z MOT/ENABLE">
+      <node ref="J9" pin="5"/>
+    </net>
+    <net code="69" name="/MESA P2 INTERNAL IO/IO_33_QUAD_01_IDX">
+      <node ref="J10" pin="13"/>
+    </net>
+    <net code="70" name="Net-(D1-Pad2)">
+      <node ref="R2" pin="1"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="71" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="72" name="/MESA P2 INTERNAL IO/MESA_5V">
+      <node ref="J10" pin="24"/>
+      <node ref="J10" pin="22"/>
+      <node ref="J10" pin="23"/>
+      <node ref="J10" pin="25"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="73" name="/ARGON ENCODER/B-">
+      <node ref="J12" pin="5"/>
+      <node ref="J13" pin="5"/>
+    </net>
+    <net code="74" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="75" name="/ARGON ENCODER/IDX-">
+      <node ref="J12" pin="14"/>
+      <node ref="J13" pin="14"/>
+    </net>
+    <net code="76" name="/ARGON ENCODER/A-">
+      <node ref="J13" pin="7"/>
+      <node ref="J12" pin="7"/>
+    </net>
+    <net code="77" name="Net-(J21-Pad22)">
+      <node ref="J21" pin="22"/>
+    </net>
+    <net code="78" name="Net-(J21-Pad23)">
+      <node ref="J21" pin="23"/>
+    </net>
+    <net code="79" name="Net-(J21-Pad24)">
+      <node ref="J21" pin="24"/>
+    </net>
+    <net code="80" name="Net-(J21-Pad6)">
+      <node ref="J21" pin="6"/>
+    </net>
+    <net code="81" name="Net-(J21-Pad7)">
+      <node ref="J21" pin="7"/>
+    </net>
+    <net code="82" name="Net-(J21-Pad8)">
+      <node ref="J21" pin="8"/>
+    </net>
+    <net code="83" name="Net-(J21-Pad9)">
+      <node ref="J21" pin="9"/>
+    </net>
+    <net code="84" name="Net-(J21-Pad18)">
+      <node ref="J21" pin="18"/>
+    </net>
+    <net code="85" name="Net-(J21-Pad17)">
+      <node ref="J21" pin="17"/>
+    </net>
+    <net code="86" name="Net-(J21-Pad13)">
+      <node ref="J21" pin="13"/>
+    </net>
+    <net code="87" name="Net-(J21-Pad10)">
+      <node ref="J21" pin="10"/>
+    </net>
+    <net code="88" name="Net-(D5-Pad1)">
+      <node ref="R9" pin="1"/>
+      <node ref="D5" pin="1"/>
+    </net>
+    <net code="89" name="Net-(D6-Pad2)">
+      <node ref="R9" pin="2"/>
+      <node ref="D6" pin="2"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="RL1" pin="8"/>
+    </net>
+    <net code="90" name="Net-(Q1-Pad2)">
+      <node ref="R8" pin="1"/>
+      <node ref="Q1" pin="2"/>
+    </net>
+    <net code="91" name="Net-(RL1-Pad2)">
+      <node ref="RL1" pin="2"/>
+    </net>
+    <net code="92" name="Net-(RL1-Pad7)">
+      <node ref="RL1" pin="7"/>
+    </net>
+    <net code="93" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="94" name="Net-(Q2-Pad2)">
+      <node ref="Q2" pin="2"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="95" name="Net-(RL2-Pad2)">
+      <node ref="RL2" pin="2"/>
+    </net>
+    <net code="96" name="Net-(RL2-Pad7)">
+      <node ref="RL2" pin="7"/>
+    </net>
+    <net code="97" name="Net-(D8-Pad2)">
+      <node ref="D8" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="RL2" pin="8"/>
+      <node ref="Q2" pin="1"/>
+    </net>
+    <net code="98" name="Net-(D9-Pad1)">
+      <node ref="D9" pin="1"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="99" name="Net-(D10-Pad2)">
+      <node ref="RL3" pin="8"/>
+      <node ref="Q3" pin="1"/>
+      <node ref="D10" pin="2"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="100" name="Net-(RL3-Pad7)">
+      <node ref="RL3" pin="7"/>
+    </net>
+    <net code="101" name="Net-(RL3-Pad2)">
+      <node ref="RL3" pin="2"/>
+    </net>
+    <net code="102" name="Net-(Q3-Pad2)">
+      <node ref="R12" pin="1"/>
+      <node ref="Q3" pin="2"/>
+    </net>
+    <net code="103" name="/ARGON ENCODER/ARGON5V">
+      <node ref="J13" pin="9"/>
+      <node ref="JP1" pin="3"/>
+    </net>
+    <net code="104" name="Net-(J13-Pad4)">
+      <node ref="J13" pin="4"/>
+    </net>
+    <net code="105" name="Net-(J13-Pad3)">
+      <node ref="J13" pin="3"/>
+    </net>
+    <net code="106" name="Net-(J13-Pad2)">
+      <node ref="J13" pin="2"/>
+    </net>
+    <net code="107" name="Net-(J13-Pad13)">
+      <node ref="J13" pin="13"/>
+    </net>
+    <net code="108" name="Net-(J13-Pad12)">
+      <node ref="J13" pin="12"/>
+    </net>
+    <net code="109" name="Net-(J13-Pad11)">
+      <node ref="J13" pin="11"/>
+    </net>
+    <net code="110" name="Net-(J13-Pad1)">
+      <node ref="J13" pin="1"/>
+    </net>
+    <net code="111" name="Net-(J12-Pad9)">
+      <node ref="J12" pin="9"/>
+      <node ref="JP1" pin="2"/>
+    </net>
+    <net code="112" name="Net-(J12-Pad1)">
+      <node ref="J12" pin="1"/>
+    </net>
+    <net code="113" name="Net-(J12-Pad10)">
+      <node ref="J12" pin="10"/>
+    </net>
+    <net code="114" name="Net-(J12-Pad11)">
+      <node ref="J12" pin="11"/>
+    </net>
+    <net code="115" name="Net-(J12-Pad12)">
+      <node ref="J12" pin="12"/>
+    </net>
+    <net code="116" name="Net-(J12-Pad13)">
+      <node ref="J12" pin="13"/>
+    </net>
+    <net code="117" name="Net-(J12-Pad2)">
+      <node ref="J12" pin="2"/>
+    </net>
+    <net code="118" name="Net-(J12-Pad3)">
+      <node ref="J12" pin="3"/>
+    </net>
+    <net code="119" name="Net-(J12-Pad4)">
+      <node ref="J12" pin="4"/>
+    </net>
+    <net code="120" name="Net-(J14-Pad6)">
+      <node ref="J14" pin="6"/>
+      <node ref="JP3" pin="2"/>
+    </net>
+    <net code="121" name="Net-(J14-Pad8)">
+      <node ref="J14" pin="8"/>
+    </net>
+    <net code="122" name="Net-(J14-Pad9)">
+      <node ref="J14" pin="9"/>
+    </net>
+    <net code="123" name="Net-(J14-Pad4)">
+      <node ref="J14" pin="4"/>
+      <node ref="JP2" pin="2"/>
+    </net>
+    <net code="124" name="Net-(J14-Pad10)">
+      <node ref="J14" pin="10"/>
+    </net>
+    <net code="125" name="Net-(J14-Pad11)">
+      <node ref="J14" pin="11"/>
+    </net>
+    <net code="126" name="Net-(J14-Pad12)">
+      <node ref="J14" pin="12"/>
+    </net>
+    <net code="127" name="Net-(J14-Pad13)">
+      <node ref="J14" pin="13"/>
+    </net>
+    <net code="128" name="Net-(J14-Pad14)">
+      <node ref="J14" pin="14"/>
+    </net>
+    <net code="129" name="Net-(J14-Pad17)">
+      <node ref="J14" pin="17"/>
+    </net>
+    <net code="130" name="Net-(J14-Pad18)">
+      <node ref="J14" pin="18"/>
+    </net>
+    <net code="131" name="Net-(J14-Pad19)">
+      <node ref="J14" pin="19"/>
+    </net>
+    <net code="132" name="Net-(J14-Pad2)">
+      <node ref="J14" pin="2"/>
+    </net>
+    <net code="133" name="Net-(J14-Pad21)">
+      <node ref="J14" pin="21"/>
+    </net>
+    <net code="134" name="Net-(J14-Pad20)">
+      <node ref="J14" pin="20"/>
+    </net>
+    <net code="135" name="Net-(J14-Pad7)">
+      <node ref="J14" pin="7"/>
+    </net>
+    <net code="136" name="Net-(J14-Pad5)">
+      <node ref="J14" pin="5"/>
+    </net>
+    <net code="137" name="Net-(J14-Pad3)">
+      <node ref="J14" pin="3"/>
+    </net>
+    <net code="138" name="Net-(J14-Pad26)">
+      <node ref="J14" pin="26"/>
+    </net>
+    <net code="139" name="Net-(J14-Pad25)">
+      <node ref="J14" pin="25"/>
+    </net>
+    <net code="140" name="Net-(J14-Pad24)">
+      <node ref="J14" pin="24"/>
+    </net>
+    <net code="141" name="Net-(J14-Pad23)">
+      <node ref="J14" pin="23"/>
+    </net>
+    <net code="142" name="Net-(J14-Pad22)">
+      <node ref="J14" pin="22"/>
+    </net>
+    <net code="143" name="Net-(J15-Pad2)">
+      <node ref="J15" pin="2"/>
+    </net>
+    <net code="144" name="Net-(J16-Pad3)">
+      <node ref="J16" pin="3"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="145" name="Net-(U2-Pad3)">
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="146" name="Net-(R15-Pad1)">
+      <node ref="U2" pin="6"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="147" name="Net-(R14-Pad1)">
+      <node ref="R14" pin="1"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="148" name="Net-(R17-Pad1)">
+      <node ref="R17" pin="1"/>
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="149" name="Net-(R16-Pad1)">
+      <node ref="U3" pin="2"/>
+      <node ref="R16" pin="1"/>
+    </net>
+    <net code="150" name="Net-(U3-Pad3)">
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="151" name="Net-(J17-Pad3)">
+      <node ref="J17" pin="3"/>
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="152" name="Net-(J18-Pad3)">
+      <node ref="J18" pin="3"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="153" name="Net-(R18-Pad1)">
+      <node ref="R18" pin="1"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="154" name="Net-(U4-Pad3)">
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="155" name="Net-(R19-Pad1)">
+      <node ref="R19" pin="1"/>
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="156" name="Net-(J19-Pad3)">
+      <node ref="J19" pin="3"/>
+      <node ref="U5" pin="1"/>
+    </net>
+    <net code="157" name="Net-(R20-Pad1)">
+      <node ref="R20" pin="1"/>
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="158" name="Net-(U5-Pad3)">
+      <node ref="U5" pin="3"/>
+    </net>
+    <net code="159" name="Net-(R21-Pad1)">
+      <node ref="U5" pin="6"/>
+      <node ref="R21" pin="1"/>
+    </net>
+    <net code="160" name="Net-(U6-Pad3)">
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="161" name="Net-(J20-Pad3)">
+      <node ref="J20" pin="3"/>
+      <node ref="U6" pin="1"/>
+    </net>
+    <net code="162" name="Net-(R22-Pad1)">
+      <node ref="R22" pin="1"/>
+      <node ref="U6" pin="2"/>
+    </net>
+    <net code="163" name="Net-(R23-Pad1)">
+      <node ref="U6" pin="6"/>
+      <node ref="R23" pin="1"/>
+    </net>
+  </nets>
+</export>
