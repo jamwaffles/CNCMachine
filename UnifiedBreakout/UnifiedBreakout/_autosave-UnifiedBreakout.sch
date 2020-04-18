@@ -2104,4 +2104,26 @@ F 3 "" H 7250 7350 50  0001 C CNN
 	1    7250 7350
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole H6
+U 1 1 5EAE25AF
+P 9150 10550
+F 0 "H6" H 9250 10596 50  0000 L CNN
+F 1 "MountingHole" H 9250 10505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9150 10550 50  0001 C CNN
+F 3 "~" H 9150 10550 50  0001 C CNN
+	1    9150 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5EAE2839
+P 8850 10750
+F 0 "H5" H 8950 10796 50  0000 L CNN
+F 1 "MountingHole" H 8950 10705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 8850 10750 50  0001 C CNN
+F 3 "~" H 8850 10750 50  0001 C CNN
+	1    8850 10750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

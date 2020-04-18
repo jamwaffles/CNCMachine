@@ -110,7 +110,7 @@ Wire Wire Line
 Text Notes 5600 1950 2    50   ~ 0
 Select between Argon 5V and Mesa 5V with this jumper
 Wire Wire Line
-	5300 4500 3800 4500
+	5300 4500 4350 4500
 Wire Wire Line
 	3800 4500 3800 4400
 Connection ~ 5300 4500
@@ -134,4 +134,11 @@ Connection ~ 4750 3800
 Wire Wire Line
 	4650 3600 4100 3600
 Connection ~ 4650 3600
+Wire Wire Line
+	4100 3100 4350 3100
+Wire Wire Line
+	4350 3100 4350 4500
+Connection ~ 4350 4500
+Wire Wire Line
+	4350 4500 3800 4500
 $EndSCHEMATC

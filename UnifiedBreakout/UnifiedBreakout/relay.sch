@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 18
+Sheet 6 18
 Title ""
 Date ""
 Rev ""
@@ -22,7 +22,7 @@ AR Path="/5E986E17/5E97D1CA" Ref="RL?"  Part="1"
 AR Path="/5E987622/5E97D1CA" Ref="RL?"  Part="1" 
 AR Path="/5E98D570/5E97D1CA" Ref="RL2"  Part="1" 
 AR Path="/5E98DEDA/5E97D1CA" Ref="RL3"  Part="1" 
-F 0 "RL2" V 4983 3250 50  0000 C CNN
+F 0 "RL1" V 4983 3250 50  0000 C CNN
 F 1 "JW2" V 5074 3250 50  0000 C CNN
 F 2 "Relay_THT:Relay_DPDT_Panasonic_JW2" H 6400 3200 50  0001 L CNN
 F 3 "http://www3.panasonic.biz/ac/e_download/control/relay/power/catalog/mech_eng_jw.pdf?via=ok" H 5750 3250 50  0001 C CNN
@@ -41,7 +41,7 @@ AR Path="/5E986E17/5E97E5AE" Ref="Q?"  Part="1"
 AR Path="/5E987622/5E97E5AE" Ref="Q?"  Part="1" 
 AR Path="/5E98D570/5E97E5AE" Ref="Q2"  Part="1" 
 AR Path="/5E98DEDA/5E97E5AE" Ref="Q3"  Part="1" 
-F 0 "Q2" H 4791 3496 50  0000 L CNN
+F 0 "Q1" H 4791 3496 50  0000 L CNN
 F 1 "BC547" H 4791 3405 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4800 3375 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4600 3450 50  0001 L CNN
@@ -57,7 +57,7 @@ AR Path="/5E986E17/5E97F269" Ref="D?"  Part="1"
 AR Path="/5E987622/5E97F269" Ref="D?"  Part="1" 
 AR Path="/5E98D570/5E97F269" Ref="D8"  Part="1" 
 AR Path="/5E98DEDA/5E97F269" Ref="D10"  Part="1" 
-F 0 "D8" H 5750 2033 50  0000 C CNN
+F 0 "D6" H 5750 2033 50  0000 C CNN
 F 1 "1N4001" H 5750 2124 50  0000 C CNN
 F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 5750 2075 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5750 2250 50  0001 C CNN
@@ -73,7 +73,7 @@ AR Path="/5E986E17/5E9816C4" Ref="D?"  Part="1"
 AR Path="/5E987622/5E9816C4" Ref="D?"  Part="1" 
 AR Path="/5E98D570/5E9816C4" Ref="D7"  Part="1" 
 AR Path="/5E98DEDA/5E9816C4" Ref="D9"  Part="1" 
-F 0 "D7" V 4739 1982 50  0000 R CNN
+F 0 "D5" V 4739 1982 50  0000 R CNN
 F 1 "LED" V 4648 1982 50  0000 R CNN
 F 2 "LED_THT:LED_D3.0mm" H 4700 2100 50  0001 C CNN
 F 3 "~" H 4700 2100 50  0001 C CNN
@@ -89,7 +89,7 @@ AR Path="/5E986E17/5E982C8C" Ref="R?"  Part="1"
 AR Path="/5E987622/5E982C8C" Ref="R?"  Part="1" 
 AR Path="/5E98D570/5E982C8C" Ref="R11"  Part="1" 
 AR Path="/5E98DEDA/5E982C8C" Ref="R13"  Part="1" 
-F 0 "R11" H 4770 2546 50  0000 L CNN
+F 0 "R9" H 4770 2546 50  0000 L CNN
 F 1 "680R" H 4770 2455 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4630 2500 50  0001 C CNN
 F 3 "~" H 4700 2500 50  0001 C CNN
@@ -102,8 +102,6 @@ Text HLabel 6150 1800 1    50   Input ~ 0
 +12V
 Text HLabel 4700 4000 3    50   Output ~ 0
 GND
-Text HLabel 6050 3350 2    50   Input ~ 0
-IN_A
 Text HLabel 6050 3750 2    50   Input ~ 0
 IN_B
 Text HLabel 5450 3250 0    50   Output ~ 0
@@ -153,7 +151,7 @@ AR Path="/5E986E17/5E98535D" Ref="R?"  Part="1"
 AR Path="/5E987622/5E98535D" Ref="R?"  Part="1" 
 AR Path="/5E98D570/5E98535D" Ref="R10"  Part="1" 
 AR Path="/5E98DEDA/5E98535D" Ref="R12"  Part="1" 
-F 0 "R10" V 3943 3450 50  0000 C CNN
+F 0 "R8" V 3943 3450 50  0000 C CNN
 F 1 "2K2" V 4034 3450 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4080 3450 50  0001 C CNN
 F 3 "~" H 4150 3450 50  0001 C CNN
@@ -166,4 +164,6 @@ Wire Wire Line
 	4400 3450 4300 3450
 Wire Wire Line
 	4000 3450 3900 3450
+Text HLabel 6050 3350 2    50   Input ~ 0
+IN_A
 $EndSCHEMATC

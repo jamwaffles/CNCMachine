@@ -31,40 +31,40 @@ F 5 "Bel" H 5400 3350 50  0001 C CNN "Manufacturer"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5000 3150 4800 3150
+	5000 3150 3500 3150
 Wire Wire Line
-	4800 3150 4800 3350
+	5000 3350 3500 3350
 Wire Wire Line
-	5000 3350 4800 3350
-Connection ~ 4800 3350
-Wire Wire Line
-	4800 3350 4800 3550
-Wire Wire Line
-	5000 3550 4800 3550
-Connection ~ 4800 3550
-Wire Wire Line
-	4800 3550 4800 3750
-Wire Wire Line
-	5000 3750 4800 3750
-Connection ~ 4800 3750
-Wire Wire Line
-	5000 3050 3500 3050
-Wire Wire Line
-	5000 3250 3500 3250
-Wire Wire Line
-	5000 3450 3500 3450
-Wire Wire Line
-	5000 3650 3500 3650
-Wire Wire Line
-	4800 3750 4800 4000
-Text HLabel 3500 3050 0    50   Input ~ 0
+	5000 3750 3500 3750
+Text HLabel 3500 3150 0    50   Input ~ 0
 STEP
-Text HLabel 3500 3250 0    50   Input ~ 0
+Text HLabel 3500 3350 0    50   Input ~ 0
 DIR
-Text HLabel 3500 3450 0    50   Input ~ 0
+Text HLabel 3500 3550 0    50   Input ~ 0
 ENABLE
-Text HLabel 3500 3650 0    50   Input ~ 0
+Text HLabel 3500 3750 0    50   Input ~ 0
 ALARM
 Text HLabel 4800 4000 3    50   UnSpc ~ 0
 GND
+Wire Wire Line
+	5000 3550 3500 3550
+Wire Wire Line
+	5000 3050 4800 3050
+Wire Wire Line
+	4800 3050 4800 3250
+Wire Wire Line
+	5000 3250 4800 3250
+Connection ~ 4800 3250
+Wire Wire Line
+	4800 3250 4800 3450
+Wire Wire Line
+	5000 3450 4800 3450
+Connection ~ 4800 3450
+Wire Wire Line
+	4800 3450 4800 3650
+Wire Wire Line
+	5000 3650 4800 3650
+Connection ~ 4800 3650
+Wire Wire Line
+	4800 3650 4800 4000
 $EndSCHEMATC

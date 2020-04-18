@@ -1,4 +1,4 @@
-update=Mon 13 Apr 2020 17:53:15 BST
+update=Sat 18 Apr 2020 18:26:54 BST
 version=1
 last_client=kicad
 [general]
@@ -38,7 +38,7 @@ MinViaDrill=0.3
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
-TrackWidth1=0.35
+TrackWidth1=0.3
 ViaDiameter1=0.8
 ViaDrill1=0.4
 dPairWidth1=0.2
@@ -237,8 +237,8 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.2
-TrackWidth=0.35
+Clearance=0.15
+TrackWidth=0.3
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3
@@ -247,6 +247,17 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
+Name=ESTOP
+Clearance=0.15
+TrackWidth=0.35
+ViaDiameter=1
+ViaDrill=0.7
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/2]
 Name=Gnd
 Clearance=0.2
 TrackWidth=0.5
@@ -257,34 +268,34 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[pcbnew/Netclasses/2]
-Name=High power
-Clearance=0.5
-TrackWidth=1.5
-ViaDiameter=0.8
-ViaDrill=0.4
-uViaDiameter=0.3
-uViaDrill=0.1
-dPairWidth=0.2
-dPairGap=0.25
-dPairViaGap=0.25
 [pcbnew/Netclasses/3]
-Name=Low power
-Clearance=0.5
-TrackWidth=1
-ViaDiameter=0.8
-ViaDrill=0.4
+Name=High power
+Clearance=0.6
+TrackWidth=1.5
+ViaDiameter=1.5
+ViaDrill=1
 uViaDiameter=0.3
 uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/4]
+Name=Low power
+Clearance=0.5
+TrackWidth=1
+ViaDiameter=1
+ViaDrill=0.7
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/5]
 Name=Mains
-Clearance=2.5
+Clearance=1.75
 TrackWidth=3
-ViaDiameter=0.8
-ViaDrill=0.4
+ViaDiameter=3
+ViaDrill=1.5
 uViaDiameter=0.3
 uViaDrill=0.1
 dPairWidth=0.2
