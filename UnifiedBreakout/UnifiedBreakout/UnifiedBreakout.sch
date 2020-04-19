@@ -119,8 +119,8 @@ F 0 "C4" H 5018 10696 50  0000 L CNN
 F 1 "100uF" H 5018 10605 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 4938 10500 50  0001 C CNN
 F 3 "~" H 4900 10650 50  0001 C CNN
-F 4 "515D107M035BB6AE3" H 4900 10650 50  0001 C CNN "MPN"
-F 5 "Vishay" H 4900 10650 50  0001 C CNN "Manufacturer"
+F 4 "860080574007" H 4900 10650 50  0001 C CNN "MPN"
+F 5 "Wurth Elektronik" H 4900 10650 50  0001 C CNN "Manufacturer"
 	1    4900 10650
 	1    0    0    -1  
 $EndComp
@@ -166,8 +166,8 @@ F 0 "C2" H 3968 10696 50  0000 L CNN
 F 1 "100uF" H 3968 10605 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 3888 10500 50  0001 C CNN
 F 3 "~" H 3850 10650 50  0001 C CNN
-F 4 "515D107M035BB6AE3" H 3850 10650 50  0001 C CNN "MPN"
-F 5 "Vishay" H 3850 10650 50  0001 C CNN "Manufacturer"
+F 4 "860080574007" H 3850 10650 50  0001 C CNN "MPN"
+F 5 "Wurth Elektronik" H 3850 10650 50  0001 C CNN "Manufacturer"
 	1    3850 10650
 	1    0    0    -1  
 $EndComp
@@ -224,8 +224,8 @@ F 0 "C6" H 6018 10696 50  0000 L CNN
 F 1 "100uF" H 6018 10605 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 5938 10500 50  0001 C CNN
 F 3 "~" H 5900 10650 50  0001 C CNN
-F 4 "515D107M035BB6AE3" H 5900 10650 50  0001 C CNN "MPN"
-F 5 "Vishay" H 5900 10650 50  0001 C CNN "Manufacturer"
+F 4 "860080574007" H 5900 10650 50  0001 C CNN "MPN"
+F 5 "Wurth Elektronik" H 5900 10650 50  0001 C CNN "Manufacturer"
 	1    5900 10650
 	1    0    0    -1  
 $EndComp
@@ -322,6 +322,8 @@ F 0 "J2" H 2250 8517 50  0000 C CNN
 F 1 "ATX-24" H 2250 8426 50  0000 C CNN
 F 2 "Connector_Molex:Molex_Mini-Fit_Jr_5569-24A2_2x12_P4.20mm_Horizontal" H 2250 7750 50  0001 C CNN
 F 3 "https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33" H 4650 7300 50  0001 C CNN
+F 4 "39-30-1240" H 2250 7850 50  0001 C CNN "MPN"
+F 5 "Molex" H 2250 7850 50  0001 C CNN "Manufacturer"
 	1    2250 7850
 	1    0    0    -1  
 $EndComp
@@ -550,8 +552,8 @@ F 0 "C8" H 7018 10696 50  0000 L CNN
 F 1 "100uF" H 7018 10605 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" H 6938 10500 50  0001 C CNN
 F 3 "~" H 6900 10650 50  0001 C CNN
-F 4 "515D107M035BB6AE3" H 6900 10650 50  0001 C CNN "MPN"
-F 5 "Vishay" H 6900 10650 50  0001 C CNN "Manufacturer"
+F 4 "860080574007" H 6900 10650 50  0001 C CNN "MPN"
+F 5 "Wurth Elektronik" H 6900 10650 50  0001 C CNN "Manufacturer"
 	1    6900 10650
 	1    0    0    -1  
 $EndComp
@@ -1592,6 +1594,8 @@ F 0 "J5" H 2680 10592 50  0000 L CNN
 F 1 "12V BUS" H 2680 10501 50  0000 L CNN
 F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 2600 10600 50  0001 C CNN
 F 3 "~" H 2600 10600 50  0001 C CNN
+F 4 "1757242" H 2600 10600 50  0001 C CNN "MPN"
+F 5 "Phoenix Contact" H 2600 10600 50  0001 C CNN "Manufacturer"
 	1    2600 10600
 	1    0    0    -1  
 $EndComp
@@ -1603,6 +1607,8 @@ F 0 "J4" H 1880 10592 50  0000 L CNN
 F 1 "24V BUS" H 1880 10501 50  0000 L CNN
 F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 1800 10600 50  0001 C CNN
 F 3 "~" H 1800 10600 50  0001 C CNN
+F 4 "1757242" H 1800 10600 50  0001 C CNN "MPN"
+F 5 "Phoenix Contact" H 1800 10600 50  0001 C CNN "Manufacturer"
 	1    1800 10600
 	1    0    0    -1  
 $EndComp
@@ -1614,6 +1620,8 @@ F 0 "J3" H 1130 10592 50  0000 L CNN
 F 1 "5V BUS" H 1130 10501 50  0000 L CNN
 F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 1050 10600 50  0001 C CNN
 F 3 "~" H 1050 10600 50  0001 C CNN
+F 4 "1757242" H 1050 10600 50  0001 C CNN "MPN"
+F 5 "Phoenix Contact" H 1050 10600 50  0001 C CNN "Manufacturer"
 	1    1050 10600
 	1    0    0    -1  
 $EndComp
@@ -1901,6 +1909,8 @@ F 0 "J24" H 8130 4642 50  0000 L CNN
 F 1 "AXIS PWR IN" H 8130 4551 50  0000 L CNN
 F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal" H 8050 4600 50  0001 C CNN
 F 3 "~" H 8050 4600 50  0001 C CNN
+F 4 "1757255" H 8050 4600 50  0001 C CNN "MPN"
+F 5 "Phoenix Contact" H 8050 4600 50  0001 C CNN "Manufacturer"
 	1    8050 4600
 	1    0    0    -1  
 $EndComp
@@ -1912,6 +1922,8 @@ F 0 "J25" H 8130 5192 50  0000 L CNN
 F 1 "AXIS PWR OUT" H 8130 5101 50  0000 L CNN
 F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal" H 8050 5150 50  0001 C CNN
 F 3 "~" H 8050 5150 50  0001 C CNN
+F 4 "1757255" H 8050 5150 50  0001 C CNN "MPN"
+F 5 "Phoenix Contact" H 8050 5150 50  0001 C CNN "Manufacturer"
 	1    8050 5150
 	1    0    0    -1  
 $EndComp
@@ -1929,6 +1941,8 @@ F 0 "J22" H 7780 5792 50  0000 L CNN
 F 1 "DRAWBAR" H 7780 5701 50  0000 L CNN
 F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 7700 5800 50  0001 C CNN
 F 3 "~" H 7700 5800 50  0001 C CNN
+F 4 "1757242" H 7700 5800 50  0001 C CNN "MPN"
+F 5 "Phoenix Contact" H 7700 5800 50  0001 C CNN "Manufacturer"
 	1    7700 5800
 	1    0    0    -1  
 $EndComp
@@ -1940,6 +1954,8 @@ F 0 "J23" H 7780 7092 50  0000 L CNN
 F 1 "MIST" H 7780 7001 50  0000 L CNN
 F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 7700 7100 50  0001 C CNN
 F 3 "~" H 7700 7100 50  0001 C CNN
+F 4 "1757242" H 7700 7100 50  0001 C CNN "MPN"
+F 5 "Phoenix Contact" H 7700 7100 50  0001 C CNN "Manufacturer"
 	1    7700 7100
 	1    0    0    -1  
 $EndComp
@@ -2105,10 +2121,10 @@ F 3 "" H 7250 7350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H6
 U 1 1 5EAE25AF
 P 9150 10550
-F 0 "H?" H 9250 10596 50  0000 L CNN
+F 0 "H6" H 9250 10596 50  0000 L CNN
 F 1 "MountingHole" H 9250 10505 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 9150 10550 50  0001 C CNN
 F 3 "~" H 9150 10550 50  0001 C CNN
@@ -2116,10 +2132,10 @@ F 3 "~" H 9150 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H5
 U 1 1 5EAE2839
 P 8850 10750
-F 0 "H?" H 8950 10796 50  0000 L CNN
+F 0 "H5" H 8950 10796 50  0000 L CNN
 F 1 "MountingHole" H 8950 10705 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 8850 10750 50  0001 C CNN
 F 3 "~" H 8850 10750 50  0001 C CNN

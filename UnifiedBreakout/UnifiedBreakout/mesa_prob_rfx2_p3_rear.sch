@@ -21,6 +21,9 @@ F 0 "J11" H 5530 3252 50  0000 L CNN
 F 1 "MESA P3 REAR IO" H 5530 3161 50  0000 L CNN
 F 2 "Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 5350 3250 50  0001 C CNN
 F 3 " ~" H 5350 3250 50  0001 C CNN
+F 4 "L77SDB25SA4CH4F " H 5350 3250 50  0001 C CNN "Alternative MPN"
+F 5 "ID25S33E4GX00LF" H 5350 3250 50  0001 C CNN "MPN"
+F 6 "Amphenol" H 5350 3250 50  0001 C CNN "Manufacturer"
 	1    5350 3250
 	1    0    0    -1  
 $EndComp

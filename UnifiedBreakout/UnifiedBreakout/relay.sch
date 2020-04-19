@@ -45,6 +45,8 @@ F 0 "Q1" H 4791 3496 50  0000 L CNN
 F 1 "BC547" H 4791 3405 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 4800 3375 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4600 3450 50  0001 L CNN
+F 4 "BC547CTFR" H 4600 3450 50  0001 C CNN "MPN"
+F 5 "ON Semiconductor" H 4600 3450 50  0001 C CNN "Manufacturer"
 	1    4600 3450
 	1    0    0    -1  
 $EndComp
