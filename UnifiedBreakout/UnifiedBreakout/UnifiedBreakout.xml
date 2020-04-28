@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/james/Repositories/CNCMachine/UnifiedBreakout/UnifiedBreakout/UnifiedBreakout.sch</source>
-    <date>Sun 19 Apr 2020 10:11:26 BST</date>
+    <date>Mon 27 Apr 2020 15:03:21 BST</date>
     <tool>Eeschema 5.1.5-52549c5~86~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -950,8 +950,8 @@
       <footprint>Connector_IDC:IDC-Header_2x13_P2.54mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="MPN">90130-3126 </field>
-        <field name="Manufacturer">Molex</field>
+        <field name="MPN">N2526-5002RB</field>
+        <field name="Manufacturer">3M</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_02x13_Odd_Even" description="Generic connector, double row, 02x13, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/ARGON IO/" tstamps="/5E9EB9EA/"/>

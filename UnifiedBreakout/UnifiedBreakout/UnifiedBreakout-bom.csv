@@ -13,7 +13,7 @@ J10 ,1,"MESA P2 INTERNAL IO","Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.8
 J11 ,1,"MESA P3 REAR IO","Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm"," ~","ID25S33E4GX00LF","Amphenol","L77SDB25SA4CH4F "
 J12 ,1,"ENCODER IN","Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm"," ~"
 J13 ,1,"ENCODER OUT","Connector_Dsub:DSUB-15_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm"," ~"
-J14 ,1,"ARGON J5","Connector_IDC:IDC-Header_2x13_P2.54mm_Horizontal","~","90130-3126 ","Molex",""
+J14 ,1,"ARGON J5","Connector_IDC:IDC-Header_2x13_P2.54mm_Horizontal","~","N2526-5002RB","3M",""
 J15 ,1,"ARGON J2.2","Stewart:SS6488SANF1","~","SS-6488S-A-NF-1","Bel",""
 J16 J17 J18 J19 J20 ,5,"RJ14","Wurth:615004141121","~","615004141121","Wurth",""
 J2 ,1,"ATX-24","Connector_Molex:Molex_Mini-Fit_Jr_5569-24A2_2x12_P4.20mm_Horizontal","https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33","39-30-1240","Molex",""
