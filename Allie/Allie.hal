@@ -5,7 +5,7 @@
 loadrt trivkins
 loadrt motmod servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=3
 loadrt hostmot2
-loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=2 num_pwmgens=0 num_stepgens=7"
+loadrt hm2_pci config="firmware=hm2/5i25/5i25_prob_rfx2 num_encoders=2 num_pwmgens=1 num_stepgens=3"
 setp    hm2_5i25.0.watchdog.timeout_ns 5000000
 loadrt pid names=pid.x,pid.y,pid.z,pid.s_pos,pid.s_vel
 
@@ -25,10 +25,8 @@ addf not.0 servo-thread
 loadrt toggle count=1
 addf toggle.0 servo-thread
 
-setp hm2_5i25.0.gpio.005.is_output true
-
-# Link probe input on black BoB v1 to drawbar-enable signal
-net drawbar-button-debounced debounce.0.0.in <= hm2_5i25.0.gpio.007.in_not
+# Drawbar button in
+net drawbar-button-debounced debounce.0.0.in <= hm2_5i25.0.gpio.022.in_not
 net drawbar-debounced-toggle toggle.0.in <= debounce.0.0.out
 
 net spindle-is-running not.0.in
@@ -37,7 +35,10 @@ net spindle-is-running not.0.in
 net spindle-interlock-button and2.0.in0 toggle.0.out
 net spindle-interlock-running and2.0.in1 not.0.out
 
-net drawbar-engage-toggle <= hm2_5i25.0.gpio.005.out and2.0.out
+# Drawbar relay
+setp hm2_5i25.0.gpio.030.is_output true
+setp hm2_5i25.0.gpio.030.invert_output true
+net drawbar-engage-toggle <= hm2_5i25.0.gpio.030.out and2.0.out
 
 addf hm2_5i25.0.read          servo-thread
 addf motion-command-handler   servo-thread
@@ -50,31 +51,30 @@ addf hm2_5i25.0.write         servo-thread
 # external output signals
 
 # --- COOLANT-MIST ---
-setp hm2_5i25.0.gpio.003.is_output true
-net coolant-mist hm2_5i25.0.gpio.003.out
-#setp hm2_5i25.0.gpio.003.invert_output true
+setp hm2_5i25.0.gpio.020.is_output true
+net coolant-mist hm2_5i25.0.gpio.020.out
+setp hm2_5i25.0.gpio.020.invert_output true
 
-# --- AUX-PSU ---
-# Parport pin 14
-setp hm2_5i25.0.gpio.000.is_output true
-net machine-is-enabled hm2_5i25.0.gpio.000.out
-setp hm2_5i25.0.gpio.000.invert_output true
+# --- ATX-PSU ---
+setp hm2_5i25.0.gpio.021.is_output true
+net machine-is-enabled hm2_5i25.0.gpio.021.out
+setp hm2_5i25.0.gpio.021.invert_output true
 
 # --- STEPPER-PSU ---
-# Parport pin 15
-setp hm2_5i25.0.gpio.001.is_output true
-net machine-is-enabled hm2_5i25.0.gpio.001.out
+setp hm2_5i25.0.gpio.017.is_output true
+net machine-is-enabled hm2_5i25.0.gpio.017.out
+setp hm2_5i25.0.gpio.017.invert_output true
 
 # external input signals
 
 # --- HOME-X ---
-net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.011.in
+net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.003.in_not
 
 # --- HOME-Y ---
-net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.012.in
+net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.007.in_not
 
 # --- HOME-Z ---
-net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.013.in
+net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.013.in_not
 
 #*******************
 #  AXIS X
@@ -361,7 +361,12 @@ net machine-is-enabled        <=  motion.motion-enabled
 #  ---estop signals---
 
 net estop-out     <=  iocontrol.0.user-enable-out
+
+# External estop button
 net estop-ext     =>  iocontrol.0.emc-enable-in
+
+# F1 control 
+# net estop-out     =>  iocontrol.0.emc-enable-in
 
 #  ---manual tool change signals---
 

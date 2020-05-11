@@ -33,33 +33,39 @@ setp   pid.s_pos.error-previous-target true
 setp   pid.s_pos.maxerror .0005
 
 # Velocity mode PID, used during normal operation
-setp   pid.s_vel.Pgain     [SPINDLE_9]VEL_P
-setp   pid.s_vel.Igain     [SPINDLE_9]VEL_I
-setp   pid.s_vel.Dgain     [SPINDLE_9]VEL_D
-setp   pid.s_vel.bias      [SPINDLE_9]VEL_BIAS
-setp   pid.s_vel.FF0       [SPINDLE_9]VEL_FF0
-setp   pid.s_vel.FF1       [SPINDLE_9]VEL_FF1
-setp   pid.s_vel.FF2       [SPINDLE_9]VEL_FF2
-setp   pid.s_vel.deadband  [SPINDLE_9]VEL_DEADBAND
-setp   pid.s_vel.maxoutput [SPINDLE_9]MAX_OUTPUT
-setp   pid.s_vel.error-previous-target true
-setp   pid.s_vel.maxerror .0005
+# setp   pid.s_vel.Pgain     [SPINDLE_9]VEL_P
+# setp   pid.s_vel.Igain     [SPINDLE_9]VEL_I
+# setp   pid.s_vel.Dgain     [SPINDLE_9]VEL_D
+# setp   pid.s_vel.bias      [SPINDLE_9]VEL_BIAS
+# setp   pid.s_vel.FF0       [SPINDLE_9]VEL_FF0
+# setp   pid.s_vel.FF1       [SPINDLE_9]VEL_FF1
+# setp   pid.s_vel.FF2       [SPINDLE_9]VEL_FF2
+# setp   pid.s_vel.deadband  [SPINDLE_9]VEL_DEADBAND
+# setp   pid.s_vel.maxoutput [SPINDLE_9]MAX_OUTPUT
+# setp   pid.s_vel.error-previous-target true
+# setp   pid.s_vel.maxerror .0005
 
-# Spindle stepgen connected to P2 pin 6 and 7
-setp   hm2_5i25.0.stepgen.06.dirsetup        [SPINDLE_9]DIRSETUP
-setp   hm2_5i25.0.stepgen.06.dirhold         [SPINDLE_9]DIRHOLD
-setp   hm2_5i25.0.stepgen.06.steplen         [SPINDLE_9]STEPLEN
-setp   hm2_5i25.0.stepgen.06.stepspace       [SPINDLE_9]STEPSPACE
-setp   hm2_5i25.0.stepgen.06.position-scale  [SPINDLE_9]STEP_SCALE
-# 0 = step/dir, 2 = quadrature, among others
-setp   hm2_5i25.0.stepgen.06.step_type        0
-# 1 = velocity mode
-setp   hm2_5i25.0.stepgen.06.control-type     1
-setp   hm2_5i25.0.stepgen.06.maxaccel         [SPINDLE_9]MAX_ACCELERATION
-setp   hm2_5i25.0.stepgen.06.maxvel           [SPINDLE_9]MAX_VELOCITY
+# # Spindle stepgen connected to P2 pin 6 and 7
+# setp   hm2_5i25.0.stepgen.06.dirsetup        [SPINDLE_9]DIRSETUP
+# setp   hm2_5i25.0.stepgen.06.dirhold         [SPINDLE_9]DIRHOLD
+# setp   hm2_5i25.0.stepgen.06.steplen         [SPINDLE_9]STEPLEN
+# setp   hm2_5i25.0.stepgen.06.stepspace       [SPINDLE_9]STEPSPACE
+# setp   hm2_5i25.0.stepgen.06.position-scale  [SPINDLE_9]STEP_SCALE
+# # 0 = step/dir, 1 = up/down, 2 = quadrature, among others
+# setp   hm2_5i25.0.stepgen.06.step_type        0
+# # 1 = velocity mode
+# setp   hm2_5i25.0.stepgen.06.control-type     1
+# setp   hm2_5i25.0.stepgen.06.maxaccel         [SPINDLE_9]MAX_ACCELERATION
+# setp   hm2_5i25.0.stepgen.06.maxvel           [SPINDLE_9]MAX_VELOCITY
 
-# Invert direction pin
+# Reverse spindle direction
 setp hm2_5i25.0.gpio.027.invert_output true
+
+# Pwmgen
+# # 1 = PWM on out0, dir on out1
+# setp hm2_5i25.0.pwmgen.00.output-type 1
+# setp hm2_5i25.0.pwmgen.pwm_frequency 3000
+# setp hm2_5i25.0.pwmgen.00.scale -100
 
 # Drive enable pin, P2 pin 8
 setp hm2_5i25.0.gpio.028.is_output true
@@ -104,10 +110,10 @@ net spindle-vel-fb-rpm <= hm2_5i25.0.encoder.00.velocity-rpm
 net spindle-index-enable <=> hm2_5i25.0.encoder.00.index-enable
 
 # Velocity PID
-net spindle-enable => pid.s_vel.enable
-net spindle-vel-cmd-rps => pid.s_vel.command
-net spindle-vel-fb-rps => pid.s_vel.feedback
-net spindle-vel-output <= pid.s_vel.output
+# net spindle-enable => pid.s_vel.enable
+# net spindle-vel-cmd-rps => pid.s_vel.command
+# net spindle-vel-fb-rps => pid.s_vel.feedback
+# net spindle-vel-output <= pid.s_vel.output
 
 # Position PID
 net spindle-orient-enable => pid.s_pos.enable
@@ -124,12 +130,19 @@ net spindle-orient-angle => orient.0.angle
 # Mux - select between pos and vel modes
 net spindle-orient-enable => mux2.0.sel
 net spindle-pos-output => mux2.0.in1
-net spindle-vel-output => mux2.0.in0
+net spindle-vel-cmd-rps => mux2.0.in0
 net spindle-mux-output <= mux2.0.out
 
 # Stepgen closed loop
 net spindle-orient-enable => or2.0.in0 
 net spindle-enable => or2.0.in1
-net spindle-or or2.0.out => hm2_5i25.0.stepgen.06.enable
+# - PWMgen
+net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
+# - Stepgen
+# net spindle-or or2.0.out => hm2_5i25.0.stepgen.06.enable
 
-net spindle-mux-output hm2_5i25.0.stepgen.06.velocity-cmd
+# Spindle output
+# - PWM
+net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
+# - Stepgen
+# net spindle-mux-output => hm2_5i25.0.stepgen.06.velocity-cmd

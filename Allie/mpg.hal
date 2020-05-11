@@ -8,26 +8,29 @@
 loadrt mux16 names=jogincr
 addf jogincr                  servo-thread
 
+# --- JOINT-SELECT-X ---
+net joint-select-a     <=  hm2_5i25.0.gpio.018.in_not
+
+# --- JOINT-SELECT-Y ---
+net joint-select-b     <=  hm2_5i25.0.gpio.029.in_not
+
+# --- JOINT-SELECT-Z ---
+net joint-select-c     <=  hm2_5i25.0.gpio.028.in_not
+
 # --- JOINT-SELECT-A ---
-net joint-select-a     <=  hm2_5i25.0.gpio.017.in_not
-
-# --- JOINT-SELECT-B ---
-net joint-select-b     <=  hm2_5i25.0.gpio.018.in_not
-
-# --- JOINT-SELECT-C ---
-net joint-select-c     <=  hm2_5i25.0.gpio.019.in_not
+net joint-select-d     <=  hm2_5i25.0.gpio.027.in_not
 
 # --- JOG-INCR-A ---
-net jog-incr-a     <=  hm2_5i25.0.gpio.020.in_not
+net jog-incr-a     <=  hm2_5i25.0.gpio.026.in_not
 
 # --- JOG-INCR-B ---
-net jog-incr-b     <=  hm2_5i25.0.gpio.021.in_not
+net jog-incr-b     <=  hm2_5i25.0.gpio.025.in_not
 
 # --- JOG-INCR-C ---
-net jog-incr-c     <=  hm2_5i25.0.gpio.022.in_not
+net jog-incr-c     <=  hm2_5i25.0.gpio.023.in_not
 
 # --- ESTOP-EXT ---
-net estop-ext     <=  hm2_5i25.0.gpio.023.in_not
+net estop-ext     <=  hm2_5i25.0.gpio.000.in_not
 
 # ---jogwheel signals to mesa encoder - shared MPG---
 
@@ -52,7 +55,6 @@ setp    joint.2.jog-vel-mode 1
 net selected-jog-incr    =>  joint.2.jog-scale axis.z.jog-scale
 net joint-select-c       =>  joint.2.jog-enable axis.z.jog-enable
 net joint-selected-count =>  joint.2.jog-counts axis.z.jog-counts
-
 
 # connect selectable mpg jog increments 
 # Note that increments of 0.025 scale to 0.1 due to 4x scaling of encoder pulses vs clicks
