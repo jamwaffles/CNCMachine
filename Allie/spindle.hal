@@ -68,7 +68,8 @@ setp hm2_5i25.0.gpio.027.invert_output true
 # setp hm2_5i25.0.pwmgen.00.scale -100
 
 # Drive enable pin, P2 pin 8
-setp hm2_5i25.0.gpio.028.is_output true
+# Commented out - this is instead used by the pendant Z axis select
+# setp hm2_5i25.0.gpio.028.is_output true
 
 # Spindle encoder
 setp    hm2_5i25.0.encoder.00.counter-mode 0
@@ -101,7 +102,8 @@ net spindle-vel-fb-rps         =>  spindle.0.speed-in
 net spindle-index-enable      <=>  spindle.0.index-enable
 
 # Drive enable pin, P2 pin 8
-net spindle-enable => hm2_5i25.0.gpio.028.out
+# Commented out - this is instead used by the pendant Z axis select
+# net spindle-enable => hm2_5i25.0.gpio.028.out
 
 # Encoder
 net spindle-revs <= hm2_5i25.0.encoder.00.position
@@ -137,12 +139,12 @@ net spindle-mux-output <= mux2.0.out
 net spindle-orient-enable => or2.0.in0 
 net spindle-enable => or2.0.in1
 # - PWMgen
-net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
+# net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
 # - Stepgen
 # net spindle-or or2.0.out => hm2_5i25.0.stepgen.06.enable
 
 # Spindle output
 # - PWM
-net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
+# net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
 # - Stepgen
 # net spindle-mux-output => hm2_5i25.0.stepgen.06.velocity-cmd
