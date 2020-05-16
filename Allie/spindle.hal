@@ -59,13 +59,13 @@ setp   pid.s_pos.maxerror .0005
 # setp   hm2_5i25.0.stepgen.06.maxvel           [SPINDLE_9]MAX_VELOCITY
 
 # Reverse spindle direction
-setp hm2_5i25.0.gpio.027.invert_output true
+# setp hm2_5i25.0.gpio.027.invert_output true
 
 # Pwmgen
-# # 1 = PWM on out0, dir on out1
-# setp hm2_5i25.0.pwmgen.00.output-type 1
-# setp hm2_5i25.0.pwmgen.pwm_frequency 3000
-# setp hm2_5i25.0.pwmgen.00.scale -100
+# 1 = PWM on out0, dir on out1
+setp hm2_5i25.0.pwmgen.00.output-type 1
+setp hm2_5i25.0.pwmgen.pwm_frequency 5000
+setp hm2_5i25.0.pwmgen.00.scale -1
 
 # Drive enable pin, P2 pin 8
 # Commented out - this is instead used by the pendant Z axis select
@@ -139,12 +139,12 @@ net spindle-mux-output <= mux2.0.out
 net spindle-orient-enable => or2.0.in0 
 net spindle-enable => or2.0.in1
 # - PWMgen
-# net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
+net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
 # - Stepgen
 # net spindle-or or2.0.out => hm2_5i25.0.stepgen.06.enable
 
 # Spindle output
 # - PWM
-# net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
+net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
 # - Stepgen
 # net spindle-mux-output => hm2_5i25.0.stepgen.06.velocity-cmd
