@@ -68,13 +68,13 @@ setp hm2_5i25.0.gpio.017.invert_output true
 # external input signals
 
 # --- HOME-X ---
-net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.003.in_not
+net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.003.in
 
 # --- HOME-Y ---
-net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.007.in_not
+net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.007.in
 
 # --- HOME-Z ---
-net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.013.in_not
+net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.013.in
 
 #*******************
 #  AXIS X
