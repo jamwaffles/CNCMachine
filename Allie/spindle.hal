@@ -65,7 +65,7 @@ setp   pid.s_pos.maxerror .0005
 # 1 = PWM on out0, dir on out1
 setp hm2_5i25.0.pwmgen.00.output-type 1
 setp hm2_5i25.0.pwmgen.pwm_frequency 5000
-setp hm2_5i25.0.pwmgen.00.scale -1
+setp hm2_5i25.0.pwmgen.00.scale -360
 
 # Drive enable pin, P2 pin 8
 # Commented out - this is instead used by the pendant Z axis select
