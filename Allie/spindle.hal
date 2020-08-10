@@ -45,26 +45,26 @@ setp   pid.s_pos.maxerror .0005
 # setp   pid.s_vel.error-previous-target true
 # setp   pid.s_vel.maxerror .0005
 
-# # Spindle stepgen connected to P2 pin 6 and 7
-# setp   hm2_5i25.0.stepgen.06.dirsetup        [SPINDLE_9]DIRSETUP
-# setp   hm2_5i25.0.stepgen.06.dirhold         [SPINDLE_9]DIRHOLD
-# setp   hm2_5i25.0.stepgen.06.steplen         [SPINDLE_9]STEPLEN
-# setp   hm2_5i25.0.stepgen.06.stepspace       [SPINDLE_9]STEPSPACE
-# setp   hm2_5i25.0.stepgen.06.position-scale  [SPINDLE_9]STEP_SCALE
-# # 0 = step/dir, 1 = up/down, 2 = quadrature, among others
-# setp   hm2_5i25.0.stepgen.06.step_type        0
-# # 1 = velocity mode
-# setp   hm2_5i25.0.stepgen.06.control-type     1
-# setp   hm2_5i25.0.stepgen.06.maxaccel         [SPINDLE_9]MAX_ACCELERATION
-# setp   hm2_5i25.0.stepgen.06.maxvel           [SPINDLE_9]MAX_VELOCITY
+# Spindle stepgen connected to P2 pin 6 and 7
+setp   hm2_5i25.0.stepgen.03.dirsetup        [SPINDLE_9]DIRSETUP
+setp   hm2_5i25.0.stepgen.03.dirhold         [SPINDLE_9]DIRHOLD
+setp   hm2_5i25.0.stepgen.03.steplen         [SPINDLE_9]STEPLEN
+setp   hm2_5i25.0.stepgen.03.stepspace       [SPINDLE_9]STEPSPACE
+setp   hm2_5i25.0.stepgen.03.position-scale  [SPINDLE_9]STEP_SCALE
+# 0 = step/dir, 1 = up/down, 2 = quadrature, among others
+setp   hm2_5i25.0.stepgen.03.step_type        0
+# 1 = velocity mode
+setp   hm2_5i25.0.stepgen.03.control-type     1
+setp   hm2_5i25.0.stepgen.03.maxaccel         [SPINDLE_9]MAX_ACCELERATION
+setp   hm2_5i25.0.stepgen.03.maxvel           [SPINDLE_9]MAX_VELOCITY
 
 # Reverse spindle direction
-# setp hm2_5i25.0.gpio.027.invert_output true
+setp hm2_5i25.0.gpio.012.invert_output true
 
 # Pwmgen
 # 1 = PWM on out0, dir on out1
 setp hm2_5i25.0.pwmgen.00.output-type 1
-setp hm2_5i25.0.pwmgen.pwm_frequency 5000
+setp hm2_5i25.0.pwmgen.pwm_frequency 10000
 setp hm2_5i25.0.pwmgen.00.scale -360
 
 # Drive enable pin, P2 pin 8
@@ -141,10 +141,10 @@ net spindle-enable => or2.0.in1
 # - PWMgen
 net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
 # - Stepgen
-# net spindle-or or2.0.out => hm2_5i25.0.stepgen.06.enable
+# net spindle-or or2.0.out => hm2_5i25.0.stepgen.03.enable
 
 # Spindle output
 # - PWM
 net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
 # - Stepgen
-# net spindle-mux-output => hm2_5i25.0.stepgen.06.velocity-cmd
+# net spindle-mux-output => hm2_5i25.0.stepgen.03.velocity-cmd
