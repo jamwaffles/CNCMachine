@@ -1,62 +1,32 @@
-# Heavily inspired by http://wiki.linuxcnc.org/uploads/orient.svg with changed signal names
-# Requires `pid.s_pos,pid.s_vel` to be added to a `loadrt pid` line
-# Example: 
-#
-# loadrt pid names=pid.s_pos,pid.s_vel
+# Inspired from https://forum.linuxcnc.org/20-g-code/33837-m19-spindle-orient#104393
 
 loadrt orient count=1
-loadrt mux2 count=1
-loadrt or2
+loadrt scale names=orient-scale
+loadrt near names=orient-angle
+loadrt mux2 names=pwm-source
+loadrt or2 count=1
 
-addf mux2.0 servo-thread
 addf orient.0 servo-thread
+addf pwm-source servo-thread
+addf orient-scale servo-thread
+addf orient-angle servo-thread
 addf or2.0 servo-thread
-
-addf pid.s_pos.do-pid-calcs       servo-thread
-addf pid.s_vel.do-pid-calcs       servo-thread
 
 # ---
 # Component setup
 # ---
-
-# Position mode PID, used during orient
-setp   pid.s_pos.Pgain     [SPINDLE_9]POS_P
-setp   pid.s_pos.Igain     [SPINDLE_9]POS_I
-setp   pid.s_pos.Dgain     [SPINDLE_9]POS_D
-setp   pid.s_pos.bias      [SPINDLE_9]POS_BIAS
-setp   pid.s_pos.FF0       [SPINDLE_9]POS_FF0
-setp   pid.s_pos.FF1       [SPINDLE_9]POS_FF1
-setp   pid.s_pos.FF2       [SPINDLE_9]POS_FF2
-setp   pid.s_pos.deadband  [SPINDLE_9]POS_DEADBAND
-setp   pid.s_pos.maxoutput [SPINDLE_9]MAX_OUTPUT
-setp   pid.s_pos.error-previous-target true
-setp   pid.s_pos.maxerror .0005
-
-# Velocity mode PID, used during normal operation
-# setp   pid.s_vel.Pgain     [SPINDLE_9]VEL_P
-# setp   pid.s_vel.Igain     [SPINDLE_9]VEL_I
-# setp   pid.s_vel.Dgain     [SPINDLE_9]VEL_D
-# setp   pid.s_vel.bias      [SPINDLE_9]VEL_BIAS
-# setp   pid.s_vel.FF0       [SPINDLE_9]VEL_FF0
-# setp   pid.s_vel.FF1       [SPINDLE_9]VEL_FF1
-# setp   pid.s_vel.FF2       [SPINDLE_9]VEL_FF2
-# setp   pid.s_vel.deadband  [SPINDLE_9]VEL_DEADBAND
-# setp   pid.s_vel.maxoutput [SPINDLE_9]MAX_OUTPUT
-# setp   pid.s_vel.error-previous-target true
-# setp   pid.s_vel.maxerror .0005
-
-# Spindle stepgen connected to P2 pin 6 and 7
-setp   hm2_5i25.0.stepgen.03.dirsetup        [SPINDLE_9]DIRSETUP
-setp   hm2_5i25.0.stepgen.03.dirhold         [SPINDLE_9]DIRHOLD
-setp   hm2_5i25.0.stepgen.03.steplen         [SPINDLE_9]STEPLEN
-setp   hm2_5i25.0.stepgen.03.stepspace       [SPINDLE_9]STEPSPACE
-setp   hm2_5i25.0.stepgen.03.position-scale  [SPINDLE_9]STEP_SCALE
-# 0 = step/dir, 1 = up/down, 2 = quadrature, among others
-setp   hm2_5i25.0.stepgen.03.step_type        0
-# 1 = velocity mode
-setp   hm2_5i25.0.stepgen.03.control-type     1
-setp   hm2_5i25.0.stepgen.03.maxaccel         [SPINDLE_9]MAX_ACCELERATION
-setp   hm2_5i25.0.stepgen.03.maxvel           [SPINDLE_9]MAX_VELOCITY
+# # Spindle stepgen connected to P2 pin 6 and 7
+# setp   hm2_5i25.0.stepgen.03.dirsetup        [SPINDLE_9]DIRSETUP
+# setp   hm2_5i25.0.stepgen.03.dirhold         [SPINDLE_9]DIRHOLD
+# setp   hm2_5i25.0.stepgen.03.steplen         [SPINDLE_9]STEPLEN
+# setp   hm2_5i25.0.stepgen.03.stepspace       [SPINDLE_9]STEPSPACE
+# setp   hm2_5i25.0.stepgen.03.position-scale  [SPINDLE_9]STEP_SCALE
+# # 0 = step/dir, 1 = up/down, 2 = quadrature, among others
+# setp   hm2_5i25.0.stepgen.03.step_type        0
+# # 1 = velocity mode
+# setp   hm2_5i25.0.stepgen.03.control-type     1
+# setp   hm2_5i25.0.stepgen.03.maxaccel         [SPINDLE_9]MAX_ACCELERATION
+# setp   hm2_5i25.0.stepgen.03.maxvel           [SPINDLE_9]MAX_VELOCITY
 
 # Reverse spindle direction
 setp hm2_5i25.0.gpio.012.invert_output true
@@ -66,10 +36,6 @@ setp hm2_5i25.0.gpio.012.invert_output true
 setp hm2_5i25.0.pwmgen.00.output-type 1
 setp hm2_5i25.0.pwmgen.pwm_frequency 10000
 setp hm2_5i25.0.pwmgen.00.scale -360
-
-# Drive enable pin, P2 pin 8
-# Commented out - this is instead used by the pendant Z axis select
-# setp hm2_5i25.0.gpio.028.is_output true
 
 # Spindle encoder
 setp    hm2_5i25.0.encoder.00.counter-mode 0
@@ -83,59 +49,32 @@ setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
 # Component wiring
 # ---
 
-# External connections
+### External connections
 net spindle-orient-enable <= spindle.0.orient
 net spindle-orient-angle <= spindle.0.orient-angle
 
-# Spindle connections
-net spindle-vel-cmd-rps        <=  spindle.0.speed-out-rps
-net spindle-vel-cmd-rps-abs    <=  spindle.0.speed-out-rps-abs
-net spindle-vel-cmd-rpm        <=  spindle.0.speed-out
-net spindle-vel-cmd-rpm-abs    <=  spindle.0.speed-out-abs
-net spindle-enable             <=  spindle.0.on
-net spindle-cw                 <=  spindle.0.forward
-net spindle-ccw                <=  spindle.0.reverse
-net spindle-brake              <=  spindle.0.brake
-net spindle-revs               =>  spindle.0.revs
-net spindle-at-speed           =>  spindle.0.at-speed
-net spindle-vel-fb-rps         =>  spindle.0.speed-in
-net spindle-index-enable      <=>  spindle.0.index-enable
-
-# Drive enable pin, P2 pin 8
-# Commented out - this is instead used by the pendant Z axis select
-# net spindle-enable => hm2_5i25.0.gpio.028.out
-
-# Encoder
-net spindle-revs <= hm2_5i25.0.encoder.00.position
-net spindle-vel-fb-rps <= hm2_5i25.0.encoder.00.velocity
-net spindle-vel-fb-rpm <= hm2_5i25.0.encoder.00.velocity-rpm
-net spindle-index-enable <=> hm2_5i25.0.encoder.00.index-enable
-
-# Velocity PID
-# net spindle-enable => pid.s_vel.enable
-# net spindle-vel-cmd-rps => pid.s_vel.command
-# net spindle-vel-fb-rps => pid.s_vel.feedback
-# net spindle-vel-output <= pid.s_vel.output
-
-# Position PID
-net spindle-orient-enable => pid.s_pos.enable
-net spindle-orient-cmd => pid.s_pos.command
-net spindle-revs => pid.s_pos.feedback
-net spindle-pos-output <= pid.s_pos.output
-
-# Orient component
-net spindle-orient-cmd <= orient.0.command
+### Orient component
+# Replaced by output of scale component below
+# net spindle-orient-cmd <= orient.0.command
 net spindle-revs => orient.0.position
 net spindle-orient-enable => orient.0.enable
 net spindle-orient-angle => orient.0.angle
 
-# Mux - select between pos and vel modes
-net spindle-orient-enable => mux2.0.sel
-net spindle-pos-output => mux2.0.in1
-net spindle-vel-cmd-rps => mux2.0.in0
-net spindle-mux-output <= mux2.0.out
+### Orient scale
+# Adjust to get suitable motor speed
+setp orient-scale.gain 1.0
+# Adjust to keep motor going slowly near end of travel
+setp orient-scale.offset 0.0
+net spindle-orient-cmd-raw orient-scale.in orient.0.command
+net spindle-orient-cmd <= orient-scale.out
 
-# Stepgen closed loop
+### Mux - select between orient output and normal operation
+net spindle-orient-enable => pwm-source.sel
+net spindle-pos-output => pwm-source.in1
+net spindle-vel-cmd-rps => pwm-source.in0
+net spindle-mux-output <= pwm-source.out
+
+### Spindle enable - either sources from orient enable or normal rotation enable
 net spindle-orient-enable => or2.0.in0 
 net spindle-enable => or2.0.in1
 # - PWMgen
@@ -143,7 +82,7 @@ net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
 # - Stepgen
 # net spindle-or or2.0.out => hm2_5i25.0.stepgen.03.enable
 
-# Spindle output
+### Spindle output
 # - PWM
 net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
 # - Stepgen
