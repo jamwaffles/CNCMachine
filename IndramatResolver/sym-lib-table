@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name IndramatResolver)(type Legacy)(uri ${KIPRJMOD}/IndramatResolver.lib)(options "")(descr ""))
+)
