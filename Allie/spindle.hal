@@ -1,20 +1,14 @@
-# Inspired from https://forum.linuxcnc.org/20-g-code/33837-m19-spindle-orient#104393
+loadusr -Wn argon /home/james/Repositories/simplemotion-rs/target/debug/examples/linuxcnc /dev/ttyUSB1 1
 
-loadrt orient count=1
-loadrt scale names=orient-scale
-loadrt near names=orient-angle
-loadrt mux2 names=pwm-source
-loadrt or2 count=1
-
-addf orient.0 servo-thread
-addf pwm-source servo-thread
-addf orient-scale servo-thread
-addf orient-angle servo-thread
-addf or2.0 servo-thread
+loadrt near names=near-at-speed
+addf near-at-speed servo-thread
 
 # ---
 # Component setup
 # ---
+
+### Stepgen
+
 # # Spindle stepgen connected to P2 pin 6 and 7
 # setp   hm2_5i25.0.stepgen.03.dirsetup        [SPINDLE_9]DIRSETUP
 # setp   hm2_5i25.0.stepgen.03.dirhold         [SPINDLE_9]DIRHOLD
@@ -28,16 +22,19 @@ addf or2.0 servo-thread
 # setp   hm2_5i25.0.stepgen.03.maxaccel         [SPINDLE_9]MAX_ACCELERATION
 # setp   hm2_5i25.0.stepgen.03.maxvel           [SPINDLE_9]MAX_VELOCITY
 
-# Reverse spindle direction
-setp hm2_5i25.0.gpio.012.invert_output true
+### PWM
 
-# Pwmgen
-# 1 = PWM on out0, dir on out1
-setp hm2_5i25.0.pwmgen.00.output-type 1
-setp hm2_5i25.0.pwmgen.pwm_frequency 10000
-setp hm2_5i25.0.pwmgen.00.scale -360
+# # Reverse spindle direction
+# setp hm2_5i25.0.gpio.012.invert_output true
+#
+# # Pwmgen
+# # 1 = PWM on out0, dir on out1
+# setp hm2_5i25.0.pwmgen.00.output-type 1
+# setp hm2_5i25.0.pwmgen.pwm_frequency 10000
+# setp hm2_5i25.0.pwmgen.00.scale -360
 
-# Spindle encoder
+### Spindle encoder
+
 setp    hm2_5i25.0.encoder.00.counter-mode 0
 setp    hm2_5i25.0.encoder.00.filter 1
 setp    hm2_5i25.0.encoder.00.index-invert 0
@@ -49,41 +46,30 @@ setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
 # Component wiring
 # ---
 
-### External connections
-net spindle-orient-enable <= spindle.0.orient
-net spindle-orient-angle <= spindle.0.orient-angle
+### Orient configuration
+net orient-enable spindle.0.orient argon.orient-enable
+net spindle-orient-angle spindle.0.orient-angle argon.orient-angle
+net is-oriented spindle.0.is-oriented <= argon.is-oriented
 
-### Orient component
-# Replaced by output of scale component below
-# net spindle-orient-cmd <= orient.0.command
-net spindle-revs => orient.0.position
-net spindle-orient-enable => orient.0.enable
-net spindle-orient-angle => orient.0.angle
+### Spindle speed command
+net spindle-speed-cmd-rps spindle.0.speed-cmd-rps => argon.spindle-speed-rps
 
-### Orient scale
-# Adjust to get suitable motor speed
-setp orient-scale.gain 1.0
-# Adjust to keep motor going slowly near end of travel
-setp orient-scale.offset 0.0
-net spindle-orient-cmd-raw orient-scale.in orient.0.command
-net spindle-orient-cmd <= orient-scale.out
+### Spindle at speed
+net spindle-fb-rps argon.spindle-fb-rps => near-at-speed.in1
+net spindle-fb-rpm argon.spindle-fb-rpm
+net spindle-speed-cmd-rps => near-at-speed.in2
+setp near-at-speed.scale 1.15
+net spindle-at-speed near-at-speed.out
 
-### Mux - select between orient output and normal operation
-net spindle-orient-enable => pwm-source.sel
-net spindle-pos-output => pwm-source.in1
-net spindle-vel-cmd-rps => pwm-source.in0
-net spindle-mux-output <= pwm-source.out
+### Non-SimpleMotion output control
 
-### Spindle enable - either sources from orient enable or normal rotation enable
-net spindle-orient-enable => or2.0.in0 
-net spindle-enable => or2.0.in1
-# - PWMgen
-net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
-# - Stepgen
-# net spindle-or or2.0.out => hm2_5i25.0.stepgen.03.enable
-
-### Spindle output
-# - PWM
-net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
-# - Stepgen
-# net spindle-mux-output => hm2_5i25.0.stepgen.03.velocity-cmd
+# # - PWMgen
+# net spindle-or or2.0.out => hm2_5i25.0.pwmgen.00.enable
+# # - Stepgen
+# # net spindle-or or2.0.out => hm2_5i25.0.stepgen.03.enable
+#
+# ### Spindle output
+# # - PWM
+# net spindle-mux-output => hm2_5i25.0.pwmgen.00.value
+# # - Stepgen
+# # net spindle-mux-output => hm2_5i25.0.stepgen.03.velocity-cmd
