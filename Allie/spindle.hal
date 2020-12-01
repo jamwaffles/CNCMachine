@@ -1,4 +1,4 @@
-loadusr -Wn argon /home/james/Repositories/simplemotion-rs/target/debug/examples/linuxcnc /dev/ttyUSB1 1
+loadusr -Wn argon ./argon-rs /dev/ttyUSB0 1
 
 loadrt near names=near-at-speed
 addf near-at-speed servo-thread
