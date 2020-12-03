@@ -14,7 +14,7 @@
 10\offset=0
 10\readonly=false
 10\scaling=1
-10\value=200
+10\value=100
 11\addr=201
 11\max=32767
 11\min=0
@@ -22,7 +22,7 @@
 11\offset=0
 11\readonly=false
 11\scaling=1
-11\value=15
+11\value=25
 12\addr=220
 12\max=32767
 12\min=0
@@ -30,7 +30,7 @@
 12\offset=0
 12\readonly=false
 12\scaling=1
-12\value=1000
+12\value=0
 13\addr=221
 13\max=32767
 13\min=0
@@ -38,7 +38,7 @@
 13\offset=0
 13\readonly=false
 13\scaling=1
-13\value=2800
+13\value=0
 14\addr=222
 14\max=119.921875
 14\min=0
@@ -54,7 +54,7 @@
 15\offset=-1
 15\readonly=false
 15\scaling=1
-15\value=0
+15\value=1
 16\addr=558
 16\max=7
 16\min=0
@@ -78,7 +78,7 @@
 18\offset=0
 18\readonly=false
 18\scaling=1
-18\value=16
+18\value=8
 19\addr=411
 19\max=18
 19\min=0
@@ -169,7 +169,7 @@
 28\value=0
 29\addr=491
 29\max=5368.70911
-29\min=1e-5
+29\min=1e-05
 29\name=AXS
 29\offset=0
 29\readonly=false
@@ -238,7 +238,7 @@
 36\offset=0
 36\readonly=false
 36\scaling=1
-36\value=50
+36\value=30
 37\addr=6055
 37\max=1
 37\min=2
@@ -254,7 +254,7 @@
 38\offset=0
 38\readonly=false
 38\scaling=1
-38\value=50
+38\value=30
 39\addr=800
 39\max=32767
 39\min=1
@@ -262,7 +262,7 @@
 39\offset=0
 39\readonly=false
 39\scaling=1
-39\value=1
+39\value=2
 4\addr=6002
 4\max=536870911
 4\min=-536870912
@@ -302,7 +302,7 @@
 43\offset=0
 43\readonly=false
 43\scaling=1000
-43\value=10
+43\value=1.8
 44\addr=406
 44\max=30
 44\min=0
@@ -310,7 +310,7 @@
 44\offset=0
 44\readonly=false
 44\scaling=1000
-44\value=30
+44\value=5
 45\addr=430
 45\max=7200
 45\min=30
@@ -326,7 +326,7 @@
 46\offset=0
 46\readonly=false
 46\scaling=0.5
-46\value=4
+46\value=6
 47\addr=572
 47\max=65000
 47\min=1
@@ -334,7 +334,7 @@
 47\offset=0
 47\readonly=false
 47\scaling=1
-47\value=6000
+47\value=6500
 48\addr=563
 48\max=100
 48\min=-100
@@ -350,9 +350,9 @@
 49\offset=0
 49\readonly=false
 49\scaling=1
-49\value=18
+49\value=146
 5\addr=565
-5\max=4e+6
+5\max=4e+06
 5\min=50
 5\name=FBR
 5\offset=0
@@ -374,7 +374,7 @@
 51\offset=0
 51\readonly=false
 51\scaling=1
-51\value=10
+51\value=1
 52\addr=808
 52\max=16384
 52\min=0
@@ -390,7 +390,7 @@
 53\offset=0
 53\readonly=false
 53\scaling=1000
-53\value=2
+53\value=4
 54\addr=835
 54\max=536870911
 54\min=-536870912
@@ -470,7 +470,7 @@
 62\offset=0
 62\readonly=false
 62\scaling=1
-62\value=0
+62\value=5
 63\addr=911
 63\max=10
 63\min=0
@@ -494,7 +494,7 @@
 65\offset=0
 65\readonly=false
 65\scaling=1
-65\value=1
+65\value=5
 66\addr=6006
 66\max=0
 66\min=0
@@ -526,7 +526,7 @@
 8\offset=0
 8\readonly=false
 8\scaling=1
-8\value=0
+8\value=1
 9\addr=202
 9\max=32767
 9\min=0
@@ -534,7 +534,7 @@
 9\offset=0
 9\readonly=false
 9\scaling=1
-9\value=400
+9\value=1500
 size=67
 
 [Header]
