@@ -12,6 +12,6 @@ T44 P44 D3.000000 Z-19.626300 ;3 flute 3mm k2 carbide
 T48 P48 D2.000000 Z-52.145200 ;2mm 2 flute uncoated carbide 
 T34 P34 D6.000000 Z-42.784700 ;3 flute nc carbide g9f43 
 T2 P2 D5.000000 Z+50.617300 ;5mm jobber drill 
-T13 P13 D50.000000 Z-43.211000 ;45deg 50mm face mill (steel) 
+T13 P13 D50.000000 Z-43.231683 ;45deg 50mm face mill (steel) 
 T8 P8 D8.300000 Z-59.272400 ;45deg chamfer mill, 3 flute, europa/osborn 
 T43 P43 D8.000000 Z-38.884100 ;8mm 4flute  ncmill carbide 
