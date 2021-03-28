@@ -42,6 +42,9 @@ setp    hm2_5i25.0.encoder.00.index-mask 0
 setp    hm2_5i25.0.encoder.00.index-mask-invert 0
 setp    hm2_5i25.0.encoder.00.scale  [SPINDLE_9]ENCODER_SCALE
 
+net spindle-revs spindle.0.revs hm2_5i25.0.encoder.00.position
+net spindle-index-enable spindle.0.index-enable hm2_5i25.0.encoder.00.index-enable
+
 # ---
 # Component wiring
 # ---
