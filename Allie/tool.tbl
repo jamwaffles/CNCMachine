@@ -1,17 +1,7 @@
-T99 P99 D10.000000 Z-21.388100 ;touch probe 
-T4 P4 D5.000000 Z-46.566700 ;5mm 120deg spot drill 
-T6 P6 D5.000000 Z-56.664100 ;5mm 2 flute 45deg drill mill 
-T1 P1 D3.000000 Z-53.892800 ;2 flute alu power e5522 
-T17 P17 D6.350000 Z-54.074300 ;30deg 0.010" flat engraver 
-T12 P12 D50.000000 Z-42.793800 ;90deg 50mm face mill 
-T20 P30 D1.000000 Z-52.590800 ;1mm jobber drill 
-T19 P19 D2.000000 Z+17.606600 ;2mm jobber drill 
-T39 P39 D5.000000 Z+50.617300 ;5mm jobber drill 
-T5 P5 D6.000000 Z-36.360300 ;6mm 3 flute alu power 
-T44 P44 D3.000000 Z-19.626300 ;3 flute 3mm k2 carbide 
-T48 P48 D2.000000 Z-52.145200 ;2mm 2 flute uncoated carbide 
-T34 P34 D6.000000 Z-42.784700 ;3 flute nc carbide g9f43 
-T2 P2 D5.000000 Z+50.617300 ;5mm jobber drill 
-T13 P13 D50.000000 Z-43.231683 ;45deg 50mm face mill (steel) 
-T8 P8 D8.300000 Z-59.272400 ;45deg chamfer mill, 3 flute, europa/osborn 
-T43 P43 D8.000000 Z-38.884100 ;8mm 4flute  ncmill carbide 
+T99 P99 D10.000000 ;touch probe 
+T2 P2 D50.000000 Z-41.339200 ;50mm square facemill for alu 
+T5 P5 D5.000000 Z-45.104300 ;5mm hss spot drill 
+T4 P4 D4.500000 Z+46.670300 ;4.5mm jobber drill 
+T1 P1 D6.000000 Z-42.849683 ;3fl alupower long polished 
+T3 P3 D3.300000 Z+33.479833 ;3.3mm hss jobber m4 tap drill 
+T7 P7 D4.000000 Z+33.617367 ;m4 spiral tap 
