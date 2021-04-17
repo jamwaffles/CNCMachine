@@ -5,3 +5,5 @@ T4 P4 D4.500000 Z+46.670300 ;4.5mm jobber drill
 T1 P1 D6.000000 Z-42.849683 ;3fl alupower long polished 
 T3 P3 D3.300000 Z+33.479833 ;3.3mm hss jobber m4 tap drill 
 T7 P7 D4.000000 Z+33.617367 ;m4 spiral tap 
+T6 P7 D2.500000 Z+0.0 ;2.5mm hss jobber m3 tap drill
+T8 P8 D3.000000 Z+0.0 ;m3 spiral tap
