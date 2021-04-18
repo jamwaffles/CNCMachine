@@ -1,9 +1,9 @@
-T99 P99 D10 ;touch probe 
-T2 P2 Z-41.3392 D50 ;50mm square facemill for alu 
-T5 P5 Z-45.1043 D5 ;5mm hss spot drill 
-T4 P4 Z46.6703 D4.5 ;4.5mm jobber drill 
-T1 P1 Z-42.8497 D6 ;3fl alupower long polished 
-T3 P3 Z33.4798 D3.3 ;3.3mm hss jobber m4 tap drill 
-T7 P7 Z33.6174 D4 ;m4 spiral tap 
-T6 P6 D2.5 ;2.5mm hss jobber m3 tap drill 
-T8 P8 D3 ;m3 spiral tap 
+T99 P99 D10.000000 ;touch probe 
+T2 P2 D50.000000 Z-41.339200 ;50mm square facemill for alu 
+T5 P5 D5.000000 Z-45.104300 ;5mm hss spot drill 
+T4 P4 D4.500000 Z+46.670300 ;4.5mm jobber drill 
+T1 P1 D6.000000 Z-42.849700 ;3fl alupower long polished 
+T3 P3 D3.300000 Z+33.479800 ;3.3mm hss jobber m4 tap drill 
+T7 P7 D4.000000 Z+33.617400 ;m4 spiral tap 
+T6 P6 D2.500000 Z+26.235517 ;2.5mm hss jobber m3 tap drill 
+T8 P8 D3.000000 Z+27.189075 ;m3 spiral tap 
