@@ -1,4 +1,4 @@
-T99 P99 D10 ;touch probe 
+T99 P99 D10 ;conductive touch probe 
 T2 P2 Z-41.3392 D50 ;50mm square facemill for alu 
 T5 P5 Z-45.1043 D5 ;5mm hss spot drill 
 T4 P4 Z46.6703 D4.5 ;4.5mm jobber drill 
@@ -14,3 +14,4 @@ T12 P12 Z-39.4866 D8 ;8mm 3fl carbide 45deg chamfer mill
 T13 P13 Z37.7777 D3.5 ;3.5mm jobber drill 
 T14 P14 Z18.9059 D2 ;2mm jobber drill 
 T15 P15 D6.35 ;6.35mm shank 60deg engraver 
+T98 P98 D4 ;ruby touch probe 
