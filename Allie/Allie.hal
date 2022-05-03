@@ -74,7 +74,8 @@ net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.003.in
 net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.007.in
 
 # --- HOME-Z ---
-net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.013.in
+# NOTE: Uses in_not with NO PNP switch type
+net home-z  =>  joint.2.home-sw-in  <=  hm2_5i25.0.gpio.013.in_not
 
 #*******************
 #  AXIS X
