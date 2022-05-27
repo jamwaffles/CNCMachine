@@ -15,7 +15,7 @@ loadrt pid names=pid.x,pid.y,pid.z,pid.s_pos,pid.s_vel
 # https://forum.linuxcnc.org/24-hal-components/32319-debounce
 loadrt debounce cfg=1
 addf debounce.0 servo-thread
-setp debounce.0.delay 300		# 10ms based on 1ms servo thread
+setp debounce.0.delay 150		# 300 = 10ms based on 1ms servo thread
 
 loadrt and2 count=1
 addf and2.0 servo-thread
