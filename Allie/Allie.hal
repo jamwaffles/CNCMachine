@@ -71,7 +71,8 @@ setp hm2_5i25.0.gpio.017.invert_output true
 net home-x  =>  joint.0.home-sw-in  <=  hm2_5i25.0.gpio.003.in
 
 # --- HOME-Y ---
-net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.007.in
+# NOTE: Uses in_not with NO PNP switch type
+net home-y  =>  joint.1.home-sw-in  <=  hm2_5i25.0.gpio.007.in_not
 
 # --- HOME-Z ---
 # NOTE: Uses in_not with NO PNP switch type
