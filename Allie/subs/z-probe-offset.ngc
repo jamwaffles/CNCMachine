@@ -1,14 +1,24 @@
-(Run with "O <subs/z-probe-offset> CALL")
+(NOTE: Switch to ruby ball electronic probe with 't98 m6 g43' BEFORE use)
+(Run with "O <subs/probe-corner> CALL")
 
 o<subs/z-probe-offset> sub
+
+(set Z calculated parameter storage)
+#1003 = 0
+
+(clear current G54 offsets)
 G10 L2 P1 Z0
 
-G38.2 Z-40 F400 (quick probe)
+(--- Z AXIS PROBE ---)
 G91 (relative)
+G38.3 Z-50 F400 (quick probe)
 G0 Z2 (retract a bit for slow probe)
-G38.2 Z-2.5 F100
-G10 L2 P1 Z#5063 (#5063 is Z value of G38.2 straight probe)
+G38.3 Z-10 F100
+(#5063 is Z value of G38.3 straight probe)
+#1003 = #5063
+G10 L2 P1 Z#1003
+G0 Z5 (retract to safe place)
 G90 (absolute)
-G0 Z10 (retract to safe height)
+
 o<subs/z-probe-offset> endsub
 M2

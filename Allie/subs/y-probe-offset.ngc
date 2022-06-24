@@ -1,25 +1,25 @@
-(Run with "O <subs/y-probe-offset> CALL")
+(NOTE: Switch to ruby ball electronic probe with 't98 m6 g43' BEFORE use)
+(Run with "O <subs/probe-corner> CALL")
 
 o<subs/y-probe-offset> sub
 
-(set Y calculated parameter storage)
-#1001 = 0
+(set X calculated parameter storage)
+#1002 = 0
 
 (clear current G54 offsets)
 G10 L2 P1 Y0
 
-(--- Y AXIS PROBE ---)
+(--- X AXIS PROBE ---)
 G91 (relative)
-G38.2 Y50 F200 (quick probe)
-G0 Y-0.5 (retract a bit for slow probe)
-G38.2 Y10 F50
-(#5062 is Y value of G38.2 straight probe)
+G38.3 Y-50 F400 (quick probe)
+G0 Y2 (retract a bit for slow probe)
+G38.3 Y-10 F100
+(#5062 is Y value of G38.3 straight probe)
 (#5410 is tool diameter. We want the tool center, hence / 2)
-#1001 = [#5062 + #5410 / 2]
-G10 L2 P1 Y#1001
-G0 Y-0.5 (retract to safe place)
+#1002 = [#5062 - #5410 / 2]
+G10 L2 P1 Y#1002
+G0 Y5 (retract to safe place)
 G90 (absolute)
-G0 Z10
 
 o<subs/y-probe-offset> endsub
 M2
