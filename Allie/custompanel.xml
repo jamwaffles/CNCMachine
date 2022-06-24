@@ -87,4 +87,22 @@
 
 		</table>
 	</labelframe>
+
+	<labelframe text="Touch probe/toolsetter">
+		<font>("Helvetica",12)</font>
+		<table>
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Active"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"probe-in"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"gray"</off_color>
+			</led>
+		</table>
+	</labelframe>
 </pyvcp>
