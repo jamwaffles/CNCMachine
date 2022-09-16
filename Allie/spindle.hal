@@ -64,6 +64,9 @@ net spindle-speed-cmd-rps => near-at-speed.in2
 setp near-at-speed.scale 1.15
 net spindle-at-speed near-at-speed.out
 
+### Drive fault
+net drive-error argon.drive-error
+
 ### Non-SimpleMotion output control
 
 # # - PWMgen

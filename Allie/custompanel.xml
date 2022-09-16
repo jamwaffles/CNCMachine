@@ -43,6 +43,19 @@
 			</led>
 
 			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Spindle drive fault"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"drive-error"</halpin>
+				<size>"10"</size>
+				<on_color>"red"</on_color>
+				<off_color>"gray"</off_color>
+			</led>
+
+			<tablerow/>
 			<tablesticky sticky="n" />
 			<label>
 				<text>"RPM"</text>

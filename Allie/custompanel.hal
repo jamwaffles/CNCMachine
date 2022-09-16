@@ -2,4 +2,5 @@ net spindle-fb-rpm => pyvcp.spindle-speed-rpm
 net spindle-at-speed => pyvcp.spindle-at-speed
 net orient-enable => pyvcp.orient-enable
 net is-oriented => pyvcp.is-oriented
+net drive-error => pyvcp.drive-error
 net probe-in => pyvcp.probe-in
