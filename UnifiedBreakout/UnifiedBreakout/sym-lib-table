@@ -1,7 +1,9 @@
 (sym_lib_table
+  (version 7)
   (lib (name "Stewart")(type "Legacy")(uri "${KIPRJMOD}/Components/Stewart-Eth-SS-6488S-A-NF.pretty/SS-6488S-A-NF-1.lib")(options "")(descr ""))
   (lib (name "Wurth")(type "Legacy")(uri "${KIPRJMOD}/Components/Wurth-615004141121-RJ11.pretty/615004141121.lib")(options "")(descr ""))
   (lib (name "Molex")(type "Legacy")(uri "${KIPRJMOD}/Components/Molex-MiniFitJr-39-30-1240.pretty/39-30-1240.lib")(options "")(descr ""))
   (lib (name "Switchcraft")(type "Legacy")(uri "${KIPRJMOD}/Components/SwitchCraft-BarrelJack-RAPC722BK/RAPC722BK.lib")(options "")(descr ""))
   (lib (name "UnifiedBreakout-rescue")(type "Legacy")(uri "${KIPRJMOD}/UnifiedBreakout-rescue.lib")(options "")(descr ""))
+  (lib (name "UnifiedBreakout")(type "KiCad")(uri "${KIPRJMOD}/Components/UnifiedBreakout.kicad_sym")(options "")(descr ""))
 )
