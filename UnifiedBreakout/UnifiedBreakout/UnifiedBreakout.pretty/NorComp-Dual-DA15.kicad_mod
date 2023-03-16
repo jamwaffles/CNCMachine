@@ -59,7 +59,7 @@
   (pad "MH2" thru_hole circle (at -26.355 2.84) (size 4.575 4.575) (drill 3.05) (layers "*.Cu" "*.Mask") (tstamp ad41cff9-06e2-4c4f-a6c7-fd93969a5b1c))
   (pad "MH3" thru_hole circle (at 6.965 -5.16) (size 4.575 4.575) (drill 3.05) (layers "*.Cu" "*.Mask") (tstamp 68cfa1e2-3545-4de1-8c31-0e80d17f9cff))
   (pad "MH4" thru_hole circle (at -26.355 -5.16) (size 4.575 4.575) (drill 3.05) (layers "*.Cu" "*.Mask") (tstamp 94f3d45f-fb46-435a-9b2c-927e6a751834))
-  (model "${KIPRJMOD}/Components/3D/NorComp-Dual-DA15.stp"
+  (model "${KIPRJMOD}/Components/3D/NorComp-178-Dual-DA15.stp"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1.1 1))
     (rotate (xyz 0 0 0))
