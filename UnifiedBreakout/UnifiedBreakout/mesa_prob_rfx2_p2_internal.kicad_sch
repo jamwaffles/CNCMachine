@@ -750,7 +750,7 @@
   (symbol (lib_id "UnifiedBreakout:DB25_Receptacle_Dual") (at 168.91 100.33 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a4e5ad7d-50fa-4876-8874-11fae99b634e)
-    (property "Reference" "J5" (at 173.99 95.885 0)
+    (property "Reference" "J8" (at 173.99 95.885 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DB25_Receptacle_Dual" (at 173.99 98.425 0)
@@ -828,7 +828,7 @@
     (instances
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005e96eb73"
-          (reference "J5") (unit 2)
+          (reference "J8") (unit 2)
         )
       )
     )

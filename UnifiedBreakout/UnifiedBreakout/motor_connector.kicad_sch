@@ -387,10 +387,10 @@
   (symbol (lib_id "UnifiedBreakout:SS71800-041F") (at 139.7 86.36 0) (mirror y) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3d2dd88b-a27d-4014-9025-321c0f6a9c16)
-    (property "Reference" "J8" (at 148.59 90.805 0)
+    (property "Reference" "J3" (at 148.59 90.805 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "" (at 148.59 88.265 0)
+    (property "Value" "~" (at 148.59 88.265 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "UnifiedBreakout:SS71800-041F" (at 139.7 86.36 0)
@@ -448,13 +448,13 @@
     (instances
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005e67ffe4"
-          (reference "J8") (unit 3)
+          (reference "J3") (unit 3)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005e67fd54"
-          (reference "J8") (unit 2)
+          (reference "J3") (unit 2)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005e6754f3"
-          (reference "J8") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
