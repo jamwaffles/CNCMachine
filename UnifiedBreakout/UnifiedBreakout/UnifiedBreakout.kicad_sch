@@ -1066,6 +1066,7 @@
     )
   )
 
+
   (junction (at 163.83 266.7) (diameter 0.9144) (color 0 0 0 0)
     (uuid 0ff508fd-18da-4ab7-9844-3c8a28c2587e)
   )
@@ -2110,31 +2111,6 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 113.03 276.86 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-00005e9505a7)
-    (property "Reference" "#PWR013" (at 113.03 283.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 113.157 281.2542 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 113.03 276.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 113.03 276.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 02a1aaa8-82a9-42f7-a1f0-9c23cecca540))
-    (instances
-      (project "UnifiedBreakout"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR013") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C") (at 113.03 270.51 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005e9516ae)
@@ -2516,7 +2492,13 @@
     (property "Datasheet" "~" (at 24.13 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Farnell PN" "" (at 24.13 139.7 0)
+    (property "Farnell PN" "1581114" (at 24.13 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "MCL034GD " (at 24.13 139.7 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Manufacturer" "MULTICOMP PRO" (at 24.13 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid eb0107f7-0426-4092-a07b-0c467aea3afc))
@@ -2545,7 +2527,13 @@
     (property "Datasheet" "~" (at 20.32 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Farnell PN" "" (at 20.32 68.58 0)
+    (property "Farnell PN" "1581114" (at 20.32 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "MCL034GD " (at 20.32 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Manufacturer" "MULTICOMP PRO" (at 20.32 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f20370a3-237b-40db-8379-cb93e6d45bdf))
@@ -2684,31 +2672,6 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 40.64 271.78 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-00005ea08199)
-    (property "Reference" "#PWR08" (at 40.64 278.13 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 40.767 276.1742 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 40.64 271.78 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 40.64 271.78 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 905456d4-9a84-481a-9e9d-144c5e500f89))
-    (instances
-      (project "UnifiedBreakout"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR08") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+24V") (at 40.64 269.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005ea08e24)
@@ -2829,31 +2792,6 @@
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR01") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 394.97 90.17 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-00005ea4353a)
-    (property "Reference" "#PWR040" (at 394.97 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 395.097 94.5642 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 394.97 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 394.97 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4389a8f5-1917-4ebf-8f04-d1d97efccba2))
-    (instances
-      (project "UnifiedBreakout"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR040") (unit 1)
         )
       )
     )
@@ -3270,31 +3208,6 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 341.63 220.98 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-00005eb5774e)
-    (property "Reference" "#PWR034" (at 341.63 227.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 341.757 225.3742 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 341.63 220.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 341.63 220.98 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ac44b5e8-7908-488f-99e4-97f718e09e64))
-    (instances
-      (project "UnifiedBreakout"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR034") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+24V") (at 372.11 217.17 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005eb8d946)
@@ -3487,6 +3400,49 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 394.97 90.17 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 19d23776-c7f3-42d6-9ace-03e4fe8c1e30)
+    (property "Reference" "#PWR045" (at 394.97 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GNDPWR" (at 394.843 95.25 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 394.97 90.17 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 394.97 90.17 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b8a186c7-05c9-4d96-8f6d-1682f0b9267d))
+    (instances
+      (project "UnifiedBreakout"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
+          (reference "#PWR045") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea623ae"
+          (reference "#PWR043") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
+          (reference "#PWR044") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea816c6"
+          (reference "#PWR046") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea7f263"
+          (reference "#PWR047") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/a961b421-d2a6-477a-a4b0-5977252d73f9"
+          (reference "#PWR048") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR040") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Relay_SolidState:TLP222A") (at 58.42 190.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 212f0d6c-f3ca-418f-b715-6eff91bcf299)
@@ -3533,7 +3489,13 @@
     (property "Datasheet" "~" (at 69.85 265.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Farnell PN" "" (at 69.85 265.43 0)
+    (property "Farnell PN" "1581122" (at 69.85 265.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "MCL034MT" (at 69.85 265.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Manufacturer" "MULTICOMP PRO" (at 69.85 265.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a508e2b6-8561-4157-afda-c574e0b84662))
@@ -3542,6 +3504,33 @@
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 238.76 265.43 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 3f4e37a7-4b07-4d11-866b-d9d1637dbe2e)
+    (property "Reference" "H6" (at 241.3 264.2616 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 241.3 266.573 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 238.76 265.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 238.76 265.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Farnell PN" "" (at 238.76 265.43 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "UnifiedBreakout"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "H6") (unit 1)
         )
       )
     )
@@ -3577,6 +3566,33 @@
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R19") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 228.6 264.16 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5261d107-879a-46e4-b8e0-6f0611e87c6f)
+    (property "Reference" "H5" (at 231.14 262.9916 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 231.14 265.303 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 228.6 264.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 228.6 264.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Farnell PN" "" (at 228.6 264.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "UnifiedBreakout"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "H5") (unit 1)
         )
       )
     )
@@ -3657,6 +3673,31 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 113.03 276.86 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 74f1f152-eacb-4009-9ab4-1edc5871f437)
+    (property "Reference" "#PWR013" (at 113.03 283.21 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 113.157 281.2542 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 113.03 276.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 113.03 276.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 66eb450a-1a99-416f-a9ae-ad6409398a6a))
+    (instances
+      (project "UnifiedBreakout"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR013") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Relay_SolidState:TLP222A") (at 58.42 209.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a1e7713f-e2d9-426e-99a1-fb07695ee096)
@@ -3708,6 +3749,49 @@
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR011") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 40.64 271.78 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid b1ec5607-41cb-418a-bd08-c30621fbc88b)
+    (property "Reference" "#PWR045" (at 40.64 276.86 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GNDPWR" (at 40.513 276.86 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 40.64 271.78 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 40.64 271.78 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 30c8e22a-5357-467d-844d-f86538b7ca22))
+    (instances
+      (project "UnifiedBreakout"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
+          (reference "#PWR045") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea623ae"
+          (reference "#PWR043") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
+          (reference "#PWR044") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea816c6"
+          (reference "#PWR046") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea7f263"
+          (reference "#PWR047") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/a961b421-d2a6-477a-a4b0-5977252d73f9"
+          (reference "#PWR048") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -3903,6 +3987,49 @@
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR042") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 341.63 220.98 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid cf396f7a-d52d-485c-941a-9b503b492b78)
+    (property "Reference" "#PWR045" (at 341.63 226.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GNDPWR" (at 341.503 226.06 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 341.63 220.98 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 341.63 220.98 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 05ee5f4a-7e2d-406c-b515-a2e75029594d))
+    (instances
+      (project "UnifiedBreakout"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
+          (reference "#PWR045") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea623ae"
+          (reference "#PWR043") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
+          (reference "#PWR044") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea816c6"
+          (reference "#PWR046") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea7f263"
+          (reference "#PWR047") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/a961b421-d2a6-477a-a4b0-5977252d73f9"
+          (reference "#PWR048") (unit 1)
+        )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR034") (unit 1)
         )
       )
     )

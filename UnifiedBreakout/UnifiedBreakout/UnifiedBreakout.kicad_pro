@@ -49,7 +49,13 @@
           "min_clearance": 0.44999999999999996
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
@@ -169,8 +175,15 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -505,23 +518,6 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.5,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "12V net",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 2.0,
-        "via_diameter": 1.5,
-        "via_drill": 1.0,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
         "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -529,80 +525,12 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "ESTOP",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.35,
-        "via_diameter": 1.0,
-        "via_drill": 0.7,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Gnd",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.6,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "High power",
+        "name": "24V power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.5,
-        "via_diameter": 1.5,
-        "via_drill": 1.0,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.5,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Low power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 1.0,
         "via_diameter": 1.0,
-        "via_drill": 0.7,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 1.75,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "Mains",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 3.0,
-        "via_diameter": 3.0,
-        "via_drill": 1.5,
+        "via_drill": 0.6,
         "wire_width": 6
       }
     ],
@@ -613,100 +541,12 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "12V net",
-        "pattern": "+12V"
-      },
-      {
-        "netclass": "12V net",
-        "pattern": "/DRAWBAR RELAY/IN_A"
-      },
-      {
-        "netclass": "12V net",
-        "pattern": "/DRAWBAR RELAY/IN_B"
-      },
-      {
-        "netclass": "12V net",
-        "pattern": "/DRAWBAR RELAY/OUT_B"
-      },
-      {
-        "netclass": "12V net",
-        "pattern": "/MIST RELAY/IN_A"
-      },
-      {
-        "netclass": "12V net",
-        "pattern": "/MIST RELAY/IN_B"
-      },
-      {
-        "netclass": "12V net",
-        "pattern": "/MIST RELAY/OUT_B"
-      },
-      {
-        "netclass": "ESTOP",
-        "pattern": "/ARGON ESTOP/ESTOP+"
-      },
-      {
-        "netclass": "ESTOP",
-        "pattern": "/ESTOP"
-      },
-      {
-        "netclass": "Gnd",
-        "pattern": "GND"
-      },
-      {
-        "netclass": "High power",
-        "pattern": "+5V"
-      },
-      {
-        "netclass": "High power",
-        "pattern": "Net-(D10-Pad2)"
-      },
-      {
-        "netclass": "High power",
-        "pattern": "Net-(D6-Pad2)"
-      },
-      {
-        "netclass": "High power",
-        "pattern": "Net-(D8-Pad2)"
-      },
-      {
-        "netclass": "Low power",
+        "netclass": "24V power",
         "pattern": "+24V"
       },
       {
-        "netclass": "Low power",
-        "pattern": "+5VP"
-      },
-      {
-        "netclass": "Low power",
-        "pattern": "/ARGON ENCODER/ARGON5V"
-      },
-      {
-        "netclass": "Low power",
-        "pattern": "/MESA P2 INTERNAL IO/MESA_5V"
-      },
-      {
-        "netclass": "Low power",
-        "pattern": "Net-(J12-Pad9)"
-      },
-      {
-        "netclass": "Mains",
-        "pattern": "/L_IN"
-      },
-      {
-        "netclass": "Mains",
-        "pattern": "/L_OUT"
-      },
-      {
-        "netclass": "Mains",
-        "pattern": "/N_IN"
-      },
-      {
-        "netclass": "Mains",
-        "pattern": "/N_OUT"
-      },
-      {
-        "netclass": "Mains",
-        "pattern": "/PE"
+        "netclass": "Default",
+        "pattern": ""
       }
     ]
   },

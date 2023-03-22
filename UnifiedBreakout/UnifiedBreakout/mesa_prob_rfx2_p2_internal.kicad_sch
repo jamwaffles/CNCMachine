@@ -575,6 +575,7 @@
     )
   )
 
+
   (junction (at 130.81 135.89) (diameter 0.9144) (color 0 0 0 0)
     (uuid 01106a52-6b7d-40fd-b165-c927be1f6a1d)
   )
@@ -583,6 +584,9 @@
   )
   (junction (at 127 118.11) (diameter 0.9144) (color 0 0 0 0)
     (uuid 9b84db75-decc-418f-80b8-9703cc547aae)
+  )
+  (junction (at 168.91 135.89) (diameter 0) (color 0 0 0 0)
+    (uuid a08906fe-0063-4d86-9f92-5bbea3a9d8bf)
   )
   (junction (at 130.81 107.95) (diameter 0.9144) (color 0 0 0 0)
     (uuid a0af1aa5-82ff-4825-8836-86496e7db65f)
@@ -628,6 +632,10 @@
   (wire (pts (xy 127 123.19) (xy 127 128.27))
     (stroke (width 0) (type solid))
     (uuid 4096c1c2-d771-4ca9-aa9d-89ee6d5132f1)
+  )
+  (wire (pts (xy 168.91 135.89) (xy 171.45 135.89))
+    (stroke (width 0) (type default))
+    (uuid 4834bda8-4f30-45e2-8464-f0fe74475f17)
   )
   (wire (pts (xy 130.81 102.87) (xy 130.81 107.95))
     (stroke (width 0) (type solid))
