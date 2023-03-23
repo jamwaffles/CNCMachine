@@ -328,7 +328,7 @@
   (symbol (lib_id "Device:R") (at 160.02 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005e9e2b63)
-    (property "Reference" "R3" (at 161.798 73.7616 0)
+    (property "Reference" "R2" (at 161.798 73.7616 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10K" (at 161.798 76.073 0)
@@ -354,22 +354,22 @@
     (instances
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea623ae"
-          (reference "R3") (unit 1)
+          (reference "R2") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea7f263"
-          (reference "R15") (unit 1)
+          (reference "R10") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea816c6"
-          (reference "R12") (unit 1)
+          (reference "R8") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
-          (reference "R9") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
           (reference "R6") (unit 1)
         )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
+          (reference "R4") (unit 1)
+        )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/a961b421-d2a6-477a-a4b0-5977252d73f9"
-          (reference "R25") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -407,28 +407,28 @@
           (reference "R1") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea7f263"
-          (reference "R13") (unit 1)
+          (reference "R9") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea816c6"
-          (reference "R10") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
           (reference "R7") (unit 1)
         )
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
+          (reference "R5") (unit 1)
+        )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
-          (reference "R4") (unit 1)
+          (reference "R3") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/a961b421-d2a6-477a-a4b0-5977252d73f9"
-          (reference "R23") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Isolator:ILD74") (at 146.05 88.9 0) (unit 1)
+  (symbol (lib_id "Isolator:ILD74") (at 146.05 88.9 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8e5783e4-4bbb-426d-a5fb-ab01f45514e4)
-    (property "Reference" "U11" (at 146.05 81.28 0)
+    (property "Reference" "U1" (at 146.05 81.28 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "ILD74" (at 146.05 83.82 0)
@@ -460,22 +460,22 @@
     (instances
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea623ae"
-          (reference "U11") (unit 1)
+          (reference "U1") (unit 2)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
-          (reference "U13") (unit 2)
+          (reference "U1") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
-          (reference "U12") (unit 2)
+          (reference "U2") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea816c6"
-          (reference "U12") (unit 1)
+          (reference "U3") (unit 2)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea7f263"
-          (reference "U11") (unit 2)
+          (reference "U3") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/a961b421-d2a6-477a-a4b0-5977252d73f9"
-          (reference "U13") (unit 1)
+          (reference "U2") (unit 2)
         )
       )
     )
@@ -484,7 +484,7 @@
   (symbol (lib_id "power:GND") (at 133.35 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f592ffdb-e9c7-4222-98bc-16e5735c28a6)
-    (property "Reference" "#PWR045" (at 133.35 114.3 0)
+    (property "Reference" "#PWR03" (at 133.35 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDPWR" (at 133.223 114.3 0)
@@ -500,19 +500,19 @@
     (instances
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea83ccc"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea623ae"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea86618"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea816c6"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005ea7f263"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/a961b421-d2a6-477a-a4b0-5977252d73f9"
           (reference "#PWR048") (unit 1)

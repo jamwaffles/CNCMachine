@@ -65,8 +65,8 @@
       39,
       40
     ],
-    "visible_layers": "00290a0_00000001",
-    "zone_display_mode": 0
+    "visible_layers": "00290a0_80000001",
+    "zone_display_mode": 1
   },
   "meta": {
     "filename": "UnifiedBreakout.kicad_prl",

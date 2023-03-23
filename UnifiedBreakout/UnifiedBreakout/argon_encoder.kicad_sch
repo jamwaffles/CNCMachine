@@ -502,7 +502,7 @@
   (symbol (lib_id "Connector:DA15_Receptacle_MountingHoles") (at 154.94 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2f443e80-887b-4b3b-83dd-cb024ced3136)
-    (property "Reference" "J10" (at 160.02 88.265 0)
+    (property "Reference" "J2" (at 160.02 88.265 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DA15_Receptacle_MountingHoles" (at 160.02 90.805 0)
@@ -542,7 +542,7 @@
     (instances
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005e9de03a"
-          (reference "J10") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -551,7 +551,7 @@
   (symbol (lib_id "Connector:DA15_Receptacle_MountingHoles") (at 96.52 88.9 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e9c9bb5b-8868-4991-a033-f1b07ccced37)
-    (property "Reference" "J11" (at 91.44 88.265 0)
+    (property "Reference" "J1" (at 91.44 88.265 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DA15_Receptacle_MountingHoles" (at 91.44 90.805 0)
@@ -591,7 +591,7 @@
     (instances
       (project "UnifiedBreakout"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/00000000-0000-0000-0000-00005e9de03a"
-          (reference "J11") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )
