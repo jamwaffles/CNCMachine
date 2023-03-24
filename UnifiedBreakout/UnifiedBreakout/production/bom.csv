@@ -1,0 +1,22 @@
+Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C3",C_Disc_D5.0mm_W2.5mm_P5.00mm,2,100n,K104K15X7RF53H5
+"C2, C4",CP_Radial_D8.0mm_P3.50mm,2,100uF,860080574007
+D1,LED_D3.0mm,1,MESA P3 PWR,MCL034GD 
+D2,LED_D3.0mm,1,MESA P2 PWR,MCL034GD 
+D3,LED_D3.0mm,1,+24V,MCL034MT
+"H1, H2, H3, H4, H5, H6",MountingHole_3.2mm_M3_Pad,6,MountingHole,
+"J1, J2",DSUB-15_Female_Vertical_P2.77x2.84mm_MountingHoles,2,DA15_Receptacle_MountingHoles,D15S24A4GV00LF 
+J10,NorComp-Dual-DB25,1,DB25_Receptacle_Dual,178-025-513R571
+J4,SS71800-041F,1,~,SS71800-041F
+J5,DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm,1,PENDANT,5747846-4 
+J6,"PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal",1,24V BUS,1757242
+J7,"PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal",1,DRAWBAR+MIST+AXIS_PWR,1757255
+J8,"PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal",1,LIMIT,1757255
+J9,"PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal",1,AUX,1757255
+"R1, R13, R14, R15, R18, R19, R3, R5, R7, R9",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,10,2K2,CFR-25JB-52-2K2
+"R10, R2, R20, R4, R6, R8",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,6,10K,CFR-25JB-52-10K 
+"R11, R12, R16",R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,3,220R,CFR-25JB-52-220R
+R17,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,1,220K,CFR-25JB-52-220K
+"U1, U2, U3",DIP-8_W7.62mm_LongPads,3,ILD74,ILD74 
+"U4, U5, U6",DIP-4_W7.62mm,3,G3VM-61A1 ,
+U7,DIP-6_W7.62mm,1,4N35,4N35

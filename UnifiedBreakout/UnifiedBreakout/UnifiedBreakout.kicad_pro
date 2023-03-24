@@ -56,7 +56,13 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|120420001|38300001|058f13ee-a620-4cb4-8ab5-74e4db03859c|bf256784-60ae-41e8-80db-bceff34023e0",
+        "silk_edge_clearance|109285000|141110000|7d583032-671f-47a7-9bf4-25758595c944|732d7217-36ee-440b-9e7d-5d9bfd27712a",
+        "silk_edge_clearance|162505000|141110000|7d583032-671f-47a7-9bf4-25758595c944|7ae27107-3763-49c2-9e8c-77339e5f5937",
+        "silk_edge_clearance|43460000|141110000|7d583032-671f-47a7-9bf4-25758595c944|24b5fdea-b102-4df9-88dc-e75b3fcfcd64",
+        "silk_edge_clearance|96240000|141110000|7d583032-671f-47a7-9bf4-25758595c944|6fa2498d-14ec-41b2-ac01-a96e98c6c911"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -117,9 +123,9 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.15,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.049999999999999996,
+        "min_copper_edge_clearance": 0.3,
         "min_hole_clearance": 0.0,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.19999999999999998,
@@ -176,7 +182,8 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        1.0
       ],
       "via_dimensions": [
         {
