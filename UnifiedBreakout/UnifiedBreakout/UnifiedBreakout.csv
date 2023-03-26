@@ -1,0 +1,22 @@
+Item,Qty,Reference(s),Value,Footprint,Datasheet,Alternative MPN,Farnell PN,MPN,Manufacturer
+1,2,"C1, C3",100n,Device:C,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm,~,,K104K15X7RF53H5,Vishay
+2,2,"C2, C4",100uF,Device:C_Polarized,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,~,8126585,35RX30100M8X11.5 ,Rubycon
+3,1,D1,MESA P3 PWR,Device:LED,LED_THT:LED_D3.0mm,~,1581114,MCL034GD ,MULTICOMP PRO
+4,1,D2,MESA P2 PWR,Device:LED,LED_THT:LED_D3.0mm,~,1581114,MCL034GD ,MULTICOMP PRO
+5,1,D3,+24V,Device:LED,LED_THT:LED_D3.0mm,~,1581122,MCL034MT,MULTICOMP PRO
+6,6,"H1, H2, H3, H4, H5, H6",MountingHole,Mechanical:MountingHole_Pad,MountingHole:MountingHole_3.2mm_M3_Pad,~,,,
+7,2,"J1, J2",DA15_Receptacle_MountingHoles,Connector:DA15_Receptacle_MountingHoles,Connector_Dsub:DSUB-15_Female_Vertical_P2.77x2.84mm_MountingHoles, ~,1103914,D15S24A4GV00LF ,AMPHENOL
+8,1,J4,~,UnifiedBreakout:SS71800-041F,UnifiedBreakout:SS71800-041F,,2891045,SS71800-041F,Stewart Connector
+9,1,J5,PENDANT,Connector:DB25_Receptacle_MountingHoles,Connector_Dsub:DSUB-25_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm, ~,2059751,5747846-4 ,AMP - TE Connectivity
+10,1,J6,24V BUS,Connector:Screw_Terminal_01x02,"Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal",~,3705171,1757242,PHOENIX CONTACT
+11,1,J7,DRAWBAR+MIST+AXIS_PWR,Connector:Screw_Terminal_01x03,"Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal",~,3705183,1757255,PHOENIX CONTACT
+12,1,J8,LIMIT,Connector:Screw_Terminal_01x03,"Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal",~,3705183,1757255,PHOENIX CONTACT
+13,1,J9,AUX,Connector:Screw_Terminal_01x03,"Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_3-G-5,08_1x03_P5.08mm_Horizontal",~,3705183,1757255,PHOENIX CONTACT
+14,1,J10,DB25_Receptacle_Dual,UnifiedBreakout:DB25_Receptacle_Dual,UnifiedBreakout:NorComp-Dual-DB25, ~,2294322,178-025-513R571,NORCOMP
+15,10,"R1, R3, R5, R7, R9, R13, R14, R15, R18, R19",2K2,Device:R,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~,9341536,MF25 2K2,MULTICOMP PRO
+16,6,"R2, R4, R6, R8, R10, R20",10K,Device:R,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~,9341110,MF25 10K,MULTICOMP PRO
+17,3,"R11, R12, R16",220R,Device:R,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~,9341528,MF25 220R,MULTICOMP PRO
+18,1,R17,220K,Device:R,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~,9341552,MF25 220K,MULTICOMP PRO
+19,3,"U1, U2, U3",ILD74,Isolator:ILD74,Package_DIP:DIP-8_W7.62mm_LongPads,https://www.vishay.com/docs/83640/ild74.pdf,1045423 ,ILD74 ,Vishay
+20,3,"U4, U5, U6",G3VM-61A1 ,Relay_SolidState:TLP222A,Package_DIP:DIP-4_W7.62mm,https://4donline.ihs.com/images/VipMasterIC/IC/OMRN/OMRN-S-A0001639850/OMRN-S-A0001639850-1.pdf?hkey=52A5661711E402568146F3353EA87419,9918957 ,G3VM-61A1,Omron
+21,1,U7,4N35,Isolator:4N35,Package_DIP:DIP-6_W7.62mm,https://www.vishay.com/docs/81181/4n35.pdf,,4N35,Vishay
