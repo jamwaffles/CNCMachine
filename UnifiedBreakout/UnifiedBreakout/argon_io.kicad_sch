@@ -299,7 +299,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_02x13_Odd_Even") (at 133.35 91.44 0) (unit 1)
-    (in_bom no) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00005e9ebbab)
     (property "Reference" "J3" (at 134.62 70.6882 0)
       (effects (font (size 1.27 1.27)))
