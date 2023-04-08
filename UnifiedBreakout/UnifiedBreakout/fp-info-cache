@@ -1,4 +1,4 @@
-21579358684974079
+21577680615415458
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -89312,13 +89312,6 @@ igbt diode module
 0
 25
 25
-UnifiedBreakout
-NorComp-Dual-DA15
-178-015-513R571-3
-Connector
-0
-34
-34
 UnifiedBreakout
 NorComp-Dual-DB25
 178-025-513R571-2
