@@ -1,7 +1,8 @@
 loadusr -Wn argon ./argon-rs /dev/ttyUSB0 1
 
-loadrt near names=near-at-speed
+loadrt near names=near-at-speed,spindle-zero-rpm
 addf near-at-speed servo-thread
+addf spindle-zero-rpm servo-thread
 
 # ---
 # Component setup
@@ -56,6 +57,11 @@ net is-oriented spindle.0.is-oriented <= argon.is-oriented
 
 ### Spindle speed command
 net spindle-speed-cmd-rps spindle.0.speed-cmd-rps => argon.spindle-speed-rps
+
+### Spindle is running command. Used for drawbar interlock, etc
+net spindle-speed-cmd-rps spindle-zero-rpm.in1
+setp spindle-zero-rpm.in2 0
+net spindle-is-stopped spindle-zero-rpm.out
 
 ### Spindle at speed
 net spindle-fb-rps argon.spindle-fb-rps => near-at-speed.in1
