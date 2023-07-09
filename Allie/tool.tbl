@@ -1,2 +1,3 @@
-T1  P1  D+5.500000 Z+193.993000 ;5.5mm drill 
-T2  P2  D+8.000000 Z+97.509167 ;8mm 3fl carbide 45deg chamfer mill 
+T1   P1   D+5.500000 Z+194.000000 ;5.5mm drill 
+T2   P2   D+8.000000 Z+98.000000 ;8mm 3fl carbide 45deg chamfer mill 
+T99  P99  D+5.000000 Z+179.176458 ;5mm ruby ball touch probe ceramic shaft 
