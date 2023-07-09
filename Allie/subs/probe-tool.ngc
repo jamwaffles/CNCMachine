@@ -2,8 +2,12 @@
 ;
 ; SET APPROXIMATE TOOL LENGTH FROM SPINDLE NOSE OR YOU'LL CRASH
 ;
+; RUN `probe-spindle-nose` BEFORE USE OTHERWISE TOOLS WILL NOT SET CORRECTLY
+;
 ; Before running, change tool and roughly position tool above setter. XY will move to center and Z
 ; probe will begin
+
+o<probe-tool> sub
 
 #<safe_dist> = 10 ; search distance for tool tip
 #<search_dist> = [#<safe_dist> + 20] ; search distance for tool tip
@@ -35,5 +39,7 @@ g0 z50 ; move to safe
 g90
 
 g43 ; reload offsets
+
+o<probe-tool> endsub
 
 m2

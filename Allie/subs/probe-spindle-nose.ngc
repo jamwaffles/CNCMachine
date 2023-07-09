@@ -3,6 +3,8 @@
 ; Before running, move to XY position so that the spindle face is above toolsetter.
 ; Ensure drive dogs are out of the way.
 
+o<probe-spindle-nose> sub
+
 g49 ; remove tool offsets
 g59.3 ; probing offset
 g10l2z0p0 ; clear Z
@@ -15,4 +17,6 @@ g0z50 ; retract to a safe distance
 
 g90 ; back to absolute
 
-m2 ; done
+o<probe-spindle-nose> endsub
+
+m2
