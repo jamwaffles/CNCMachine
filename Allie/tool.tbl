@@ -1,18 +1,2 @@
-T99  P99  D+10.000000 ;conductive touch probe 
-T2   P2   D+50.000000 Z-41.339200 ;50mm square facemill for alu 
-T5   P5   D+5.000000 Z-45.104300 ;5mm hss spot drill 
-T4   P4   D+4.500000 Z+46.670300 ;4.5mm jobber drill 
-T1   P1   D+6.000000 Z-42.849700 ;3fl alupower long polished 
-T3   P3   D+3.300000 Z+33.479800 ;3.3mm hss jobber m4 tap drill 
-T7   P7   D+4.000000 Z+33.617400 ;m4 spiral tap 
-T6   P6   D+2.500000 Z+26.235500 ;2.5mm hss jobber m3 tap drill 
-T8   P8   D+3.000000 Z+27.189100 ;m3 spiral tap 
-T9   P9   D+3.000000 Z-18.198000 ;3mm 3fl coated carbide 
-T10  P10  D+5.500000 Z+193.993000 ;5.5mm drill 
-T11  P11  D+6.000000 Z-41.368500 ;3fl 6mm nc mill carbide 
-T12  P12  D+8.000000 Z+97.509167 ;8mm 3fl carbide 45deg chamfer mill 
-T13  P13  D+3.500000 Z+37.777700 ;3.5mm jobber drill 
-T14  P14  D+2.000000 Z+18.905900 ;2mm jobber drill 
-T15  P15  D+6.350000 ;6.35mm shank 60deg engraver 
-T98  P98  D+5.000000 ;ruby touch probe 
-T16  P16  D+8.000000 ;8mm 45deg chamfer mill 3fl 
+T1  P1  D+5.500000 Z+193.993000 ;5.5mm drill 
+T2  P2  D+8.000000 Z+97.509167 ;8mm 3fl carbide 45deg chamfer mill 
