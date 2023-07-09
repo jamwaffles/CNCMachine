@@ -1,0 +1,39 @@
+; Probes a tool using the toolsetter
+;
+; SET APPROXIMATE TOOL LENGTH FROM SPINDLE NOSE OR YOU'LL CRASH
+;
+; Before running, change tool and roughly position tool above setter. XY will move to center and Z
+; probe will begin
+
+#<safe_dist> = 10 ; search distance for tool tip
+#<search_dist> = [#<safe_dist> + 20] ; search distance for tool tip
+#<current_tool_len> = #5403 ; approximate tool length from tool table
+
+g90
+
+g40 ; disable cutter comp
+g43.1 z0 ; clear TLO but don't write it 
+g59.3 ; probing offset
+
+; g10l2p0x0y0z0 ; reset offset to 0 so the length maths works
+; global moves from here on out
+g0 x0 y0 ; position over tool setter
+g0 z[#<current_tool_len> + #<safe_dist>] ; move down to safe distance
+
+f400 ; fast probe
+g91 ; relative
+g38.2 z[-#<search_dist>]
+
+g0 z1 ; move up a little bit ready for slow probe
+
+; slow probe
+f50 
+g38.2 z-2
+g10 l11 p#5400 z0 ; set new tool len
+g0 z50 ; move to safe
+
+g90
+
+g43 ; reload offsets
+
+m2

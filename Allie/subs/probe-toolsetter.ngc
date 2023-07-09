@@ -1,0 +1,75 @@
+; Probes X and Y center of toolsetter mounted to table
+; Before running, move probe to approximate center of toolsetter and zero X, Y and Z
+
+
+#<ball> = 5 ; 5mm ruby ball
+#<dia> = 24 ; 22mm round probe face with XY home leeway
+#<xy_safety> = [[#<dia> + #<ball>] / 2] ; safe position around part
+#<z_down_offset> = -1 ; where to place probe ball centerline when probing edges, not including ball 
+#<z_down> = [-#<ball> / 2 + #<z_down_offset>]
+#<z_probe_dist> = 10;
+#<xy_probe_dist> = 5 ; distance to move probe before erroring out
+
+g59.3 ; probing offset
+g49 ; tool length comp off
+
+; -- Probe Z face
+(msg,"Hold toolsetter to stop it depressing")
+m0 ; pause to get hand ready
+
+f50 ; slow af
+g38.2 z[-#<z_probe_dist>]
+g10 l20 p0 z0 ; Z0 is now top of probe
+; don't care about storing z height in global var - this is set by `probe-spindle-face.ngc`
+g0 z5 ; move to safe position
+
+(msg,"Remove hand and hit run")
+m0 ; pause program so hand can be removed
+
+; -- Probe X negative
+g0 x[-#<xy_safety>]
+g0 z#<z_down>
+g38.2 x#<xy_probe_dist>
+g10 l20 p0 x0 ; X0 is now wherever we are lol
+g0 x-0.5 ; move away to safe distance
+g0 z5
+
+; -- Probe X positive
+g0 x[#<xy_safety> * 2] ; other side of part
+g0 z#<z_down>
+g38.2 x[#<xy_safety> * 2 - #<xy_probe_dist>]
+
+; move to safe distance
+g91
+g0 x0.5
+g90
+
+g0 z5
+g0 x[#5061 / 2] ; move to center
+
+g10 l20 p0 x0; set WCS X0 to center
+
+; -- Probe Y negative
+g0 y[-#<xy_safety>]
+g0 z#<z_down>
+g38.2 y#<xy_probe_dist>
+g10 l20 p0 y0 ; Y0 is now wherever we are lol
+g0 y-0.5 ; move away to safe distance
+g0 z5
+
+; -- Probe Y positive
+g0 y[#<xy_safety> * 2] ; other side of part
+g0 z#<z_down>
+g38.2 y[#<xy_safety> * 2 - #<xy_probe_dist>]
+
+; move to safe distance
+g91
+g0 y0.5
+g90
+
+g0 z5
+g0 y[#5062 / 2] ; move to center
+
+g10 l20 p0 y0 ; set WCS Y0 to center
+
+m2

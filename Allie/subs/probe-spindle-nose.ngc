@@ -1,0 +1,18 @@
+; Sets Z0 of G59 as spindle face so we can use it as a zero length for setting tools
+;
+; Before running, move to XY position so that the spindle face is above toolsetter.
+; Ensure drive dogs are out of the way.
+
+g49 ; remove tool offsets
+g59.3 ; probing offset
+g10l2z0p0 ; clear Z
+
+f50 ; slowwwww
+g91 ; relative mode
+g38.2 z-10 ; move down slowly until probe hits
+g10 l20 p0 z0 ; set WCS Z0 to top of tool setter
+g0z50 ; retract to a safe distance
+
+g90 ; back to absolute
+
+m2 ; done
