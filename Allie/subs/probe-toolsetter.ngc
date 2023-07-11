@@ -1,8 +1,6 @@
 ; Probes X and Y center of toolsetter mounted to table
 ; Before running, move probe to approximate center of toolsetter and zero X, Y and Z
 
-o<probe-toolsetter> sub
-
 #<ball> = 5 ; 5mm ruby ball
 #<dia> = 24 ; 22mm round probe face with XY home leeway
 #<xy_safety> = [[#<dia> + #<ball>] / 2] ; safe position around part
@@ -32,7 +30,7 @@ g0 x[-#<xy_safety>]
 g0 z#<z_down>
 g38.2 x#<xy_probe_dist>
 g10 l20 p0 x0 ; X0 is now wherever we are lol
-g0 x-0.5 ; move away to safe distance
+g0 x-0.2 ; move away to safe distance
 g0 z5
 
 ; -- Probe X positive
@@ -72,7 +70,5 @@ g0 z5
 g0 y[#5062 / 2] ; move to center
 
 g10 l20 p0 y0 ; set WCS Y0 to center
-
-o<probe-toolsetter> endsub
 
 m2
