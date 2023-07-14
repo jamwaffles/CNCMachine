@@ -1,3 +1,7 @@
 T1   P1   D+5.500000 Z+193.966250 ;5.5mm drill 
 T2   P2   D+8.000000 Z+97.495000 ;8mm 3fl carbide 45deg chamfer mill 
+T3   P3   D+8.000000 Z+86.911667 ;8mm 4fl carbide nc-mill G9F42080N
+T4   P4   D+6.000000 Z+84.042500 ;6mm 3fl carbide nc-mill G9F43060N
+T5   P5   D+6.300000 Z+170.637083 ;6.3mm 120deg spot drill
+T6   P6   D+6.800000 Z+208.315000 ;6.8mm jobber drill
 T99  P99  D+5.000000 Z+179.212083 ;5mm ruby ball touch probe ceramic shaft 
