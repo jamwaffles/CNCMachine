@@ -1,0 +1,32 @@
+; Probes Z surface for current WCS
+
+o<probe-z> sub
+
+#<probe_tool_no> = 99
+#<search_dist> = 10
+
+g90 ; absolute
+
+o100 if [ #<_current_tool> ne #<probe_tool_no> ]
+	t99m6g43 ; switch to probe if we don't already have it in the spindle
+o100 endif
+
+g40 ; disable cutter comp
+
+f400 ; fast probe
+g91 ; relative
+g38.2 z[-#<search_dist>]
+
+g0 z1 ; move up a little bit ready for slow probe
+
+; slow probe
+f50 
+g38.2 z-2
+g10 l20 p0 z0 ; set new z offset
+g0 z5 ; move to safe
+
+g90 ; absolute
+
+o<probe-z> endsub
+
+m2

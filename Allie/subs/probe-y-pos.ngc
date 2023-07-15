@@ -1,0 +1,33 @@
+; Probes Y position in positive direction
+
+o<probe-y-pos> sub
+
+#<probe_tool_no> = 99
+#<search_dist> = 10
+#<probe_dia> = 5
+
+g90 ; absolute
+
+o100 if [ #<_current_tool> ne #<probe_tool_no> ]
+	t99m6g43 ; switch to probe if we don't already have it in the spindle
+o100 endif
+
+g40 ; disable cutter comp
+
+f400 ; fast probe
+g91 ; relative
+g38.2 y[#<search_dist>]
+
+g0 y-1 ; move away a little bit ready for slow probe
+
+; slow probe
+f50 
+g38.2 y2
+g10 l20 p0 y[-#<probe_dia> / 2] ; set new y offset taking into account probe tip radius
+g0 y-1 ; move to safe
+
+g90 ; absolute
+
+o<probe-y-pos> endsub
+
+m2
