@@ -4,7 +4,7 @@
 #<ball> = 5 ; 5mm ruby ball
 #<dia> = 24 ; 22mm round probe face with XY home leeway
 #<xy_safety> = [[#<dia> + #<ball>] / 2] ; safe position around part
-#<z_down_offset> = -1 ; where to place probe ball centerline when probing edges, not including ball 
+#<z_down_offset> = -0.3 ; where to place probe ball centerline when probing edges, not including ball 
 #<z_down> = [-#<ball> / 2 + #<z_down_offset>]
 #<z_probe_dist> = 10;
 #<xy_probe_dist> = 5 ; distance to move probe before erroring out

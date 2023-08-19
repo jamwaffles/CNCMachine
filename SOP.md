@@ -6,6 +6,13 @@ The `G59.3` WCS is used for all toolsetting operations and is persisted in `linu
 
 # Set toolsetter position
 
+1. Probe toolsetter XY position
+  - Make sure **spindle probe** is plugged in
+  - `t99m6g43` to use spindle probe
+  - Open (not sub call) `probe-toolsetter.ngc`
+  - Position probe tip just above approximate XY zero of toolsetter
+  - Zero all axes
+  - Run program, follow on-screen prompts
 1. Probe spindle nose to establish zero offset
   - Make sure **toolsetter** is plugged in
   - `t0m6g43` to clear tool
@@ -13,13 +20,6 @@ The `G59.3` WCS is used for all toolsetting operations and is persisted in `linu
   - `o<probe-spindle-nose> call`
   - This re-establishes 0 offset after homing, crash, etc
   - Check an existing known-length tool if there are any
-2. Probe toolsetter position
-  - Make sure **spindle probe** is plugged in
-  - `t99m6g43` to use spindle probe
-  - Open (not sub call) `probe-toolsetter.ngc`
-  - Position probe tip just above approximate XY zero of toolsetter
-  - Zero all axes
-  - Run program, follow on-screen prompts
 
 # Set touch probe length offset
 
