@@ -1,1 +1,10 @@
-net probe-in motion.probe-input hm2_5i25.0.gpio.024.in
+loadrt or2 names=probes
+addf probes servo-thread
+
+# Touch probe
+net touch-probe probes.in0 hm2_5i25.0.gpio.024.in
+
+# Toolsetter
+net toolsetter probes.in1 hm2_5i25.0.gpio.021.in
+
+net probe-in motion.probe-input probes.out

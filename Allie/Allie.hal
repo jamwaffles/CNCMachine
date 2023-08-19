@@ -52,11 +52,6 @@ setp hm2_5i25.0.gpio.020.is_output true
 net coolant-mist hm2_5i25.0.gpio.020.out
 setp hm2_5i25.0.gpio.020.invert_output true
 
-# --- ATX-PSU ---
-setp hm2_5i25.0.gpio.021.is_output true
-net machine-is-enabled hm2_5i25.0.gpio.021.out
-setp hm2_5i25.0.gpio.021.invert_output true
-
 # --- STEPPER-PSU ---
 setp hm2_5i25.0.gpio.017.is_output true
 net machine-is-enabled hm2_5i25.0.gpio.017.out
