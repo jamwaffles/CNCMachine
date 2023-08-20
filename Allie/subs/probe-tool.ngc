@@ -12,6 +12,7 @@ o<probe-tool> sub
 #<safe_dist> = 10 ; search distance for tool tip
 #<search_dist> = [#<safe_dist> + 20] ; search distance for tool tip
 #<current_tool_len> = #5403 ; approximate tool length from tool table
+#<current_coord_system> = #<_coord_system> ; multiplied by 10, e.g. G59.3 = 593
 
 g90
 
@@ -39,6 +40,9 @@ g0 z50 ; move to safe
 g90
 
 g43 ; reload offsets
+
+; reset back to current coordinate system
+g[#<current_coord_system> / 10]
 
 o<probe-tool> endsub
 
