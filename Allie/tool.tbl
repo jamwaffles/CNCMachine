@@ -7,4 +7,6 @@ T6   P6   D+6.800000 Z+208.315000 ;6.8mm jobber drill
 T7   P7   D+4.200000 Z+179.170000 ;4.2mm m5 tap drill
 T8   P8   D+5.000000 Z+188.739000 ;5mm hssco8 jobber drill
 T9   P9   D+5.000000 Z+106.984167 ;m5 spiral flute tap
+T10  P10  D+6.500000 Z0.0 ;6.5mm hssco5 jobber drill
+T11  P11  D+10.00000 Z0.0 ;10mm 3fl hss tialn long length end mill
 T99  P99  D+5.000000 Z+179.212000 ;5mm ruby ball touch probe ceramic shaft
