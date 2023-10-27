@@ -9,5 +9,6 @@ T8   P8   D+5.000000 Z+188.739000 ;5mm hssco8 jobber drill
 T9   P9   D+5.000000 Z+104.895075 ;m5 spiral flute tap
 T10  P10  D+6.500000 Z+200.328000 ;6.5mm hssco5 jobber drill
 T11  P11  D+10.000000 Z+112.366000 ;10mm 3fl hss tialn long length end mill
-T99  P99  D+5.000000 Z+179.212000 ;5mm ruby ball touch probe ceramic shaft
 T12  P12  D+6.000000 Z+112.346533 ;6mm-4fl-only-one-gyg02060
+T13  P13  D+8.000000 Z0.0 ;8mm-4fl-rougher-hss-tialn-060-283-06008
+T99  P99  D+5.000000 Z+179.212000 ;5mm ruby ball touch probe ceramic shaft
