@@ -1,14 +1,15 @@
-T1   P1   D+5.500000 Z+194.852000 ;5.5mm drill
-T2   P2   D+8.000000 Z+97.480000 ;8mm 3fl carbide 45deg chamfer mill
-T3   P3   D+8.000000 Z+86.911700 ;8mm 4fl carbide nc-mill g9f42080n
-T4   P4   D+6.000000 Z+84.042500 ;6mm 3fl carbide nc-mill g9f43060n
-T5   P5   D+6.300000 Z+170.637000 ;6.3mm 120deg spot drill
-T6   P6   D+6.800000 Z+208.315000 ;6.8mm jobber drill
-T7   P7   D+4.200000 Z+179.170000 ;4.2mm m5 tap drill
-T8   P8   D+5.000000 Z+188.739000 ;5mm hssco8 jobber drill
-T9   P9   D+5.000000 Z+104.895075 ;m5 spiral flute tap
-T10  P10  D+6.500000 Z+200.328000 ;6.5mm hssco5 jobber drill
-T11  P11  D+10.000000 Z+112.366000 ;10mm 3fl hss tialn long length end mill
-T12  P12  D+6.000000 Z+112.346533 ;6mm-4fl-only-one-gyg02060
-T13  P13  D+8.000000 Z0.0 ;8mm-4fl-rougher-hss-tialn-060-283-06008
-T99  P99  D+5.000000 Z+179.212000 ;5mm ruby ball touch probe ceramic shaft
+T1  P1  Z194.852  D5.5  ;5.5mm drill
+T2  P2  Z97.48  D8  ;8mm 3fl carbide 45deg chamfer mill
+T3  P3  Z86.9117  D8  ;8mm 4fl carbide nc-mill g9f42080n
+T4  P4  Z84.0425  D6  ;6mm 3fl carbide nc-mill g9f43060n
+T5  P5  Z170.637  D6.3  ;6.3mm 120deg spot drill
+T6  P6  Z208.315  D6.8  ;6.8mm jobber drill
+T7  P7  Z179.17  D4.2  ;4.2mm m5 tap drill
+T8  P8  Z188.739  D5  ;5mm hssco8 jobber drill
+T9  P9  Z104.895  D5  ;m5 spiral flute tap
+T10  P10  Z200.328  D6.5  ;6.5mm hssco5 jobber drill
+T11  P11  Z112.366  D10  ;10mm 3fl hss tialn long length end mill
+T12  P12  Z112.347  D6  ;6mm-4fl-only-one-gyg02060
+T13  P13  Z0  D8  ;8mm-4fl-rougher-hss-tialn-060-283-06008
+T99  P99  Z179.212  D5  ;5mm ruby ball touch probe ceramic shaft
+T14  P14  Z0  D8.5  ;8.5mm-hssco-jobber-drill
