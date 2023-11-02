@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "5mm-hssco8-jobber",
+  "shape": "drill.fcstd",
+  "parameter": {
+    "Chipload": "0.03 mm",
+    "Diameter": "5.00 mm",
+    "Flutes": "2",
+    "Length": "50.00 mm",
+    "Material": "HSS",
+    "TipAngle": "119.00 \u00b0"
+  },
+  "attribute": {}
+}

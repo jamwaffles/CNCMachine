@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "3mm-3fl-alupower-test",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.02 mm",
+    "CuttingEdgeHeight": "12.00 mm",
+    "Diameter": "3.00 mm",
+    "Flutes": "3",
+    "Length": "35.00 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "3.00 mm"
+  },
+  "attribute": {}
+}

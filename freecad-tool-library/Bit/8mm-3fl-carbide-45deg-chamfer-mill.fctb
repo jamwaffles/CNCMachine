@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "8mm-3fl-carbide-45deg-chamfer-mill",
+  "shape": "chamfer.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "CuttingEdgeAngle": "90.000 \u00b0",
+    "CuttingEdgeHeight": "6.350 mm",
+    "Diameter": "8.000 mm",
+    "Flutes": "3",
+    "Length": "30.000 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "8.000 mm",
+    "TipDiameter": "0.000 mm"
+  },
+  "attribute": {}
+}

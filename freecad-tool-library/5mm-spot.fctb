@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "5mm-spot",
+  "shape": "drill.fcstd",
+  "parameter": {
+    "Chipload": "0.00 mm",
+    "Diameter": "6.00 mm",
+    "Flutes": "2",
+    "Length": "30.00 mm",
+    "Material": "HSS",
+    "TipAngle": "120.00 \u00b0"
+  },
+  "attribute": {}
+}

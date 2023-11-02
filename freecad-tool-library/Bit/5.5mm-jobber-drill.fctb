@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "5.5mm-jobber-drill",
+  "shape": "drill.fcstd",
+  "parameter": {
+    "Chipload": "0.05 mm",
+    "Diameter": "5.50 mm",
+    "Flutes": "2",
+    "Length": "57.00 mm",
+    "Material": "HSS",
+    "TipAngle": "119.00 \u00b0"
+  },
+  "attribute": {}
+}

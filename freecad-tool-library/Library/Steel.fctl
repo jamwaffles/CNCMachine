@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "nr": 1,
+      "path": "5.5mm-jobber-drill.fctb"
+    },
+    {
+      "nr": 3,
+      "path": "8mm-4fl-nc-mill-g9f42080n.fctb"
+    },
+    {
+      "nr": 4,
+      "path": "6mm-3fl-nc-mill-g9f43060n.fctb"
+    },
+    {
+      "nr": 5,
+      "path": "6.3mm-spot-drill.fctb"
+    },
+    {
+      "nr": 7,
+      "path": "4.2mm-m5-tap-drill.fctb"
+    },
+    {
+      "nr": 8,
+      "path": "5mm-hssco8-jobber-drill.fctb"
+    },
+    {
+      "nr": 9,
+      "path": "m5-spiral-tap.fctb"
+    },
+    {
+      "nr": 10,
+      "path": "6.5mm-hssco8-jobber-drill.fctb"
+    },
+    {
+      "nr": 11,
+      "path": "10mm-3fl-arc-hss-al-060-283-05010.fctb"
+    },
+    {
+      "nr": 12,
+      "path": "6mm-4fl-only-one-gyg02060.fctb"
+    },
+    {
+      "nr": 13,
+      "path": "8mm-4fl-rougher-hss-tialn-060-283-06008.fctb"
+    },
+    {
+      "nr": 14,
+      "path": "8.5mm-hssco-jobber-drill.fctb"
+    },
+    {
+      "nr": 2,
+      "path": "8mm-3fl-carbide-45deg-chamfer-mill.fctb"
+    }
+  ],
+  "version": 1
+}

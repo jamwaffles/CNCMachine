@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "8mm-4fl-chamfer",
+  "shape": "/usr/lib/freecad-daily/Mod/Path/Tools/Shape/chamfer.fcstd",
+  "parameter": {
+    "Chipload": "0.02 mm",
+    "CuttingEdgeAngle": "45.00 \u00b0",
+    "CuttingEdgeHeight": "8.00 mm",
+    "Diameter": "8.00 mm",
+    "Flutes": "4",
+    "Length": "30.00 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "8.00 mm",
+    "TipDiameter": "0.00 mm"
+  },
+  "attribute": {}
+}

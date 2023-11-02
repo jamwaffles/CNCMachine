@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "6mm-3fl-nc-mill-g9f43060n",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.04 mm",
+    "CuttingEdgeHeight": "16.00 mm",
+    "Diameter": "6.00 mm",
+    "Flutes": "3",
+    "Length": "20.00 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "6.00 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}

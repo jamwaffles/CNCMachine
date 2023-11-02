@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "m5-spiral-tap",
+  "shape": "drill.fcstd",
+  "parameter": {
+    "Chipload": "0.00 mm",
+    "Diameter": "5.00 mm",
+    "Flutes": "0",
+    "Length": "50.00 mm",
+    "Material": "HSS",
+    "TipAngle": "119.00 \u00b0"
+  },
+  "attribute": {}
+}

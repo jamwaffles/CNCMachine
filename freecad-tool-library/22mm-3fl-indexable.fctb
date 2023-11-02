@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "22mm-3fl-indexable",
+  "shape": "/usr/lib/freecad-daily/Mod/Path/Tools/Shape/endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.05 mm",
+    "CuttingEdgeHeight": "9.00 mm",
+    "Diameter": "22.00 mm",
+    "Flutes": "3",
+    "Length": "50.00 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "20.00 mm"
+  },
+  "attribute": {}
+}

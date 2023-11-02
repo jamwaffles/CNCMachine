@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "8mm-4fl-nc-mill-g9f42080n",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.04 mm",
+    "CuttingEdgeHeight": "20.00 mm",
+    "Diameter": "8.00 mm",
+    "Flutes": "4",
+    "Length": "25.00 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "8.00 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "50mm-90deg-facemill",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.00 mm",
+    "CuttingEdgeHeight": "5.00 mm",
+    "Diameter": "50.00 mm",
+    "Flutes": "4",
+    "Length": "50.00 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "50.00 mm"
+  },
+  "attribute": {}
+}

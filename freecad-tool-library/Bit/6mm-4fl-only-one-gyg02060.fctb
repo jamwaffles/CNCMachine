@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "6mm-4fl-only-one-gyg02060",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "CuttingEdgeHeight": "30.000 mm",
+    "Diameter": "6.000 mm",
+    "Flutes": "4",
+    "Length": "50.000 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "6.000 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}

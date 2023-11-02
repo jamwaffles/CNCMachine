@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "10mm-3fl-arc-hss-al-060-283-05010",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.04 mm",
+    "CuttingEdgeHeight": "45.00 mm",
+    "Diameter": "10.00 mm",
+    "Flutes": "3",
+    "Length": "60.00 mm",
+    "Material": "HSS",
+    "ShankDiameter": "10.00 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}

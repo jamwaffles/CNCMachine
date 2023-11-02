@@ -1,0 +1,33 @@
+{
+  "tools": [
+    {
+      "nr": 1,
+      "path": "/home/james/Repositories/cad/tools/6mm-3fl-alupower-test.fctb"
+    },
+    {
+      "nr": 2,
+      "path": "/home/james/Repositories/cad/tools/50mm-90deg-facemill.fctb"
+    },
+    {
+      "nr": 3,
+      "path": "/home/james/Repositories/cad/tools/3mm-3fl-alupower-test.fctb"
+    },
+    {
+      "nr": 4,
+      "path": "/home/james/Repositories/cad/tools/5mm-drill.fctb"
+    },
+    {
+      "nr": 5,
+      "path": "/home/james/Repositories/cad/tools/5mm-spot.fctb"
+    },
+    {
+      "nr": 6,
+      "path": "/home/james/Repositories/cad/tools/8mm-4fl-chamfer.fctb"
+    },
+    {
+      "nr": 7,
+      "path": "/home/james/Repositories/cad/tools/22mm-3fl-indexable.fctb"
+    }
+  ],
+  "version": 1
+}
