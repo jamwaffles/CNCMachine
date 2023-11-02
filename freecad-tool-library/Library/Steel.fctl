@@ -5,6 +5,10 @@
       "path": "5.5mm-jobber-drill.fctb"
     },
     {
+      "nr": 2,
+      "path": "8mm-3fl-carbide-45deg-chamfer-mill.fctb"
+    },
+    {
       "nr": 3,
       "path": "8mm-4fl-nc-mill-g9f42080n.fctb"
     },
@@ -47,10 +51,6 @@
     {
       "nr": 14,
       "path": "8.5mm-hssco-jobber-drill.fctb"
-    },
-    {
-      "nr": 2,
-      "path": "8mm-3fl-carbide-45deg-chamfer-mill.fctb"
     }
   ],
   "version": 1
