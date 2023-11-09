@@ -51,6 +51,14 @@
     {
       "nr": 14,
       "path": "8.5mm-hssco-jobber-drill.fctb"
+    },
+    {
+      "nr": 15,
+      "path": "5mm-3fl-nc-mill-g9f430050n.fctb"
+    },
+    {
+      "nr": 16,
+      "path": "3.3mm-m4-tap-drill.fctb"
     }
   ],
   "version": 1

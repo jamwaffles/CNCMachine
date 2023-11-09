@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "3.3mm-m4-tap-drill",
+  "shape": "drill.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "Diameter": "3.300 mm",
+    "Flutes": "2",
+    "Length": "50.000 mm",
+    "Material": "HSS",
+    "TipAngle": "119.000 \u00b0"
+  },
+  "attribute": {}
+}
