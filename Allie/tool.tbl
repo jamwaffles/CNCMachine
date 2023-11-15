@@ -1,6 +1,6 @@
 T1   P1   D+5.500000 Z+194.852000 ;5.5mm drill
 T2   P2   D+8.000000 Z+97.480000 ;8mm 3fl carbide 45deg chamfer mill
-T3   P3   D+8.000000 Z+86.911700 ;8mm 4fl carbide nc-mill g9f42080n
+T3   P3   D+8.000000 Z+88.589342 ;8mm 4fl carbide nc-mill g9f42080n
 T4   P4   D+6.000000 Z+84.042500 ;6mm 3fl carbide nc-mill g9f43060n
 T5   P5   D+6.300000 Z+170.637000 ;6.3mm 120deg spot drill
 T6   P6   D+6.800000 Z+208.315000 ;6.8mm jobber drill
