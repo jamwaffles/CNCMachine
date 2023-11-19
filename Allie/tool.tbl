@@ -14,5 +14,5 @@ T13  P13  D+8.000000 ;8mm-4fl-rougher-hss-tialn-060-283-06008
 T99  P99  D+5.000000 Z+179.212000 ;5mm ruby ball touch probe ceramic shaft
 T14  P14  D+8.500000 Z+213.310000 ;8.5mm-hssco-jobber-drill
 T98  P98  D+10.000000 Z+139.988000 ;50mm boring head
-T15  P15  D+5.000000 ;5mm-3fl-nc-mill-g9f430050n
+T15  P15  D+5.000000 Z+91.864254 ;5mm-3fl-nc-mill-g9f430050n
 T16  P16  D+3.300000 Z+169.483542 ;3.3mm m4 tap drill
