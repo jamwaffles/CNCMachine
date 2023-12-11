@@ -14,6 +14,7 @@ loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JO
 loadusr -W lcec_conf ethercat-conf.xml
 loadrt lcec
 loadrt cia402 count=3
+loadrt pid names=pid.x,pid.y,pid.z
 
 ###########################################################
 # Functions servo-thread
@@ -32,6 +33,10 @@ addf cia402.1.write-all servo-thread
 addf cia402.2.write-all servo-thread
 addf lcec.write-all servo-thread
 
+addf pid.x.do-pid-calcs       servo-thread
+addf pid.y.do-pid-calcs       servo-thread
+addf pid.z.do-pid-calcs       servo-thread
+
 
 #########################################
 #nets
@@ -45,10 +50,29 @@ sets emc-enable 1
 # Joint 0
 #
 
+setp   pid.x.Pgain     [JOINT_0]P
+setp   pid.x.Igain     [JOINT_0]I
+setp   pid.x.Dgain     [JOINT_0]D
+setp   pid.x.bias      [JOINT_0]BIAS
+setp   pid.x.FF0       [JOINT_0]FF0
+setp   pid.x.FF1       [JOINT_0]FF1
+setp   pid.x.FF2       [JOINT_0]FF2
+setp   pid.x.deadband  [JOINT_0]DEADBAND
+setp   pid.x.maxoutput [JOINT_0]MAX_OUTPUT
+setp   pid.x.error-previous-target true
+setp   pid.x.maxerror .0005
+
 # Set to 1 to switch from CSV to CSP. All the other settings support both so this should be the only change required.
 setp cia402.0.csp-mode 0
 setp cia402.0.pos-scale [JOINT_0]PULSES_PER_MM
 setp cia402.0.velo-scale [JOINT_0]PULSES_PER_MM
+
+net 0-index-enable  <=>  pid.x.index-enable
+net 0-enable         =>  pid.x.enable
+net 0-pos-cmd        =>  pid.x.command
+net 0-vel-cmd        =>  pid.x.command-deriv
+net 0-pos-fb         =>  pid.x.feedback
+net 0-pid-vel-output =>  pid.x.output
 
 #from servo(ethercat) to cia402
 net 0-statusword      lcec.0.0.cia-statusword => cia402.0.statusword
@@ -67,7 +91,12 @@ net 0-enable    <= joint.0.amp-enable-out => cia402.0.enable
 net 0-amp-fault => joint.0.amp-fault-in   <= cia402.0.drv-fault
 net 0-pos-cmd   <= joint.0.motor-pos-cmd  => cia402.0.pos-cmd
 net 0-pos-fb    => joint.0.motor-pos-fb   <= cia402.0.pos-fb
-net 0-vel-cmd   <= joint.0.vel-cmd  => cia402.0.velocity-cmd
+
+# Not using PID
+# net 0-vel-cmd   <= joint.0.vel-cmd  => cia402.0.velocity-cmd
+
+# Using PID
+net 0-pid-vel-output pid.x.output => cia402.0.velocity-cmd
 
 #homing
 # TODO
