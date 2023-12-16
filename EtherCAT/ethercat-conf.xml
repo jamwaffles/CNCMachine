@@ -107,6 +107,8 @@
       </sdoConfig>
       <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
     </slave>
+    <slave idx="3" type="EK1100"/>
+    <slave idx="4" type="EL2008"/>
    </master>
 </masters>
 
