@@ -32,13 +32,13 @@
       <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
 
       <!-- 0x09 = CSV, 0x08 = CSP -->
-      <sdoConfig idx="6060" subIdx="0"><sdoDataRaw data="09"/></sdoConfig>
+      <sdoConfig idx="6060" subIdx="0"><sdoDataRaw data="08"/></sdoConfig>
       <!-- 1 = reverse direction -->
       <sdoConfig idx="607E" subIdx="0"><sdoDataRaw data="01"/></sdoConfig>
       <!-- Home offset -->
       <sdoConfig idx="607c" subIdx="0"><sdoDataRaw data ="64 00 00 00"/></sdoConfig> 
       <!-- Homing method -->
-      <sdoConfig idx="6098" subIdx="0"><sdoDataRaw data ="22"/></sdoConfig> 
+      <sdoConfig idx="6098" subIdx="0"><sdoDataRaw data ="03"/></sdoConfig> 
       <!-- Home acceleration -->
       <sdoConfig idx="609a" subIdx="0"><sdoDataRaw data ="64 00 00 00"/></sdoConfig> 
 
