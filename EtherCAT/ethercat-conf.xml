@@ -71,8 +71,9 @@
             <complexEntry bitLen="1" halPin="min-lim-in" halType="bit"/>
             <complexEntry bitLen="1" halPin="max-lim-in" halType="bit"/>
             <complexEntry bitLen="1" halPin="home-in" halType="bit"/>
+            <complexEntry bitLen="28" />
+            <complexEntry bitLen="1" halPin="z-in" halType="bit"/>
           </pdoEntry>  
-
         </pdo>
       </syncManager>
     </slave>
