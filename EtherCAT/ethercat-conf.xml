@@ -36,7 +36,7 @@
       <!-- 1 = reverse direction -->
       <sdoConfig idx="607E" subIdx="0"><sdoDataRaw data="01"/></sdoConfig>
       <!-- Home offset -->
-      <sdoConfig idx="607c" subIdx="0"><sdoDataRaw data ="64 00 00 00"/></sdoConfig> 
+      <sdoConfig idx="607c" subIdx="0"><sdoDataRaw data ="00 00 00 00"/></sdoConfig> 
       <!-- Homing method -->
       <sdoConfig idx="6098" subIdx="0"><sdoDataRaw data ="02"/></sdoConfig> 
       <!-- Home acceleration -->
