@@ -22,11 +22,16 @@
             <complexEntry bitLen="1" halPin="min-lim-in" halType="bit"/>
             <complexEntry bitLen="1" halPin="max-lim-in" halType="bit"/>
             <complexEntry bitLen="1" halPin="home-in" halType="bit"/>
-            <complexEntry bitLen="28" />
+            <complexEntry bitLen="2" />
+            <!-- Bit 5 -->
+            <complexEntry bitLen="1" halPin="drawbar-button" halType="bit" />
+            <complexEntry bitLen="25" />
             <complexEntry bitLen="1" halPin="z-in" halType="bit"/>
           </pdoEntry> 
         </pdo>
       </syncManager>
+      <!-- Drawbar button, NO, DI2 -->
+      <sdoConfig idx="2401" subIdx="0"><sdoDataRaw data ="00 00 00 00"/></sdoConfig> 
       <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
       <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
 
