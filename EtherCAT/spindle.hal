@@ -43,4 +43,4 @@ net drawbar-on <= db-toggle.out
 #--- Engage drawbar only if spindle is stopped
 net spindle-is-stopped db-interlock.in1
 
-#--- If DB is on, disable spindle speed CMD
+# TODO: Don't allow spindle rotation if drawbar is still engaged
