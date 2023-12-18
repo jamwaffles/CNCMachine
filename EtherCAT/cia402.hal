@@ -61,22 +61,19 @@ net 0-drv-act-velo    lcec.0.0.actual-velocity => cia402.0.drv-actual-velocity
 
 #from motion to cia
 
-net 0-home-index <= joint.0.index-enable  => cia402.0.home
+# Commented out to use LCNC homing instead of drive internal
+# net 0-home-index <= joint.0.index-enable  => cia402.0.home
 net 0-enable     <= joint.0.amp-enable-out => cia402.0.enable
 net 0-amp-fault  => joint.0.amp-fault-in   <= cia402.0.drv-fault
 net 0-pos-cmd    <= joint.0.motor-pos-cmd  => cia402.0.pos-cmd
 net 0-pos-fb     => joint.0.motor-pos-fb   <= cia402.0.pos-fb
-#net 0-home          lcec.0.0.in-5          => joint.0.home-sw-in
+net 0-home-input => joint.0.home-sw-in <= lcec.0.0.home-in
 
 #from cia402 to servo(ethercat)
 net 0-controlword         cia402.0.controlword => lcec.0.0.cia-controlword
 net 0-modes-of-operation  cia402.0.opmode => lcec.0.0.opmode
 net 0-drv-target-pos      cia402.0.drv-target-position => lcec.0.0.target-position
 net 0-drv-target-velo     cia402.0.drv-target-velocity => lcec.0.0.target-velocity
-
-#homing
-# TODO
-# net 0-home-index <= joint.0.index-enable  => cia402.0.home
 
 #
 # Joint 1
@@ -122,12 +119,13 @@ net 2-drv-act-velo    lcec.0.2.actual-velocity => cia402.2.drv-actual-velocity
 
 #from motion to cia
 
-net 2-home-index <= joint.2.index-enable  => cia402.2.home
+# Commented out to use LCNC homing instead of drive internal
+# net 2-home-index <= joint.2.index-enable  => cia402.2.home
 net 2-enable     <= joint.2.amp-enable-out => cia402.2.enable
 net 2-amp-fault  => joint.2.amp-fault-in   <= cia402.2.drv-fault
 net 2-pos-cmd    <= joint.2.motor-pos-cmd  => cia402.2.pos-cmd
 net 2-pos-fb     => joint.2.motor-pos-fb   <= cia402.2.pos-fb
-#net 2-home          lcec.0.2.in-5          => joint.2.home-sw-in
+net 2-home-input => joint.2.home-sw-in <= lcec.0.2.home-in
 
 #from cia402 to servo(ethercat)
 net 2-controlword         cia402.2.controlword => lcec.0.2.cia-controlword
@@ -135,18 +133,12 @@ net 2-modes-of-operation  cia402.2.opmode => lcec.0.2.opmode
 net 2-drv-target-pos      cia402.2.drv-target-position => lcec.0.2.target-position
 net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-velocity
 
-#homing
-# TODO
-# net 2-home-index <= joint.2.index-enable  => cia402.2.home
+#
+# Slave 4 I/O module EL2008
+#
 
-# #
-# # Slave 3 I/O module - RTEC1616
-# #
-# 
-# #Outputs
-# #M3,M4,M5
-# net spindle-on spindle.0.on => lcec.0.3.out-01
-# net mist-on iocontrol.0.coolant-mist => lcec.0.3.out-02 
-# net coolant-on => iocontrol.0.coolant-flood =>	lcec.0.3.out-03 
-# 
-# 
+#Outputs
+net mist-on iocontrol.0.coolant-mist => lcec.0.4.dout-1
+
+# TODO: Drawbar with interlock. EL2008 handles debouncing. Drawbar is on dout-0
+

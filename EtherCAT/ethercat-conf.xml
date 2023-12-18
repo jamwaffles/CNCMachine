@@ -17,13 +17,19 @@
           <pdoEntry idx="6061" subIdx="00" bitLen="8" halPin="opmode-display" halType="s32"/>
           <pdoEntry idx="6064" subIdx="00" bitLen="32" halPin="actual-position" halType="s32"/>
           <pdoEntry idx="606C" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/>
-          <pdoEntry idx="6077" subIdx="00" bitLen="16" halPin="actual-torque" halType="s32"/>        
+          <pdoEntry idx="6077" subIdx="00" bitLen="16" halPin="actual-torque" halType="s32"/>      
+          <pdoEntry idx="60FD" subIdx="00" bitLen="32" halType="Complex">
+            <complexEntry bitLen="1" halPin="min-lim-in" halType="bit"/>
+            <complexEntry bitLen="1" halPin="max-lim-in" halType="bit"/>
+            <complexEntry bitLen="1" halPin="home-in" halType="bit"/>
+            <complexEntry bitLen="28" />
+            <complexEntry bitLen="1" halPin="z-in" halType="bit"/>
+          </pdoEntry> 
         </pdo>
       </syncManager>
-      <sdoConfig idx="6060" subIdx="0">
-        <!-- 0x09 = CSV, 0x08 = CSP -->
-        <sdoDataRaw data="08"/>
-      </sdoConfig>
+      <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
+      <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
+
       <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
     </slave>
 
@@ -52,6 +58,9 @@
       <sdoConfig idx="6099" subIdx="1"><sdoDataRaw data ="64 00 00 00"/></sdoConfig> 
       <!-- Home slow speed -->
       <sdoConfig idx="6099" subIdx="2"><sdoDataRaw data ="64 00 00 00"/></sdoConfig> 
+
+      <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
+      <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
 
       <syncManager idx="2" dir="out">
         <!-- 0x1601 for velocity mode, 0x1600 for position mode -->
@@ -97,13 +106,19 @@
           <pdoEntry idx="6061" subIdx="00" bitLen="8" halPin="opmode-display" halType="s32"/>
           <pdoEntry idx="6064" subIdx="00" bitLen="32" halPin="actual-position" halType="s32"/>
           <pdoEntry idx="606C" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/>
-          <pdoEntry idx="6077" subIdx="00" bitLen="16" halPin="actual-torque" halType="s32"/>        
+          <pdoEntry idx="6077" subIdx="00" bitLen="16" halPin="actual-torque" halType="s32"/>      
+          <pdoEntry idx="60FD" subIdx="00" bitLen="32" halType="Complex">
+            <complexEntry bitLen="1" halPin="min-lim-in" halType="bit"/>
+            <complexEntry bitLen="1" halPin="max-lim-in" halType="bit"/>
+            <complexEntry bitLen="1" halPin="home-in" halType="bit"/>
+            <complexEntry bitLen="28" />
+            <complexEntry bitLen="1" halPin="z-in" halType="bit"/>
+          </pdoEntry> 
         </pdo>
       </syncManager>
-      <sdoConfig idx="6060" subIdx="0">
-        <!-- 0x09 = CSV, 0x08 = CSP -->
-        <sdoDataRaw data="08"/>
-      </sdoConfig>
+      <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
+      <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
+
       <sdoConfig idx="607E" subIdx="0">
         <!-- 1 = reverse direction -->
         <sdoDataRaw data="01"/>
