@@ -30,6 +30,9 @@
           </pdoEntry> 
         </pdo>
       </syncManager>
+      <!-- Input filtering in multiples of 100us -->
+      <!-- E.g. 20dec = 14h = 2ms -->
+      <!-- <sdoConfig idx="2515" subIdx="0"><sdoDataRaw data ="14 00 00 00"/></sdoConfig>  -->
       <!-- Drawbar button, NO, DI2 -->
       <sdoConfig idx="2401" subIdx="0"><sdoDataRaw data ="00 00 00 00"/></sdoConfig> 
       <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->

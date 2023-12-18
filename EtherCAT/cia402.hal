@@ -137,10 +137,8 @@ net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-veloci
 # Slave 4 I/O module EL2008
 #
 
-#Outputs
 net mist-on iocontrol.0.coolant-mist => lcec.0.4.dout-1
-
-# TODO: Drawbar with interlock. Drawbar is on dout-0
+net drawbar-on <= lcec.0.4.dout-0
 
 #  ---HALUI signals---
 

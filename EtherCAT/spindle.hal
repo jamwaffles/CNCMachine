@@ -23,3 +23,24 @@ net spindle-at-speed near-at-speed.out
 
 ### Drive fault
 net drive-error argon.drive-error
+
+### Drawbar button 
+### EL7 inputs have some input filtering on them
+loadrt and2 names=db-interlock
+loadrt toggle names=db-toggle
+addf db-interlock servo-thread
+addf db-toggle servo-thread
+
+# Pass button input to interlock otherwise the drawbar will engage as
+# soon as spindle stops if it was toggled on during run.
+net drawbar-input db-interlock.in0 <= lcec.0.0.drawbar-button
+net drawbar-toggle db-interlock.out => db-toggle.in
+
+net drawbar-on <= db-toggle.out
+
+### interlock
+
+#--- Engage drawbar only if spindle is stopped
+net spindle-is-stopped db-interlock.in1
+
+#--- If DB is on, disable spindle speed CMD
