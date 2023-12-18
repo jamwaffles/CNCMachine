@@ -140,5 +140,31 @@ net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-veloci
 #Outputs
 net mist-on iocontrol.0.coolant-mist => lcec.0.4.dout-1
 
-# TODO: Drawbar with interlock. EL2008 handles debouncing. Drawbar is on dout-0
+# TODO: Drawbar with interlock. Drawbar is on dout-0
+
+#  ---HALUI signals---
+
+net joint-select-a        halui.axis.x.select
+net x-is-homed            halui.joint.0.is-homed
+net jog-x-pos             halui.axis.x.plus
+net jog-x-neg             halui.axis.x.minus
+net jog-x-analog          halui.axis.x.analog
+net joint-select-b        halui.axis.y.select
+net y-is-homed            halui.joint.1.is-homed
+net jog-y-pos             halui.axis.y.plus
+net jog-y-neg             halui.axis.y.minus
+net jog-y-analog          halui.axis.y.analog
+net joint-select-c        halui.axis.z.select
+net z-is-homed            halui.joint.2.is-homed
+net jog-z-pos             halui.axis.z.plus
+net jog-z-neg             halui.axis.z.minus
+net jog-z-analog          halui.axis.z.analog
+net jog-selected-pos      halui.axis.selected.plus
+net jog-selected-neg      halui.axis.selected.minus
+net spindle-manual-cw     halui.spindle.0.forward
+net spindle-manual-ccw    halui.spindle.0.reverse
+net spindle-manual-stop   halui.spindle.0.stop
+net machine-is-on         halui.machine.is-on
+net jog-speed             halui.axis.jog-speed
+net MDI-mode              halui.mode.is-mdi
 

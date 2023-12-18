@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pyvcp>
+	<labelframe text="Argon Spindle Drive">
+		<font>("Helvetica",12)</font>
+		<table>
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Orient enable"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"orient-enable"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"gray"</off_color>
+			</led>
+
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Is oriented"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"is-oriented"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"gray"</off_color>
+			</led>
+
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Spindle at speed"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"spindle-at-speed"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"red"</off_color>
+			</led>
+
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Spindle drive fault"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"drive-error"</halpin>
+				<size>"10"</size>
+				<on_color>"red"</on_color>
+				<off_color>"gray"</off_color>
+			</led>
+
+			<tablerow/>
+			<tablesticky sticky="n" />
+			<label>
+				<text>"RPM"</text>
+			</label>
+			<tablerow />
+			<bar>
+				<halpin>"spindle-speed-rpm"</halpin>
+				<size>250</size>
+				<min_>-6000</min_>
+				<max_>6000</max_>
+				<fillcolor>"green"</fillcolor>
+			</bar>
+
+			<!-- <tablerow />
+            <meter>
+                <halpin>"motor-current"</halpin>
+                <size>200</size>
+                <min_>0</min_>
+                <max_>10</max_>
+                <majorscale>1</majorscale>
+                <text>"Current"</text>
+                <subtext>"Amps"</subtext>
+                <minorscale>0.2</minorscale>
+                <region1>(0,4.5,"green")</region1>
+                <region2>(4.5,5,"yellow")</region2>
+                <region3>(5,7,"red")</region3>
+            </meter>
+
+            <tablerow/>
+            <tablesticky sticky="n" />
+            <label>
+                <text>"Drive temp"</text>
+            </label>
+            <tablerow />
+            <bar>
+                <halpin>"heatsink-temp"</halpin>
+                <size>200</size>
+                <min_>0</min_>
+                <max_>110</max_>
+                <fillcolor>"blue"</fillcolor>
+            </bar> -->
+
+		</table>
+	</labelframe>
+
+	<labelframe text="Touch probe/toolsetter">
+		<font>("Helvetica",12)</font>
+		<table>
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Active"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"probe-in"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"gray"</off_color>
+			</led>
+		</table>
+	</labelframe>
+</pyvcp>

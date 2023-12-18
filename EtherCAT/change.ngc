@@ -1,0 +1,8 @@
+o<change> sub
+
+M19 R100 Q3
+M6
+
+; succeed by returning a positive value
+o<change> endsub [1]
+m2
