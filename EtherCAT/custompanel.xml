@@ -118,4 +118,22 @@
 			</led>
 		</table>
 	</labelframe>
+
+	<labelframe text="EtherCAT">
+		<font>("Helvetica",12)</font>
+		<table>
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"All OP"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"ecat-all-op"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"red"</off_color>
+			</led>
+		</table>
+	</labelframe>
 </pyvcp>

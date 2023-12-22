@@ -4,3 +4,4 @@ net orient-enable => pyvcp.orient-enable
 net is-oriented => pyvcp.is-oriented
 net drive-error => pyvcp.drive-error
 net probe-in => pyvcp.probe-in
+net all-op => lcec.all-op pyvcp.ecat-all-op

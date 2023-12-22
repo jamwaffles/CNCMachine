@@ -2,7 +2,7 @@
 
 # Serial port, device address, update interval in ms
 # ARGON_LOG_LEVEL to get some output
-loadusr -Wn argon ./argon-rs-d16f141 /dev/ttyUSB0 1 100
+loadusr -Wn argon ./argon-rs /dev/ttyUSB0 1 25
 
 loadrt near names=near-at-speed,spindle-zero-rpm
 addf near-at-speed servo-thread
