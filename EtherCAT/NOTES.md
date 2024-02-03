@@ -8,3 +8,6 @@ Spindle re-trammed, is now square to table by about 5um over 240mm or 0.00002083
 
 22mm 3fl endmill should therefore have a deviation of 0.5um (lol again)
 
+# Table sizing - Sat 03 Feb 2024 17:21:48 GMT
+
+Table is cut to 409mm X, 256mm Y
