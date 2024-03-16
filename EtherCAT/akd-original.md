@@ -68,3 +68,42 @@ but dmesg says
 [ 4025.615692] EtherCAT ERROR 0-5: Failed to set SAFEOP state, slave refused state change (PREOP + ERROR).
 [ 4025.615955] EtherCAT ERROR 0-5: AL status message 0x001D: "Invalid output configuration".
 ```
+
+# A bit of progress
+
+Latest and greatest:
+
+```
+[ 5216.664882] EtherCAT: Requesting master 0...
+[ 5216.664886] EtherCAT: Successfully requested master 0.
+[ 5216.665566] EtherCAT 0: Domain0: Logical address 0x00000000, 97 byte, expected working counter 14.
+[ 5216.665568] EtherCAT 0:   Datagram domain0-0-main: Logical offset 0x00000000, 97 byte, type LRW.
+[ 5216.665580] EtherCAT 0: Master thread exited.
+[ 5216.665581] EtherCAT 0: Stopping EoE thread.
+[ 5216.665589] EtherCAT 0: EoE thread exited.
+[ 5216.665590] EtherCAT 0: Starting EoE thread.
+[ 5216.665635] EtherCAT 0: Starting EtherCAT-OP thread.
+[ 5216.665665] EtherCAT WARNING 0: 1 datagram TIMED OUT!
+[ 5216.665667] EtherCAT WARNING 0: 1 datagram UNMATCHED!
+[ 5222.049852] EtherCAT WARNING 0-0: Slave did not sync after 5000 ms.
+[ 5227.257843] EtherCAT WARNING 0-1: Slave did not sync after 5000 ms.
+[ 5232.441586] EtherCAT WARNING 0-2: Slave did not sync after 5000 ms.
+[ 5232.662095] EtherCAT ERROR 0-5: Mailbox error response received - Unknown error reply code 0x0000.
+[ 5232.662101] EtherCAT WARNING 0-5: Invalid mailbox response for eoe0s5.
+[ 5232.718108] EtherCAT ERROR 0-5: Mailbox error response received - Unknown error reply code 0x0000.
+[ 5232.718113] EtherCAT WARNING 0-5: Invalid mailbox response for eoe0s5.
+[ 5232.758105] EtherCAT ERROR 0-5: Mailbox error response received - Unknown error reply code 0x0000.
+[ 5232.758112] EtherCAT WARNING 0-5: Invalid mailbox response for eoe0s5.
+[ 5232.838118] EtherCAT ERROR 0-5: Mailbox error response received - Unknown error reply code 0x0000.
+[ 5232.838124] EtherCAT WARNING 0-5: Invalid mailbox response for eoe0s5.
+[ 5232.862152] EtherCAT ERROR 0-5: Mailbox error response received - Unknown error reply code 0x0000.
+[ 5232.862183] EtherCAT WARNING 0-5: Invalid mailbox response for eoe0s5.
+[ 5232.878123] EtherCAT WARNING 0-5: Other mailbox protocol response for eoe0s5.
+[ 5232.878648] EtherCAT ERROR 0-5: Reception of CoE download response failed: No response.
+[ 5232.878657] EtherCAT WARNING 0-5: Failed to set number of assigned PDOs of SM2.
+[ 5232.878658] EtherCAT WARNING 0-5: Currently assigned PDOs: (none). PDOs to assign: 0x1600
+[ 5232.878664] EtherCAT WARNING 0-5: PDO configuration failed.
+[ 5232.909607] EtherCAT 0: Slave states on main device: OP.
+[ 5243.373563] EtherCAT WARNING 0-5: Failed to receive mbox check datagram for eoe0s5.
+[ 5243.697557] EtherCAT WARNING 0: 1 datagram TIMED OUT!
+```
