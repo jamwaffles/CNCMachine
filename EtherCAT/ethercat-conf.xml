@@ -38,12 +38,12 @@
       <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
       <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
 
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
+      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
     </slave>
 
     <!-- Joint 1 -->
     <slave idx="1" type="generic" vid="00004321" pid="000010b2" configPdos="true">
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
+      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
 
       <!-- 0x09 = CSV, 0x08 = CSP -->
       <!-- <sdoConfig idx="6060" subIdx="0"><sdoDataRaw data="08"/></sdoConfig> -->
@@ -131,18 +131,13 @@
         <!-- 1 = reverse direction -->
         <sdoDataRaw data="01"/>
       </sdoConfig>
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
+      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
     </slave>
     <slave idx="3" type="EK1100"/>
     <slave idx="4" type="EL2008"/>
 
     <!-- AKD spindle motor -->
     <slave idx="5" type="generic" vid="0000006A" pid="00414b44" configPdos="true">
-      <!-- Software enable -->
-      <!-- <sdoConfig idx="5080" subIdx="00">
-        <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig> -->
-
       <sdoConfig idx="1600" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
@@ -224,12 +219,12 @@
         </pdo>
       </syncManager>
 
-      <!-- Software enable -->
-      <!-- <sdoConfig idx="5080" subIdx="00">
-        <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig> -->
+      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
 
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
+      <!-- Software enable -->
+      <sdoConfig idx="5080" subIdx="00">
+        <sdoDataRaw data="01 00 00 00"/>
+      </sdoConfig>
     </slave>
    </master>
 </masters>
