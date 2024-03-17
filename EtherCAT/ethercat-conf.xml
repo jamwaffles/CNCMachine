@@ -142,162 +142,94 @@
       <!-- <sdoConfig idx="5080" subIdx="00">
         <sdoDataRaw data="01 00 00 00"/>
       </sdoConfig> -->
-      <!-- Clear SM PDOs -->
+
+      <sdoConfig idx="1600" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+      <sdoConfig idx="1600" subIdx="01">
+        <sdoDataRaw data="20 00 ff 60"/>
+      </sdoConfig>
+      <sdoConfig idx="1600" subIdx="02">
+        <sdoDataRaw data="10 00 40 60"/>
+      </sdoConfig>
+      <sdoConfig idx="1600" subIdx="00">
+        <sdoDataRaw data="02"/>
+      </sdoConfig>
+
+      <sdoConfig idx="1a00" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+      <sdoConfig idx="1a00" subIdx="01">
+        <sdoDataRaw data="20 00 6c 60"/>
+      </sdoConfig>
+      <sdoConfig idx="1a00" subIdx="02">
+        <sdoDataRaw data="10 00 41 60"/>
+      </sdoConfig>
+      <sdoConfig idx="1a00" subIdx="00">
+        <sdoDataRaw data="02"/>
+      </sdoConfig>
+
       <sdoConfig idx="1C12" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
-      <!-- Clear SM PDOs -->
-      <sdoConfig idx="1C13" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Clear RX PDO1 -->
-      <sdoConfig idx="1A00" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Map status word to RX-PDO1 -->
-      <!--  0x6041 0010 -->
-      <sdoConfig idx="1A00" subIdx="01">
-        <sdoDataRaw data="10 00 41 60"/>
-      </sdoConfig>
-      <!-- Map position feedback to RX-PDO1 -->
-      <!-- 0x6064 0020 -->
-      <sdoConfig idx="1A00" subIdx="02">
-        <sdoDataRaw data="20 00 64 60"/>
-      </sdoConfig>
-      <!-- Set RX-PDO1 count to 2 -->
-      <sdoConfig idx="1A00" subIdx="00">
-        <sdoDataRaw data="02"/>
-      </sdoConfig>
-      <!-- Clear RX-PDO2 -->
-      <sdoConfig idx="1A01" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Clear RX-PDO3 -->
-      <sdoConfig idx="1A02" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Clear RX-PDO4 -->
-      <sdoConfig idx="1A03" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Clear TX-PDO1 -->
-      <sdoConfig idx="1600" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Map control word to TX-PDO1 -->
-      <!-- 0x6040 0010 -->
-      <sdoConfig idx="1600" subIdx="01">
-        <sdoDataRaw data="10 00 40 60"/>
-      </sdoConfig>
-      <!-- Map position command to TX-PDO1 -->
-      <!-- 0x607A 0020 -->
-      <sdoConfig idx="1600" subIdx="02">
-        <sdoDataRaw data="20 01 C1 60"/>
-      </sdoConfig>
-      <!-- Set TX-PDO1 count to 2 -->
-      <sdoConfig idx="1600" subIdx="00">
-        <sdoDataRaw data="02"/>
-      </sdoConfig>
-      <!-- Clear TX-PDO2 -->
-      <sdoConfig idx="1601" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Clear TX-PDO3 -->
-      <sdoConfig idx="1602" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Clear TX-PDO4 -->
-      <sdoConfig idx="1603" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
-      <!-- Download PDO 0x1C12:01 index -->
-      <!-- 0x1600 -->
       <sdoConfig idx="1C12" subIdx="01">
         <sdoDataRaw data="00 16"/>
       </sdoConfig>
-      <!-- Download PDO 0x1C12:02 index -->
-      <!-- 0x1601 -->
-      <!-- <sdoConfig idx="1C12" subIdx="02">
-        <sdoDataRaw data="01 16"/>
-      </sdoConfig> -->
-      <!-- Download PDO 0x1C12 count -->
       <sdoConfig idx="1C12" subIdx="00">
         <sdoDataRaw data="01"/>
       </sdoConfig>
-      <!-- Download PDO 0x1C13:01 index -->
-      <!-- 0x1A00 -->
-      <sdoConfig idx="1C13" subIdx="01">
-        <sdoDataRaw data="00 1A"/>
+
+      <sdoConfig idx="1C13" subIdx="00">
+        <sdoDataRaw data="00"/>
       </sdoConfig>
-      <!-- Download PDO 0x1C13:02 index -->
-      <!-- 0x1A01 -->
-      <!-- <sdoConfig idx="1C13" subIdx="02">
-        <sdoDataRaw data="01 1A"/>
-      </sdoConfig> -->
-      <!-- Download PDO 0x1C13 count -->
+      <sdoConfig idx="1C13" subIdx="01">
+        <sdoDataRaw data="00 1a"/>
+      </sdoConfig>
       <sdoConfig idx="1C13" subIdx="00">
         <sdoDataRaw data="01"/>
       </sdoConfig>
-      
-      <!-- Set OpMode to Cyclic Synchronous Position -->
-      <sdoConfig idx="6060" subIdx="00">
-        <sdoDataRaw data="08"/>
-      </sdoConfig>
-      <!-- Set Cycle Time -->
-      <!-- <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="01"/>
-      </sdoConfig> -->
-      <!-- Set Cycle exp -->
-      <!-- <sdoConfig idx="60C2" subIdx="02">
-        <sdoDataRaw data="FD"/>
-      </sdoConfig> -->
-      <!-- Set Digital Output mask -->
-      <!-- 0x0003 0001 -->
-      <!-- <sdoConfig idx="60FE" subIdx="02">
-        <sdoDataRaw data="01 00 03 00"/>
-      </sdoConfig> -->
-      <!-- Set FBUS.PARAM05, enable DS402 scaling -->
-      <!-- 0x0000 0010 -->
-      <!-- <sdoConfig idx="36E9" subIdx="00">
-        <sdoDataRaw data="10 00 00 00"/>
-      </sdoConfig> -->
-      <!-- Set Motor Revolutions -->
-      <!-- 0x0000 0001 -->
-      <!-- <sdoConfig idx="6091" subIdx="01">
-        <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig> -->
-      <!-- Set Shaft Revolutions -->
-      <!-- 0x0000 0001 -->
-      <!-- <sdoConfig idx="6091" subIdx="02">
-        <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig> -->
-      <!-- Feed (65536 counts/rev) -->
-      <!-- 0x0010 0000 -->
-      <!-- <sdoConfig idx="6092" subIdx="01">
-        <sdoDataRaw data="00 00 10 00"/>
-      </sdoConfig> -->
-      <!-- Set Shaft Revolutions -->
-      <!-- 0x0000 0001 -->
-      <!-- <sdoConfig idx="6092" subIdx="02">
-        <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig> -->
 
-      <syncManager idx="0" dir="out" />
-      <syncManager idx="1" dir="in" />
+      <!-- Set OpMode to Cyclic Synchronous Velocity -->
+      <sdoConfig idx="6060" subIdx="00">
+        <sdoDataRaw data="09"/>
+      </sdoConfig>
+
       <syncManager idx="2" dir="out">
+        <!-- 0x1601 for velocity mode, 0x1600 for position mode -->
         <pdo idx="1600">
-          <pdoEntry idx="6040" subIdx="00" bitLen="16" halPin="cia-controlword" halType="u32">
-          </pdoEntry>
-          <pdoEntry idx="607A" subIdx="00" bitLen="32" halPin="target-position" halType="s32"/>
+          <pdoEntry idx="60ff" subIdx="00" bitLen="32" halPin="target-velocity" halType="s32"/>
+          <pdoEntry idx="6040" subIdx="00" bitLen="16" halPin="cia-controlword" halType="u32"/>
+          <!-- <pdoEntry idx="6060" subIdx="00" bitLen="8" halPin="opmode" halType="s32"/> -->
+          <!-- <pdoEntry idx="2002" subIdx="01" bitLen="8" halPin="out-even-length-padding" halType="s32"/> -->
         </pdo>
+        <!-- <pdo idx="1601">
+          <pdoEntry idx="60FF" subIdx="00" bitLen="32" halPin="target-velocity" halType="s32"/>
+        </pdo> -->
       </syncManager>
       <syncManager idx="3" dir="in">
         <pdo idx="1a00">
+          <pdoEntry idx="606c" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/>
           <pdoEntry idx="6041" subIdx="00" bitLen="16" halPin="cia-statusword" halType="u32"/>
-          <pdoEntry idx="6063" subIdx="00" bitLen="32" halPin="actual-position" halType="s32"/>
+          <!-- <pdoEntry idx="6061" subIdx="00" bitLen="8" halPin="opmode-display" halType="s32"/> -->
+          <!-- <pdoEntry idx="2002" subIdx="01" bitLen="8" halPin="in-even-length-padding" halType="s32"/> -->
+          <!-- <pdoEntry idx="606C" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/> -->
+          <!-- <pdoEntry idx="6077" subIdx="00" bitLen="16" halPin="actual-torque" halType="s32"/>       -->
+          <!-- <pdoEntry idx="60FD" subIdx="00" bitLen="32" halType="Complex">
+            <complexEntry bitLen="1" halPin="min-lim-in" halType="bit"/>
+            <complexEntry bitLen="1" halPin="max-lim-in" halType="bit"/>
+            <complexEntry bitLen="1" halPin="home-in" halType="bit"/>
+            <complexEntry bitLen="28" />
+            <complexEntry bitLen="1" halPin="z-in" halType="bit"/>
+          </pdoEntry>  -->
         </pdo>
       </syncManager>
-      <!--<dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="25000"/>-->
+
+      <!-- Software enable -->
+      <!-- <sdoConfig idx="5080" subIdx="00">
+        <sdoDataRaw data="01 00 00 00"/>
+      </sdoConfig> -->
+
+      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0"/>
     </slave>
    </master>
 </masters>

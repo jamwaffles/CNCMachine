@@ -139,21 +139,25 @@ net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-veloci
 #
 # AKD spindle
 #
-setp cia402.3.csp-mode 1
-# setp cia402.3.pos-scale [JOINT_2]PULSES_PER_MM
-# setp cia402.3.velo-scale [JOINT_2]PULSES_PER_MM
+setp cia402.3.csp-mode 0
+# TODO
+setp cia402.3.pos-scale 1
+setp cia402.3.velo-scale 1
+
+net akd-spindle-drv-enable  motion.motion-enabled => cia402.3.enable
+net akd-spindle-drv-fault <= cia402.3.drv-fault
 
 #from servo(ethercat) to cia402
 net akd-spindle-statusword      lcec.0.5.cia-statusword => cia402.3.statusword
 # net akd-spindle-opmode-display  lcec.0.5.opmode-display => cia402.3.opmode-display
-net akd-spindle-drv-act-pos     lcec.0.5.actual-position => cia402.3.drv-actual-position
-# net akd-spindle-drv-act-velo    lcec.0.5.actual-velocity => cia402.3.drv-actual-velocity
+# net akd-spindle-drv-act-pos     lcec.0.5.actual-position => cia402.3.drv-actual-position
+net akd-spindle-drv-act-velo    lcec.0.5.actual-velocity => cia402.3.drv-actual-velocity
 
 #from cia402 to servo(ethercat)
 net akd-spindle-controlword         cia402.3.controlword => lcec.0.5.cia-controlword
 # net akd-spindle-modes-of-operation  cia402.3.opmode => lcec.0.5.opmode
-net akd-spindle-drv-target-pos      cia402.3.drv-target-position => lcec.0.5.target-position
-# net akd-spindle-drv-target-velo     cia402.3.drv-target-velocity => lcec.0.5.target-velocity
+# net akd-spindle-drv-target-pos      cia402.3.drv-target-position => lcec.0.5.target-position
+net akd-spindle-drv-target-velo     cia402.3.drv-target-velocity => lcec.0.5.target-velocity
 
 #
 # Slave 4 I/O module EL2008
