@@ -139,17 +139,16 @@
     <!-- AKD spindle motor -->
     <!-- TODO: object 345Ah brake control -->
     <slave idx="5" type="generic" vid="0000006A" pid="00414b44" configPdos="true">
-      <sdoConfig idx="1600" subIdx="00">
+      <!-- Software enable -->
+      <!-- <sdoConfig idx="5080" subIdx="00">
+        <sdoDataRaw data="01 00 00 00"/>
+      </sdoConfig> -->
+
+      <sdoConfig idx="1c12" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
-      <sdoConfig idx="1600" subIdx="01">
-        <sdoDataRaw data="20 00 ff 60"/>
-      </sdoConfig>
-      <sdoConfig idx="1600" subIdx="02">
-        <sdoDataRaw data="10 00 40 60"/>
-      </sdoConfig>
-      <sdoConfig idx="1600" subIdx="00">
-        <sdoDataRaw data="02"/>
+      <sdoConfig idx="1c13" subIdx="00">
+        <sdoDataRaw data="00"/>
       </sdoConfig>
 
       <sdoConfig idx="1a00" subIdx="00">
@@ -165,9 +164,39 @@
         <sdoDataRaw data="02"/>
       </sdoConfig>
 
-      <sdoConfig idx="1C12" subIdx="00">
+      <sdoConfig idx="1a01" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
+      <sdoConfig idx="1a02" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+      <sdoConfig idx="1a03" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+
+      <sdoConfig idx="1600" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+      <sdoConfig idx="1600" subIdx="01">
+        <sdoDataRaw data="20 00 ff 60"/>
+      </sdoConfig>
+      <sdoConfig idx="1600" subIdx="02">
+        <sdoDataRaw data="10 00 40 60"/>
+      </sdoConfig>
+      <sdoConfig idx="1600" subIdx="00">
+        <sdoDataRaw data="02"/>
+      </sdoConfig>
+
+      <sdoConfig idx="1601" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+      <sdoConfig idx="1602" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+      <sdoConfig idx="1603" subIdx="00">
+        <sdoDataRaw data="00"/>
+      </sdoConfig>
+
       <sdoConfig idx="1C12" subIdx="01">
         <sdoDataRaw data="00 16"/>
       </sdoConfig>
@@ -175,11 +204,8 @@
         <sdoDataRaw data="01"/>
       </sdoConfig>
 
-      <sdoConfig idx="1C13" subIdx="00">
-        <sdoDataRaw data="00"/>
-      </sdoConfig>
       <sdoConfig idx="1C13" subIdx="01">
-        <sdoDataRaw data="00 1a"/>
+        <sdoDataRaw data="00 1b"/>
       </sdoConfig>
       <sdoConfig idx="1C13" subIdx="00">
         <sdoDataRaw data="01"/>
@@ -221,11 +247,6 @@
       </syncManager>
 
       <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
-
-      <!-- Software enable -->
-      <sdoConfig idx="5080" subIdx="00">
-        <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig>
     </slave>
    </master>
 </masters>
