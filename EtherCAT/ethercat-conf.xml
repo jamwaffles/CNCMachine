@@ -137,6 +137,7 @@
     <slave idx="4" type="EL2008"/>
 
     <!-- AKD spindle motor -->
+    <!-- TODO: object 345Ah brake control -->
     <slave idx="5" type="generic" vid="0000006A" pid="00414b44" configPdos="true">
       <sdoConfig idx="1600" subIdx="00">
         <sdoDataRaw data="00"/>
