@@ -1,5 +1,5 @@
 <masters>
-  <master idx="0" appTimePeriod="2000000" refClockSyncCycles="1">
+  <master idx="0" appTimePeriod="2000000" refClockSyncCycles="10000">
     <!-- Joint 0 -->
     <slave idx="0" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <syncManager idx="2" dir="out">
@@ -138,6 +138,10 @@
 
     <!-- AKD spindle motor -->
     <slave idx="5" type="generic" vid="0000006A" pid="00414b44" configPdos="true">
+      <!-- Software enable -->
+      <!-- <sdoConfig idx="5080" subIdx="00">
+        <sdoDataRaw data="01 00 00 00"/>
+      </sdoConfig> -->
       <!-- Clear SM PDOs -->
       <sdoConfig idx="1C12" subIdx="00">
         <sdoDataRaw data="00"/>
@@ -188,7 +192,7 @@
       <!-- Map position command to TX-PDO1 -->
       <!-- 0x607A 0020 -->
       <sdoConfig idx="1600" subIdx="02">
-        <sdoDataRaw data="20 00 7A 60"/>
+        <sdoDataRaw data="20 01 C1 60"/>
       </sdoConfig>
       <!-- Set TX-PDO1 count to 2 -->
       <sdoConfig idx="1600" subIdx="00">
@@ -213,12 +217,12 @@
       </sdoConfig>
       <!-- Download PDO 0x1C12:02 index -->
       <!-- 0x1601 -->
-      <sdoConfig idx="1C12" subIdx="02">
+      <!-- <sdoConfig idx="1C12" subIdx="02">
         <sdoDataRaw data="01 16"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Download PDO 0x1C12 count -->
       <sdoConfig idx="1C12" subIdx="00">
-        <sdoDataRaw data="02"/>
+        <sdoDataRaw data="01"/>
       </sdoConfig>
       <!-- Download PDO 0x1C13:01 index -->
       <!-- 0x1A00 -->
@@ -227,12 +231,12 @@
       </sdoConfig>
       <!-- Download PDO 0x1C13:02 index -->
       <!-- 0x1A01 -->
-      <sdoConfig idx="1C13" subIdx="02">
+      <!-- <sdoConfig idx="1C13" subIdx="02">
         <sdoDataRaw data="01 1A"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Download PDO 0x1C13 count -->
       <sdoConfig idx="1C13" subIdx="00">
-        <sdoDataRaw data="02"/>
+        <sdoDataRaw data="01"/>
       </sdoConfig>
       
       <!-- Set OpMode to Cyclic Synchronous Position -->
@@ -240,43 +244,43 @@
         <sdoDataRaw data="08"/>
       </sdoConfig>
       <!-- Set Cycle Time -->
-      <sdoConfig idx="60C2" subIdx="01">
+      <!-- <sdoConfig idx="60C2" subIdx="01">
         <sdoDataRaw data="01"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Set Cycle exp -->
-      <sdoConfig idx="60C2" subIdx="02">
+      <!-- <sdoConfig idx="60C2" subIdx="02">
         <sdoDataRaw data="FD"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Set Digital Output mask -->
       <!-- 0x0003 0001 -->
-      <sdoConfig idx="60FE" subIdx="02">
+      <!-- <sdoConfig idx="60FE" subIdx="02">
         <sdoDataRaw data="01 00 03 00"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Set FBUS.PARAM05, enable DS402 scaling -->
       <!-- 0x0000 0010 -->
-      <sdoConfig idx="36E9" subIdx="00">
+      <!-- <sdoConfig idx="36E9" subIdx="00">
         <sdoDataRaw data="10 00 00 00"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Set Motor Revolutions -->
       <!-- 0x0000 0001 -->
-      <sdoConfig idx="6091" subIdx="01">
+      <!-- <sdoConfig idx="6091" subIdx="01">
         <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Set Shaft Revolutions -->
       <!-- 0x0000 0001 -->
-      <sdoConfig idx="6091" subIdx="02">
+      <!-- <sdoConfig idx="6091" subIdx="02">
         <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Feed (65536 counts/rev) -->
       <!-- 0x0010 0000 -->
-      <sdoConfig idx="6092" subIdx="01">
+      <!-- <sdoConfig idx="6092" subIdx="01">
         <sdoDataRaw data="00 00 10 00"/>
-      </sdoConfig>
+      </sdoConfig> -->
       <!-- Set Shaft Revolutions -->
       <!-- 0x0000 0001 -->
-      <sdoConfig idx="6092" subIdx="02">
+      <!-- <sdoConfig idx="6092" subIdx="02">
         <sdoDataRaw data="01 00 00 00"/>
-      </sdoConfig>
+      </sdoConfig> -->
 
       <syncManager idx="0" dir="out" />
       <syncManager idx="1" dir="in" />
