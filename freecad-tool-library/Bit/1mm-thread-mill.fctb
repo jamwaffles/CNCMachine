@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "name": "1mm-thread-mill",
+  "shape": "thread-mill.fcstd",
+  "parameter": {
+    "Chipload": "0.00 mm",
+    "Crest": "0.10 mm",
+    "Diameter": "4.50 mm",
+    "Flutes": "3",
+    "Length": "50.00 mm",
+    "Material": "Carbide",
+    "NeckDiameter": "2.50 mm",
+    "NeckLength": "10.00 mm",
+    "ShankDiameter": "4.00 mm",
+    "cuttingAngle": "60.00 \u00b0"
+  },
+  "attribute": {}
+}

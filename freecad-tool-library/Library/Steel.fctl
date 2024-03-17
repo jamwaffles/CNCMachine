@@ -59,6 +59,14 @@
     {
       "nr": 16,
       "path": "3.3mm-m4-tap-drill.fctb"
+    },
+    {
+      "nr": 17,
+      "path": "6mm-reamer.fctb"
+    },
+    {
+      "nr": 18,
+      "path": "1mm-thread-mill.fctb"
     }
   ],
   "version": 1
