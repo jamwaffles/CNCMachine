@@ -155,10 +155,10 @@
         <sdoDataRaw data="00"/>
       </sdoConfig>
       <sdoConfig idx="1a00" subIdx="01">
-        <sdoDataRaw data="20 00 6c 60"/>
+        <sdoDataRaw data="10 00 41 60"/>
       </sdoConfig>
       <sdoConfig idx="1a00" subIdx="02">
-        <sdoDataRaw data="10 00 41 60"/>
+        <sdoDataRaw data="20 00 6c 60"/>
       </sdoConfig>
       <sdoConfig idx="1a00" subIdx="00">
         <sdoDataRaw data="02"/>
@@ -178,10 +178,10 @@
         <sdoDataRaw data="00"/>
       </sdoConfig>
       <sdoConfig idx="1600" subIdx="01">
-        <sdoDataRaw data="20 00 ff 60"/>
+        <sdoDataRaw data="10 00 40 60"/>
       </sdoConfig>
       <sdoConfig idx="1600" subIdx="02">
-        <sdoDataRaw data="10 00 40 60"/>
+        <sdoDataRaw data="20 00 ff 60"/>
       </sdoConfig>
       <sdoConfig idx="1600" subIdx="00">
         <sdoDataRaw data="02"/>
@@ -205,7 +205,7 @@
       </sdoConfig>
 
       <sdoConfig idx="1C13" subIdx="01">
-        <sdoDataRaw data="00 1b"/>
+        <sdoDataRaw data="00 1a"/>
       </sdoConfig>
       <sdoConfig idx="1C13" subIdx="00">
         <sdoDataRaw data="01"/>
@@ -219,8 +219,8 @@
       <syncManager idx="2" dir="out">
         <!-- 0x1601 for velocity mode, 0x1600 for position mode -->
         <pdo idx="1600">
-          <pdoEntry idx="60ff" subIdx="00" bitLen="32" halPin="target-velocity" halType="s32"/>
           <pdoEntry idx="6040" subIdx="00" bitLen="16" halPin="cia-controlword" halType="u32"/>
+          <pdoEntry idx="60ff" subIdx="00" bitLen="32" halPin="target-velocity" halType="s32"/>
           <!-- <pdoEntry idx="6060" subIdx="00" bitLen="8" halPin="opmode" halType="s32"/> -->
           <!-- <pdoEntry idx="2002" subIdx="01" bitLen="8" halPin="out-even-length-padding" halType="s32"/> -->
         </pdo>
@@ -230,8 +230,8 @@
       </syncManager>
       <syncManager idx="3" dir="in">
         <pdo idx="1a00">
-          <pdoEntry idx="606c" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/>
           <pdoEntry idx="6041" subIdx="00" bitLen="16" halPin="cia-statusword" halType="u32"/>
+          <pdoEntry idx="606c" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/>
           <!-- <pdoEntry idx="6061" subIdx="00" bitLen="8" halPin="opmode-display" halType="s32"/> -->
           <!-- <pdoEntry idx="2002" subIdx="01" bitLen="8" halPin="in-even-length-padding" halType="s32"/> -->
           <!-- <pdoEntry idx="606C" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/> -->
