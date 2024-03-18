@@ -139,6 +139,11 @@
     <!-- AKD spindle motor -->
     <!-- TODO: object 345Ah brake control -->
     <slave idx="5" type="generic" vid="0000006A" pid="00414b44" configPdos="true">
+      <!-- Software enable -->
+      <sdoConfig idx="5080" subIdx="00">
+        <sdoDataRaw data="01 00 00 00"/>
+      </sdoConfig>
+
       <sdoConfig idx="1c12" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
@@ -204,6 +209,15 @@
       </sdoConfig>
       <sdoConfig idx="1C13" subIdx="00">
         <sdoDataRaw data="01"/>
+      </sdoConfig>
+
+      <!-- Set Cycle Time -->
+      <sdoConfig idx="60C2" subIdx="01">
+        <sdoDataRaw data="01"/>
+      </sdoConfig>
+      <!-- Set Cycle exp -->
+      <sdoConfig idx="60C2" subIdx="02">
+       <sdoDataRaw data="FD"/>
       </sdoConfig>
 
       <!-- Set OpMode to Cyclic Synchronous Velocity -->
