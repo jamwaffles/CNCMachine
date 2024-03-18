@@ -1,5 +1,5 @@
 <masters>
-  <master idx="0" appTimePeriod="2000000" refClockSyncCycles="10000">
+  <master idx="0" appTimePeriod="1000000" refClockSyncCycles="10000">
     <!-- Joint 0 -->
     <slave idx="0" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <syncManager idx="2" dir="out">
