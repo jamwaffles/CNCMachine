@@ -144,6 +144,15 @@
         <sdoDataRaw data="01 00 00 00"/>
       </sdoConfig>
 
+      <!-- Max velocity 6500 RPM, up from default 3000 -->
+      <sdoConfig idx="3622" subIdx="00">
+        <sdoDataRaw data="64 19 00 00"/>
+      </sdoConfig>
+      <!-- Max velocity -6500 RPM, up from default -3000 -->
+      <sdoConfig idx="3623" subIdx="00">
+        <sdoDataRaw data="9c e6 ff ff"/>
+      </sdoConfig>
+
       <sdoConfig idx="1c12" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
