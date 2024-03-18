@@ -27,22 +27,18 @@ net akd-spindle-drv-target-velo       cia402.3.drv-target-velocity => lcec.0.5.t
 
 ### Spindle speed command
 ### `speed-out` is in RPM
-net spindle-speed-cmd=rpm spindle.0.speed-out cia402.3.velocity-cmd
+net spindle-speed-cmd-rpm spindle.0.speed-out cia402.3.velocity-cmd
 # 
 # ### Spindle is running command. Used for drawbar interlock, etc
-net spindle-speed-cmd=rpm spindle-zero-rpm.in1
+net spindle-speed-cmd-rpm spindle-zero-rpm.in1 near-at-speed.in1
 setp spindle-zero-rpm.in2 0
 net spindle-is-stopped spindle-zero-rpm.out
 # 
 # ### Spindle at speed
-# net spindle-fb-rps near-at-speed.in1
-net spindle-fb-rpm cia402.3.velocity-fb
+net spindle-fb-rpm cia402.3.velocity-fb near-at-speed.in2
 setp near-at-speed.scale 1.15
 net spindle-at-speed near-at-speed.out
-# 
-# ### Drive fault
-# # net drive-error argon.drive-error
-# 
+
 ### Drawbar button 
 ### EL7 inputs have some input filtering on them
 loadrt and2 names=db-interlock
