@@ -39,6 +39,9 @@ net spindle-fb-rpm cia402.3.velocity-fb near-at-speed.in2
 setp near-at-speed.scale 1.15
 net spindle-at-speed near-at-speed.out
 
+### Drive fault
+net spindle-drive-error cia402.3.stat-fault
+
 ### Drawbar button 
 ### EL7 inputs have some input filtering on them
 loadrt and2 names=db-interlock
