@@ -233,11 +233,15 @@
       <!-- Arcol HS150 100R (150W, 100 ohm) -->
       <!-- User defined resistance, REGEN.REXT, 100 ohm -->
       <sdoConfig idx="35C2" subIdx="00">
-       <sdoDataRaw data="64 00 00 00"/>
+        <sdoDataRaw data="64 00 00 00"/>
       </sdoConfig>
       <!-- Regen type external, -1, i8 -->
       <sdoConfig idx="3412" subIdx="00">
-       <sdoDataRaw data="ff"/>
+        <sdoDataRaw data="ff"/>
+      </sdoConfig>
+      <sdoConfig idx="3414" subIdx="00">
+        <!-- 150W external resistor -->
+        <sdoDataRaw data="96 00"/>
       </sdoConfig>
 
       <!-- DRV.DIR reverse direction -->
