@@ -176,6 +176,13 @@
       <sdoConfig idx="1a01" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
+      <sdoConfig idx="1a01" subIdx="01">
+        <sdoDataRaw data="20 00 63 60"/>
+      </sdoConfig>
+      <sdoConfig idx="1a01" subIdx="00">
+        <sdoDataRaw data="01"/>
+      </sdoConfig>
+
       <sdoConfig idx="1a02" subIdx="00">
         <sdoDataRaw data="00"/>
       </sdoConfig>
@@ -216,8 +223,11 @@
       <sdoConfig idx="1C13" subIdx="01">
         <sdoDataRaw data="00 1a"/>
       </sdoConfig>
+      <sdoConfig idx="1C13" subIdx="02">
+        <sdoDataRaw data="01 1a"/>
+      </sdoConfig>
       <sdoConfig idx="1C13" subIdx="00">
-        <sdoDataRaw data="01"/>
+        <sdoDataRaw data="02"/>
       </sdoConfig>
 
       <!-- Set Cycle Time -->
@@ -270,6 +280,11 @@
         <pdo idx="1a00">
           <pdoEntry idx="6041" subIdx="00" bitLen="16" halPin="cia-statusword" halType="u32"/>
           <pdoEntry idx="606c" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/>
+        </pdo>
+        <pdo idx="1a01">
+          <pdoEntry idx="6063" subIdx="00" bitLen="32" halPin="actual-position" halType="s32"/>
+          <!-- <pdoEntry idx="20a0" subIdx="00" bitLen="32" halPin="index-pos" halType="s32"/> -->
+          <!-- <pdoEntry idx="20a5" subIdx="00" bitLen="16" halPin="latch-status" halType="u32"/> -->
           <!-- <pdoEntry idx="6061" subIdx="00" bitLen="8" halPin="opmode-display" halType="s32"/> -->
           <!-- <pdoEntry idx="2002" subIdx="01" bitLen="8" halPin="in-even-length-padding" halType="s32"/> -->
           <!-- <pdoEntry idx="606C" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/> -->
