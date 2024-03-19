@@ -259,6 +259,16 @@
         <sdoDataRaw data="01 00 00 00"/>
       </sdoConfig>
 
+      <!-- Encoder index pulse -->
+      <sdoConfig idx="3460" subIdx="01">
+        <!-- CAP0.TRIGGER 10d = encoder as trigger source -->
+        <sdoDataRaw data="0a"/>
+      </sdoConfig>
+      <sdoConfig idx="3460" subIdx="03">
+        <!-- CAP0.MODE 03 = encoder index pulse -->
+        <sdoDataRaw data="03"/>
+      </sdoConfig>
+
       <!-- Set OpMode to Cyclic Synchronous Velocity -->
       <sdoConfig idx="6060" subIdx="00">
         <sdoDataRaw data="09"/>

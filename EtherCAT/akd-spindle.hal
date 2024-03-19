@@ -16,7 +16,7 @@ net akd-spindle-drv-fault <= cia402.3.drv-fault
 #from servo(ethercat) to cia402
 net akd-spindle-statusword        lcec.0.5.cia-statusword => cia402.3.statusword
 # net akd-spindle-opmode-display  lcec.0.5.opmode-display => cia402.3.opmode-display
-# net akd-spindle-drv-act-pos     lcec.0.5.actual-position => cia402.3.drv-actual-position
+net akd-spindle-drv-act-pos     lcec.0.5.actual-position => cia402.3.drv-actual-position
 net akd-spindle-drv-act-velo      lcec.0.5.actual-velocity => cia402.3.drv-actual-velocity
 
 #from cia402 to servo(ethercat)
@@ -38,6 +38,11 @@ net spindle-is-stopped spindle-zero-rpm.out
 net spindle-fb-rpm cia402.3.velocity-fb near-at-speed.in2
 setp near-at-speed.scale 1.15
 net spindle-at-speed near-at-speed.out
+
+### Synchronised motion
+net spindle-revs spindle.0.revs cia402.3.pos-fb
+# TODO: Get AKD to give me an index pulse
+# net spindle-index-enable spindle.0.index-enable hm2_5i25.0.encoder.00.index-enable
 
 ### Drive fault
 net spindle-drive-error cia402.3.stat-fault
