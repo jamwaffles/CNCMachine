@@ -229,6 +229,17 @@
        <sdoDataRaw data="FD"/>
       </sdoConfig>
 
+      <!-- Configure braking resistor -->
+      <!-- Arcol HS150 100R (150W, 100 ohm) -->
+      <!-- User defined resistance, REGEN.REXT, 100 ohm -->
+      <sdoConfig idx="35C2" subIdx="00">
+       <sdoDataRaw data="64 00 00 00"/>
+      </sdoConfig>
+      <!-- Regen type external, -1, i8 -->
+      <sdoConfig idx="3412" subIdx="00">
+       <sdoDataRaw data="ff"/>
+      </sdoConfig>
+
       <!-- Set OpMode to Cyclic Synchronous Velocity -->
       <sdoConfig idx="6060" subIdx="00">
         <sdoDataRaw data="09"/>
