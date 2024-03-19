@@ -240,6 +240,11 @@
        <sdoDataRaw data="ff"/>
       </sdoConfig>
 
+      <!-- DRV.DIR reverse direction -->
+      <sdoConfig idx="352a" subIdx="00">
+        <sdoDataRaw data="01 00 00 00"/>
+      </sdoConfig>
+
       <!-- Set OpMode to Cyclic Synchronous Velocity -->
       <sdoConfig idx="6060" subIdx="00">
         <sdoDataRaw data="09"/>
