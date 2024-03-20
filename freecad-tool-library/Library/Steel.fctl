@@ -67,6 +67,10 @@
     {
       "nr": 18,
       "path": "1mm-thread-mill.fctb"
+    },
+    {
+      "nr": 19,
+      "path": "5mm-3fl-apt-carbide-for-alu-ea3s-05050050-5.fctb"
     }
   ],
   "version": 1

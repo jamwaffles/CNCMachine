@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "5mm-3fl-apt-carbide-for-alu-ea3s-05050050-5",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "CuttingEdgeHeight": "12.000 mm",
+    "Diameter": "5.000 mm",
+    "Flutes": "3",
+    "Length": "16.000 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "5.000 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}
