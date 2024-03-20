@@ -12,13 +12,18 @@ git checkout stable-1.5
 # --disable-8139too is for kernel 6.6
 # --disable-eoe is the important bit!
 # --enable-igc is for Intel i211 NIC, but I ended up just using the `generic` driver anyway
-./configure --enable-igc --sysconfdir=/etc --disable-8139too --disable-eoe
+# --enable-e1000e is for 82579LM on Dell Optiplex motherboard
+./configure --enable-igc --enable-e100e --sysconfdir=/etc --disable-8139too --disable-eoe
 make all modules
 sudo make modules_install install
 sudo depmod
 
 vim /etc/ethercat.conf
 ```
+
+Find out which driver a device is using with `sudo lshw -class network`. 
+
+**NOTE:** The `e1000e` driver seems to be very jittery, so just use `generic`.
 
 This also needs a custom build of `linuxcnc-ethercat` with this pasted into `src/realtime.mk`:
 
