@@ -133,12 +133,10 @@
       </sdoConfig>
       <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
     </slave>
-    <slave idx="3" type="EK1100"/>
-    <slave idx="4" type="EL2008"/>
 
     <!-- AKD spindle motor -->
     <!-- TODO: object 345Ah brake control -->
-    <slave idx="5" type="generic" vid="0000006A" pid="00414b44" configPdos="true">
+    <slave idx="3" type="generic" vid="0000006A" pid="00414b44" configPdos="true">
       <!-- Software enable -->
       <sdoConfig idx="5080" subIdx="00">
         <sdoDataRaw data="01 00 00 00"/>
@@ -301,6 +299,9 @@
 
       <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
     </slave>
+
+    <slave idx="4" type="EK1100"/>
+    <slave idx="5" type="EL2008"/>
    </master>
 </masters>
 

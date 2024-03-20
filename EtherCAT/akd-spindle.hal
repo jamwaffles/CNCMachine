@@ -14,16 +14,16 @@ net akd-spindle-drv-enable  motion.motion-enabled => cia402.3.enable
 net akd-spindle-drv-fault <= cia402.3.drv-fault
 
 #from servo(ethercat) to cia402
-net akd-spindle-statusword        lcec.0.5.cia-statusword => cia402.3.statusword
-# net akd-spindle-opmode-display  lcec.0.5.opmode-display => cia402.3.opmode-display
-net akd-spindle-drv-act-pos     lcec.0.5.actual-position => cia402.3.drv-actual-position
-net akd-spindle-drv-act-velo      lcec.0.5.actual-velocity => cia402.3.drv-actual-velocity
+net akd-spindle-statusword        lcec.0.3.cia-statusword => cia402.3.statusword
+# net akd-spindle-opmode-display  lcec.0.3.opmode-display => cia402.3.opmode-display
+net akd-spindle-drv-act-pos     lcec.0.3.actual-position => cia402.3.drv-actual-position
+net akd-spindle-drv-act-velo      lcec.0.3.actual-velocity => cia402.3.drv-actual-velocity
 
 #from cia402 to servo(ethercat)
-net akd-spindle-controlword           cia402.3.controlword => lcec.0.5.cia-controlword
-# net akd-spindle-modes-of-operation  cia402.3.opmode => lcec.0.5.opmode
-# net akd-spindle-drv-target-pos      cia402.3.drv-target-position => lcec.0.5.target-position
-net akd-spindle-drv-target-velo       cia402.3.drv-target-velocity => lcec.0.5.target-velocity
+net akd-spindle-controlword           cia402.3.controlword => lcec.0.3.cia-controlword
+# net akd-spindle-modes-of-operation  cia402.3.opmode => lcec.0.3.opmode
+# net akd-spindle-drv-target-pos      cia402.3.drv-target-position => lcec.0.3.target-position
+net akd-spindle-drv-target-velo       cia402.3.drv-target-velocity => lcec.0.3.target-velocity
 
 ### Spindle speed command
 ### `speed-out` is in RPM

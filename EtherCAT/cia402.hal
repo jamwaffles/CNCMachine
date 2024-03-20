@@ -141,8 +141,8 @@ net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-veloci
 # Slave 4 I/O module EL2008
 #
 
-net mist-on iocontrol.0.coolant-mist => lcec.0.4.dout-1
-net drawbar-on <= lcec.0.4.dout-0
+net mist-on iocontrol.0.coolant-mist => lcec.0.5.dout-1
+net drawbar-on <= lcec.0.5.dout-0
 
 #
 # Spindle drive configured in akd-spindle.hal
