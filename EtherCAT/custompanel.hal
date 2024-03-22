@@ -4,4 +4,5 @@ net orient-enable => pyvcp.orient-enable
 net is-oriented => pyvcp.is-oriented
 net spindle-drive-error => pyvcp.drive-error
 net toolsetter => pyvcp.toolsetter
+net touch-probe => pyvcp.touch-probe
 net all-op => lcec.all-op pyvcp.ecat-all-op

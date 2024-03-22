@@ -152,12 +152,17 @@ addf probes servo-thread
 net probe-in motion.probe-input probes.out
 
 # 
-# Toolsetter, NC input
+# Toolsetter, touch probe, both NC inputs
 # 
-loadrt not names=toolsetter-not
+loadrt not names=toolsetter-not,touch-probe-not
 addf toolsetter-not servo-thread
+addf touch-probe-not servo-thread
+
 net toolsetter-not toolsetter-not.in <= lcec.0.0.toolsetter
 net toolsetter toolsetter-not.out => probes.in1
+
+net touch-probe-not touch-probe-not.in <= lcec.0.1.touch-probe
+net touch-probe touch-probe-not.out => probes.in0
 
 #
 # Spindle drive configured in akd-spindle.hal

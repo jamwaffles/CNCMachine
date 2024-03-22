@@ -116,6 +116,19 @@
 				<on_color>"green"</on_color>
 				<off_color>"gray"</off_color>
 			</led>
+
+			<tablerow/>
+			<tablesticky sticky="w" />
+			<label>
+				<text>"Touch probe"</text>
+			</label>
+			<tablesticky sticky="e" />
+			<led>
+				<halpin>"touch-probe"</halpin>
+				<size>"10"</size>
+				<on_color>"green"</on_color>
+				<off_color>"gray"</off_color>
+			</led>
 		</table>
 	</labelframe>
 
