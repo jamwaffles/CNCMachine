@@ -145,6 +145,21 @@ net mist-on iocontrol.0.coolant-mist => lcec.0.5.dout-1
 net drawbar-on <= lcec.0.5.dout-0
 
 #
+# Common stuff for touch probe and toolsetter
+#
+loadrt or2 names=probes
+addf probes servo-thread
+net probe-in motion.probe-input probes.out
+
+# 
+# Toolsetter, NC input
+# 
+loadrt not names=toolsetter-not
+addf toolsetter-not servo-thread
+net toolsetter-not toolsetter-not.in <= lcec.0.0.toolsetter
+net toolsetter toolsetter-not.out => probes.in1
+
+#
 # Spindle drive configured in akd-spindle.hal
 #
 

@@ -107,11 +107,11 @@
 			<tablerow/>
 			<tablesticky sticky="w" />
 			<label>
-				<text>"Active"</text>
+				<text>"Toolsetter"</text>
 			</label>
 			<tablesticky sticky="e" />
 			<led>
-				<halpin>"probe-in"</halpin>
+				<halpin>"toolsetter"</halpin>
 				<size>"10"</size>
 				<on_color>"green"</on_color>
 				<off_color>"gray"</off_color>
