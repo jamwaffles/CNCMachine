@@ -41,12 +41,12 @@
       <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
       <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
 
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
+      <dcConf assignActivate="730" sync0Cycle="*1" sync0Shift="500000"/>
     </slave>
 
     <!-- Joint 1 -->
     <slave idx="1" type="generic" vid="00004321" pid="000010b2" configPdos="true">
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
+      <dcConf assignActivate="730" sync0Cycle="*1" sync0Shift="500000"/>
 
       <!-- 0x09 = CSV, 0x08 = CSP -->
       <!-- <sdoConfig idx="6060" subIdx="0"><sdoDataRaw data="08"/></sdoConfig> -->
@@ -140,7 +140,7 @@
         <!-- 1 = reverse direction -->
         <sdoDataRaw data="01"/>
       </sdoConfig>
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
+      <dcConf assignActivate="730" sync0Cycle="*1" sync0Shift="500000"/>
     </slave>
 
     <!-- AKD spindle motor -->
@@ -306,7 +306,7 @@
         </pdo>
       </syncManager>
 
-      <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="100000"/>
+      <dcConf assignActivate="730" sync0Cycle="*1" sync0Shift="500000"/>
     </slave>
 
     <slave idx="4" type="EK1100"/>
