@@ -16,4 +16,6 @@ T14  P14  D+8.500000 Z+214.020417 ;8.5mm-hssco-jobber-drill
 T98  P98  D+10.000000 Z+139.988000 ;50mm boring head
 T15  P15  D+5.000000 Z+91.720550 ;5mm-3fl-nc-mill-g9f430050n
 T16  P16  D+3.300000 Z+169.224467 ;3.3mm m4 tap drill
-T19  P19  D+5.000000 Z+86.695417 ;5mm-3fl-apt-carbide-for-alu-ea3s-05050050-007
+T19  P19  D+5.000000 Z+86.664584 ;5mm-3fl-apt-carbide-for-alu-ea3s-05050050-007
+T18  P18  D+4.000000 Z+117.332083 ;m6x1-thread-mill
+T17  P17  D+6.000000 Z+193.962917 ;6mm-reamer
