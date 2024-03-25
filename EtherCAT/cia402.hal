@@ -53,7 +53,7 @@ sets emc-enable 1
 #
 # Joint 0
 #
-setp cia402.0.csp-mode 1
+setp cia402.0.csp-mode 0
 setp cia402.0.pos-scale [JOINT_0]PULSES_PER_MM
 setp cia402.0.velo-scale [JOINT_0]PULSES_PER_MM
 
@@ -70,6 +70,7 @@ net 0-drv-act-velo    lcec.0.0.actual-velocity => cia402.0.drv-actual-velocity
 net 0-enable     <= joint.0.amp-enable-out => cia402.0.enable
 net 0-amp-fault  => joint.0.amp-fault-in   <= cia402.0.drv-fault
 net 0-pos-cmd    <= joint.0.motor-pos-cmd  => cia402.0.pos-cmd
+net 0-velocity-cmd <= joint.0.vel-cmd  => cia402.0.velocity-cmd
 net 0-pos-fb     => joint.0.motor-pos-fb   <= cia402.0.pos-fb
 net 0-home-input => joint.0.home-sw-in <= lcec.0.0.home-in
 
@@ -82,7 +83,7 @@ net 0-drv-target-velo     cia402.0.drv-target-velocity => lcec.0.0.target-veloci
 #
 # Joint 1
 #
-setp cia402.1.csp-mode 1
+setp cia402.1.csp-mode 0
 setp cia402.1.pos-scale [JOINT_1]PULSES_PER_MM
 setp cia402.1.velo-scale [JOINT_1]PULSES_PER_MM
 
@@ -99,6 +100,7 @@ net 1-drv-act-velo    lcec.0.1.actual-velocity => cia402.1.drv-actual-velocity
 net 1-enable     <= joint.1.amp-enable-out => cia402.1.enable
 net 1-amp-fault  => joint.1.amp-fault-in   <= cia402.1.drv-fault
 net 1-pos-cmd    <= joint.1.motor-pos-cmd  => cia402.1.pos-cmd
+net 1-velocity-cmd    <= joint.1.vel-cmd  => cia402.1.velocity-cmd
 net 1-pos-fb     => joint.1.motor-pos-fb   <= cia402.1.pos-fb
 net 1-home-input => joint.1.home-sw-in <= lcec.0.1.home-in
 
@@ -111,7 +113,7 @@ net 1-drv-target-velo     cia402.1.drv-target-velocity => lcec.0.1.target-veloci
 #
 # Joint 2
 #
-setp cia402.2.csp-mode 1
+setp cia402.2.csp-mode 0
 setp cia402.2.pos-scale [JOINT_2]PULSES_PER_MM
 setp cia402.2.velo-scale [JOINT_2]PULSES_PER_MM
 
@@ -128,6 +130,7 @@ net 2-drv-act-velo    lcec.0.2.actual-velocity => cia402.2.drv-actual-velocity
 net 2-enable     <= joint.2.amp-enable-out => cia402.2.enable
 net 2-amp-fault  => joint.2.amp-fault-in   <= cia402.2.drv-fault
 net 2-pos-cmd    <= joint.2.motor-pos-cmd  => cia402.2.pos-cmd
+net 2-velocity-cmd    <= joint.2.vel-cmd  => cia402.2.velocity-cmd
 net 2-pos-fb     => joint.2.motor-pos-fb   <= cia402.2.pos-fb
 net 2-home-input => joint.2.home-sw-in <= lcec.0.2.home-in
 
