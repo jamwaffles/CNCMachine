@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "5mm-3fl-apt-dlc-alu-eav3s-06050050dlc-13mmfl",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "CuttingEdgeHeight": "13.000 mm",
+    "Diameter": "5.000 mm",
+    "Flutes": "3",
+    "Length": "25.000 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "6.000 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}

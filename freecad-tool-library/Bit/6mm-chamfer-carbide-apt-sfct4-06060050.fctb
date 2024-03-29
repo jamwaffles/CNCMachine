@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "6mm-chamfer-carbide-apt-sfct4-06060050",
+  "shape": "chamfer.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "CuttingEdgeAngle": "45.000 \u00b0",
+    "CuttingEdgeHeight": "2.000 mm",
+    "Diameter": "6.000 mm",
+    "Flutes": "4",
+    "Length": "20.000 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "6.000 mm",
+    "TipDiameter": "2.000 mm"
+  },
+  "attribute": {}
+}

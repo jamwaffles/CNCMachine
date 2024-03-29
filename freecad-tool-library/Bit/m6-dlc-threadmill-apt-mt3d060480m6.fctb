@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "name": "m6-dlc-threadmill-apt-mt3d060480m6",
+  "shape": "thread-mill.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "Crest": "0.000 mm",
+    "Diameter": "4.800 mm",
+    "Flutes": "3",
+    "Length": "30.000 mm",
+    "Material": "Carbide",
+    "NeckDiameter": "3.550 mm",
+    "NeckLength": "18.000 mm",
+    "ShankDiameter": "6.000 mm",
+    "cuttingAngle": "60.000 \u00b0"
+  },
+  "attribute": {}
+}

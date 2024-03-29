@@ -71,6 +71,26 @@
     {
       "nr": 19,
       "path": "5mm-3fl-apt-carbide-for-alu-ea3s-05050050-5.fctb"
+    },
+    {
+      "nr": 20,
+      "path": "5mm-3fl-apt-dlc-alu-eav3s-06050050dlc-13mmfl.fctb"
+    },
+    {
+      "nr": 21,
+      "path": "m6-dlc-threadmill-apt-mt3d060480m60dlc.fctb"
+    },
+    {
+      "nr": 22,
+      "path": "5mm-drill-carbide-apt-2sfhsd-06050-075-550.fctb"
+    },
+    {
+      "nr": 23,
+      "path": "6mm-reamer-carbide-apt-pmr-06060-093-550.fctb"
+    },
+    {
+      "nr": 24,
+      "path": "6mm-chamfer-carbide-apt-sfct4-06060050.fctb"
     }
   ],
   "version": 1
