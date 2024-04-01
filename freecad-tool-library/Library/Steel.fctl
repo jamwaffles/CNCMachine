@@ -91,6 +91,18 @@
     {
       "nr": 24,
       "path": "6mm-chamfer-carbide-apt-sfct4-06060050.fctb"
+    },
+    {
+      "nr": 25,
+      "path": "8mm-2fl-alupower-e5522080.fctb"
+    },
+    {
+      "nr": 26,
+      "path": "50mm-90deg-4fl-facemill.fctb"
+    },
+    {
+      "nr": 27,
+      "path": "50mm-45deg-4fl-facemill.fctb"
     }
   ],
   "version": 1

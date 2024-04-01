@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "50mm-45deg-4fl-facemill",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "CuttingEdgeHeight": "10.000 mm",
+    "Diameter": "50.000 mm",
+    "Flutes": "4",
+    "Length": "50.000 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "50.000 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}
