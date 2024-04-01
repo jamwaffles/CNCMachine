@@ -1,0 +1,46 @@
+; Probes a large tool using the toolsetter
+;
+; Position tool cutting edge just above center of probe, then call this program
+;
+; SET APPROXIMATE TOOL LENGTH FROM SPINDLE NOSE OR YOU'LL CRASH
+;
+; RUN `probe-spindle-nose` BEFORE USE OTHERWISE TOOLS WILL NOT SET CORRECTLY
+;
+; Before running, change tool and roughly position tool above setter. XY will move to center and Z
+; probe will begin
+
+o<probe-large-tool> sub
+
+#<safe_dist> = 10 ; search distance for tool tip
+#<search_dist> = [#<safe_dist> + 20] ; search distance for tool tip
+#<current_tool_len> = #5403 ; approximate tool length from tool table
+#<current_coord_system> = #<_coord_system> ; multiplied by 10, e.g. G59.3 = 593
+
+g90
+
+g40 ; disable cutter comp
+g43.1 z0 ; clear TLO but don't write it 
+g59.3 ; probing offset
+
+f400 ; fast probe
+g91 ; relative
+g38.2 z[-#<search_dist>]
+
+g0 z1 ; move up a little bit ready for slow probe
+
+; slow probe
+f25 
+g38.2 z-2
+g10 l11 p#5400 z0 ; set new tool len
+g0 z50 ; move to safe
+
+g90
+
+g43 ; reload offsets
+
+; reset back to current coordinate system
+g[#<current_coord_system> / 10]
+
+o<probe-large-tool> endsub
+
+m2
