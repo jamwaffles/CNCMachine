@@ -1,0 +1,47 @@
+; Probe rectangular object
+;
+; Set globals #<_probe_w> and #<_probe_h>.
+;
+; Position probe near part center before running. WCS doesn't need to be zeroed
+
+; NOT FINISHED YET!
+m2
+
+o<probe-rect> sub
+
+#<probe_tool_no> = 99
+#<search_dist> = 10
+#<fast_probe> = 400
+#<slow_probe> = 40
+
+o100 if [ #<_probe_w> lt 1 ]
+	(msg,"#<_probe_w> must be non-zero")
+	m2
+o100 endif
+o101 if [ #<_probe_h> lt 1 ]
+	(msg,"#<_probe_h> must be non-zero")
+	m2
+o101 endif
+
+o102 if [ #<_current_tool> ne #<probe_tool_no> ]
+	t[#<probe_tool_no>]m6g43 ; switch to probe if we don't already have it in the spindle
+o102 endif
+
+g90 ; absolute
+
+g40 ; disable cutter comp
+
+f[#<fast_probe>] ; fast probe
+g91 ; relative
+g38.2 z[-#<search_dist>]
+g0 z1 ; move up a little bit ready for slow probe
+; slow probe
+f[#<slow_probe>]
+g38.2 z-2
+g10 l20 p0 z0 ; set new z offset
+g0 z5 ; move to safe
+g90 ; absolute
+
+o<probe-rect> endsub
+
+m2
