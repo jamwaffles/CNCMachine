@@ -62,6 +62,9 @@ g10 l20 p0 x[#<_x> / 2] ; zero X to center of part
 g0 x-[#<safe>] ; move to safe X pos
 g0 z[5 + #<safe>] ; we were just at Z-5, so add that, then go to safe
 
+; ---
+; Transition to Y axis now by moving to part X center
+; ---
 g90 ; back to absolute
 g0 x0 ; position at X part center
 g91 ; relative again
