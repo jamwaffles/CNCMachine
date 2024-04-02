@@ -1,8 +1,8 @@
-; Probe rectangular object
+; Probe rectangular boss
 ;
 ; Position probe near part center before running. WCS doesn't need to be zeroed
 
-o<probe-rect> sub
+o<probe-boss> sub
 
 #<probe_tool_no> = 99
 #<search_dist> = 10
@@ -69,6 +69,37 @@ g90 ; back to absolute
 g0 x0 ; position at X part center
 g91 ; relative again
 
-o<probe-rect> endsub
+; ---
+; positive Y
+; ---
+g0 y[#<h> / 2 + #<search_dist>]
+g0 z[-#<safe> - 5] ; Z was at +5, we need to go to -5, which is probe tip size
+f[#<fast_probe>]
+g38.2 y-[#<search_dist> + 2]
+g0 y1
+f[#<slow_probe>]
+g38.2 y-2
+g10 l20 p0 y0 ; zero Y wherever we are atm. Will divide by 2 later to get part center
+g0 y[#<safe>] ; move to safe Y pos
+g0 z[5 + #<safe>] ; we were just at Z-5, so add that, then go to safe
+
+; ---
+; negative Y
+; ---
+g0 Y-[#<h> + #<search_dist> * 2]
+g0 z[-#<safe> - 5] ; Z was at +5, we need to go to -5, which is probe tip size
+f[#<fast_probe>]
+g38.2 Y[#<search_dist> + 2]
+g0 Y-1
+f[#<slow_probe>]
+g38.2 Y2
+g10 l20 p0 Y[#<_Y> / 2] ; zero Y to center of part
+g0 Y-[#<safe>] ; move to safe Y pos
+g0 z[5 + #<safe>] ; we were just at Z-5, so add that, then go to safe
+
+g90 ; absolute
+g0 y0 ; go to center
+
+o<probe-boss> endsub
 
 m2
