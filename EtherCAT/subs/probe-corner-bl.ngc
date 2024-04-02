@@ -1,0 +1,34 @@
+; Probe Z and bottom left corner
+;
+; Position probe near corner before running
+
+o<probe-corner-bl> sub
+
+#<search> = 10
+#<safe> = 5
+#<probe_dia> = 5
+
+o<probe-z> call
+g0 z[#<safe>]
+
+g91 ; relative
+
+g0x-[#<search>]
+g0z-[#<safe> + #<probe_dia>]
+o<probe-x-pos> call
+g91 ; force relative, in case x-pos subroutine changed it
+g0z[#<safe> + #<probe_dia>]
+g0x[#<search>] ; back to center
+
+g0y-[#<search>]
+g0z-[#<safe> + #<probe_dia>]
+o<probe-y-pos> call
+g91 ; force relative, in case y-pos subroutine changed it
+g0z[#<safe> + #<probe_dia>]
+g0y[#<search>] ; back to center
+
+g90 ; back to absolute
+
+o<probe-corner-bl> endsub
+
+m2
