@@ -27,3 +27,4 @@ T24  P24  D+6.000000 Z+72.590416 ;6mm-chamfer-carbide-apt-sfct4-06060050
 T25  P25  D+8.000000 Z+90.513333 ;8mm-2fl-alupower-e5522080
 T26  P26  D+50.000000 Z+94.662184 ;50mm-90deg-4fl-facemill
 T27  P27  D+50.000000 Z+94.298850 ;50mm-45deg-4fl-facemill
+T28  P28  D+5.900000 Z+104.801667 ;5.9mm-carbide-cutwel-dca400059
