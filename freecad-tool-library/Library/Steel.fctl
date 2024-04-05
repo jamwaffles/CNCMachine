@@ -21,6 +21,10 @@
       "path": "6.3mm-spot-drill.fctb"
     },
     {
+      "nr": 6,
+      "path": "6.fctb"
+    },
+    {
       "nr": 7,
       "path": "4.2mm-m5-tap-drill.fctb"
     },

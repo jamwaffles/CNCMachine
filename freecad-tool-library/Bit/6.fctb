@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "6.8mm-m8-tap-drill",
+  "shape": "drill.fcstd",
+  "parameter": {
+    "Chipload": "0.000 mm",
+    "Diameter": "6.800 mm",
+    "Flutes": "2",
+    "Length": "50.000 mm",
+    "Material": "HSS",
+    "TipAngle": "119.000 \u00b0"
+  },
+  "attribute": {}
+}
