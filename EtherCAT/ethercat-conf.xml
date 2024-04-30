@@ -10,6 +10,9 @@
       <sdoConfig idx="60C2" subIdx="02">
        <sdoDataRaw data="FD"/>
       </sdoConfig>
+      <!-- Homing method -->
+      <!-- 23h = 35d: home at current position -->
+      <sdoConfig idx="6098" subIdx="0"><sdoDataRaw data ="23"/></sdoConfig> 
 
       <syncManager idx="2" dir="out">
         <!-- 0x1601 for velocity mode, 0x1600 for position mode -->
@@ -73,7 +76,8 @@
       <!-- Home offset -->
       <sdoConfig idx="607c" subIdx="0"><sdoDataRaw data ="00 00 00 00"/></sdoConfig> 
       <!-- Homing method -->
-      <sdoConfig idx="6098" subIdx="0"><sdoDataRaw data ="02"/></sdoConfig> 
+      <!-- 23h = 35d: home at current position -->
+      <sdoConfig idx="6098" subIdx="0"><sdoDataRaw data ="23"/></sdoConfig> 
       <!-- Home acceleration -->
       <sdoConfig idx="609a" subIdx="0"><sdoDataRaw data ="64 00 00 00"/></sdoConfig> 
       <!-- Clear multiturn alarm -->
@@ -89,7 +93,7 @@
       <sdoConfig idx="6099" subIdx="2"><sdoDataRaw data ="64 00 00 00"/></sdoConfig> 
 
       <!-- Touch probe, NC, DI2 -->
-      <sdoConfig idx="2401" subIdx="0"><sdoDataRaw data ="00 00 00 00"/></sdoConfig> 
+      <sdoConfig idx="2401" subIdx="0"><sdoDataRaw data="00 00 00 00"/></sdoConfig> 
 
       <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
       <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
@@ -134,6 +138,9 @@
       <sdoConfig idx="60C2" subIdx="02">
        <sdoDataRaw data="FD"/>
       </sdoConfig>
+      <!-- Homing method -->
+      <!-- 23h = 35d: home at current position -->
+      <sdoConfig idx="6098" subIdx="0"><sdoDataRaw data ="23"/></sdoConfig> 
 
       <syncManager idx="2" dir="out">
         <!-- 0x1601 for velocity mode, 0x1600 for position mode -->

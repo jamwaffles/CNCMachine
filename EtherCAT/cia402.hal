@@ -66,7 +66,7 @@ net 0-drv-act-velo    lcec.0.0.actual-velocity => cia402.0.drv-actual-velocity
 #from motion to cia
 
 # Commented out to use LCNC homing instead of drive internal
-# net 0-home-index <= joint.0.index-enable  => cia402.0.home
+net 0-home-index <= joint.0.index-enable  => cia402.0.home
 net 0-enable     <= joint.0.amp-enable-out => cia402.0.enable
 net 0-amp-fault  => joint.0.amp-fault-in   <= cia402.0.drv-fault
 net 0-pos-cmd    <= joint.0.motor-pos-cmd  => cia402.0.pos-cmd
@@ -96,7 +96,7 @@ net 1-drv-act-velo    lcec.0.1.actual-velocity => cia402.1.drv-actual-velocity
 #from motion to cia
 
 # Commented out to use LCNC homing instead of drive internal
-# net 1-home-index <= joint.1.index-enable  => cia402.1.home
+net 1-home-index <= joint.1.index-enable  => cia402.1.home
 net 1-enable     <= joint.1.amp-enable-out => cia402.1.enable
 net 1-amp-fault  => joint.1.amp-fault-in   <= cia402.1.drv-fault
 net 1-pos-cmd    <= joint.1.motor-pos-cmd  => cia402.1.pos-cmd
@@ -126,7 +126,7 @@ net 2-drv-act-velo    lcec.0.2.actual-velocity => cia402.2.drv-actual-velocity
 #from motion to cia
 
 # Commented out to use LCNC homing instead of drive internal
-# net 2-home-index <= joint.2.index-enable  => cia402.2.home
+net 2-home-index <= joint.2.index-enable  => cia402.2.home
 net 2-enable     <= joint.2.amp-enable-out => cia402.2.enable
 net 2-amp-fault  => joint.2.amp-fault-in   <= cia402.2.drv-fault
 net 2-pos-cmd    <= joint.2.motor-pos-cmd  => cia402.2.pos-cmd
