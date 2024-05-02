@@ -1,10 +1,10 @@
 <masters>
-  <master idx="0" appTimePeriod="2000000" refClockSyncCycles="10000">
+  <master idx="0" appTimePeriod="4000000" refClockSyncCycles="10000">
     <!-- Joint 0 -->
     <slave idx="0" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="02"/>
+        <sdoDataRaw data="04"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
@@ -53,21 +53,21 @@
       <!-- Home switch, NO PNP, DI4. See EL7 datasheet for Pr4.03 or 2403h -->
       <sdoConfig idx="2403" subIdx="0"><sdoDataRaw data ="16 00 00 00"/></sdoConfig> 
 
-      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="250000"/>
+      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="1000000"/>
     </slave>
 
     <!-- Joint 1 -->
     <slave idx="1" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="02"/>
+        <sdoDataRaw data="04"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
        <sdoDataRaw data="FD"/>
       </sdoConfig>
 
-      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="250000"/>
+      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="1000000"/>
 
       <!-- 0x09 = CSV, 0x08 = CSP -->
       <!-- <sdoConfig idx="6060" subIdx="0"><sdoDataRaw data="08"/></sdoConfig> -->
@@ -132,7 +132,7 @@
     <slave idx="2" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="02"/>
+        <sdoDataRaw data="04"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
@@ -174,7 +174,7 @@
         <!-- 1 = reverse direction -->
         <sdoDataRaw data="01"/>
       </sdoConfig>
-      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="250000"/>
+      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="1000000"/>
     </slave>
 
     <!-- AKD spindle motor -->
@@ -273,7 +273,7 @@
 
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="02"/>
+        <sdoDataRaw data="04"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
@@ -340,7 +340,7 @@
         </pdo>
       </syncManager>
 
-      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="250000"/>
+      <dcConf assignActivate="0300" sync0Cycle="*1" sync0Shift="1000000"/>
     </slave>
 
     <slave idx="4" type="EK1100"/>
