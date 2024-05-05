@@ -37,6 +37,10 @@ embassy-stm32 = { version = "0.1.0", features = [
 ] }
 embassy-usb = { version = "0.1.0", features = ["defmt"] }
 embassy-futures = { version = "0.1.1", features = ["defmt"] }
+serde = { version = "1.0.200", default-features = false, features = ["derive"] }
+cobs = { version = "0.2.3", default-features = false }
+control-box-common = { path = "../control-box-common" }
+embassy-sync = "0.5.0"
 
 [profile.release]
 debug = 2

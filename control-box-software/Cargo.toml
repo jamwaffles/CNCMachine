@@ -1,0 +1,10 @@
+[package]
+name = "control-box-software"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+control-box-common = { path = "../control-box-common" }
+serialport = "4.3.0"

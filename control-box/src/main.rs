@@ -1,9 +1,12 @@
 #![no_std]
 #![no_main]
 
+use core::sync::atomic::{AtomicBool, AtomicU16, Ordering};
+
+use control_box_common::Outputs;
 use defmt_rtt as _;
 use embassy_executor::Spawner;
-use embassy_futures::join::join3;
+use embassy_futures::join::{join, join3};
 use embassy_stm32::{
     bind_interrupts,
     exti::ExtiInput,
@@ -14,7 +17,7 @@ use embassy_stm32::{
     usb::{self, Driver, Instance},
     Config,
 };
-use embassy_time::{Duration, Timer};
+use embassy_time::{Duration, Ticker, Timer};
 use embassy_usb::{
     class::cdc_acm::{CdcAcmClass, State},
     driver::EndpointError,
@@ -22,6 +25,14 @@ use embassy_usb::{
 };
 use embedded_hal::digital::OutputPin;
 use panic_probe as _;
+
+const VID: u16 = 0xaabb;
+const PID: u16 = 0xccdd;
+
+static ENCODER1: AtomicU16 = AtomicU16::new(0);
+static ENCODER2: AtomicU16 = AtomicU16::new(0);
+static ENCODER_BUTTON1: AtomicBool = AtomicBool::new(false);
+static ENCODER_BUTTON2: AtomicBool = AtomicBool::new(false);
 
 bind_interrupts!(struct Irqs {
     USB_LP_CAN1_RX0 => usb::InterruptHandler<peripherals::USB>;
@@ -41,20 +52,28 @@ async fn heartbeat_task(mut led: impl OutputPin + 'static) -> ! {
 #[embassy_executor::task]
 async fn button1_task(mut button1: ExtiInput<'static, PA0>) -> ! {
     loop {
-        button1.wait_for_falling_edge().await;
-        defmt::info!("B1 pressed!");
-        button1.wait_for_rising_edge().await;
-        defmt::info!("B1 released!");
+        button1.wait_for_any_edge().await;
+
+        // Active low
+        let state = !button1.is_high();
+
+        defmt::info!("B1 changed to {}", state);
+
+        ENCODER_BUTTON1.store(state, Ordering::Relaxed);
     }
 }
 
 #[embassy_executor::task]
-async fn button2_task(mut button1: ExtiInput<'static, PA1>) -> ! {
+async fn button2_task(mut button2: ExtiInput<'static, PA1>) -> ! {
     loop {
-        button1.wait_for_falling_edge().await;
-        defmt::info!("B2 pressed!");
-        button1.wait_for_rising_edge().await;
-        defmt::info!("B2 released!");
+        button2.wait_for_any_edge().await;
+
+        // Active low
+        let state = !button2.is_high();
+
+        defmt::info!("B2 changed to {}", state);
+
+        ENCODER_BUTTON2.store(state, Ordering::Relaxed);
     }
 }
 
@@ -81,7 +100,7 @@ async fn main(spawner: Spawner) {
     let driver = Driver::new(p.USB, Irqs, p.PA12, p.PA11);
 
     // Create embassy-usb Config
-    let config = embassy_usb::Config::new(0xc0de, 0xcafe);
+    let config = embassy_usb::Config::new(VID, PID);
 
     // Create embassy-usb DeviceBuilder using the driver and config.
     // It needs some buffers for building the descriptors.
@@ -111,15 +130,15 @@ async fn main(spawner: Spawner) {
     // Run the USB device.
     let usb_fut = usb.run();
 
-    // Do stuff with the class!
-    let echo_fut = async {
-        loop {
-            class.wait_connection().await;
-            defmt::info!("Connected");
-            let _ = echo(&mut class).await;
-            defmt::info!("Disconnected");
-        }
-    };
+    // // Do stuff with the class!
+    // let echo_fut = async {
+    //     loop {
+    //         class.wait_connection().await;
+    //         defmt::info!("Connected");
+    //         let _ = echo(&mut class).await;
+    //         defmt::info!("Disconnected");
+    //     }
+    // };
 
     // Black pill/blue pill user LED on PC13, active low
     // let led = Output::new(p.PC13, Level::Low, Speed::Low);
@@ -140,16 +159,26 @@ async fn main(spawner: Spawner) {
 
     defmt::info!("Begin loop");
 
+    let mut ticker = Ticker::every(Duration::from_millis(250));
+
     let encoder_task = async {
+        let mut out_buf = [0u8; 128];
+
         loop {
-            let dir1 = match encoder1.read_direction() {
-                Direction::Upcounting => "↑",
-                Direction::Downcounting => "↓",
-            };
-            let dir2 = match encoder2.read_direction() {
-                Direction::Upcounting => "↑",
-                Direction::Downcounting => "↓",
-            };
+            defmt::info!("Waiting for connection");
+
+            class.wait_connection().await;
+
+            defmt::info!("USB is connected");
+
+            // let dir1 = match encoder1.read_direction() {
+            //     Direction::Upcounting => "↑",
+            //     Direction::Downcounting => "↓",
+            // };
+            // let dir2 = match encoder2.read_direction() {
+            //     Direction::Upcounting => "↑",
+            //     Direction::Downcounting => "↓",
+            // };
 
             // Divide by 4 because quadrature
             // defmt::info!(
@@ -160,34 +189,61 @@ async fn main(spawner: Spawner) {
             //     dir2
             // );
 
-            Timer::after(Duration::from_millis(25)).await;
+            // ENCODER1.store(encoder1.count(), Ordering::Relaxed);
+            // ENCODER2.store(encoder2.count(), Ordering::Relaxed);
+
+            loop {
+                let data = Outputs {
+                    encoder1: encoder1.count(),
+                    encoder2: encoder2.count(),
+                    encoder_button1: ENCODER_BUTTON1.load(Ordering::Relaxed),
+                    encoder_button2: ENCODER_BUTTON2.load(Ordering::Relaxed),
+                };
+
+                if let Ok(send) = data.encode(&mut out_buf) {
+                    if let Err(EndpointError::Disabled) = class.write_packet(send).await {
+                        defmt::info!("USB is disconnected");
+
+                        break;
+                    }
+                }
+
+                ticker.next().await;
+            }
         }
     };
 
-    join3(encoder_task, usb_fut, echo_fut).await;
+    join(encoder_task, usb_fut).await;
 }
 
-struct Disconnected {}
+// struct Disconnected {}
 
-impl From<EndpointError> for Disconnected {
-    fn from(val: EndpointError) -> Self {
-        match val {
-            EndpointError::BufferOverflow => panic!("Buffer overflow"),
-            EndpointError::Disabled => Disconnected {},
-        }
-    }
-}
+// impl From<EndpointError> for Disconnected {
+//     fn from(val: EndpointError) -> Self {
+//         match val {
+//             EndpointError::BufferOverflow => panic!("Buffer overflow"),
+//             EndpointError::Disabled => Disconnected {},
+//         }
+//     }
+// }
 
-async fn echo<'d, T: Instance + 'd>(
-    class: &mut CdcAcmClass<'d, Driver<'d, T>>,
-) -> Result<(), Disconnected> {
-    let mut buf = [0; 64];
-    loop {
-        let n = class.read_packet(&mut buf).await?;
-        let data = &buf[..n];
+// async fn echo<'d, T: Instance + 'd>(
+//     class: &mut CdcAcmClass<'d, Driver<'d, T>>,
+// ) -> Result<(), Disconnected> {
+//     let mut buf = [0; 64];
+//     let mut out_buf = [0u8; 128];
 
-        defmt::info!("data: {:x}", data);
+//     loop {
+//         let n = class.read_packet(&mut buf).await?;
 
-        class.write_packet(data).await?;
-    }
-}
+//         let data = &buf[..n];
+
+//         defmt::info!("data: {:x}", data);
+
+//         let count = cobs::encode_with_sentinel(data, &mut out_buf, b'\n');
+
+//         let ret = &out_buf[0..count];
+
+//         class.write_packet(ret).await?;
+//     }
+// }
