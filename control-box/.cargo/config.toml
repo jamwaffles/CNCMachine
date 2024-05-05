@@ -1,8 +1,8 @@
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
-runner = "probe-rs run --chip STM32F411CEUx"
+runner = "probe-rs run --chip STM32F103C8"
 
 [build]
-target = "thumbv7em-none-eabi"
+target = "thumbv7m-none-eabi"
 
 [env]
-DEFMT_LOG = "info"
+DEFMT_LOG = "trace"
