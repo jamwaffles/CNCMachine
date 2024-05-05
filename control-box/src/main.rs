@@ -5,6 +5,7 @@ use defmt_rtt as _;
 use embassy_executor::Spawner;
 use embassy_stm32::{
     gpio::{Level, Output, Speed},
+    timer::qei::{Direction, Qei, QeiPin},
     Config,
 };
 use embassy_time::{Duration, Timer};
@@ -14,8 +15,6 @@ use panic_probe as _;
 #[embassy_executor::task]
 async fn blinky(mut led: impl OutputPin + 'static) -> ! {
     loop {
-        defmt::info!("Tick");
-
         let _ = led.set_low();
         Timer::after(Duration::from_millis(200)).await;
 
@@ -40,7 +39,30 @@ async fn main(spawner: Spawner) {
     let led = Output::new(p.PB12, Level::Low, Speed::Low);
     defmt::unwrap!(spawner.spawn(blinky(led)));
 
+    let encoder1 = Qei::new(p.TIM1, QeiPin::new_ch1(p.PA8), QeiPin::new_ch2(p.PA9));
+    let encoder2 = Qei::new(p.TIM3, QeiPin::new_ch1(p.PA6), QeiPin::new_ch2(p.PA7));
+
     defmt::info!("Begin loop");
 
-    core::future::pending::<()>().await;
+    loop {
+        let dir1 = match encoder1.read_direction() {
+            Direction::Upcounting => "↑",
+            Direction::Downcounting => "↓",
+        };
+        let dir2 = match encoder2.read_direction() {
+            Direction::Upcounting => "↑",
+            Direction::Downcounting => "↓",
+        };
+
+        // Divide by 4 because quadrature
+        defmt::info!(
+            "{} {} | {} {}",
+            encoder1.count() / 4,
+            dir1,
+            encoder2.count() / 4,
+            dir2
+        );
+
+        Timer::after(Duration::from_millis(25)).await;
+    }
 }
