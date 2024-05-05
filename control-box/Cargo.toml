@@ -35,6 +35,8 @@ embassy-stm32 = { version = "0.1.0", features = [
     "exti",
     "unstable-pac",
 ] }
+embassy-usb = { version = "0.1.0", features = ["defmt"] }
+embassy-futures = { version = "0.1.1", features = ["defmt"] }
 
 [profile.release]
 debug = 2

@@ -3,17 +3,29 @@
 
 use defmt_rtt as _;
 use embassy_executor::Spawner;
-use embassy_stm32::exti::ExtiInput;
-use embassy_stm32::gpio::Input;
-use embassy_stm32::peripherals::{PA0, PA1};
+use embassy_futures::join::join3;
 use embassy_stm32::{
-    gpio::{Level, Output, Pull, Speed},
+    bind_interrupts,
+    exti::ExtiInput,
+    gpio::{Input, Level, Output, Pull, Speed},
+    peripherals::{self, PA0, PA1},
+    time::Hertz,
     timer::qei::{Direction, Qei, QeiPin},
+    usb::{self, Driver, Instance},
     Config,
 };
 use embassy_time::{Duration, Timer};
+use embassy_usb::{
+    class::cdc_acm::{CdcAcmClass, State},
+    driver::EndpointError,
+    Builder,
+};
 use embedded_hal::digital::OutputPin;
 use panic_probe as _;
+
+bind_interrupts!(struct Irqs {
+    USB_LP_CAN1_RX0 => usb::InterruptHandler<peripherals::USB>;
+});
 
 #[embassy_executor::task]
 async fn heartbeat_task(mut led: impl OutputPin + 'static) -> ! {
@@ -48,13 +60,66 @@ async fn button2_task(mut button1: ExtiInput<'static, PA1>) -> ! {
 
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
-    let config = Config::default();
+    let mut config = Config::default();
+    config.rcc.hse = Some(Hertz(8_000_000));
+    config.rcc.sys_ck = Some(Hertz(48_000_000));
+    config.rcc.pclk1 = Some(Hertz(24_000_000));
+    let mut p = embassy_stm32::init(config);
 
-    defmt::info!("Start");
+    defmt::info!("Starting up");
 
-    let p = embassy_stm32::init(config);
+    {
+        // BluePill board has a pull-up resistor on the D+ line.
+        // Pull the D+ pin down to send a RESET condition to the USB bus.
+        // This forced reset is needed only for development, without it host
+        // will not reset your device when you upload new firmware.
+        let _dp = Output::new(&mut p.PA12, Level::Low, Speed::Low);
+        Timer::after_millis(10).await;
+    }
 
-    defmt::info!("Spawning blinky");
+    // Create the driver, from the HAL.
+    let driver = Driver::new(p.USB, Irqs, p.PA12, p.PA11);
+
+    // Create embassy-usb Config
+    let config = embassy_usb::Config::new(0xc0de, 0xcafe);
+
+    // Create embassy-usb DeviceBuilder using the driver and config.
+    // It needs some buffers for building the descriptors.
+    let mut device_descriptor = [0; 256];
+    let mut config_descriptor = [0; 256];
+    let mut bos_descriptor = [0; 256];
+    let mut control_buf = [0; 7];
+
+    let mut state = State::new();
+
+    let mut builder = Builder::new(
+        driver,
+        config,
+        &mut device_descriptor,
+        &mut config_descriptor,
+        &mut bos_descriptor,
+        &mut [], // no msos descriptors
+        &mut control_buf,
+    );
+
+    // Create classes on the builder.
+    let mut class = CdcAcmClass::new(&mut builder, &mut state, 64);
+
+    // Build the builder.
+    let mut usb = builder.build();
+
+    // Run the USB device.
+    let usb_fut = usb.run();
+
+    // Do stuff with the class!
+    let echo_fut = async {
+        loop {
+            class.wait_connection().await;
+            defmt::info!("Connected");
+            let _ = echo(&mut class).await;
+            defmt::info!("Disconnected");
+        }
+    };
 
     // Black pill/blue pill user LED on PC13, active low
     // let led = Output::new(p.PC13, Level::Low, Speed::Low);
@@ -75,25 +140,54 @@ async fn main(spawner: Spawner) {
 
     defmt::info!("Begin loop");
 
+    let encoder_task = async {
+        loop {
+            let dir1 = match encoder1.read_direction() {
+                Direction::Upcounting => "↑",
+                Direction::Downcounting => "↓",
+            };
+            let dir2 = match encoder2.read_direction() {
+                Direction::Upcounting => "↑",
+                Direction::Downcounting => "↓",
+            };
+
+            // Divide by 4 because quadrature
+            // defmt::info!(
+            //     "{} {} | {} {}",
+            //     encoder1.count() / 4,
+            //     dir1,
+            //     encoder2.count() / 4,
+            //     dir2
+            // );
+
+            Timer::after(Duration::from_millis(25)).await;
+        }
+    };
+
+    join3(encoder_task, usb_fut, echo_fut).await;
+}
+
+struct Disconnected {}
+
+impl From<EndpointError> for Disconnected {
+    fn from(val: EndpointError) -> Self {
+        match val {
+            EndpointError::BufferOverflow => panic!("Buffer overflow"),
+            EndpointError::Disabled => Disconnected {},
+        }
+    }
+}
+
+async fn echo<'d, T: Instance + 'd>(
+    class: &mut CdcAcmClass<'d, Driver<'d, T>>,
+) -> Result<(), Disconnected> {
+    let mut buf = [0; 64];
     loop {
-        let dir1 = match encoder1.read_direction() {
-            Direction::Upcounting => "↑",
-            Direction::Downcounting => "↓",
-        };
-        let dir2 = match encoder2.read_direction() {
-            Direction::Upcounting => "↑",
-            Direction::Downcounting => "↓",
-        };
+        let n = class.read_packet(&mut buf).await?;
+        let data = &buf[..n];
 
-        // Divide by 4 because quadrature
-        defmt::info!(
-            "{} {} | {} {}",
-            encoder1.count() / 4,
-            dir1,
-            encoder2.count() / 4,
-            dir2
-        );
+        defmt::info!("data: {:x}", data);
 
-        Timer::after(Duration::from_millis(25)).await;
+        class.write_packet(data).await?;
     }
 }
