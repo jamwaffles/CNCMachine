@@ -14,6 +14,9 @@ o<probe-boss> sub
 #<w> = #1
 #<h> = #2
 
+(msg,"Check whether this actually centers stuff - last run there was a weird offset but maybe that's in the shitty CAD?")
+m0 ; TODO
+
 o102 if [ #<_current_tool> ne #<probe_tool_no> ]
 	t[#<probe_tool_no>]m6g43 ; switch to probe if we don't already have it in the spindle
 o102 endif
