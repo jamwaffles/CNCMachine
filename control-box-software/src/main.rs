@@ -1,9 +1,19 @@
 use control_box_common::Outputs;
+use linuxcnc_hal::{
+    error::PinRegisterError,
+    hal_pin::{InputPin, OutputPin},
+    prelude::*,
+    HalComponent, RegisterResources, Resources,
+};
 use postcard::accumulator::{CobsAccumulator, FeedResult};
 use std::io;
 use std::time::Duration;
 
 const BUF_SIZE: usize = 1024;
+
+struct Pins {
+    //
+}
 
 fn main() {
     let port_name = "/dev/ttyACM2";

@@ -7,5 +7,6 @@ edition = "2021"
 
 [dependencies]
 control-box-common = { path = "../control-box-common" }
+linuxcnc-hal = "0.3.0"
 postcard = { version = "1.0.8", features = ["use-std"] }
 serialport = "4.3.0"
