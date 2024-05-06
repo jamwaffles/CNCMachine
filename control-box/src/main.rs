@@ -6,15 +6,15 @@ use core::sync::atomic::{AtomicBool, AtomicU16, Ordering};
 use control_box_common::Outputs;
 use defmt_rtt as _;
 use embassy_executor::Spawner;
-use embassy_futures::join::{join, join3};
+use embassy_futures::join::join;
 use embassy_stm32::{
     bind_interrupts,
     exti::ExtiInput,
     gpio::{Input, Level, Output, Pull, Speed},
     peripherals::{self, PA0, PA1},
     time::Hertz,
-    timer::qei::{Direction, Qei, QeiPin},
-    usb::{self, Driver, Instance},
+    timer::qei::{Qei, QeiPin},
+    usb::{self, Driver},
     Config,
 };
 use embassy_time::{Duration, Ticker, Timer};
@@ -29,8 +29,6 @@ use panic_probe as _;
 const VID: u16 = 0xaabb;
 const PID: u16 = 0xccdd;
 
-static ENCODER1: AtomicU16 = AtomicU16::new(0);
-static ENCODER2: AtomicU16 = AtomicU16::new(0);
 static ENCODER_BUTTON1: AtomicBool = AtomicBool::new(false);
 static ENCODER_BUTTON2: AtomicBool = AtomicBool::new(false);
 

@@ -7,4 +7,5 @@ edition = "2021"
 
 [dependencies]
 control-box-common = { path = "../control-box-common" }
+postcard = { version = "1.0.8", features = ["use-std"] }
 serialport = "4.3.0"

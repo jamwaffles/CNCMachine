@@ -1,5 +1,9 @@
-use std::io::{self, Write};
+use control_box_common::Outputs;
+use postcard::accumulator::{CobsAccumulator, FeedResult};
+use std::io;
 use std::time::Duration;
+
+const BUF_SIZE: usize = 1024;
 
 fn main() {
     let port_name = "/dev/ttyACM2";
@@ -11,19 +15,37 @@ fn main() {
 
     match port {
         Ok(mut port) => {
-            let mut serial_buf: Vec<u8> = vec![0; 1000];
-
             println!("Receiving data on {} at {} baud:", &port_name, &baud_rate);
 
+            let mut cobs_buf: CobsAccumulator<BUF_SIZE> = CobsAccumulator::new();
+            let mut raw_buf = [0u8; BUF_SIZE];
+
             loop {
-                match port.read(serial_buf.as_mut_slice()) {
-                    Ok(read_len) => {
-                        // io::stdout().write_all(&serial_buf[..t]).unwrap()
-                        // TODO
-                        let part = &serial_buf[0..read_len];
+                let buf = match port.read(&mut raw_buf) {
+                    Ok(ct) => &raw_buf[..ct],
+                    Err(ref e) if e.kind() == io::ErrorKind::TimedOut => continue,
+                    Err(ref e) if e.kind() == io::ErrorKind::BrokenPipe => {
+                        panic!("Broken pipe")
                     }
-                    Err(ref e) if e.kind() == io::ErrorKind::TimedOut => (),
-                    Err(e) => eprintln!("{:?}", e),
+                    Err(e) => {
+                        eprintln!("{}", e);
+                        continue;
+                    }
+                };
+
+                let mut window = &buf[..];
+
+                'cobs: while !window.is_empty() {
+                    window = match cobs_buf.feed::<Outputs>(&window) {
+                        FeedResult::Consumed => break 'cobs,
+                        FeedResult::OverFull(new_wind) => new_wind,
+                        FeedResult::DeserError(new_wind) => new_wind,
+                        FeedResult::Success { data, remaining } => {
+                            println!("{:?}", data);
+
+                            remaining
+                        }
+                    };
                 }
             }
         }
