@@ -6,11 +6,13 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+configparser = "3.0.4"
 control-box-common = { path = "../control-box-common" }
 futures-lite = "2.3.0"
-linuxcnc-hal = "0.3.0"
+linuxcnc-hal = { version = "0.3.0", path = "../../linuxcnc-hal-rs/linuxcnc-hal" }
+linuxcnc-hal-sys = { version = "0.3.0", path = "../../linuxcnc-hal-rs/linuxcnc-hal-sys" }
 postcard = { version = "1.0.8", features = ["use-std"] }
 rtapi-logger = "0.2.0"
-rustix = "0.38.34"
+rustix = { version = "0.38.34", features = ["fs"] }
 serialport = "4.3.0"
 smol = "2.0.0"
