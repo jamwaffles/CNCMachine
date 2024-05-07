@@ -1,0 +1,1 @@
+loadusr -Wn control-box /home/james/Repositories/CNCMachine/control-box-software/target/debug/control-box-software /dev/ttyACM2

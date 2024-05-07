@@ -7,6 +7,10 @@ edition = "2021"
 
 [dependencies]
 control-box-common = { path = "../control-box-common" }
+futures-lite = "2.3.0"
 linuxcnc-hal = "0.3.0"
 postcard = { version = "1.0.8", features = ["use-std"] }
+rtapi-logger = "0.2.0"
+rustix = "0.38.34"
 serialport = "4.3.0"
+smol = "2.0.0"
