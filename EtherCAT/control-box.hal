@@ -1,4 +1,4 @@
-loadusr -Wn control-box control-box-software /dev/ttyACM2
+loadusr -Wn control-box ./control-box-software /dev/ttyACM0
 
 # Unused
 net feed-override-value halui.feed-override.value control-box.feed-override-value
