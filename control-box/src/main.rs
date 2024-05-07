@@ -35,19 +35,19 @@ bind_interrupts!(struct Irqs {
     USB_LP_CAN1_RX0 => usb::InterruptHandler<peripherals::USB>;
 });
 
-#[embassy_executor::task]
-async fn heartbeat_task(mut led: impl OutputPin + 'static) -> ! {
-    loop {
-        let _ = led.set_low();
-        Timer::after(Duration::from_millis(200)).await;
+// #[embassy_executor::task]
+// async fn heartbeat_task(mut led: impl OutputPin + 'static) -> ! {
+//     loop {
+//         let _ = led.set_low();
+//         Timer::after(Duration::from_millis(200)).await;
 
-        let _ = led.set_high();
-        Timer::after(Duration::from_millis(800)).await;
-    }
-}
+//         let _ = led.set_high();
+//         Timer::after(Duration::from_millis(800)).await;
+//     }
+// }
 
 #[embassy_executor::task]
-async fn button1_task(mut button1: ExtiInput<'static, PA0>) -> ! {
+async fn button1_task(mut button1: ExtiInput<'static, PA1>) -> ! {
     loop {
         button1.wait_for_any_edge().await;
 
@@ -61,7 +61,7 @@ async fn button1_task(mut button1: ExtiInput<'static, PA0>) -> ! {
 }
 
 #[embassy_executor::task]
-async fn button2_task(mut button2: ExtiInput<'static, PA1>) -> ! {
+async fn button2_task(mut button2: ExtiInput<'static, PA0>) -> ! {
     loop {
         button2.wait_for_any_edge().await;
 
@@ -145,10 +145,10 @@ async fn main(spawner: Spawner) {
     let encoder1 = Qei::new(p.TIM1, QeiPin::new_ch1(p.PA8), QeiPin::new_ch2(p.PA9));
     let encoder2 = Qei::new(p.TIM3, QeiPin::new_ch1(p.PA6), QeiPin::new_ch2(p.PA7));
 
-    let button1 = Input::new(p.PA0, Pull::Down);
-    let button1 = ExtiInput::new(button1, p.EXTI0);
-    let button2 = Input::new(p.PA1, Pull::Down);
-    let button2 = ExtiInput::new(button2, p.EXTI1);
+    let button1 = Input::new(p.PA1, Pull::Down);
+    let button1 = ExtiInput::new(button1, p.EXTI1);
+    let button2 = Input::new(p.PA0, Pull::Down);
+    let button2 = ExtiInput::new(button2, p.EXTI0);
 
     // defmt::unwrap!(spawner.spawn(heartbeat_task(led)));
     defmt::unwrap!(spawner.spawn(button1_task(button1)));
@@ -201,20 +201,18 @@ async fn main(spawner: Spawner) {
                     encoder_button2: ENCODER_BUTTON2.load(Ordering::Relaxed),
                 };
 
-                if data == prev {
-                    continue;
-                }
+                if data != prev {
+                    if let Ok(send) = data.encode(&mut out_buf) {
+                        if let Err(EndpointError::Disabled) = class.write_packet(send).await {
+                            defmt::info!("USB is disconnected");
 
-                if let Ok(send) = data.encode(&mut out_buf) {
-                    if let Err(EndpointError::Disabled) = class.write_packet(send).await {
-                        defmt::info!("USB is disconnected");
+                            // Turn off
+                            led.set_high();
 
-                        // Turn off
-                        led.set_high();
-
-                        break;
-                    } else {
-                        led.toggle();
+                            break;
+                        } else {
+                            led.toggle();
+                        }
                     }
 
                     prev = data;

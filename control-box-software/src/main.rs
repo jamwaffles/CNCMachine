@@ -15,6 +15,7 @@ struct Pins {
     feed_override_scale: OutputPin<f64>,
     feed_override_value: InputPin<f64>,
     encoder1: OutputPin<i32>,
+    encoder1_button: OutputPin<bool>,
 }
 
 impl Resources for Pins {
@@ -25,6 +26,7 @@ impl Resources for Pins {
             feed_override_scale: comp.register_pin::<OutputPin<f64>>("feed-override-scale")?,
             feed_override_value: comp.register_pin::<InputPin<f64>>("feed-override-value")?,
             encoder1: comp.register_pin::<OutputPin<i32>>("encoder-1")?,
+            encoder1_button: comp.register_pin::<OutputPin<bool>>("encoder-1-button")?,
         })
     }
 }
@@ -89,25 +91,31 @@ fn main() -> Result<(), Box<dyn Error>> {
                 FeedResult::OverFull(new_wind) => new_wind,
                 FeedResult::DeserError(new_wind) => new_wind,
                 FeedResult::Success { data, remaining } => {
-                    let prev = *encoder1_prev.get_or_insert(data.encoder1);
-                    let new = data.encoder1;
+                    {
+                        let prev = *encoder1_prev.get_or_insert(data.encoder1);
+                        let new = data.encoder1;
 
-                    let diff = i32::from(new) - i32::from(prev);
+                        let diff = i32::from(new) - i32::from(prev);
 
-                    let wrapped = diff.abs() > i32::from(u16::MAX / 2);
+                        let wrapped = diff.abs() > i32::from(u16::MAX / 2);
 
-                    let res = if wrapped {
-                        diff - i32::from(u16::MAX) * diff.signum()
-                    } else {
-                        diff
-                    };
+                        let res = if wrapped {
+                            diff - i32::from(u16::MAX) * diff.signum()
+                        } else {
+                            diff
+                        };
 
-                    encoder1_value += res;
+                        encoder1_value += res;
 
-                    // Divide by 4 because quadrature encoder
-                    pins.encoder1.set_value(encoder1_value / 4)?;
+                        // Divide by 4 because quadrature encoder
+                        pins.encoder1.set_value(encoder1_value / 4)?;
 
-                    encoder1_prev = Some(new);
+                        encoder1_prev = Some(new);
+                    }
+
+                    {
+                        pins.encoder1_button.set_value(data.encoder_button1)?;
+                    }
 
                     remaining
                 }

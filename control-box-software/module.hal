@@ -3,3 +3,4 @@ loadusr -Wn control-box /home/james/Repositories/CNCMachine/control-box-software
 net feed-override-scale halui.feed-override.scale control-box.feed-override-scale
 net feed-override-value halui.feed-override.value control-box.feed-override-value
 net feed-override-encoder halui.feed-override.counts control-box.encoder-1
+net feed-override-reset halui.feed-override.reset control-box.encoder-1-button
