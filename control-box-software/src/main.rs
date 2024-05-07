@@ -123,6 +123,11 @@ fn main() -> Result<(), Box<dyn Error>> {
                         encoder1_prev = Some(new);
                     }
 
+                    // Feed override reset
+                    {
+                        pins.encoder1_button.set_value(data.encoder_button1)?;
+                    }
+
                     // Rapid override slider
                     {
                         let prev = *encoder2_prev.get_or_insert(data.encoder2);

@@ -10,7 +10,7 @@ use embassy_stm32::{
     bind_interrupts,
     exti::ExtiInput,
     gpio::{Input, Level, Output, Pull, Speed},
-    peripherals::{self, PA0, PA1},
+    peripherals::{self, PA0, PA1, PA10, PA5},
     time::Hertz,
     timer::qei::{Direction, Qei, QeiPin},
     usb::{self, Driver},
@@ -47,7 +47,7 @@ bind_interrupts!(struct Irqs {
 // }
 
 #[embassy_executor::task]
-async fn button1_task(mut button1: ExtiInput<'static, PA1>) -> ! {
+async fn button1_task(mut button1: ExtiInput<'static, PA10>) -> ! {
     loop {
         button1.wait_for_any_edge().await;
 
@@ -61,7 +61,7 @@ async fn button1_task(mut button1: ExtiInput<'static, PA1>) -> ! {
 }
 
 #[embassy_executor::task]
-async fn button2_task(mut button2: ExtiInput<'static, PA0>) -> ! {
+async fn button2_task(mut button2: ExtiInput<'static, PA5>) -> ! {
     loop {
         button2.wait_for_any_edge().await;
 
@@ -145,10 +145,10 @@ async fn main(spawner: Spawner) {
     let encoder1 = Qei::new(p.TIM1, QeiPin::new_ch1(p.PA8), QeiPin::new_ch2(p.PA9));
     let encoder2 = Qei::new(p.TIM3, QeiPin::new_ch1(p.PA6), QeiPin::new_ch2(p.PA7));
 
-    let button1 = Input::new(p.PA1, Pull::Down);
-    let button1 = ExtiInput::new(button1, p.EXTI1);
-    let button2 = Input::new(p.PA0, Pull::Down);
-    let button2 = ExtiInput::new(button2, p.EXTI0);
+    let button1 = Input::new(p.PA10, Pull::Down);
+    let button1 = ExtiInput::new(button1, p.EXTI10);
+    let button2 = Input::new(p.PA5, Pull::Down);
+    let button2 = ExtiInput::new(button2, p.EXTI5);
 
     // defmt::unwrap!(spawner.spawn(heartbeat_task(led)));
     defmt::unwrap!(spawner.spawn(button1_task(button1)));
