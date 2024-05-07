@@ -8,11 +8,8 @@ edition = "2021"
 [dependencies]
 configparser = "3.0.4"
 control-box-common = { path = "../control-box-common" }
-futures-lite = "2.3.0"
 linuxcnc-hal = { version = "0.3.0", path = "../../linuxcnc-hal-rs/linuxcnc-hal" }
 linuxcnc-hal-sys = { version = "0.3.0", path = "../../linuxcnc-hal-rs/linuxcnc-hal-sys" }
 postcard = { version = "1.0.8", features = ["use-std"] }
 rtapi-logger = "0.2.0"
-rustix = { version = "0.38.34", features = ["fs"] }
 serialport = "4.3.0"
-smol = "2.0.0"

@@ -1,4 +1,5 @@
-loadusr -Wn control-box /home/james/Repositories/CNCMachine/control-box-software/target/debug/control-box-software /dev/ttyACM2
+loadusr -Wn control-box /home/james/Repositories/CNCMachine/control-box-software/target/release/control-box-software /dev/ttyACM2
 
-net feed-override-scale halui.feed-override.scale => control-box.feed-override-scale
-net feed-override-value halui.feed-override.value => control-box.feed-override-value
+net feed-override-scale halui.feed-override.scale control-box.feed-override-scale
+net feed-override-value halui.feed-override.value control-box.feed-override-value
+net feed-override-encoder halui.feed-override.counts control-box.encoder-1

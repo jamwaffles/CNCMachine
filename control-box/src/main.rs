@@ -1,9 +1,8 @@
 #![no_std]
 #![no_main]
 
-use core::sync::atomic::{AtomicBool, AtomicU16, Ordering};
-
 use control_box_common::Outputs;
+use core::sync::atomic::{AtomicBool, Ordering};
 use defmt_rtt as _;
 use embassy_executor::Spawner;
 use embassy_futures::join::join;
@@ -13,7 +12,7 @@ use embassy_stm32::{
     gpio::{Input, Level, Output, Pull, Speed},
     peripherals::{self, PA0, PA1},
     time::Hertz,
-    timer::qei::{Qei, QeiPin},
+    timer::qei::{Direction, Qei, QeiPin},
     usb::{self, Driver},
     Config,
 };
@@ -141,7 +140,7 @@ async fn main(spawner: Spawner) {
     // Black pill/blue pill user LED on PC13, active low
     // let led = Output::new(p.PC13, Level::Low, Speed::Low);
     // Or for the black version of the blue pill with mounting holes
-    let led = Output::new(p.PB12, Level::Low, Speed::Low);
+    let mut led = Output::new(p.PB12, Level::High, Speed::Low);
 
     let encoder1 = Qei::new(p.TIM1, QeiPin::new_ch1(p.PA8), QeiPin::new_ch2(p.PA9));
     let encoder2 = Qei::new(p.TIM3, QeiPin::new_ch1(p.PA6), QeiPin::new_ch2(p.PA7));
@@ -151,16 +150,18 @@ async fn main(spawner: Spawner) {
     let button2 = Input::new(p.PA1, Pull::Down);
     let button2 = ExtiInput::new(button2, p.EXTI1);
 
-    defmt::unwrap!(spawner.spawn(heartbeat_task(led)));
+    // defmt::unwrap!(spawner.spawn(heartbeat_task(led)));
     defmt::unwrap!(spawner.spawn(button1_task(button1)));
     defmt::unwrap!(spawner.spawn(button2_task(button2)));
 
     defmt::info!("Begin loop");
 
-    let mut ticker = Ticker::every(Duration::from_millis(250));
+    let mut ticker = Ticker::every(Duration::from_millis(5));
+
+    let mut prev = Outputs::default();
 
     let encoder_task = async {
-        let mut out_buf = [0u8; 128];
+        let mut out_buf = [0u8; 256];
 
         loop {
             defmt::info!("Waiting for connection");
@@ -194,16 +195,29 @@ async fn main(spawner: Spawner) {
                 let data = Outputs {
                     encoder1: encoder1.count(),
                     encoder2: encoder2.count(),
+                    encoder1_up: matches!(encoder1.read_direction(), Direction::Upcounting),
+                    encoder2_up: matches!(encoder2.read_direction(), Direction::Upcounting),
                     encoder_button1: ENCODER_BUTTON1.load(Ordering::Relaxed),
                     encoder_button2: ENCODER_BUTTON2.load(Ordering::Relaxed),
                 };
+
+                if data == prev {
+                    continue;
+                }
 
                 if let Ok(send) = data.encode(&mut out_buf) {
                     if let Err(EndpointError::Disabled) = class.write_packet(send).await {
                         defmt::info!("USB is disconnected");
 
+                        // Turn off
+                        led.set_high();
+
                         break;
+                    } else {
+                        led.toggle();
                     }
+
+                    prev = data;
                 }
 
                 ticker.next().await;

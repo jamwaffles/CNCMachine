@@ -1,5 +1,4 @@
 use control_box_common::Outputs;
-use futures_lite::StreamExt;
 use linuxcnc_hal::{
     error::PinRegisterError,
     hal_pin::{InputPin, OutputPin},
@@ -7,21 +6,15 @@ use linuxcnc_hal::{
     HalComponent, RegisterResources, Resources,
 };
 use postcard::accumulator::{CobsAccumulator, FeedResult};
-use smol::prelude::*;
-use std::env;
-use std::os::fd::AsRawFd;
+use std::time::Duration;
 use std::{error::Error, io};
-use std::{
-    os::fd::{FromRawFd, OwnedFd},
-    time::Duration,
-};
 
 const BUF_SIZE: usize = 1024;
 
 struct Pins {
-    feed_override_scale: InputPin<f64>,
+    feed_override_scale: OutputPin<f64>,
     feed_override_value: InputPin<f64>,
-    encoder1: OutputPin<u32>,
+    encoder1: OutputPin<i32>,
 }
 
 impl Resources for Pins {
@@ -29,9 +22,9 @@ impl Resources for Pins {
 
     fn register_resources(comp: &RegisterResources) -> Result<Self, Self::RegisterError> {
         Ok(Pins {
-            feed_override_scale: comp.register_pin::<InputPin<f64>>("feed-override-scale")?,
+            feed_override_scale: comp.register_pin::<OutputPin<f64>>("feed-override-scale")?,
             feed_override_value: comp.register_pin::<InputPin<f64>>("feed-override-value")?,
-            encoder1: comp.register_pin::<OutputPin<u32>>("encoder-1")?,
+            encoder1: comp.register_pin::<OutputPin<i32>>("encoder-1")?,
         })
     }
 }
@@ -53,50 +46,27 @@ fn main() -> Result<(), Box<dyn Error>> {
         .open()
         .expect("Failed to open port");
 
-    println!("Receiving data on {} at {} baud:", &port_name, &baud_rate);
+    port.clear(serialport::ClearBuffer::All)?;
 
-    // let async_port =
-    //     smol::Async::new_nonblocking(unsafe { OwnedFd::from_raw_fd(port.as_raw_fd()) })?;
+    println!("Receiving data on {} at {} baud:", &port_name, &baud_rate);
 
     let mut cobs_buf: CobsAccumulator<BUF_SIZE> = CobsAccumulator::new();
     let mut raw_buf = [0u8; BUF_SIZE];
 
-    let section = "EMC";
-    let name = "MAX_FEED_OVERRIDE";
-
-    let ini_path = env::var("INI_FILE_NAME")?;
-
-    let mut ini = configparser::ini::Ini::new();
-
-    ini.load(ini_path)?;
-
-    let feed_override_max = ini.getfloat("DISPLAY", "MAX_FEED_OVERRIDE")?.unwrap_or(1.0);
-
-    dbg!(feed_override_max);
-
-    // smol::block_on(async {
-    // while let Ok(n) = async_port
-    //     .read_with(|t| rustix::io::read(t, &mut raw_buf).map_err(io::Error::from))
-    //     .await
+    // // Demo of reading values from INI file
     // {
-    //     let mut window = &raw_buf[0..n];
-
-    //     'cobs: while !window.is_empty() {
-    //         window = match cobs_buf.feed::<Outputs>(&window) {
-    //             FeedResult::Consumed => break 'cobs,
-    //             FeedResult::OverFull(new_wind) => new_wind,
-    //             FeedResult::DeserError(new_wind) => new_wind,
-    //             FeedResult::Success { data, remaining } => {
-    //                 println!("{:?}", data);
-
-    //                 remaining
-    //             }
-    //         };
-    //     }
+    //     let ini_path = env::var("INI_FILE_NAME")?;
+    //     let mut ini = configparser::ini::Ini::new();
+    //     ini.load(ini_path)?;
+    //     let feed_override_max = ini.getfloat("DISPLAY", "MAX_FEED_OVERRIDE")?.unwrap_or(1.0);
+    //     dbg!(feed_override_max);
     // }
 
-    // Start at 100% feed to match UI
-    let mut value = 100;
+    let mut encoder1_prev = None;
+    let mut encoder1_value = 0i32;
+
+    // 5% for every detent
+    pins.feed_override_scale.set_value(0.05)?;
 
     while !comp.should_exit() {
         let buf = match port.read(&mut raw_buf) {
@@ -119,16 +89,31 @@ fn main() -> Result<(), Box<dyn Error>> {
                 FeedResult::OverFull(new_wind) => new_wind,
                 FeedResult::DeserError(new_wind) => new_wind,
                 FeedResult::Success { data, remaining } => {
-                    // println!("{:?}", data);
+                    let prev = *encoder1_prev.get_or_insert(data.encoder1);
+                    let new = data.encoder1;
 
-                    pins.encoder1.set_value(u32::from(data.encoder1 / 4))?;
+                    let diff = i32::from(new) - i32::from(prev);
+
+                    let wrapped = diff.abs() > i32::from(u16::MAX / 2);
+
+                    let res = if wrapped {
+                        diff - i32::from(u16::MAX) * diff.signum()
+                    } else {
+                        diff
+                    };
+
+                    encoder1_value += res;
+
+                    // Divide by 4 because quadrature encoder
+                    pins.encoder1.set_value(encoder1_value / 4)?;
+
+                    encoder1_prev = Some(new);
 
                     remaining
                 }
             };
         }
     }
-    // });
 
     Ok(())
 }

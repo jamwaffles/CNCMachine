@@ -1,20 +1,19 @@
 #![no_std]
 
-use core::sync::atomic::{AtomicU16, Ordering};
-use serde::{Deserialize, Deserializer, Serialize, Serializer};
-
-#[derive(Debug, Copy, Clone, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, Default, Copy, Clone, serde::Serialize, serde::Deserialize, PartialEq, Eq)]
 pub struct Outputs {
     // #[serde(
     //     serialize_with = "serialize_atomic",
     //     deserialize_with = "deserialize_atomic"
     // )]
     pub encoder1: u16,
+    pub encoder1_up: bool,
     // #[serde(
     //     serialize_with = "serialize_atomic",
     //     deserialize_with = "deserialize_atomic"
     // )]
     pub encoder2: u16,
+    pub encoder2_up: bool,
     pub encoder_button1: bool,
     pub encoder_button2: bool,
 }
