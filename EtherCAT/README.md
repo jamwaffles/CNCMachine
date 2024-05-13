@@ -32,7 +32,7 @@ include ../config.mk
 include Kbuild
 
 cc-option = $(shell if $(CC) $(CFLAGS) $(1) -S -o /dev/null -xc /dev/null \
-             > /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi ;)
+						> /dev/null 2>&1; then echo "$(1)"; else echo "$(2)"; fi ;)
 
 .PHONY: all clean install
 
@@ -41,7 +41,7 @@ ifeq ($(BUILDSYS),kbuild)
 module = $(patsubst %.o,%.ko,$(obj-m))
 
 ifeq (,$(findstring -Wframe-larger-than=,$(EXTRA_CFLAGS)))
-  EXTRA_CFLAGS += $(call cc-option,-Wframe-larger-than=2560)
+	EXTRA_CFLAGS += $(call cc-option,-Wframe-larger-than=2560)
 endif
 
 $(module):
@@ -79,6 +79,8 @@ install: $(module)
 ```
 
 Otherwise you get `undefined symbol: ecrt_slave_config_sdo`. The solution is from [here](https://www.forum.linuxcnc.org/9-installing-linuxcnc/41983-linuxcnc-ethercat-undefined-symbol-ecrt-slave-config-sdo#203252)
+
+If you get "missing sperator" errors during `make`, ensure that the file is tab-indented. Space indentation is the cause of this error.
 
 ## Cycle time
 
