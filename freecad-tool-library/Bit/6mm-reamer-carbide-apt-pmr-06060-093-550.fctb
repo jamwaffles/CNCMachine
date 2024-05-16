@@ -3,12 +3,12 @@
   "name": "6mm-reamer-carbide-apt-pmr-06060-093-550",
   "shape": "drill.fcstd",
   "parameter": {
-    "Chipload": "0.000 mm",
-    "Diameter": "6.000 mm",
+    "Chipload": "0.00 mm",
+    "Diameter": "6.00 mm",
     "Flutes": "4",
-    "Length": "26.000 mm",
+    "Length": "26.00 mm",
     "Material": "Carbide",
-    "TipAngle": "0.000 \u00b0"
+    "TipAngle": "0.01 \u00b0"
   },
   "attribute": {}
 }
