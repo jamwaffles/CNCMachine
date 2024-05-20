@@ -144,8 +144,10 @@ net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-veloci
 # Slave 4 I/O module EL2008
 #
 
-net mist-on iocontrol.0.coolant-mist => lcec.0.5.dout-1
 net drawbar-on <= lcec.0.5.dout-0
+net mist-on iocontrol.0.coolant-mist => lcec.0.5.dout-1
+# Not actually flood! Just pressurises the mist coolant resevoir!
+net flood-on iocontrol.0.coolant-flood => lcec.0.5.dout-2
 
 #
 # Common stuff for touch probe and toolsetter
