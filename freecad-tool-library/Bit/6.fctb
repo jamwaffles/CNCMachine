@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "name": "6.8mm-m8-tap-drill",
-  "shape": "drill.fcstd",
+  "name": "60deg-engraver",
+  "shape": "v-bit.fcstd",
   "parameter": {
-    "Chipload": "0.000 mm",
-    "Diameter": "6.800 mm",
-    "Flutes": "2",
-    "Length": "50.000 mm",
+    "Chipload": "0.00 mm",
+    "CuttingEdgeAngle": "60.00 \u00b0",
+    "CuttingEdgeHeight": "5.00 mm",
+    "Diameter": "6.35 mm",
+    "Flutes": "0",
+    "Length": "20.00 mm",
     "Material": "HSS",
-    "TipAngle": "119.000 \u00b0"
+    "ShankDiameter": "6.35 mm",
+    "TipDiameter": "0.25 mm"
   },
   "attribute": {}
 }
