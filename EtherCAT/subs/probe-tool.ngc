@@ -29,7 +29,8 @@ f400 ; fast probe
 g91 ; relative
 g38.2 z[-#<search_dist>]
 
-g0 z1 ; move up a little bit ready for slow probe
+f200
+g1 z1 ; move up a little bit ready for slow probe
 
 ; slow probe
 f25 
