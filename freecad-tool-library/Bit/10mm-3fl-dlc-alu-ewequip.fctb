@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "10mm-3fl-dlc-alu-ewequip",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.00 mm",
+    "CuttingEdgeHeight": "30.00 mm",
+    "Diameter": "10.00 mm",
+    "Flutes": "3",
+    "Length": "50.00 mm",
+    "Material": "Carbide",
+    "ShankDiameter": "10.00 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}

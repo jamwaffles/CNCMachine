@@ -11,22 +11,23 @@ T10  P10  D+6.500000 Z+200.183033 ;6.5mm hssco5 jobber drill
 T11  P11  D+10.000000 Z+112.366000 ;10mm 3fl hss tialn long length end mill
 T12  P12  D+6.000000 Z+112.347000 ;6mm-4fl-only-one-gyg02060
 T13  P13  D+8.000000 ;8mm-4fl-rougher-hss-tialn-060-283-06008
-T99  P99  D+5.000000 Z+179.255334 ;5mm ruby ball touch probe ceramic shaft
+T99  P99  D+5.000000 Z+157.676667 ;5mm ruby ball touch probe ceramic shaft
 T14  P14  D+8.500000 Z+214.020417 ;8.5mm-hssco-jobber-drill
 T98  P98  D+10.000000 Z+139.988000 ;50mm boring head
 T15  P15  D+5.000000 Z+91.720550 ;5mm-3fl-nc-mill-g9f430050n
 T16  P16  D+3.300000 Z+169.224467 ;3.3mm m4 tap drill
 T19  P19  D+5.000000 Z+86.664584 ;5mm-3fl-apt-carbide-for-alu-ea3s-050500
 T18  P18  D+4.000000 Z+117.332083 ;m6x1-thread-mill
-T17  P17  D+6.000000 Z+193.962917 ;6mm-reamer
-T20  P20  D+5.000000 Z+92.860000 ;5mm-3fl-apt-dlc-alu-eav3s-06050050dlc-1
-T21  P21  D+4.800000 Z+82.845000 ;m6-dlc-threadmill-apt-mt3d060480m6.0dlc
-T22  P22  D+5.000000 Z+107.217917 ;5mm-drill-carbide-apt-2sfhsd-06050-075-
-T23  P23  D+6.000000 Z+115.419583 ;6mm-reamer-carbide-apt-pmr-06060-093-55
-T24  P24  D+6.000000 Z+72.590416 ;6mm-chamfer-carbide-apt-sfct4-06060050
+T20  P20  D+5.000000 Z+92.858333 ;5mm-3fl-apt-dlc-alu-eav3s-06050050dlc-1
+T21  P21  D+4.800000 Z+82.825000 ;m6-dlc-threadmill-apt-mt3d060480m6.0dlc
+T22  P22  D+5.000000 Z+103.726667 ;5mm-drill-carbide
+T23  P23  D+6.000000 Z+125.736667 ;6mm-reamer-carbide-apt-pmr-06060-093-55
+T24  P24  D+6.000000 Z+72.573749 ;6mm-chamfer-carbide-apt-sfct4-06060050
 T25  P25  D+8.000000 Z+90.513333 ;8mm-2fl-alupower-e5522080
 T26  P26  D+50.000000 Z+94.662184 ;50mm-90deg-4fl-facemill
 T27  P27  D+50.000000 Z+94.298850 ;50mm-45deg-4fl-facemill
 T28  P28  D+5.900000 Z+104.468334 ;5.9mm-carbide-cutwel-dca400059
 T29  P29  D+2.000000 Z+87.511666 ;2mm-3fl-ball-alu-3AABN-04020050
-T30  P30  D+0.250000 Z+90.030000 ;60deg-v-bit
+T30  P30  D+0.250000 Z+90.026667 ;60deg-v-bit
+T31  P31  D+5.800000 Z+91.131667 ;5.8 carbide drill Kennametal
+T32  P32  D+10.000000 Z+96.841833 ;10mm-3fl-dlc-alu-ewequip

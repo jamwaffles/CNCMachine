@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "name": "5.9mm-carbide-cutwel-dca400059",
+  "name": "5.8 carbide drill",
   "shape": "drill.fcstd",
   "parameter": {
-    "Chipload": "0.000 mm",
-    "Diameter": "5.900 mm",
+    "Chipload": "0.00 mm",
+    "Diameter": "5.80 mm",
     "Flutes": "2",
-    "Length": "35.000 mm",
+    "Length": "25.00 mm",
     "Material": "Carbide",
-    "TipAngle": "119.000 \u00b0"
+    "TipAngle": "140.00 \u00b0"
   },
   "attribute": {}
 }
