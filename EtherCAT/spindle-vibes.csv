@@ -1,0 +1,21 @@
+run,rpm,x rms,y rms,z rms,rms mag
+no screws at all,3000,0.018,0.041,0.442
+baseline single grub on paint line,3000,0.023,0.038,0.208
+one grub opposite,3000,0.023,0.031,0.213
+baseline + 90deg CW,3000,0.014,0.029,0.155
+baseline + 90deg CCW,3000,0.019,0.036,0.271
+45deg CW,3000,0.018,0.027,0.176
+2x short grub at pos 4 and 5,3000,0.017,0.020,0.159
+2x short grub at pos 3 and 4,3000,0.014,0.031,0.168
+3x short grub pos 3-5,3000,0.015,0.027,0.352
+3x short grub pos 2-4,3000,0.014,0.024,0.295
+2x long grub pos 1 and -1,3000,0.011,0.018,0.194
+2x long grub + 1x medium grub pos -1-2,3000,0.015,0.018,0.226
+no screws but with more balanced motor pulley,3000,0.027,0.030,0.212,0.217
+long grub pos 0,3000,0.017,0.028,0.418,0.424
+long grub opposite,3000,0.024,0.029,0.215,0.342
+long grub +90deg,3000,0.020,0.028,0.295,0.428
+long grub -90deg,3000,0.021,0.026,0.370,0.620
+2x long grub opposite,3000,0.030,0.040,0.236,0.298
+4x grub opposite,3000,0.029,0.040,0.246,0.402
+2x grub,3000,0.017,0.024,0.129,0.214
