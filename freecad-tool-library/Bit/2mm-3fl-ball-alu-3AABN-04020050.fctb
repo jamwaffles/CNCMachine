@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "2mm-3fl-ball-alu-3AABN-04020051",
+  "name": "2mm-3fl-ball-alu-3AABN-04020050",
   "shape": "ballend.fcstd",
   "parameter": {
     "Chipload": "0.00 mm",
@@ -9,7 +9,7 @@
     "Flutes": "3",
     "Length": "50.00 mm",
     "Material": "Carbide",
-    "ShankDiameter": "6.00 mm"
+    "ShankDiameter": "4.00 mm"
   },
   "attribute": {}
 }
