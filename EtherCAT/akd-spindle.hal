@@ -28,15 +28,29 @@ net akd-spindle-drv-target-velo       cia402.3.drv-target-velocity => lcec.0.3.t
 ### Spindle speed command
 ### `speed-out` is in RPM
 net spindle-speed-cmd-rpm spindle.0.speed-out cia402.3.velocity-cmd
-# 
-# ### Spindle is running command. Used for drawbar interlock, etc
+net spindle-fb-rpm cia402.3.velocity-fb 
+
+### Filtered RPM value to get rid of encoder noise
+loadrt lowpass names=spindle-rpm-filtered
+addf spindle-rpm-filtered servo-thread
+
+# To figure out this weird number, read the docs: http://linuxcnc.org/docs/stable/html/man/man9/lowpass.9.html 
+# Or use the calculator "lowpass-calc.ods"
+setp spindle-rpm-filtered.gain 0.118088547155586
+
+net spindle-fb-rpm => spindle-rpm-filtered.in 
+net spindle-fb-rpm-filtered <= spindle-rpm-filtered.out
+
+### Spindle is running command. Used for drawbar interlock, etc
 net spindle-speed-cmd-rpm spindle-zero-rpm.in1 near-at-speed.in1
 setp spindle-zero-rpm.in2 0
 net spindle-is-stopped spindle-zero-rpm.out
-# 
-# ### Spindle at speed
-net spindle-fb-rpm cia402.3.velocity-fb near-at-speed.in2
+
+### Spindle at speed
+net spindle-fb-rpm-filtered => near-at-speed.in2
+# E.g. 1.15 = 15%
 setp near-at-speed.scale 1.15
+setp near-at-speed.difference 3
 net spindle-at-speed near-at-speed.out
 
 ### Synchronised motion
@@ -59,13 +73,13 @@ addf db-toggle servo-thread
 net drawbar-input db-interlock.in0 <= lcec.0.0.drawbar-button
 net drawbar-toggle db-interlock.out => db-toggle.in
 
-net drawbar-on <= db-toggle.out
-
-### interlock
+### interlocks
 
 #--- Engage drawbar only if spindle is stopped
 net spindle-is-stopped db-interlock.in1
 
-# TODO: Provide a 10Hz filtered (lowpass comp?) value for spindle at speed, display, etc
+#--- Don't allow spindle rotation if DB is engaged
+net drawbar-on <= db-toggle.out spindle.0.inhibit
 
-# TODO: Don't allow spindle rotation if drawbar is still engaged
+
+

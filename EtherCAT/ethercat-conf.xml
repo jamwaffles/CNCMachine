@@ -324,6 +324,7 @@
         </pdo>
         <pdo idx="1a01">
           <pdoEntry idx="6063" subIdx="00" bitLen="32" halPin="actual-position" halType="s32"/>
+          <pdoEntry idx="3407" subIdx="01" bitLen="32" halPin="actual-velocity-filtered" halType="float"/>
           <!-- <pdoEntry idx="20a0" subIdx="00" bitLen="32" halPin="index-pos" halType="s32"/> -->
           <!-- <pdoEntry idx="20a5" subIdx="00" bitLen="16" halPin="latch-status" halType="u32"/> -->
           <!-- <pdoEntry idx="6061" subIdx="00" bitLen="8" halPin="opmode-display" halType="s32"/> -->

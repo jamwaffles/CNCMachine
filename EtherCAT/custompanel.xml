@@ -61,13 +61,22 @@
 				<text>"RPM"</text>
 			</label>
 			<tablerow />
-			<bar>
-				<halpin>"spindle-speed-rpm"</halpin>
-				<!-- <size>250</size> -->
-				<min_>-7000</min_>
-				<max_>7000</max_>
-				<fillcolor>"green"</fillcolor>
-			</bar>
+			
+
+			<meter>
+			    <halpin>"spindle-speed-rpm"</halpin>
+			    <text>"Spindle"</text>
+			    <subtext>"RPM"</subtext>
+			    <size>250</size>
+			    <min_>-7000.0</min_>
+			    <max_>7000.0</max_>
+			    <format>"3.5f"</format>
+			    <majorscale>1000</majorscale>
+			    <minorscale>500</minorscale>
+			    <region1>(-6000,6000,"green")</region1>
+			    <region2>(-7000,-6000,"red")</region2>
+			    <region3>(6000,7000,"red")</region3>
+			</meter>
 
 			<!-- <tablerow />
             <meter>
