@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "10mm-3fl-dlc-alu-ewequip",
+  "name": "10mm-3fl-dlc-alu-ewequip001",
   "shape": "endmill.fcstd",
   "parameter": {
     "Chipload": "0.00 mm",

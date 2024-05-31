@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "5.8 carbide drill",
+  "name": "5.8-drill-carbide",
   "shape": "drill.fcstd",
   "parameter": {
     "Chipload": "0.00 mm",

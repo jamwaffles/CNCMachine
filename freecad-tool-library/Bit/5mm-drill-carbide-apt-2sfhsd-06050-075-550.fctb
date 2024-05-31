@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "name": "5mm-drill-carbide-apt-2sfhsd-06050-075-550",
+  "name": "5mm-carbide-drill",
   "shape": "drill.fcstd",
   "parameter": {
-    "Chipload": "0.000 mm",
-    "Diameter": "5.000 mm",
+    "Chipload": "0.00 mm",
+    "Diameter": "5.00 mm",
     "Flutes": "2",
-    "Length": "26.000 mm",
+    "Length": "26.00 mm",
     "Material": "Carbide",
-    "TipAngle": "140.000 \u00b0"
+    "TipAngle": "140.00 \u00b0"
   },
   "attribute": {}
 }
