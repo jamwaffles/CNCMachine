@@ -29,13 +29,22 @@ f400 ; fast probe
 g91 ; relative
 g38.2 z[-#<search_dist>]
 
-f200
-g1 z1 ; move up a little bit ready for slow probe
+#1 = 0
+#<accum> = 0
+#<num_iterations> = 10
 
-; slow probe
+; slow probe, repeat and find average
+o101 do
+f200
+g1 z0.5 ; move up a little bit ready for slow probe
 f25 
 g38.2 z-2
-g10 l11 p#5400 z0 ; set new tool len
+g10 l11 p#5400 z0 ; set new tool len #5400 = current tool number
+#<accum> = [#<accum> + #5403] ; #5403 = current tool Z offset
+#1 = [#1 + 1]
+o101 while [#1 lt #<num_iterations>]
+
+g10 l1 p#5400 z[#<accum> / #<num_iterations>] ; set new tool len as average of probes
 g0 z50 ; move to safe
 
 g90

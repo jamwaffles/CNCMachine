@@ -2,7 +2,7 @@ T1   P1   D+5.500000 Z+194.894500 ;5.5mm drill
 T2   P2   D+8.000000 Z+97.359167 ;8mm 3fl carbide 45deg chamfer mill
 T3   P3   D+8.000000 Z+88.633562 ;8mm 4fl carbide nc-mill g9f42080n
 T4   P4   D+6.000000 Z+84.020417 ;6mm 3fl carbide nc-mill g9f43060n
-T5   P5   D+6.300000 Z+170.612250 ;6.3mm 120deg spot drill
+T5   P5   D+6.300000 Z+170.625583 ;6.3mm 120deg spot drill
 T6   P6   D+6.800000 Z+208.251250 ;6.8mm jobber drill
 T7   P7   D+4.200000 Z+179.079866 ;4.2mm m5 tap drill
 T8   P8   D+5.000000 Z+188.731500 ;5mm hssco8 jobber drill
@@ -18,16 +18,16 @@ T15  P15  D+5.000000 Z+91.720550 ;5mm-3fl-nc-mill-g9f430050n
 T16  P16  D+3.300000 Z+169.224467 ;3.3mm m4 tap drill
 T19  P19  D+5.000000 Z+86.664584 ;5mm-3fl-apt-carbide-for-alu-ea3s-050500
 T18  P18  D+4.000000 Z+117.332083 ;m6x1-thread-mill
-T20  P20  D+5.000000 Z+92.858333 ;5mm-3fl-apt-dlc-alu-eav3s-06050050dlc-1
-T21  P21  D+4.800000 Z+82.825000 ;m6-dlc-threadmill-apt-mt3d060480m6.0dlc
-T22  P22  D+5.000000 Z+103.726667 ;5mm-drill-carbide
-T23  P23  D+6.000000 Z+125.736667 ;6mm-reamer-carbide-apt-pmr-06060-093-55
-T24  P24  D+6.000000 Z+72.573749 ;6mm-chamfer-carbide-apt-sfct4-06060050
+T20  P20  D+5.000000 Z+92.877000 ;5mm-3fl-apt-dlc-alu-eav3s-06050050dlc-1
+T21  P21  D+4.800000 Z+82.837167 ;m6-dlc-threadmill-apt-mt3d060480m6.0dlc
+T22  P22  D+5.000000 Z+101.462334 ;5mm-drill-carbide
+T23  P23  D+6.000000 Z+125.768167 ;6mm-reamer-carbide-apt-pmr-06060-093-55
+T24  P24  D+6.000000 Z+72.596249 ;6mm-chamfer-carbide-apt-sfct4-06060050
 T25  P25  D+8.000000 Z+90.513333 ;8mm-2fl-alupower-e5522080
 T26  P26  D+50.000000 Z+94.662184 ;50mm-90deg-4fl-facemill
 T27  P27  D+50.000000 Z+94.298850 ;50mm-45deg-4fl-facemill
 T28  P28  D+5.900000 Z+104.468334 ;5.9mm-carbide-cutwel-dca400059
 T29  P29  D+2.000000 Z+87.511666 ;2mm-3fl-ball-alu-3AABN-04020050
-T30  P30  D+0.250000 Z+90.026667 ;60deg-v-bit
-T31  P31  D+5.800000 Z+91.131667 ;5.8 carbide drill Kennametal
-T32  P32  D+10.000000 Z+96.841833 ;10mm-3fl-dlc-alu-ewequip
+T30  P30  D+0.250000 Z+90.037500 ;60deg-v-bit
+T31  P31  D+5.800000 Z+91.153000 ;5.8 carbide drill Kennametal
+T32  P32  D+10.000000 Z+96.858000 ;10mm-3fl-dlc-alu-ewequip
