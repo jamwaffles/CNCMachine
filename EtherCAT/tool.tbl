@@ -20,8 +20,8 @@ T19  P19  D+5.000000 Z+86.664584 ;5mm-3fl-apt-carbide-for-alu-ea3s-050500
 T18  P18  D+4.000000 Z+117.332083 ;m6x1-thread-mill
 T20  P20  D+5.000000 Z+92.877000 ;5mm-3fl-apt-dlc-alu-eav3s-06050050dlc-1
 T21  P21  D+4.800000 Z+82.837167 ;m6-dlc-threadmill-apt-mt3d060480m6.0dlc
-T22  P22  D+5.000000 Z+101.462334 ;5mm-drill-carbide
-T23  P23  D+6.000000 Z+125.768167 ;6mm-reamer-carbide-apt-pmr-06060-093-55
+T22  P22  D+5.000000 Z+101.672167 ;5mm-drill-carbide
+T23  P23  D+6.000000 Z+126.850000 ;6mm-reamer-carbide-apt-pmr-06060-093-55
 T24  P24  D+6.000000 Z+72.596249 ;6mm-chamfer-carbide-apt-sfct4-06060050
 T25  P25  D+8.000000 Z+90.513333 ;8mm-2fl-alupower-e5522080
 T26  P26  D+50.000000 Z+94.662184 ;50mm-90deg-4fl-facemill
