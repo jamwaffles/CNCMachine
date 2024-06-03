@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '67503_1020'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Molex", "67503-1020" (!) = "", "675031020", "Other", "538-67503-1020", "https://www.mouser.co.uk/ProductDetail/Molex/67503-1020?qs=7zcQ9RRVJlhHWuXYKEhKMg%3D%3D", "", "", "USB Connectors USB Mini-B Recept On-The-Go Rt.Angle", "https://www.molex.com/pdm_docs/sd/675031020_sd.pdf", "4.05 mm"
+END_PART
+
+END.

@@ -1,0 +1,9 @@
+Manufacturer=Molex
+PartNumber=67503-1020
+PartCategory=Connector
+PackageCategory=Other
+PinCount=9
+Version=1.3
+Released=2020-10-29 10:43:31
+Downloaded=2024-06-03 11:55:54
+3D=Y

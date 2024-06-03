@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "TS1187ABAB"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "TS1187ABAB")
+        (spec "default")
+    )
+)

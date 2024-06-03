@@ -1,0 +1,168 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "PEC11L-4115F-S0020"
+   (description "Encoders ENCODER")
+   (family "ANA")
+   (package "PEC11L4115FS0020")
+   (attribute "Datasheet Link" "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA5/494003.pdf")
+   (attribute "Geometry.Height" "25mm")
+   (attribute "Manufacturer_Name" "Bourns")
+   (attribute "Manufacturer_Part_Number" "PEC11L-4115F-S0020")
+   (attribute "Mouser Part Number" "652-PEC11L4115FS0020")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/PEC11L-4115F-S0020?qs=gk21WLQFtgRAgrgJZfpkWw%3D%3D")
+   (attribute "Arrow Part Number" "PEC11L-4115F-S0020")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/pec11l-4115f-s0020/bourns?region=nac")
+   (gate
+    (symbol "PEC11L-4115F-S0020")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "A1" A1 PS)
+    (pin "B1" B1 PS)
+    (pin "C1" C1 PS)
+    (pin "MH1" MH1 PS)
+    (pin "MH2" MH2 PS)
+   )
+  )
+  (symbol "PEC11L-4115F-S0020"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 300) (pt 800 300) (pt 800 -300) (pt 200 -300) (pt 200 300) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 400 500) (rot 90) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 500) (rot 90) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 400 -500) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 600 -500) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 500 -500) (rot 90) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1000 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "PEC11L4115FS0020"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -3.4 -1)
+      (pt 8.4 -1)
+      (pt 8.4 -13)
+      (pt -3.4 -13)
+      (pt -3.4 -1))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -6.5 1.975)
+      (pt 11.5 1.975)
+      (pt 11.5 -16.875)
+      (pt -6.5 -16.875)
+      (pt -6.5 1.975))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -3.4 -9.2)
+      (pt -3.4 -13)
+      (pt 8.4 -13)
+      (pt 8.4 -9.2))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -0.1 1.3)
+      (arc (pt -0.100 1.300) (pt -0.100 1.200) (pt 0.100 1.400) (start 180.0) (sweep 180.0))
+      (pt 0.1 1.3)
+      (arc (pt 0.100 1.300) (pt -0.100 1.200) (pt 0.100 1.400) (start 180.0) (sweep .0))
+      (pt -0.1 1.3))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -3.4 -4.8)
+      (pt -3.4 -1)
+      (pt -0.9 -1))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt 5.9 -1)
+      (pt 8.4 -1)
+      (pt 8.4 -4.8))))
+   (leg 1 (pt 0.000 0.000) (padstack 0))
+   (leg 2 (pt 5.000 0.000) (padstack 0))
+   (leg A1 (pt 0.000 -14.500) (padstack 0))
+   (leg B1 (pt 5.000 -14.500) (padstack 0))
+   (leg C1 (pt 2.500 -14.500) (padstack 0))
+   (leg MH1 (pt -3.200 -7.000) (padstack 6))
+   (leg MH2 (pt 8.200 -7.000) (padstack 7))
+   (padstack 0
+    (hole 1.2)
+    (plated true)
+    (pad (layer TCOP) (round 1.800))
+    (pad (layer INNER) (round 1.800))
+    (pad (layer BCOP) (round 1.800))
+   )
+   (padstack 6
+    (hole 2.5239)
+    (plated true)
+    (pad (layer TCOP) (round 3.786))
+    (pad (layer INNER) (round 3.786))
+    (pad (layer BCOP) (round 3.786))
+   )
+   (padstack 7
+    (hole 2.5239)
+    (plated true)
+    (pad (layer TCOP) (round 3.786))
+    (pad (layer INNER) (round 3.786))
+    (pad (layer BCOP) (round 3.786))
+   )
+   (model "PEC11L-4115F-S0020.stp"
+    (euler -90 0 0)
+    (offset 2.450000047683716 -6.940000057220459 11.880000114440918)
+   )
+  )
+ )
+)

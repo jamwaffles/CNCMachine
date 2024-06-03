@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=PEC11L-4115F-S0020
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=7
+Version=1.1
+Released=2019-07-26 09:43:41
+Downloaded=2024-06-03 13:36:31
+3D=Y

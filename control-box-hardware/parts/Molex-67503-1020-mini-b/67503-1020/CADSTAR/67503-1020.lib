@@ -1,0 +1,19 @@
+.67503-1020 :1 ;USB Connectors USB Mini-B Recept On-The-Go Rt.Angle
+"675031020"
+*STM J
+*NGS
+*PNM 1=1 2=2 3=3 4=4 5=5 6=MP1 7=MP2 8=MP3 9=MP4
+*PLB 1="VBUS" 2="D-" 3="D+" 4="ID" 5="GND" 6="MP1" 7="MP2" 8="MP3" 9="MP4"
+*MXP 11
+*DFN 67503-1020
+~!Manufacturer_Name (Molex)
+~!Manufacturer_Part_Number (67503-1020)
+~!Mouser Part Number (538-67503-1020)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Molex/67503-1020?qs=7zcQ9RRVJlhHWuXYKEhKMg%3D%3D)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.molex.com/pdm_docs/sd/675031020_sd.pdf)
+~!Height (4.05mm)
+~!3D_Model (67503-1020)
+"67503-1020"
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 

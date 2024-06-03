@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'PEC11L_4115F_S0020'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Bourns", "PEC11L-4115F-S0020" (!) = "", "PEC11L4115FS0020", "Other", "652-PEC11L4115FS0020", "https://www.mouser.co.uk/ProductDetail/Bourns/PEC11L-4115F-S0020?qs=gk21WLQFtgRAgrgJZfpkWw%3D%3D", "PEC11L-4115F-S0020", "https://www.arrow.com/en/products/pec11l-4115f-s0020/bourns?region=nac", "Encoders ENCODER", "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA5/494003.pdf", "25 mm"
+END_PART
+
+END.

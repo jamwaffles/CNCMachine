@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TS-1187A-B-A-B"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-10-27-12:27:47)
+    (mountForm default
+        (footprintRef "TS1187ABAB")
+        (spec "System")
+    )
+)

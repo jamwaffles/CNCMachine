@@ -1,0 +1,9 @@
+Manufacturer=XKB Connectivity
+PartNumber=TS-1187A-B-A-B
+PartCategory=Switch
+PackageCategory=Other
+PinCount=4
+Version=4.3
+Released=2019-09-23 06:51:37
+Downloaded=2024-06-03 13:41:20
+3D=Y

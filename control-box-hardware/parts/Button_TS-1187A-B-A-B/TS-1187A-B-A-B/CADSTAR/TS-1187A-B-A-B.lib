@@ -1,0 +1,19 @@
+.TS-1187A-B-A-B :1 ;tact switch 4x4X1.5 patch 160GF metal head waterproof
+TS1187ABAB
+*STM S
+*NGS
+*PNM 1=A1 2=B1 3=C1 4=D1
+*PLB 1="COM_1" 2="COM_2" 3="NO_1" 4="NO_2"
+*MXP 4
+*DFN TS-1187A-B-A-B
+~!Manufacturer_Name (XKB Connectivity)
+~!Manufacturer_Part_Number (TS-1187A-B-A-B)
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (http://www.helloxkb.com/public/images/pdf/TS-1187A-X-X-X.pdf)
+~!Height (4.05mm)
+~!3D_Model (TS-1187A-B-A-B)
+TS-1187A-B-A-B
+1.1!U 2.1!U 3.1!U 4.1!U 

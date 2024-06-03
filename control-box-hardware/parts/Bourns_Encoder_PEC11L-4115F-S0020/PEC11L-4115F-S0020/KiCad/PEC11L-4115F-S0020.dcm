@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP PEC11L-4115F-S0020
+D Encoders ENCODER
+K
+F https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA5/494003.pdf
+$ENDCMP
+#
+#End Doc Library

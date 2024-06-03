@@ -1,0 +1,138 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "TS-1187A-B-A-B"
+   (description "tact switch 4x4X1.5 patch 160GF metal head waterproof")
+   (family "SWI")
+   (package "TS1187ABAB")
+   (attribute "Datasheet Link" "http://www.helloxkb.com/public/images/pdf/TS-1187A-X-X-X.pdf")
+   (attribute "Geometry.Height" "4.05mm")
+   (attribute "Manufacturer_Name" "XKB Connectivity")
+   (attribute "Manufacturer_Part_Number" "TS-1187A-B-A-B")
+   (attribute "Mouser Part Number" "")
+   (attribute "Mouser Price/Stock" "")
+   (attribute "Arrow Part Number" "")
+   (attribute "Arrow Price/Stock" "")
+   (gate
+    (symbol "TS-1187A-B-A-B")
+    (pin "COM_1" A1 PS)
+    (pin "COM_2" B1 PS)
+    (pin "NO_1" C1 PS)
+    (pin "NO_2" D1 PS)
+   )
+  )
+  (symbol "TS-1187A-B-A-B"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1000 100) (pt 1000 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "TS1187ABAB"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -2.55 -2.55)
+      (pt 2.55 -2.55)
+      (pt 2.55 2.55)
+      (pt -2.55 2.55)
+      (pt -2.55 -2.55))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -5.5 3.55)
+      (pt 4.5 3.55)
+      (pt 4.5 -3.55)
+      (pt -5.5 -3.55)
+      (pt -5.5 3.55))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -4.5 1.9)
+      (arc (pt -4.500 1.900) (pt -4.500 1.850) (pt -4.400 1.950) (start 180.0) (sweep 180.0))
+      (pt -4.4 1.9)
+      (arc (pt -4.400 1.900) (pt -4.500 1.850) (pt -4.400 1.950) (start 180.0) (sweep .0))
+      (pt -4.5 1.9)
+      (arc (pt -4.500 1.900) (pt -4.500 1.850) (pt -4.400 1.950) (start 180.0) (sweep 180.0))
+      (pt -4.4 1.9))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2.55 1)
+      (pt -2.55 -1))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt 2.55 1)
+      (pt 2.55 -1))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2 2.55)
+      (pt 2 2.55))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2 -2.55)
+      (pt 2 -2.55))))
+   (leg A1 (pt -3.000 1.875) (padstack 0))
+   (leg B1 (pt 3.000 1.875) (padstack 0))
+   (leg C1 (pt -3.000 -1.875) (padstack 0))
+   (leg D1 (pt 3.000 -1.875) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.750 1.000 0 0 0.000))
+   )
+   (model "TS-1187A-B-A-B.stp"
+    (euler 90 0 90)
+    (offset 0.05000000074505806 0 0)
+   )
+  )
+ )
+)
