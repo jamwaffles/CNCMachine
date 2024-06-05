@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "6.010 reamer",
+  "shape": "endmill.fcstd",
+  "parameter": {
+    "Chipload": "0.00 mm",
+    "CuttingEdgeHeight": "30.00 mm",
+    "Diameter": "6.01 mm",
+    "Flutes": "6",
+    "Length": "50.00 mm",
+    "Material": "HSS",
+    "ShankDiameter": "5.60 mm",
+    "SpindleDirection": "Forward"
+  },
+  "attribute": {}
+}

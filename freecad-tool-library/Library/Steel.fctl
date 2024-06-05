@@ -123,6 +123,10 @@
     {
       "nr": 32,
       "path": "10mm-3fl-dlc-alu-ewequip.fctb"
+    },
+    {
+      "nr": 33,
+      "path": "6-010-reamer.fctb"
     }
   ],
   "version": 1
