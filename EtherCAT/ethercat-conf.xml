@@ -1,10 +1,10 @@
 <masters>
-  <master idx="0" appTimePeriod="4000000" refClockSyncCycles="10000">
+  <master idx="0" appTimePeriod="2000000" refClockSyncCycles="10000">
     <!-- Joint 0 -->
     <slave idx="0" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="04"/>
+        <sdoDataRaw data="02"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
@@ -60,7 +60,7 @@
     <slave idx="1" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="04"/>
+        <sdoDataRaw data="02"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
@@ -132,7 +132,7 @@
     <slave idx="2" type="generic" vid="00004321" pid="000010b2" configPdos="true">
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="04"/>
+        <sdoDataRaw data="02"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
@@ -273,7 +273,7 @@
 
       <!-- Set Cycle Time -->
       <sdoConfig idx="60C2" subIdx="01">
-        <sdoDataRaw data="04"/>
+        <sdoDataRaw data="02"/>
       </sdoConfig>
       <!-- Set Cycle exp -->
       <sdoConfig idx="60C2" subIdx="02">
