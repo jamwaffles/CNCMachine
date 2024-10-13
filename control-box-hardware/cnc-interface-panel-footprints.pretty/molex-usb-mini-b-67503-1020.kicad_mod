@@ -37,6 +37,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -49,6 +50,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -61,6 +63,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -383,25 +386,25 @@
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "e1c6a2b8-0741-49b6-83d8-b8522fe13777")
 	)
-	(pad "MP1" smd rect
+	(pad "6" smd rect
 		(at -4.925 -3.75)
 		(size 2.05 3.5)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "c46b2c2e-4093-42ac-9d62-402c64c67774")
 	)
-	(pad "MP2" smd rect
-		(at 4.925 -3.75)
-		(size 2.05 3.5)
-		(layers "F.Cu" "F.Paste" "F.Mask")
-		(uuid "864e019d-f16f-444a-8da2-2e5ba2af288b")
-	)
-	(pad "MP3" smd rect
+	(pad "6" smd rect
 		(at -4.925 0.5)
 		(size 2.05 4)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "6a261dea-b21c-4024-94ad-b1ed88d0e7c2")
 	)
-	(pad "MP4" smd rect
+	(pad "6" smd rect
+		(at 4.925 -3.75)
+		(size 2.05 3.5)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "864e019d-f16f-444a-8da2-2e5ba2af288b")
+	)
+	(pad "6" smd rect
 		(at 4.925 0.5)
 		(size 2.05 4)
 		(layers "F.Cu" "F.Paste" "F.Mask")
