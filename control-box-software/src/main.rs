@@ -115,7 +115,8 @@ fn main() -> Result<(), Box<dyn Error>> {
                             diff
                         };
 
-                        encoder1_value += res;
+                        // + or - here inverts direction
+                        encoder1_value -= res;
 
                         // Divide by 4 because quadrature encoder
                         pins.encoder1.set_value(encoder1_value / 4)?;
@@ -143,7 +144,8 @@ fn main() -> Result<(), Box<dyn Error>> {
                             diff
                         };
 
-                        encoder2_value += res;
+                        // + or - here inverts direction
+                        encoder2_value -= res;
 
                         // Divide by 4 because quadrature encoder
                         pins.encoder2.set_value(encoder2_value / 4)?;
