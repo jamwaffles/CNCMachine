@@ -3870,6 +3870,12 @@
 		(uuid "c9b23f11-84bd-4d7c-9949-065d71476e27")
 	)
 	(junction
+		(at 63.5 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd9ee4b3-6e6c-4fc6-84c6-7dcd3e2a3f66")
+	)
+	(junction
 		(at 54.61 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4087,16 +4093,6 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 35.56) (xy 148.59 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07ec968b-e913-43c6-a2df-6ea257087fa1")
-	)
-	(wire
-		(pts
 			(xy 27.94 104.14) (xy 27.94 105.41)
 		)
 		(stroke
@@ -4147,7 +4143,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 45.72) (xy 234.95 45.72)
+			(xy 231.14 45.72) (xy 247.65 45.72)
 		)
 		(stroke
 			(width 0)
@@ -4377,6 +4373,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 87.63) (xy 63.5 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31d84788-5437-4474-a212-fc0cf7e5faee")
+	)
+	(wire
+		(pts
 			(xy 229.87 90.17) (xy 229.87 88.9)
 		)
 		(stroke
@@ -4574,6 +4580,16 @@
 			(type default)
 		)
 		(uuid "5cd7dcfd-0ea7-4b4c-86e8-e7035624ffd5")
+	)
+	(wire
+		(pts
+			(xy 63.5 87.63) (xy 73.66 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fea588d-00ef-4e2a-87af-3ee20225d99a")
 	)
 	(wire
 		(pts
@@ -4977,7 +4993,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 35.56) (xy 135.89 35.56)
+			(xy 132.08 35.56) (xy 148.59 35.56)
 		)
 		(stroke
 			(width 0)
@@ -5044,16 +5060,6 @@
 			(type default)
 		)
 		(uuid "efe79dd0-f894-417f-9dc3-6871debbe24c")
-	)
-	(wire
-		(pts
-			(xy 240.03 45.72) (xy 247.65 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f532223d-4f0f-44dd-b6a1-35f47a270e02")
 	)
 	(wire
 		(pts
@@ -5172,7 +5178,7 @@
 		(uuid "dc1c177b-3806-4d0b-9885-a7d1e4ce222c")
 	)
 	(label "RAPID_RESET"
-		(at 250.19 45.72 0)
+		(at 255.27 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5216,7 +5222,7 @@
 		(uuid "1698e2bc-f7b9-4d23-a102-1a127445927e")
 	)
 	(label "FEED_RESET"
-		(at 151.13 35.56 0)
+		(at 156.21 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5260,7 +5266,7 @@
 		(uuid "47fd30d5-6d5f-440c-8556-6009868f1904")
 	)
 	(label "D+"
-		(at 38.1 87.63 0)
+		(at 73.66 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5921,11 +5927,77 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 63.5 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "09fb113d-34a7-4b75-b662-2101c40c8777")
+		(property "Reference" "#PWR09"
+			(at 63.5 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 63.5 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b069f449-0b5c-43e4-852c-e1b8b9d5996c")
+		)
+		(instances
+			(project "cnc-interface-panel"
+				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:USB_B_Mini")
 		(at 30.48 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5973,7 +6045,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB" ""
+		(property "JLCPCB" "C136451"
 			(at 30.48 87.63 0)
 			(effects
 				(font
@@ -5982,7 +6054,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "67503-1020"
 			(at 30.48 87.63 0)
 			(effects
 				(font
@@ -5991,7 +6063,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "MOLEX"
 			(at 30.48 87.63 0)
 			(effects
 				(font
@@ -6119,6 +6191,103 @@
 			(project "cnc-interface-panel"
 				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 236.22 90.17 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "15a7a8d6-2639-44e5-a029-478f784c0a72")
+		(property "Reference" "R20"
+			(at 237.4901 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k5"
+			(at 234.9501 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 236.22 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 236.22 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 236.22 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C22843"
+			(at 236.22 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603WAF1501T5E"
+			(at 236.22 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 236.22 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "104dff96-aa1e-4ec0-821f-82b25c44f487")
+		)
+		(pin "2"
+			(uuid "d845e074-47da-4829-b125-6241f342fdbc")
+		)
+		(instances
+			(project "cnc-interface-panel"
+				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -6918,101 +7087,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 236.22 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "351c5e06-a05e-40f0-a58a-c4f6cbeedea3")
-		(property "Reference" "R5"
-			(at 236.22 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "560"
-			(at 236.22 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 236.22 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 236.22 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 236.22 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" "C23204"
-			(at 236.22 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "0603WAF5600T5E"
-			(at 236.22 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 236.22 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bf4350a0-0def-4e67-8467-04f47dd88f0f")
-		)
-		(pin "2"
-			(uuid "2f4387fb-dc1a-47ec-a73e-8e68a3464c79")
-		)
-		(instances
-			(project "cnc-interface-panel"
-				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 261.62 21.59 0)
 		(unit 1)
@@ -7080,7 +7154,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 138.43 35.56 270)
+		(at 153.67 35.56 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7089,7 +7163,7 @@
 		(dnp no)
 		(uuid "36667a2d-606c-434b-9528-f073ac00826b")
 		(property "Reference" "R9"
-			(at 139.7001 33.02 0)
+			(at 154.9401 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7098,7 +7172,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 137.1601 33.02 0)
+			(at 152.4001 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7107,7 +7181,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 138.43 35.56 0)
+			(at 153.67 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7116,7 +7190,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 138.43 35.56 0)
+			(at 153.67 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7125,7 +7199,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 138.43 35.56 0)
+			(at 153.67 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7134,7 +7208,7 @@
 			)
 		)
 		(property "JLCPCB" "C4190"
-			(at 138.43 35.56 0)
+			(at 153.67 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7143,7 +7217,7 @@
 			)
 		)
 		(property "MPN" "0603WAF2201T5E"
-			(at 138.43 35.56 0)
+			(at 153.67 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7152,7 +7226,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 138.43 35.56 0)
+			(at 153.67 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8705,6 +8779,103 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 63.5 85.09 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "786fe148-3545-43d7-8dcf-21240e943690")
+		(property "Reference" "R19"
+			(at 60.96 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k5"
+			(at 60.96 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 63.5 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 63.5 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 63.5 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C22843"
+			(at 63.5 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603WAF1501T5E"
+			(at 63.5 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 63.5 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "822da900-2f08-4f9a-a661-d773fa9ae5c2")
+		)
+		(pin "2"
+			(uuid "182a45c1-fd34-4f80-898e-2d7ab4c79f45")
+		)
+		(instances
+			(project "cnc-interface-panel"
+				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 245.11 114.3 0)
 		(unit 1)
@@ -8935,7 +9106,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 237.49 45.72 270)
+		(at 252.73 45.72 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8944,7 +9115,7 @@
 		(dnp no)
 		(uuid "87caea95-fe51-45b3-9a0c-69687bf9a2f8")
 		(property "Reference" "R17"
-			(at 238.7601 43.18 0)
+			(at 254.0001 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8953,7 +9124,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 236.2201 43.18 0)
+			(at 251.4601 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8962,7 +9133,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 237.49 45.72 0)
+			(at 252.73 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8971,7 +9142,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 237.49 45.72 0)
+			(at 252.73 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8980,7 +9151,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 237.49 45.72 0)
+			(at 252.73 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8989,7 +9160,7 @@
 			)
 		)
 		(property "JLCPCB" "C4190"
-			(at 237.49 45.72 0)
+			(at 252.73 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8998,7 +9169,7 @@
 			)
 		)
 		(property "MPN" "0603WAF2201T5E"
-			(at 237.49 45.72 0)
+			(at 252.73 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9007,7 +9178,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 237.49 45.72 0)
+			(at 252.73 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11489,7 +11660,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_1804140028_BOURNS-PEC11L-4115F-S0020_C143799.pdf"
 			(at 124.46 31.496 0)
 			(effects
 				(font
@@ -11947,6 +12118,103 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 233.68 114.3 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed5f49a5-15b4-4cdc-ac02-fa95c85b4138")
+		(property "Reference" "R21"
+			(at 234.9501 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k5"
+			(at 232.4101 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 233.68 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 233.68 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 233.68 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB" "C22843"
+			(at 233.68 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "0603WAF1501T5E"
+			(at 233.68 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 233.68 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7a9356f-e045-4ccd-9a9c-3952ffa066b9")
+		)
+		(pin "2"
+			(uuid "511dd0ee-1807-4293-a4d5-c87002857ad1")
+		)
+		(instances
+			(project "cnc-interface-panel"
+				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 205.74 55.88 0)
 		(unit 1)
@@ -12134,101 +12402,6 @@
 			(project "cnc-interface-panel"
 				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
 					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 233.68 114.3 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fc538e68-4a54-4a32-83b8-0dcbb84f749b")
-		(property "Reference" "R6"
-			(at 233.68 109.22 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "560"
-			(at 233.68 111.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 233.68 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 233.68 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 233.68 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB" "C23204"
-			(at 233.68 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "0603WAF5600T5E"
-			(at 233.68 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 233.68 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5687b748-9b4b-40e3-b103-1827f7497dba")
-		)
-		(pin "2"
-			(uuid "40527f65-3980-4e34-a027-9e629285ca94")
-		)
-		(instances
-			(project "cnc-interface-panel"
-				(path "/5b55aedc-ecba-4f4d-ab6b-2e73ebce587d"
-					(reference "R6")
 					(unit 1)
 				)
 			)
