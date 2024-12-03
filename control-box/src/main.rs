@@ -10,7 +10,7 @@ use embassy_stm32::{
     bind_interrupts,
     exti::ExtiInput,
     gpio::{Input, Level, Output, Pull, Speed},
-    peripherals::{self, PA0, PA1, PA10, PA5},
+    peripherals::{self, PA10, PB0},
     time::Hertz,
     timer::qei::{Direction, Qei, QeiPin},
     usb::{self, Driver},
@@ -35,16 +35,16 @@ bind_interrupts!(struct Irqs {
     USB_LP_CAN1_RX0 => usb::InterruptHandler<peripherals::USB>;
 });
 
-// #[embassy_executor::task]
-// async fn heartbeat_task(mut led: impl OutputPin + 'static) -> ! {
-//     loop {
-//         let _ = led.set_low();
-//         Timer::after(Duration::from_millis(200)).await;
+#[embassy_executor::task]
+async fn heartbeat_task(mut led: impl OutputPin + 'static) -> ! {
+    loop {
+        let _ = led.set_low();
+        Timer::after(Duration::from_millis(200)).await;
 
-//         let _ = led.set_high();
-//         Timer::after(Duration::from_millis(800)).await;
-//     }
-// }
+        let _ = led.set_high();
+        Timer::after(Duration::from_millis(800)).await;
+    }
+}
 
 #[embassy_executor::task]
 async fn button1_task(mut button1: ExtiInput<'static, PA10>) -> ! {
@@ -61,7 +61,7 @@ async fn button1_task(mut button1: ExtiInput<'static, PA10>) -> ! {
 }
 
 #[embassy_executor::task]
-async fn button2_task(mut button2: ExtiInput<'static, PA5>) -> ! {
+async fn button2_task(mut button2: ExtiInput<'static, PB0>) -> ! {
     loop {
         button2.wait_for_any_edge().await;
 
@@ -147,12 +147,13 @@ async fn main(spawner: Spawner) {
 
     let button1 = Input::new(p.PA10, Pull::Down);
     let button1 = ExtiInput::new(button1, p.EXTI10);
-    let button2 = Input::new(p.PA5, Pull::Down);
-    let button2 = ExtiInput::new(button2, p.EXTI5);
+    let button2 = Input::new(p.PB0, Pull::Down);
+    let button2 = ExtiInput::new(button2, p.EXTI0);
 
     // defmt::unwrap!(spawner.spawn(heartbeat_task(led)));
     defmt::unwrap!(spawner.spawn(button1_task(button1)));
     defmt::unwrap!(spawner.spawn(button2_task(button2)));
+    // defmt::unwrap!(spawner.spawn(heartbeat_task(led)));
 
     defmt::info!("Begin loop");
 
