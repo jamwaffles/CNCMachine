@@ -6,3 +6,4 @@ net spindle-drive-error => pyvcp.drive-error
 net toolsetter => pyvcp.toolsetter
 net touch-probe => pyvcp.touch-probe
 net all-op => lcec.all-op pyvcp.ecat-all-op
+net ring-light-on => pyvcp.ring-light-on

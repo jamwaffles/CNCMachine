@@ -158,4 +158,16 @@
 			</led>
 		</table>
 	</labelframe>
+
+	<labelframe text="Controls">
+		<font>("Helvetica",12)</font>
+		<table>
+			<tablerow/>
+			<checkbutton>
+			    <halpin>"ring-light-on"</halpin>
+			    <text>"Ring light"</text>
+			    <initval>0</initval>
+			</checkbutton>
+		</table>
+	</labelframe>
 </pyvcp>
